@@ -1,0 +1,3963 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>自动化测试报告,测试结果如下：</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.3"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { word-wrap:break-word;word-break:break-all;overflow:auto;}
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 2ex;
+    margin-bottom: 3ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    /* width: 500px;*/
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 99%;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #74A474; }
+.failClass  { background-color: #FDD283; }
+.errorClass { background-color: #FF6600; }
+.passCase   { color: #6c6; }
+.failCase   { color: #FF6600; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+#div_base {
+            position:absolute;
+            top:0%;
+            left:5%;
+            right:5%;
+            width: auto;
+            height: auto;
+            margin: -15px 0 0 0;
+}
+</style>
+
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+<div id="div_base">
+
+<div class='page-header'>
+<h1>自动化测试报告,测试结果如下：</h1>
+<p class='attribute'><strong>开始时间:</strong> 2017-12-15 18:28:30</p>
+<p class='attribute'><strong>运行时长:</strong> 20:01:28.977619</p>
+<p class='attribute'><strong>状态:</strong> 通过 1</p>
+
+</div>
+<p class='description'>用例执行情况：</p>
+
+
+
+<div class="btn-group btn-group-sm">
+<button class="btn btn-default" onclick='javascript:showCase(0)'>总结</button>
+<button class="btn btn-default" onclick='javascript:showCase(1)'>失败</button>
+<button class="btn btn-default" onclick='javascript:showCase(2)'>全部</button>
+</div>
+<p></p>
+<table id='result_table' class="table table-bordered">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>测试套件/测试用例</td>
+    <td>总数</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>查看</td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_01_MSG.MSG: --MSG-WR265-P6v3.0.0-171203--软件升级测试</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_m_s_g: --页面升级500次</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        通过</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: start!----开始升级
+第2430次升级
+当前时间： Fri Dec 15 18:28:35 2017
+
+升级截图编号：2017-12-15_18h30min00s_2430.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 18:31:00 2017
+
+第2431次升级
+当前时间： Fri Dec 15 18:31:08 2017
+
+升级截图编号：2017-12-15_18h32min32s_2431.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 18:33:33 2017
+
+第2432次升级
+当前时间： Fri Dec 15 18:33:41 2017
+
+升级截图编号：2017-12-15_18h34min57s_2432.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 18:35:57 2017
+
+第2433次升级
+当前时间： Fri Dec 15 18:36:05 2017
+
+升级截图编号：2017-12-15_18h37min16s_2433.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 18:38:16 2017
+
+第2434次升级
+当前时间： Fri Dec 15 18:38:25 2017
+
+升级截图编号：2017-12-15_18h39min35s_2434.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 18:40:35 2017
+
+第2435次升级
+当前时间： Fri Dec 15 18:40:43 2017
+
+升级截图编号：2017-12-15_18h41min56s_2435.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 18:42:56 2017
+
+第2436次升级
+当前时间： Fri Dec 15 18:43:05 2017
+
+升级截图编号：2017-12-15_18h44min23s_2436.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 18:45:24 2017
+
+第2437次升级
+当前时间： Fri Dec 15 18:45:32 2017
+
+升级截图编号：2017-12-15_18h46min41s_2437.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2438次升级
+当前时间： Fri Dec 15 18:47:49 2017
+
+升级截图编号：2017-12-15_18h48min58s_2438.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 18:49:58 2017
+
+第2439次升级
+当前时间： Fri Dec 15 18:50:06 2017
+
+升级截图编号：2017-12-15_18h51min24s_2439.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 18:52:24 2017
+
+第2440次升级
+当前时间： Fri Dec 15 18:52:33 2017
+
+升级截图编号：2017-12-15_18h53min57s_2440.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 18:54:57 2017
+
+第2441次升级
+当前时间： Fri Dec 15 18:55:05 2017
+
+升级截图编号：2017-12-15_18h56min14s_2441.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2442次升级
+当前时间： Fri Dec 15 18:57:23 2017
+
+升级截图编号：2017-12-15_18h58min31s_2442.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2443次升级
+当前时间： Fri Dec 15 18:59:39 2017
+
+升级截图编号：2017-12-15_19h01min03s_2443.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:02:03 2017
+
+第2444次升级
+当前时间： Fri Dec 15 19:02:11 2017
+
+升级截图编号：2017-12-15_19h03min32s_2444.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:04:32 2017
+
+第2445次升级
+当前时间： Fri Dec 15 19:04:41 2017
+
+升级截图编号：2017-12-15_19h05min47s_2445.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:06:51 2017
+
+第2446次升级
+当前时间： Fri Dec 15 19:06:59 2017
+
+升级截图编号：2017-12-15_19h08min05s_2446.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2447次升级
+当前时间： Fri Dec 15 19:09:15 2017
+
+升级截图编号：2017-12-15_19h10min23s_2447.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:11:30 2017
+
+第2448次升级
+当前时间： Fri Dec 15 19:11:39 2017
+
+升级截图编号：2017-12-15_19h12min56s_2448.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:13:56 2017
+
+第2449次升级
+当前时间： Fri Dec 15 19:14:05 2017
+
+升级截图编号：2017-12-15_19h15min12s_2449.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:16:15 2017
+
+第2450次升级
+当前时间： Fri Dec 15 19:16:23 2017
+
+升级截图编号：2017-12-15_19h17min34s_2450.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:18:34 2017
+
+第2451次升级
+当前时间： Fri Dec 15 19:18:42 2017
+
+升级截图编号：2017-12-15_19h19min59s_2451.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:21:00 2017
+
+第2452次升级
+当前时间： Fri Dec 15 19:21:08 2017
+
+升级截图编号：2017-12-15_19h22min22s_2452.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:23:22 2017
+
+第2453次升级
+当前时间： Fri Dec 15 19:23:30 2017
+
+升级截图编号：2017-12-15_19h24min40s_2453.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:25:40 2017
+
+第2454次升级
+当前时间： Fri Dec 15 19:25:49 2017
+
+升级截图编号：2017-12-15_19h27min08s_2454.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:28:08 2017
+
+第2455次升级
+当前时间： Fri Dec 15 19:28:16 2017
+
+升级截图编号：2017-12-15_19h29min36s_2455.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:30:36 2017
+
+第2456次升级
+当前时间： Fri Dec 15 19:30:45 2017
+
+升级截图编号：2017-12-15_19h31min57s_2456.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:32:58 2017
+
+第2457次升级
+当前时间： Fri Dec 15 19:33:06 2017
+
+升级截图编号：2017-12-15_19h34min27s_2457.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:35:27 2017
+
+第2458次升级
+当前时间： Fri Dec 15 19:35:35 2017
+
+升级截图编号：2017-12-15_19h37min00s_2458.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:38:00 2017
+
+第2459次升级
+当前时间： Fri Dec 15 19:38:08 2017
+
+升级截图编号：2017-12-15_19h39min27s_2459.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:40:27 2017
+
+第2460次升级
+当前时间： Fri Dec 15 19:40:36 2017
+
+升级截图编号：2017-12-15_19h41min40s_2460.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2461次升级
+当前时间： Fri Dec 15 19:43:03 2017
+
+升级截图编号：2017-12-15_19h44min19s_2461.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:45:19 2017
+
+第2462次升级
+当前时间： Fri Dec 15 19:45:28 2017
+
+升级截图编号：2017-12-15_19h46min37s_2462.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:47:38 2017
+
+第2463次升级
+当前时间： Fri Dec 15 19:47:46 2017
+
+升级截图编号：2017-12-15_19h48min55s_2463.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2464次升级
+当前时间： Fri Dec 15 19:50:03 2017
+
+升级截图编号：2017-12-15_19h51min20s_2464.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:52:21 2017
+
+第2465次升级
+当前时间： Fri Dec 15 19:52:29 2017
+
+升级截图编号：2017-12-15_19h53min45s_2465.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:54:45 2017
+
+第2466次升级
+当前时间： Fri Dec 15 19:54:54 2017
+
+升级截图编号：2017-12-15_19h56min14s_2466.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:57:14 2017
+
+第2467次升级
+当前时间： Fri Dec 15 19:57:22 2017
+
+升级截图编号：2017-12-15_19h58min41s_2467.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 19:59:41 2017
+
+第2468次升级
+当前时间： Fri Dec 15 19:59:50 2017
+
+升级截图编号：2017-12-15_20h01min00s_2468.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:02:01 2017
+
+第2469次升级
+当前时间： Fri Dec 15 20:02:09 2017
+
+升级截图编号：2017-12-15_20h03min29s_2469.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:04:29 2017
+
+第2470次升级
+当前时间： Fri Dec 15 20:04:37 2017
+
+升级截图编号：2017-12-15_20h05min52s_2470.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:06:52 2017
+
+第2471次升级
+当前时间： Fri Dec 15 20:07:00 2017
+
+升级截图编号：2017-12-15_20h08min13s_2471.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:09:13 2017
+
+第2472次升级
+当前时间： Fri Dec 15 20:09:21 2017
+
+升级截图编号：2017-12-15_20h10min45s_2472.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:11:45 2017
+
+第2473次升级
+当前时间： Fri Dec 15 20:11:53 2017
+
+升级截图编号：2017-12-15_20h13min09s_2473.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:14:09 2017
+
+第2474次升级
+当前时间： Fri Dec 15 20:14:18 2017
+
+升级截图编号：2017-12-15_20h15min23s_2474.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:16:30 2017
+
+第2475次升级
+当前时间： Fri Dec 15 20:16:38 2017
+
+升级截图编号：2017-12-15_20h17min51s_2475.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:18:52 2017
+
+第2476次升级
+当前时间： Fri Dec 15 20:19:00 2017
+
+升级截图编号：2017-12-15_20h20min20s_2476.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:21:20 2017
+
+第2477次升级
+当前时间： Fri Dec 15 20:21:28 2017
+
+升级截图编号：2017-12-15_20h22min33s_2477.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2478次升级
+当前时间： Fri Dec 15 20:23:55 2017
+
+升级截图编号：2017-12-15_20h25min08s_2478.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:26:09 2017
+
+第2479次升级
+当前时间： Fri Dec 15 20:26:17 2017
+
+升级截图编号：2017-12-15_20h27min26s_2479.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2480次升级
+当前时间： Fri Dec 15 20:28:34 2017
+
+升级截图编号：2017-12-15_20h29min49s_2480.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:30:49 2017
+
+第2481次升级
+当前时间： Fri Dec 15 20:30:57 2017
+
+升级截图编号：2017-12-15_20h32min06s_2481.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2482次升级
+当前时间： Fri Dec 15 20:33:15 2017
+
+升级截图编号：2017-12-15_20h34min27s_2482.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:35:28 2017
+
+第2483次升级
+当前时间： Fri Dec 15 20:35:36 2017
+
+升级截图编号：2017-12-15_20h37min00s_2483.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:38:00 2017
+
+第2484次升级
+当前时间： Fri Dec 15 20:38:08 2017
+
+升级截图编号：2017-12-15_20h39min32s_2484.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:40:32 2017
+
+第2485次升级
+当前时间： Fri Dec 15 20:40:41 2017
+
+升级截图编号：2017-12-15_20h42min03s_2485.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:43:03 2017
+
+第2486次升级
+当前时间： Fri Dec 15 20:43:12 2017
+
+升级截图编号：2017-12-15_20h44min21s_2486.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:45:21 2017
+
+第2487次升级
+当前时间： Fri Dec 15 20:45:30 2017
+
+升级截图编号：2017-12-15_20h46min51s_2487.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:47:52 2017
+
+第2488次升级
+当前时间： Fri Dec 15 20:48:00 2017
+
+升级截图编号：2017-12-15_20h49min21s_2488.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:50:21 2017
+
+第2489次升级
+当前时间： Fri Dec 15 20:50:29 2017
+
+升级截图编号：2017-12-15_20h51min52s_2489.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:52:52 2017
+
+第2490次升级
+当前时间： Fri Dec 15 20:53:00 2017
+
+升级截图编号：2017-12-15_20h54min11s_2490.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:55:11 2017
+
+第2491次升级
+当前时间： Fri Dec 15 20:55:19 2017
+
+升级截图编号：2017-12-15_20h56min38s_2491.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:57:38 2017
+
+第2492次升级
+当前时间： Fri Dec 15 20:57:47 2017
+
+升级截图编号：2017-12-15_20h58min58s_2492.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 20:59:58 2017
+
+第2493次升级
+当前时间： Fri Dec 15 21:00:06 2017
+
+升级截图编号：2017-12-15_21h01min30s_2493.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:02:30 2017
+
+第2494次升级
+当前时间： Fri Dec 15 21:02:38 2017
+
+升级截图编号：2017-12-15_21h03min52s_2494.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:04:52 2017
+
+第2495次升级
+当前时间： Fri Dec 15 21:05:01 2017
+
+升级截图编号：2017-12-15_21h06min23s_2495.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:07:23 2017
+
+第2496次升级
+当前时间： Fri Dec 15 21:07:31 2017
+
+升级截图编号：2017-12-15_21h08min47s_2496.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:09:47 2017
+
+第2497次升级
+当前时间： Fri Dec 15 21:09:56 2017
+
+升级截图编号：2017-12-15_21h11min19s_2497.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:12:19 2017
+
+第2498次升级
+当前时间： Fri Dec 15 21:12:27 2017
+
+升级截图编号：2017-12-15_21h13min32s_2498.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2499次升级
+当前时间： Fri Dec 15 21:14:55 2017
+
+升级截图编号：2017-12-15_21h16min04s_2499.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:17:05 2017
+
+第2500次升级
+当前时间： Fri Dec 15 21:17:13 2017
+
+升级截图编号：2017-12-15_21h18min38s_2500.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:19:38 2017
+
+第2501次升级
+当前时间： Fri Dec 15 21:19:46 2017
+
+升级截图编号：2017-12-15_21h21min07s_2501.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:22:07 2017
+
+第2502次升级
+当前时间： Fri Dec 15 21:22:15 2017
+
+升级截图编号：2017-12-15_21h23min29s_2502.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:24:30 2017
+
+第2503次升级
+当前时间： Fri Dec 15 21:24:38 2017
+
+升级截图编号：2017-12-15_21h25min50s_2503.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:26:50 2017
+
+第2504次升级
+当前时间： Fri Dec 15 21:26:58 2017
+
+升级截图编号：2017-12-15_21h28min07s_2504.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2505次升级
+当前时间： Fri Dec 15 21:29:15 2017
+
+升级截图编号：2017-12-15_21h30min33s_2505.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:31:33 2017
+
+第2506次升级
+当前时间： Fri Dec 15 21:31:41 2017
+
+升级截图编号：2017-12-15_21h32min53s_2506.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:33:53 2017
+
+第2507次升级
+当前时间： Fri Dec 15 21:34:01 2017
+
+升级截图编号：2017-12-15_21h35min06s_2507.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2508次升级
+当前时间： Fri Dec 15 21:36:16 2017
+
+升级截图编号：2017-12-15_21h37min30s_2508.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:38:30 2017
+
+第2509次升级
+当前时间： Fri Dec 15 21:38:39 2017
+
+升级截图编号：2017-12-15_21h39min56s_2509.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:40:56 2017
+
+第2510次升级
+当前时间： Fri Dec 15 21:41:05 2017
+
+升级截图编号：2017-12-15_21h42min26s_2510.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:43:27 2017
+
+第2511次升级
+当前时间： Fri Dec 15 21:43:35 2017
+
+升级截图编号：2017-12-15_21h44min49s_2511.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:45:49 2017
+
+第2512次升级
+当前时间： Fri Dec 15 21:45:57 2017
+
+升级截图编号：2017-12-15_21h47min04s_2512.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2513次升级
+当前时间： Fri Dec 15 21:48:12 2017
+
+升级截图编号：2017-12-15_21h49min27s_2513.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:50:27 2017
+
+第2514次升级
+当前时间： Fri Dec 15 21:50:35 2017
+
+升级截图编号：2017-12-15_21h51min45s_2514.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:52:45 2017
+
+第2515次升级
+当前时间： Fri Dec 15 21:52:53 2017
+
+升级截图编号：2017-12-15_21h54min05s_2515.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:55:05 2017
+
+第2516次升级
+当前时间： Fri Dec 15 21:55:13 2017
+
+升级截图编号：2017-12-15_21h56min20s_2516.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 21:57:24 2017
+
+第2517次升级
+当前时间： Fri Dec 15 21:57:32 2017
+
+升级截图编号：2017-12-15_21h58min38s_2517.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2518次升级
+当前时间： Fri Dec 15 22:00:00 2017
+
+升级截图编号：2017-12-15_22h01min25s_2518.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:02:25 2017
+
+第2519次升级
+当前时间： Fri Dec 15 22:02:33 2017
+
+升级截图编号：2017-12-15_22h03min58s_2519.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:04:59 2017
+
+第2520次升级
+当前时间： Fri Dec 15 22:05:07 2017
+
+升级截图编号：2017-12-15_22h06min26s_2520.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:07:27 2017
+
+第2521次升级
+当前时间： Fri Dec 15 22:07:35 2017
+
+升级截图编号：2017-12-15_22h08min41s_2521.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2522次升级
+当前时间： Fri Dec 15 22:10:02 2017
+
+升级截图编号：2017-12-15_22h11min11s_2522.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2523次升级
+当前时间： Fri Dec 15 22:12:19 2017
+
+升级截图编号：2017-12-15_22h13min39s_2523.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:14:39 2017
+
+第2524次升级
+当前时间： Fri Dec 15 22:14:47 2017
+
+升级截图编号：2017-12-15_22h16min09s_2524.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:17:10 2017
+
+第2525次升级
+当前时间： Fri Dec 15 22:17:18 2017
+
+升级截图编号：2017-12-15_22h18min25s_2525.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:19:31 2017
+
+第2526次升级
+当前时间： Fri Dec 15 22:19:40 2017
+
+升级截图编号：2017-12-15_22h20min57s_2526.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:21:58 2017
+
+第2527次升级
+当前时间： Fri Dec 15 22:22:06 2017
+
+升级截图编号：2017-12-15_22h23min17s_2527.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:24:17 2017
+
+第2528次升级
+当前时间： Fri Dec 15 22:24:25 2017
+
+升级截图编号：2017-12-15_22h25min45s_2528.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:26:46 2017
+
+第2529次升级
+当前时间： Fri Dec 15 22:26:54 2017
+
+升级截图编号：2017-12-15_22h28min01s_2529.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:29:04 2017
+
+第2530次升级
+当前时间： Fri Dec 15 22:29:12 2017
+
+升级截图编号：2017-12-15_22h30min19s_2530.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2531次升级
+当前时间： Fri Dec 15 22:31:41 2017
+
+升级截图编号：2017-12-15_22h32min51s_2531.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:33:52 2017
+
+第2532次升级
+当前时间： Fri Dec 15 22:34:00 2017
+
+升级截图编号：2017-12-15_22h35min21s_2532.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:36:21 2017
+
+第2533次升级
+当前时间： Fri Dec 15 22:36:29 2017
+
+升级截图编号：2017-12-15_22h37min39s_2533.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:38:39 2017
+
+第2534次升级
+当前时间： Fri Dec 15 22:38:47 2017
+
+升级截图编号：2017-12-15_22h39min56s_2534.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2535次升级
+当前时间： Fri Dec 15 22:41:05 2017
+
+升级截图编号：2017-12-15_22h42min17s_2535.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:43:17 2017
+
+第2536次升级
+当前时间： Fri Dec 15 22:43:26 2017
+
+升级截图编号：2017-12-15_22h44min33s_2536.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:45:36 2017
+
+第2537次升级
+当前时间： Fri Dec 15 22:45:44 2017
+
+升级截图编号：2017-12-15_22h46min58s_2537.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:47:58 2017
+
+第2538次升级
+当前时间： Fri Dec 15 22:48:06 2017
+
+升级截图编号：2017-12-15_22h49min26s_2538.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:50:26 2017
+
+第2539次升级
+当前时间： Fri Dec 15 22:50:35 2017
+
+升级截图编号：2017-12-15_22h51min39s_2539.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2540次升级
+当前时间： Fri Dec 15 22:52:49 2017
+
+升级截图编号：2017-12-15_22h54min06s_2540.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:55:06 2017
+
+第2541次升级
+当前时间： Fri Dec 15 22:55:14 2017
+
+升级截图编号：2017-12-15_22h56min35s_2541.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:57:36 2017
+
+第2542次升级
+当前时间： Fri Dec 15 22:57:44 2017
+
+升级截图编号：2017-12-15_22h58min56s_2542.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 22:59:56 2017
+
+第2543次升级
+当前时间： Fri Dec 15 23:00:04 2017
+
+升级截图编号：2017-12-15_23h01min23s_2543.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:02:23 2017
+
+第2544次升级
+当前时间： Fri Dec 15 23:02:31 2017
+
+升级截图编号：2017-12-15_23h03min36s_2544.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2545次升级
+当前时间： Fri Dec 15 23:04:58 2017
+
+升级截图编号：2017-12-15_23h06min11s_2545.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:07:11 2017
+
+第2546次升级
+当前时间： Fri Dec 15 23:07:19 2017
+
+升级截图编号：2017-12-15_23h08min24s_2546.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2547次升级
+当前时间： Fri Dec 15 23:09:47 2017
+
+升级截图编号：2017-12-15_23h10min51s_2547.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2548次升级
+当前时间： Fri Dec 15 23:12:02 2017
+
+升级截图编号：2017-12-15_23h13min25s_2548.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:14:26 2017
+
+第2549次升级
+当前时间： Fri Dec 15 23:14:34 2017
+
+升级截图编号：2017-12-15_23h15min57s_2549.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:16:57 2017
+
+第2550次升级
+当前时间： Fri Dec 15 23:17:05 2017
+
+升级截图编号：2017-12-15_23h18min22s_2550.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:19:22 2017
+
+第2551次升级
+当前时间： Fri Dec 15 23:19:30 2017
+
+升级截图编号：2017-12-15_23h20min53s_2551.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:21:54 2017
+
+第2552次升级
+当前时间： Fri Dec 15 23:22:02 2017
+
+升级截图编号：2017-12-15_23h23min20s_2552.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:24:20 2017
+
+第2553次升级
+当前时间： Fri Dec 15 23:24:28 2017
+
+升级截图编号：2017-12-15_23h25min37s_2553.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2554次升级
+当前时间： Fri Dec 15 23:26:45 2017
+
+升级截图编号：2017-12-15_23h27min57s_2554.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:28:57 2017
+
+第2555次升级
+当前时间： Fri Dec 15 23:29:05 2017
+
+升级截图编号：2017-12-15_23h30min19s_2555.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:31:19 2017
+
+第2556次升级
+当前时间： Fri Dec 15 23:31:27 2017
+
+升级截图编号：2017-12-15_23h32min32s_2556.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2557次升级
+当前时间： Fri Dec 15 23:33:54 2017
+
+升级截图编号：2017-12-15_23h35min18s_2557.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:36:18 2017
+
+第2558次升级
+当前时间： Fri Dec 15 23:36:26 2017
+
+升级截图编号：2017-12-15_23h37min32s_2558.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2559次升级
+当前时间： Fri Dec 15 23:38:54 2017
+
+升级截图编号：2017-12-15_23h40min04s_2559.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:41:04 2017
+
+第2560次升级
+当前时间： Fri Dec 15 23:41:13 2017
+
+升级截图编号：2017-12-15_23h42min23s_2560.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:43:23 2017
+
+第2561次升级
+当前时间： Fri Dec 15 23:43:32 2017
+
+升级截图编号：2017-12-15_23h44min43s_2561.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:45:44 2017
+
+第2562次升级
+当前时间： Fri Dec 15 23:45:52 2017
+
+升级截图编号：2017-12-15_23h47min07s_2562.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:48:07 2017
+
+第2563次升级
+当前时间： Fri Dec 15 23:48:15 2017
+
+升级截图编号：2017-12-15_23h49min39s_2563.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:50:39 2017
+
+第2564次升级
+当前时间： Fri Dec 15 23:50:47 2017
+
+升级截图编号：2017-12-15_23h52min08s_2564.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:53:08 2017
+
+第2565次升级
+当前时间： Fri Dec 15 23:53:17 2017
+
+升级截图编号：2017-12-15_23h54min21s_2565.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2566次升级
+当前时间： Fri Dec 15 23:55:44 2017
+
+升级截图编号：2017-12-15_23h57min04s_2566.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Fri Dec 15 23:58:04 2017
+
+第2567次升级
+当前时间： Fri Dec 15 23:58:12 2017
+
+升级截图编号：2017-12-15_23h59min33s_2567.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:00:33 2017
+
+第2568次升级
+当前时间： Sat Dec 16 00:00:42 2017
+
+升级截图编号：2017-12-16_00h01min55s_2568.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:02:55 2017
+
+第2569次升级
+当前时间： Sat Dec 16 00:03:03 2017
+
+升级截图编号：2017-12-16_00h04min27s_2569.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:05:28 2017
+
+第2570次升级
+当前时间： Sat Dec 16 00:05:36 2017
+
+升级截图编号：2017-12-16_00h06min48s_2570.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:07:48 2017
+
+第2571次升级
+当前时间： Sat Dec 16 00:07:56 2017
+
+升级截图编号：2017-12-16_00h09min04s_2571.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2572次升级
+当前时间： Sat Dec 16 00:10:13 2017
+
+升级截图编号：2017-12-16_00h11min35s_2572.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:12:36 2017
+
+第2573次升级
+当前时间： Sat Dec 16 00:12:44 2017
+
+升级截图编号：2017-12-16_00h14min06s_2573.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:15:06 2017
+
+第2574次升级
+当前时间： Sat Dec 16 00:15:15 2017
+
+升级截图编号：2017-12-16_00h16min24s_2574.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2575次升级
+当前时间： Sat Dec 16 00:17:32 2017
+
+升级截图编号：2017-12-16_00h18min53s_2575.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:19:53 2017
+
+第2576次升级
+当前时间： Sat Dec 16 00:20:02 2017
+
+升级截图编号：2017-12-16_00h21min09s_2576.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2577次升级
+当前时间： Sat Dec 16 00:22:18 2017
+
+升级截图编号：2017-12-16_00h23min35s_2577.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:24:35 2017
+
+第2578次升级
+当前时间： Sat Dec 16 00:24:44 2017
+
+升级截图编号：2017-12-16_00h25min52s_2578.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2579次升级
+当前时间： Sat Dec 16 00:27:01 2017
+
+升级截图编号：2017-12-16_00h28min10s_2579.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:29:11 2017
+
+第2580次升级
+当前时间： Sat Dec 16 00:29:19 2017
+
+升级截图编号：2017-12-16_00h30min25s_2580.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:31:32 2017
+
+第2581次升级
+当前时间： Sat Dec 16 00:31:40 2017
+
+升级截图编号：2017-12-16_00h32min45s_2581.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2582次升级
+当前时间： Sat Dec 16 00:34:07 2017
+
+升级截图编号：2017-12-16_00h35min17s_2582.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:36:17 2017
+
+第2583次升级
+当前时间： Sat Dec 16 00:36:25 2017
+
+升级截图编号：2017-12-16_00h37min34s_2583.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2584次升级
+当前时间： Sat Dec 16 00:38:43 2017
+
+升级截图编号：2017-12-16_00h39min50s_2584.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:40:57 2017
+
+第2585次升级
+当前时间： Sat Dec 16 00:41:05 2017
+
+升级截图编号：2017-12-16_00h42min11s_2585.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2586次升级
+当前时间： Sat Dec 16 00:43:21 2017
+
+升级截图编号：2017-12-16_00h44min29s_2586.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2587次升级
+当前时间： Sat Dec 16 00:45:38 2017
+
+升级截图编号：2017-12-16_00h46min52s_2587.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:47:52 2017
+
+第2588次升级
+当前时间： Sat Dec 16 00:48:00 2017
+
+升级截图编号：2017-12-16_00h49min15s_2588.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:50:15 2017
+
+第2589次升级
+当前时间： Sat Dec 16 00:50:23 2017
+
+升级截图编号：2017-12-16_00h51min44s_2589.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:52:44 2017
+
+第2590次升级
+当前时间： Sat Dec 16 00:52:52 2017
+
+升级截图编号：2017-12-16_00h54min12s_2590.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:55:12 2017
+
+第2591次升级
+当前时间： Sat Dec 16 00:55:20 2017
+
+升级截图编号：2017-12-16_00h56min29s_2591.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:57:29 2017
+
+第2592次升级
+当前时间： Sat Dec 16 00:57:37 2017
+
+升级截图编号：2017-12-16_00h58min47s_2592.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 00:59:47 2017
+
+第2593次升级
+当前时间： Sat Dec 16 00:59:55 2017
+
+升级截图编号：2017-12-16_01h01min09s_2593.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:02:09 2017
+
+第2594次升级
+当前时间： Sat Dec 16 01:02:17 2017
+
+升级截图编号：2017-12-16_01h03min24s_2594.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:04:31 2017
+
+第2595次升级
+当前时间： Sat Dec 16 01:04:39 2017
+
+升级截图编号：2017-12-16_01h05min44s_2595.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2596次升级
+当前时间： Sat Dec 16 01:06:54 2017
+
+升级截图编号：2017-12-16_01h08min10s_2596.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:09:10 2017
+
+第2597次升级
+当前时间： Sat Dec 16 01:09:19 2017
+
+升级截图编号：2017-12-16_01h10min33s_2597.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:11:34 2017
+
+第2598次升级
+当前时间： Sat Dec 16 01:11:42 2017
+
+升级截图编号：2017-12-16_01h13min01s_2598.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:14:01 2017
+
+第2599次升级
+当前时间： Sat Dec 16 01:14:09 2017
+
+升级截图编号：2017-12-16_01h15min15s_2599.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2600次升级
+当前时间： Sat Dec 16 01:16:37 2017
+
+升级截图编号：2017-12-16_01h18min00s_2600.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:19:00 2017
+
+第2601次升级
+当前时间： Sat Dec 16 01:19:08 2017
+
+升级截图编号：2017-12-16_01h20min30s_2601.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:21:30 2017
+
+第2602次升级
+当前时间： Sat Dec 16 01:21:39 2017
+
+升级截图编号：2017-12-16_01h23min02s_2602.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:24:03 2017
+
+第2603次升级
+当前时间： Sat Dec 16 01:24:11 2017
+
+升级截图编号：2017-12-16_01h25min28s_2603.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:26:28 2017
+
+第2604次升级
+当前时间： Sat Dec 16 01:26:36 2017
+
+升级截图编号：2017-12-16_01h27min51s_2604.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:28:51 2017
+
+第2605次升级
+当前时间： Sat Dec 16 01:28:59 2017
+
+升级截图编号：2017-12-16_01h30min14s_2605.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:31:14 2017
+
+第2606次升级
+当前时间： Sat Dec 16 01:31:22 2017
+
+升级截图编号：2017-12-16_01h32min43s_2606.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:33:43 2017
+
+第2607次升级
+当前时间： Sat Dec 16 01:33:51 2017
+
+升级截图编号：2017-12-16_01h35min10s_2607.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:36:10 2017
+
+第2608次升级
+当前时间： Sat Dec 16 01:36:19 2017
+
+升级截图编号：2017-12-16_01h37min23s_2608.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2609次升级
+当前时间： Sat Dec 16 01:38:34 2017
+
+升级截图编号：2017-12-16_01h39min46s_2609.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2610次升级
+当前时间： Sat Dec 16 01:40:54 2017
+
+升级截图编号：2017-12-16_01h42min06s_2610.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:43:07 2017
+
+第2611次升级
+当前时间： Sat Dec 16 01:43:15 2017
+
+升级截图编号：2017-12-16_01h44min26s_2611.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:45:26 2017
+
+第2612次升级
+当前时间： Sat Dec 16 01:45:34 2017
+
+升级截图编号：2017-12-16_01h46min43s_2612.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2613次升级
+当前时间： Sat Dec 16 01:47:51 2017
+
+升级截图编号：2017-12-16_01h49min02s_2613.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:50:02 2017
+
+第2614次升级
+当前时间： Sat Dec 16 01:50:11 2017
+
+升级截图编号：2017-12-16_01h51min35s_2614.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:52:36 2017
+
+第2615次升级
+当前时间： Sat Dec 16 01:52:44 2017
+
+升级截图编号：2017-12-16_01h54min03s_2615.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:55:04 2017
+
+第2616次升级
+当前时间： Sat Dec 16 01:55:12 2017
+
+升级截图编号：2017-12-16_01h56min22s_2616.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 01:57:22 2017
+
+第2617次升级
+当前时间： Sat Dec 16 01:57:30 2017
+
+升级截图编号：2017-12-16_01h58min38s_2617.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2618次升级
+当前时间： Sat Dec 16 01:59:47 2017
+
+升级截图编号：2017-12-16_02h00min59s_2618.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:02:00 2017
+
+第2619次升级
+当前时间： Sat Dec 16 02:02:08 2017
+
+升级截图编号：2017-12-16_02h03min20s_2619.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:04:20 2017
+
+第2620次升级
+当前时间： Sat Dec 16 02:04:28 2017
+
+升级截图编号：2017-12-16_02h05min53s_2620.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:06:53 2017
+
+第2621次升级
+当前时间： Sat Dec 16 02:07:01 2017
+
+升级截图编号：2017-12-16_02h08min24s_2621.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:09:24 2017
+
+第2622次升级
+当前时间： Sat Dec 16 02:09:32 2017
+
+升级截图编号：2017-12-16_02h10min38s_2622.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2623次升级
+当前时间： Sat Dec 16 02:11:48 2017
+
+升级截图编号：2017-12-16_02h13min08s_2623.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:14:09 2017
+
+第2624次升级
+当前时间： Sat Dec 16 02:14:17 2017
+
+升级截图编号：2017-12-16_02h15min35s_2624.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:16:35 2017
+
+第2625次升级
+当前时间： Sat Dec 16 02:16:43 2017
+
+升级截图编号：2017-12-16_02h18min03s_2625.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:19:03 2017
+
+第2626次升级
+当前时间： Sat Dec 16 02:19:11 2017
+
+升级截图编号：2017-12-16_02h20min17s_2626.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2627次升级
+当前时间： Sat Dec 16 02:21:26 2017
+
+升级截图编号：2017-12-16_02h22min47s_2627.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:23:47 2017
+
+第2628次升级
+当前时间： Sat Dec 16 02:23:55 2017
+
+升级截图编号：2017-12-16_02h25min06s_2628.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:26:07 2017
+
+第2629次升级
+当前时间： Sat Dec 16 02:26:15 2017
+
+升级截图编号：2017-12-16_02h27min29s_2629.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:28:30 2017
+
+第2630次升级
+当前时间： Sat Dec 16 02:28:38 2017
+
+升级截图编号：2017-12-16_02h29min43s_2630.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2631次升级
+当前时间： Sat Dec 16 02:30:53 2017
+
+升级截图编号：2017-12-16_02h32min17s_2631.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:33:17 2017
+
+第2632次升级
+当前时间： Sat Dec 16 02:33:25 2017
+
+升级截图编号：2017-12-16_02h34min42s_2632.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:35:42 2017
+
+第2633次升级
+当前时间： Sat Dec 16 02:35:50 2017
+
+升级截图编号：2017-12-16_02h37min11s_2633.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:38:11 2017
+
+第2634次升级
+当前时间： Sat Dec 16 02:38:19 2017
+
+升级截图编号：2017-12-16_02h39min43s_2634.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:40:43 2017
+
+第2635次升级
+当前时间： Sat Dec 16 02:40:51 2017
+
+升级截图编号：2017-12-16_02h42min11s_2635.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:43:11 2017
+
+第2636次升级
+当前时间： Sat Dec 16 02:43:19 2017
+
+升级截图编号：2017-12-16_02h44min30s_2636.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:45:30 2017
+
+第2637次升级
+当前时间： Sat Dec 16 02:45:39 2017
+
+升级截图编号：2017-12-16_02h46min44s_2637.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2638次升级
+当前时间： Sat Dec 16 02:47:54 2017
+
+升级截图编号：2017-12-16_02h49min08s_2638.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:50:08 2017
+
+第2639次升级
+当前时间： Sat Dec 16 02:50:16 2017
+
+升级截图编号：2017-12-16_02h51min33s_2639.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:52:34 2017
+
+第2640次升级
+当前时间： Sat Dec 16 02:52:42 2017
+
+升级截图编号：2017-12-16_02h54min04s_2640.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:55:05 2017
+
+第2641次升级
+当前时间： Sat Dec 16 02:55:13 2017
+
+升级截图编号：2017-12-16_02h56min27s_2641.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 02:57:27 2017
+
+第2642次升级
+当前时间： Sat Dec 16 02:57:36 2017
+
+升级截图编号：2017-12-16_02h58min40s_2642.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2643次升级
+当前时间： Sat Dec 16 02:59:51 2017
+
+升级截图编号：2017-12-16_03h01min05s_2643.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:02:05 2017
+
+第2644次升级
+当前时间： Sat Dec 16 03:02:13 2017
+
+升级截图编号：2017-12-16_03h03min19s_2644.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2645次升级
+当前时间： Sat Dec 16 03:04:29 2017
+
+升级截图编号：2017-12-16_03h05min43s_2645.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:06:44 2017
+
+第2646次升级
+当前时间： Sat Dec 16 03:06:52 2017
+
+升级截图编号：2017-12-16_03h08min14s_2646.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:09:15 2017
+
+第2647次升级
+当前时间： Sat Dec 16 03:09:23 2017
+
+升级截图编号：2017-12-16_03h10min45s_2647.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:11:45 2017
+
+第2648次升级
+当前时间： Sat Dec 16 03:11:53 2017
+
+升级截图编号：2017-12-16_03h13min00s_2648.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:14:07 2017
+
+第2649次升级
+当前时间： Sat Dec 16 03:14:15 2017
+
+升级截图编号：2017-12-16_03h15min38s_2649.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:16:38 2017
+
+第2650次升级
+当前时间： Sat Dec 16 03:16:46 2017
+
+升级截图编号：2017-12-16_03h18min08s_2650.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:19:08 2017
+
+第2651次升级
+当前时间： Sat Dec 16 03:19:16 2017
+
+升级截图编号：2017-12-16_03h20min21s_2651.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2652次升级
+当前时间： Sat Dec 16 03:21:31 2017
+
+升级截图编号：2017-12-16_03h22min44s_2652.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:23:45 2017
+
+第2653次升级
+当前时间： Sat Dec 16 03:23:53 2017
+
+升级截图编号：2017-12-16_03h25min06s_2653.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:26:06 2017
+
+第2654次升级
+当前时间： Sat Dec 16 03:26:14 2017
+
+升级截图编号：2017-12-16_03h27min34s_2654.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:28:34 2017
+
+第2655次升级
+当前时间： Sat Dec 16 03:28:42 2017
+
+升级截图编号：2017-12-16_03h30min00s_2655.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:31:00 2017
+
+第2656次升级
+当前时间： Sat Dec 16 03:31:08 2017
+
+升级截图编号：2017-12-16_03h32min19s_2656.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:33:19 2017
+
+第2657次升级
+当前时间： Sat Dec 16 03:33:27 2017
+
+升级截图编号：2017-12-16_03h34min37s_2657.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:35:37 2017
+
+第2658次升级
+当前时间： Sat Dec 16 03:35:46 2017
+
+升级截图编号：2017-12-16_03h37min06s_2658.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:38:07 2017
+
+第2659次升级
+当前时间： Sat Dec 16 03:38:15 2017
+
+升级截图编号：2017-12-16_03h39min29s_2659.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:40:29 2017
+
+第2660次升级
+当前时间： Sat Dec 16 03:40:38 2017
+
+升级截图编号：2017-12-16_03h41min59s_2660.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:42:59 2017
+
+第2661次升级
+当前时间： Sat Dec 16 03:43:07 2017
+
+升级截图编号：2017-12-16_03h44min19s_2661.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:45:19 2017
+
+第2662次升级
+当前时间： Sat Dec 16 03:45:28 2017
+
+升级截图编号：2017-12-16_03h46min41s_2662.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:47:41 2017
+
+第2663次升级
+当前时间： Sat Dec 16 03:47:49 2017
+
+升级截图编号：2017-12-16_03h49min04s_2663.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:50:04 2017
+
+第2664次升级
+当前时间： Sat Dec 16 03:50:12 2017
+
+升级截图编号：2017-12-16_03h51min18s_2664.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2665次升级
+当前时间： Sat Dec 16 03:52:27 2017
+
+升级截图编号：2017-12-16_03h53min34s_2665.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2666次升级
+当前时间： Sat Dec 16 03:54:44 2017
+
+升级截图编号：2017-12-16_03h55min56s_2666.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:56:57 2017
+
+第2667次升级
+当前时间： Sat Dec 16 03:57:05 2017
+
+升级截图编号：2017-12-16_03h58min24s_2667.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 03:59:25 2017
+
+第2668次升级
+当前时间： Sat Dec 16 03:59:33 2017
+
+升级截图编号：2017-12-16_04h00min42s_2668.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2669次升级
+当前时间： Sat Dec 16 04:01:50 2017
+
+升级截图编号：2017-12-16_04h03min15s_2669.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 04:04:15 2017
+
+第2670次升级
+当前时间： Sat Dec 16 04:04:23 2017
+
+升级截图编号：2017-12-16_04h05min29s_2670.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2671次升级
+当前时间： Sat Dec 16 04:06:39 2017
+
+升级截图编号：2017-12-16_04h07min58s_2671.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 04:08:59 2017
+
+第2672次升级
+当前时间： Sat Dec 16 04:09:07 2017
+
+升级截图编号：2017-12-16_04h10min28s_2672.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 04:11:28 2017
+
+第2673次升级
+当前时间： Sat Dec 16 04:11:36 2017
+
+升级截图编号：2017-12-16_04h12min55s_2673.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 04:13:55 2017
+
+第2674次升级
+当前时间： Sat Dec 16 04:14:04 2017
+
+升级截图编号：2017-12-16_04h15min25s_2674.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 04:16:25 2017
+
+第2675次升级
+当前时间： Sat Dec 16 04:16:34 2017
+
+升级截图编号：2017-12-16_04h17min58s_2675.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 04:18:59 2017
+
+第2676次升级
+当前时间： Sat Dec 16 04:19:07 2017
+
+升级截图编号：2017-12-16_04h20min12s_2676.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2677次升级
+当前时间： Sat Dec 16 04:21:35 2017
+
+升级截图编号：2017-12-16_04h22min40s_2677.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2678次升级
+当前时间： Sat Dec 16 04:24:03 2017
+
+升级截图编号：2017-12-16_04h25min25s_2678.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 04:26:25 2017
+
+第2679次升级
+当前时间： Sat Dec 16 04:26:33 2017
+
+升级截图编号：2017-12-16_04h27min47s_2679.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 04:28:48 2017
+
+第2680次升级
+当前时间： Sat Dec 16 04:28:56 2017
+
+升级截图编号：2017-12-16_04h30min16s_2680.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 04:31:17 2017
+
+第2681次升级
+当前时间： Sat Dec 16 04:31:25 2017
+
+升级截图编号：2017-12-16_04h32min44s_2681.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 04:33:45 2017
+
+第2682次升级
+当前时间： Sat Dec 16 04:33:53 2017
+
+升级截图编号：2017-12-16_04h35min15s_2682.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 04:36:15 2017
+
+第2683次升级
+当前时间： Sat Dec 16 04:36:23 2017
+
+升级截图编号：2017-12-16_04h37min48s_2683.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 04:38:48 2017
+
+第2684次升级
+当前时间： Sat Dec 16 04:38:56 2017
+
+升级截图编号：2017-12-16_04h40min20s_2684.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 04:41:20 2017
+
+第2685次升级
+当前时间： Sat Dec 16 04:41:28 2017
+
+升级截图编号：2017-12-16_04h42min53s_2685.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 04:43:53 2017
+
+第2686次升级
+当前时间： Sat Dec 16 04:44:01 2017
+
+升级截图编号：2017-12-16_04h45min09s_2686.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2687次升级
+当前时间： Sat Dec 16 04:46:17 2017
+
+升级截图编号：2017-12-16_04h47min22s_2687.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2688次升级
+当前时间： Sat Dec 16 04:48:34 2017
+
+升级截图编号：2017-12-16_04h49min43s_2688.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 04:50:50 2017
+
+第2689次升级
+当前时间： Sat Dec 16 04:50:58 2017
+
+升级截图编号：2017-12-16_04h52min11s_2689.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 04:53:11 2017
+
+第2690次升级
+当前时间： Sat Dec 16 04:53:19 2017
+
+升级截图编号：2017-12-16_04h54min27s_2690.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2691次升级
+当前时间： Sat Dec 16 04:55:36 2017
+
+升级截图编号：2017-12-16_04h56min41s_2691.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2692次升级
+当前时间： Sat Dec 16 04:57:52 2017
+
+升级截图编号：2017-12-16_04h59min02s_2692.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2693次升级
+当前时间： Sat Dec 16 05:00:10 2017
+
+升级截图编号：2017-12-16_05h01min24s_2693.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:02:24 2017
+
+第2694次升级
+当前时间： Sat Dec 16 05:02:32 2017
+
+升级截图编号：2017-12-16_05h03min44s_2694.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:04:44 2017
+
+第2695次升级
+当前时间： Sat Dec 16 05:04:52 2017
+
+升级截图编号：2017-12-16_05h06min09s_2695.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:07:10 2017
+
+第2696次升级
+当前时间： Sat Dec 16 05:07:18 2017
+
+升级截图编号：2017-12-16_05h08min30s_2696.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:09:30 2017
+
+第2697次升级
+当前时间： Sat Dec 16 05:09:38 2017
+
+升级截图编号：2017-12-16_05h10min54s_2697.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:11:54 2017
+
+第2698次升级
+当前时间： Sat Dec 16 05:12:02 2017
+
+升级截图编号：2017-12-16_05h13min23s_2698.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:14:23 2017
+
+第2699次升级
+当前时间： Sat Dec 16 05:14:32 2017
+
+升级截图编号：2017-12-16_05h15min47s_2699.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:16:48 2017
+
+第2700次升级
+当前时间： Sat Dec 16 05:16:56 2017
+
+升级截图编号：2017-12-16_05h18min14s_2700.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:19:14 2017
+
+第2701次升级
+当前时间： Sat Dec 16 05:19:22 2017
+
+升级截图编号：2017-12-16_05h20min39s_2701.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:21:39 2017
+
+第2702次升级
+当前时间： Sat Dec 16 05:21:48 2017
+
+升级截图编号：2017-12-16_05h22min55s_2702.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2703次升级
+当前时间： Sat Dec 16 05:24:04 2017
+
+升级截图编号：2017-12-16_05h25min12s_2703.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:26:18 2017
+
+第2704次升级
+当前时间： Sat Dec 16 05:26:26 2017
+
+升级截图编号：2017-12-16_05h27min47s_2704.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:28:48 2017
+
+第2705次升级
+当前时间： Sat Dec 16 05:28:56 2017
+
+升级截图编号：2017-12-16_05h30min03s_2705.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2706次升级
+当前时间： Sat Dec 16 05:31:12 2017
+
+升级截图编号：2017-12-16_05h32min16s_2706.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2707次升级
+当前时间： Sat Dec 16 05:33:40 2017
+
+升级截图编号：2017-12-16_05h34min54s_2707.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:35:54 2017
+
+第2708次升级
+当前时间： Sat Dec 16 05:36:02 2017
+
+升级截图编号：2017-12-16_05h37min22s_2708.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:38:22 2017
+
+第2709次升级
+当前时间： Sat Dec 16 05:38:30 2017
+
+升级截图编号：2017-12-16_05h39min48s_2709.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:40:48 2017
+
+第2710次升级
+当前时间： Sat Dec 16 05:40:56 2017
+
+升级截图编号：2017-12-16_05h42min11s_2710.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:43:11 2017
+
+第2711次升级
+当前时间： Sat Dec 16 05:43:19 2017
+
+升级截图编号：2017-12-16_05h44min38s_2711.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:45:38 2017
+
+第2712次升级
+当前时间： Sat Dec 16 05:45:46 2017
+
+升级截图编号：2017-12-16_05h46min56s_2712.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2713次升级
+当前时间： Sat Dec 16 05:48:05 2017
+
+升级截图编号：2017-12-16_05h49min19s_2713.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:50:20 2017
+
+第2714次升级
+当前时间： Sat Dec 16 05:50:28 2017
+
+升级截图编号：2017-12-16_05h51min46s_2714.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:52:47 2017
+
+第2715次升级
+当前时间： Sat Dec 16 05:52:55 2017
+
+升级截图编号：2017-12-16_05h54min09s_2715.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:55:10 2017
+
+第2716次升级
+当前时间： Sat Dec 16 05:55:18 2017
+
+升级截图编号：2017-12-16_05h56min23s_2716.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2717次升级
+当前时间： Sat Dec 16 05:57:33 2017
+
+升级截图编号：2017-12-16_05h58min49s_2717.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 05:59:50 2017
+
+第2718次升级
+当前时间： Sat Dec 16 05:59:58 2017
+
+升级截图编号：2017-12-16_06h01min05s_2718.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:02:12 2017
+
+第2719次升级
+当前时间： Sat Dec 16 06:02:20 2017
+
+升级截图编号：2017-12-16_06h03min30s_2719.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:04:30 2017
+
+第2720次升级
+当前时间： Sat Dec 16 06:04:39 2017
+
+升级截图编号：2017-12-16_06h05min52s_2720.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:06:52 2017
+
+第2721次升级
+当前时间： Sat Dec 16 06:07:00 2017
+
+升级截图编号：2017-12-16_06h08min12s_2721.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:09:12 2017
+
+第2722次升级
+当前时间： Sat Dec 16 06:09:21 2017
+
+升级截图编号：2017-12-16_06h10min33s_2722.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:11:34 2017
+
+第2723次升级
+当前时间： Sat Dec 16 06:11:42 2017
+
+升级截图编号：2017-12-16_06h12min52s_2723.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:13:52 2017
+
+第2724次升级
+当前时间： Sat Dec 16 06:14:01 2017
+
+升级截图编号：2017-12-16_06h15min20s_2724.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:16:20 2017
+
+第2725次升级
+当前时间： Sat Dec 16 06:16:29 2017
+
+升级截图编号：2017-12-16_06h17min40s_2725.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:18:40 2017
+
+第2726次升级
+当前时间： Sat Dec 16 06:18:48 2017
+
+升级截图编号：2017-12-16_06h19min54s_2726.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2727次升级
+当前时间： Sat Dec 16 06:21:16 2017
+
+升级截图编号：2017-12-16_06h22min26s_2727.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:23:27 2017
+
+第2728次升级
+当前时间： Sat Dec 16 06:23:35 2017
+
+升级截图编号：2017-12-16_06h24min57s_2728.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:25:57 2017
+
+第2729次升级
+当前时间： Sat Dec 16 06:26:06 2017
+
+升级截图编号：2017-12-16_06h27min12s_2729.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:28:19 2017
+
+第2730次升级
+当前时间： Sat Dec 16 06:28:27 2017
+
+升级截图编号：2017-12-16_06h29min49s_2730.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:30:49 2017
+
+第2731次升级
+当前时间： Sat Dec 16 06:30:58 2017
+
+升级截图编号：2017-12-16_06h32min11s_2731.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:33:11 2017
+
+第2732次升级
+当前时间： Sat Dec 16 06:33:19 2017
+
+升级截图编号：2017-12-16_06h34min30s_2732.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:35:30 2017
+
+第2733次升级
+当前时间： Sat Dec 16 06:35:38 2017
+
+升级截图编号：2017-12-16_06h36min58s_2733.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:37:58 2017
+
+第2734次升级
+当前时间： Sat Dec 16 06:38:07 2017
+
+升级截图编号：2017-12-16_06h39min30s_2734.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:40:31 2017
+
+第2735次升级
+当前时间： Sat Dec 16 06:40:39 2017
+
+升级截图编号：2017-12-16_06h42min00s_2735.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:43:00 2017
+
+第2736次升级
+当前时间： Sat Dec 16 06:43:08 2017
+
+升级截图编号：2017-12-16_06h44min28s_2736.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:45:28 2017
+
+第2737次升级
+当前时间： Sat Dec 16 06:45:37 2017
+
+升级截图编号：2017-12-16_06h46min56s_2737.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:47:56 2017
+
+第2738次升级
+当前时间： Sat Dec 16 06:48:05 2017
+
+升级截图编号：2017-12-16_06h49min10s_2738.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2739次升级
+当前时间： Sat Dec 16 06:50:20 2017
+
+升级截图编号：2017-12-16_06h51min35s_2739.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:52:35 2017
+
+第2740次升级
+当前时间： Sat Dec 16 06:52:43 2017
+
+升级截图编号：2017-12-16_06h54min07s_2740.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:55:07 2017
+
+第2741次升级
+当前时间： Sat Dec 16 06:55:15 2017
+
+升级截图编号：2017-12-16_06h56min24s_2741.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2742次升级
+当前时间： Sat Dec 16 06:57:33 2017
+
+升级截图编号：2017-12-16_06h58min38s_2742.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 06:59:47 2017
+
+第2743次升级
+当前时间： Sat Dec 16 06:59:55 2017
+
+升级截图编号：2017-12-16_07h01min06s_2743.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:02:06 2017
+
+第2744次升级
+当前时间： Sat Dec 16 07:02:15 2017
+
+升级截图编号：2017-12-16_07h03min33s_2744.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:04:34 2017
+
+第2745次升级
+当前时间： Sat Dec 16 07:04:42 2017
+
+升级截图编号：2017-12-16_07h06min04s_2745.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:07:04 2017
+
+第2746次升级
+当前时间： Sat Dec 16 07:07:13 2017
+
+升级截图编号：2017-12-16_07h08min28s_2746.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:09:28 2017
+
+第2747次升级
+当前时间： Sat Dec 16 07:09:36 2017
+
+升级截图编号：2017-12-16_07h10min53s_2747.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:11:53 2017
+
+第2748次升级
+当前时间： Sat Dec 16 07:12:01 2017
+
+升级截图编号：2017-12-16_07h13min10s_2748.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2749次升级
+当前时间： Sat Dec 16 07:14:19 2017
+
+升级截图编号：2017-12-16_07h15min24s_2749.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2750次升级
+当前时间： Sat Dec 16 07:16:47 2017
+
+升级截图编号：2017-12-16_07h17min52s_2750.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2751次升级
+当前时间： Sat Dec 16 07:19:02 2017
+
+升级截图编号：2017-12-16_07h20min15s_2751.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:21:15 2017
+
+第2752次升级
+当前时间： Sat Dec 16 07:21:24 2017
+
+升级截图编号：2017-12-16_07h22min41s_2752.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:23:42 2017
+
+第2753次升级
+当前时间： Sat Dec 16 07:23:50 2017
+
+升级截图编号：2017-12-16_07h25min00s_2753.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2754次升级
+当前时间： Sat Dec 16 07:26:08 2017
+
+升级截图编号：2017-12-16_07h27min23s_2754.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:28:23 2017
+
+第2755次升级
+当前时间： Sat Dec 16 07:28:31 2017
+
+升级截图编号：2017-12-16_07h29min36s_2755.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2756次升级
+当前时间： Sat Dec 16 07:30:47 2017
+
+升级截图编号：2017-12-16_07h32min06s_2756.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:33:06 2017
+
+第2757次升级
+当前时间： Sat Dec 16 07:33:14 2017
+
+升级截图编号：2017-12-16_07h34min38s_2757.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:35:39 2017
+
+第2758次升级
+当前时间： Sat Dec 16 07:35:47 2017
+
+升级截图编号：2017-12-16_07h37min07s_2758.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:38:07 2017
+
+第2759次升级
+当前时间： Sat Dec 16 07:38:15 2017
+
+升级截图编号：2017-12-16_07h39min28s_2759.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:40:28 2017
+
+第2760次升级
+当前时间： Sat Dec 16 07:40:36 2017
+
+升级截图编号：2017-12-16_07h41min49s_2760.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:42:49 2017
+
+第2761次升级
+当前时间： Sat Dec 16 07:42:57 2017
+
+升级截图编号：2017-12-16_07h44min19s_2761.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:45:19 2017
+
+第2762次升级
+当前时间： Sat Dec 16 07:45:28 2017
+
+升级截图编号：2017-12-16_07h46min49s_2762.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:47:49 2017
+
+第2763次升级
+当前时间： Sat Dec 16 07:47:57 2017
+
+升级截图编号：2017-12-16_07h49min17s_2763.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:50:17 2017
+
+第2764次升级
+当前时间： Sat Dec 16 07:50:25 2017
+
+升级截图编号：2017-12-16_07h51min43s_2764.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:52:43 2017
+
+第2765次升级
+当前时间： Sat Dec 16 07:52:51 2017
+
+升级截图编号：2017-12-16_07h53min57s_2765.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2766次升级
+当前时间： Sat Dec 16 07:55:06 2017
+
+升级截图编号：2017-12-16_07h56min31s_2766.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 07:57:32 2017
+
+第2767次升级
+当前时间： Sat Dec 16 07:57:40 2017
+
+升级截图编号：2017-12-16_07h59min05s_2767.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:00:05 2017
+
+第2768次升级
+当前时间： Sat Dec 16 08:00:13 2017
+
+升级截图编号：2017-12-16_08h01min22s_2768.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2769次升级
+当前时间： Sat Dec 16 08:02:31 2017
+
+升级截图编号：2017-12-16_08h03min46s_2769.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:04:47 2017
+
+第2770次升级
+当前时间： Sat Dec 16 08:04:55 2017
+
+升级截图编号：2017-12-16_08h06min02s_2770.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:07:06 2017
+
+第2771次升级
+当前时间： Sat Dec 16 08:07:14 2017
+
+升级截图编号：2017-12-16_08h08min33s_2771.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:09:33 2017
+
+第2772次升级
+当前时间： Sat Dec 16 08:09:41 2017
+
+升级截图编号：2017-12-16_08h11min06s_2772.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:12:06 2017
+
+第2773次升级
+当前时间： Sat Dec 16 08:12:14 2017
+
+升级截图编号：2017-12-16_08h13min33s_2773.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:14:33 2017
+
+第2774次升级
+当前时间： Sat Dec 16 08:14:42 2017
+
+升级截图编号：2017-12-16_08h15min47s_2774.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2775次升级
+当前时间： Sat Dec 16 08:16:57 2017
+
+升级截图编号：2017-12-16_08h18min16s_2775.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:19:16 2017
+
+第2776次升级
+当前时间： Sat Dec 16 08:19:24 2017
+
+升级截图编号：2017-12-16_08h20min37s_2776.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:21:38 2017
+
+第2777次升级
+当前时间： Sat Dec 16 08:21:46 2017
+
+升级截图编号：2017-12-16_08h23min00s_2777.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:24:00 2017
+
+第2778次升级
+当前时间： Sat Dec 16 08:24:09 2017
+
+升级截图编号：2017-12-16_08h25min21s_2778.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:26:21 2017
+
+第2779次升级
+当前时间： Sat Dec 16 08:26:29 2017
+
+升级截图编号：2017-12-16_08h27min46s_2779.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:28:46 2017
+
+第2780次升级
+当前时间： Sat Dec 16 08:28:54 2017
+
+升级截图编号：2017-12-16_08h30min15s_2780.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:31:15 2017
+
+第2781次升级
+当前时间： Sat Dec 16 08:31:23 2017
+
+升级截图编号：2017-12-16_08h32min43s_2781.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:33:44 2017
+
+第2782次升级
+当前时间： Sat Dec 16 08:33:52 2017
+
+升级截图编号：2017-12-16_08h35min04s_2782.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:36:04 2017
+
+第2783次升级
+当前时间： Sat Dec 16 08:36:12 2017
+
+升级截图编号：2017-12-16_08h37min33s_2783.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:38:33 2017
+
+第2784次升级
+当前时间： Sat Dec 16 08:38:42 2017
+
+升级截图编号：2017-12-16_08h40min02s_2784.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:41:02 2017
+
+第2785次升级
+当前时间： Sat Dec 16 08:41:11 2017
+
+升级截图编号：2017-12-16_08h42min23s_2785.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:43:23 2017
+
+第2786次升级
+当前时间： Sat Dec 16 08:43:31 2017
+
+升级截图编号：2017-12-16_08h44min47s_2786.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:45:47 2017
+
+第2787次升级
+当前时间： Sat Dec 16 08:45:56 2017
+
+升级截图编号：2017-12-16_08h47min01s_2787.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2788次升级
+当前时间： Sat Dec 16 08:48:24 2017
+
+升级截图编号：2017-12-16_08h49min32s_2788.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:50:35 2017
+
+第2789次升级
+当前时间： Sat Dec 16 08:50:43 2017
+
+升级截图编号：2017-12-16_08h52min06s_2789.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:53:06 2017
+
+第2790次升级
+当前时间： Sat Dec 16 08:53:14 2017
+
+升级截图编号：2017-12-16_08h54min31s_2790.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:55:31 2017
+
+第2791次升级
+当前时间： Sat Dec 16 08:55:40 2017
+
+升级截图编号：2017-12-16_08h57min03s_2791.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 08:58:04 2017
+
+第2792次升级
+当前时间： Sat Dec 16 08:58:12 2017
+
+升级截图编号：2017-12-16_08h59min31s_2792.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:00:31 2017
+
+第2793次升级
+当前时间： Sat Dec 16 09:00:40 2017
+
+升级截图编号：2017-12-16_09h01min56s_2793.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:02:56 2017
+
+第2794次升级
+当前时间： Sat Dec 16 09:03:04 2017
+
+升级截图编号：2017-12-16_09h04min23s_2794.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:05:23 2017
+
+第2795次升级
+当前时间： Sat Dec 16 09:05:32 2017
+
+升级截图编号：2017-12-16_09h06min48s_2795.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:07:48 2017
+
+第2796次升级
+当前时间： Sat Dec 16 09:07:56 2017
+
+升级截图编号：2017-12-16_09h09min06s_2796.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:10:06 2017
+
+第2797次升级
+当前时间： Sat Dec 16 09:10:14 2017
+
+升级截图编号：2017-12-16_09h11min25s_2797.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:12:26 2017
+
+第2798次升级
+当前时间： Sat Dec 16 09:12:34 2017
+
+升级截图编号：2017-12-16_09h13min53s_2798.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:14:53 2017
+
+第2799次升级
+当前时间： Sat Dec 16 09:15:01 2017
+
+升级截图编号：2017-12-16_09h16min18s_2799.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:17:18 2017
+
+第2800次升级
+当前时间： Sat Dec 16 09:17:27 2017
+
+升级截图编号：2017-12-16_09h18min40s_2800.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:19:40 2017
+
+第2801次升级
+当前时间： Sat Dec 16 09:19:48 2017
+
+升级截图编号：2017-12-16_09h21min02s_2801.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:22:02 2017
+
+第2802次升级
+当前时间： Sat Dec 16 09:22:11 2017
+
+升级截图编号：2017-12-16_09h23min29s_2802.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:24:30 2017
+
+第2803次升级
+当前时间： Sat Dec 16 09:24:38 2017
+
+升级截图编号：2017-12-16_09h25min59s_2803.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:26:59 2017
+
+第2804次升级
+当前时间： Sat Dec 16 09:27:07 2017
+
+升级截图编号：2017-12-16_09h28min32s_2804.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:29:33 2017
+
+第2805次升级
+当前时间： Sat Dec 16 09:29:41 2017
+
+升级截图编号：2017-12-16_09h30min49s_2805.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2806次升级
+当前时间： Sat Dec 16 09:31:58 2017
+
+升级截图编号：2017-12-16_09h33min12s_2806.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:34:13 2017
+
+第2807次升级
+当前时间： Sat Dec 16 09:34:21 2017
+
+升级截图编号：2017-12-16_09h35min26s_2807.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2808次升级
+当前时间： Sat Dec 16 09:36:36 2017
+
+升级截图编号：2017-12-16_09h37min56s_2808.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:38:57 2017
+
+第2809次升级
+当前时间： Sat Dec 16 09:39:05 2017
+
+升级截图编号：2017-12-16_09h40min14s_2809.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2810次升级
+当前时间： Sat Dec 16 09:41:23 2017
+
+升级截图编号：2017-12-16_09h42min33s_2810.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:43:34 2017
+
+第2811次升级
+当前时间： Sat Dec 16 09:43:42 2017
+
+升级截图编号：2017-12-16_09h44min52s_2811.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2812次升级
+当前时间： Sat Dec 16 09:46:00 2017
+
+升级截图编号：2017-12-16_09h47min23s_2812.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:48:23 2017
+
+第2813次升级
+当前时间： Sat Dec 16 09:48:31 2017
+
+升级截图编号：2017-12-16_09h49min53s_2813.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:50:53 2017
+
+第2814次升级
+当前时间： Sat Dec 16 09:51:02 2017
+
+升级截图编号：2017-12-16_09h52min08s_2814.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2815次升级
+当前时间： Sat Dec 16 09:53:30 2017
+
+升级截图编号：2017-12-16_09h54min45s_2815.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:55:46 2017
+
+第2816次升级
+当前时间： Sat Dec 16 09:55:54 2017
+
+升级截图编号：2017-12-16_09h57min14s_2816.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 09:58:14 2017
+
+第2817次升级
+当前时间： Sat Dec 16 09:58:22 2017
+
+升级截图编号：2017-12-16_09h59min45s_2817.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:00:45 2017
+
+第2818次升级
+当前时间： Sat Dec 16 10:00:53 2017
+
+升级截图编号：2017-12-16_10h02min05s_2818.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:03:05 2017
+
+第2819次升级
+当前时间： Sat Dec 16 10:03:13 2017
+
+升级截图编号：2017-12-16_10h04min29s_2819.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:05:29 2017
+
+第2820次升级
+当前时间： Sat Dec 16 10:05:38 2017
+
+升级截图编号：2017-12-16_10h06min44s_2820.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2821次升级
+当前时间： Sat Dec 16 10:08:06 2017
+
+升级截图编号：2017-12-16_10h09min21s_2821.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:10:21 2017
+
+第2822次升级
+当前时间： Sat Dec 16 10:10:29 2017
+
+升级截图编号：2017-12-16_10h11min53s_2822.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:12:53 2017
+
+第2823次升级
+当前时间： Sat Dec 16 10:13:02 2017
+
+升级截图编号：2017-12-16_10h14min14s_2823.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:15:14 2017
+
+第2824次升级
+当前时间： Sat Dec 16 10:15:22 2017
+
+升级截图编号：2017-12-16_10h16min45s_2824.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:17:46 2017
+
+第2825次升级
+当前时间： Sat Dec 16 10:17:54 2017
+
+升级截图编号：2017-12-16_10h18min59s_2825.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2826次升级
+当前时间： Sat Dec 16 10:20:22 2017
+
+升级截图编号：2017-12-16_10h21min28s_2826.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2827次升级
+当前时间： Sat Dec 16 10:22:37 2017
+
+升级截图编号：2017-12-16_10h23min49s_2827.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:24:49 2017
+
+第2828次升级
+当前时间： Sat Dec 16 10:24:58 2017
+
+升级截图编号：2017-12-16_10h26min08s_2828.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2829次升级
+当前时间： Sat Dec 16 10:27:17 2017
+
+升级截图编号：2017-12-16_10h28min29s_2829.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:29:30 2017
+
+第2830次升级
+当前时间： Sat Dec 16 10:29:38 2017
+
+升级截图编号：2017-12-16_10h30min55s_2830.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:31:55 2017
+
+第2831次升级
+当前时间： Sat Dec 16 10:32:03 2017
+
+升级截图编号：2017-12-16_10h33min24s_2831.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:34:25 2017
+
+第2832次升级
+当前时间： Sat Dec 16 10:34:33 2017
+
+升级截图编号：2017-12-16_10h35min54s_2832.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:36:55 2017
+
+第2833次升级
+当前时间： Sat Dec 16 10:37:03 2017
+
+升级截图编号：2017-12-16_10h38min19s_2833.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:39:19 2017
+
+第2834次升级
+当前时间： Sat Dec 16 10:39:27 2017
+
+升级截图编号：2017-12-16_10h40min49s_2834.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:41:49 2017
+
+第2835次升级
+当前时间： Sat Dec 16 10:41:57 2017
+
+升级截图编号：2017-12-16_10h43min22s_2835.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:44:22 2017
+
+第2836次升级
+当前时间： Sat Dec 16 10:44:31 2017
+
+升级截图编号：2017-12-16_10h45min48s_2836.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:46:49 2017
+
+第2837次升级
+当前时间： Sat Dec 16 10:46:57 2017
+
+升级截图编号：2017-12-16_10h48min12s_2837.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:49:12 2017
+
+第2838次升级
+当前时间： Sat Dec 16 10:49:20 2017
+
+升级截图编号：2017-12-16_10h50min33s_2838.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:51:33 2017
+
+第2839次升级
+当前时间： Sat Dec 16 10:51:41 2017
+
+升级截图编号：2017-12-16_10h53min00s_2839.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:54:01 2017
+
+第2840次升级
+当前时间： Sat Dec 16 10:54:09 2017
+
+升级截图编号：2017-12-16_10h55min29s_2840.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:56:29 2017
+
+第2841次升级
+当前时间： Sat Dec 16 10:56:38 2017
+
+升级截图编号：2017-12-16_10h57min58s_2841.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 10:58:59 2017
+
+第2842次升级
+当前时间： Sat Dec 16 10:59:07 2017
+
+升级截图编号：2017-12-16_11h00min17s_2842.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:01:17 2017
+
+第2843次升级
+当前时间： Sat Dec 16 11:01:25 2017
+
+升级截图编号：2017-12-16_11h02min33s_2843.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2844次升级
+当前时间： Sat Dec 16 11:03:42 2017
+
+升级截图编号：2017-12-16_11h05min03s_2844.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:06:04 2017
+
+第2845次升级
+当前时间： Sat Dec 16 11:06:12 2017
+
+升级截图编号：2017-12-16_11h07min26s_2845.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:08:26 2017
+
+第2846次升级
+当前时间： Sat Dec 16 11:08:34 2017
+
+升级截图编号：2017-12-16_11h09min40s_2846.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2847次升级
+当前时间： Sat Dec 16 11:10:49 2017
+
+升级截图编号：2017-12-16_11h12min03s_2847.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:13:03 2017
+
+第2848次升级
+当前时间： Sat Dec 16 11:13:11 2017
+
+升级截图编号：2017-12-16_11h14min18s_2848.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2849次升级
+当前时间： Sat Dec 16 11:15:40 2017
+
+升级截图编号：2017-12-16_11h16min59s_2849.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:17:59 2017
+
+第2850次升级
+当前时间： Sat Dec 16 11:18:07 2017
+
+升级截图编号：2017-12-16_11h19min28s_2850.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:20:29 2017
+
+第2851次升级
+当前时间： Sat Dec 16 11:20:37 2017
+
+升级截图编号：2017-12-16_11h21min56s_2851.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:22:56 2017
+
+第2852次升级
+当前时间： Sat Dec 16 11:23:04 2017
+
+升级截图编号：2017-12-16_11h24min25s_2852.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:25:25 2017
+
+第2853次升级
+当前时间： Sat Dec 16 11:25:33 2017
+
+升级截图编号：2017-12-16_11h26min45s_2853.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:27:46 2017
+
+第2854次升级
+当前时间： Sat Dec 16 11:27:54 2017
+
+升级截图编号：2017-12-16_11h29min12s_2854.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:30:13 2017
+
+第2855次升级
+当前时间： Sat Dec 16 11:30:21 2017
+
+升级截图编号：2017-12-16_11h31min29s_2855.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2856次升级
+当前时间： Sat Dec 16 11:32:38 2017
+
+升级截图编号：2017-12-16_11h33min56s_2856.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:34:56 2017
+
+第2857次升级
+当前时间： Sat Dec 16 11:35:04 2017
+
+升级截图编号：2017-12-16_11h36min10s_2857.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2858次升级
+当前时间： Sat Dec 16 11:37:19 2017
+
+升级截图编号：2017-12-16_11h38min33s_2858.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:39:33 2017
+
+第2859次升级
+当前时间： Sat Dec 16 11:39:41 2017
+
+升级截图编号：2017-12-16_11h40min52s_2859.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:41:56 2017
+
+第2860次升级
+当前时间： Sat Dec 16 11:42:04 2017
+
+升级截图编号：2017-12-16_11h43min15s_2860.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:44:16 2017
+
+第2861次升级
+当前时间： Sat Dec 16 11:44:24 2017
+
+升级截图编号：2017-12-16_11h45min39s_2861.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:46:39 2017
+
+第2862次升级
+当前时间： Sat Dec 16 11:46:48 2017
+
+升级截图编号：2017-12-16_11h47min54s_2862.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2863次升级
+当前时间： Sat Dec 16 11:49:03 2017
+
+升级截图编号：2017-12-16_11h50min27s_2863.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:51:27 2017
+
+第2864次升级
+当前时间： Sat Dec 16 11:51:35 2017
+
+升级截图编号：2017-12-16_11h52min53s_2864.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:53:53 2017
+
+第2865次升级
+当前时间： Sat Dec 16 11:54:01 2017
+
+升级截图编号：2017-12-16_11h55min09s_2865.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2866次升级
+当前时间： Sat Dec 16 11:56:17 2017
+
+升级截图编号：2017-12-16_11h57min39s_2866.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 11:58:39 2017
+
+第2867次升级
+当前时间： Sat Dec 16 11:58:47 2017
+
+升级截图编号：2017-12-16_12h00min12s_2867.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:01:13 2017
+
+第2868次升级
+当前时间： Sat Dec 16 12:01:21 2017
+
+升级截图编号：2017-12-16_12h02min32s_2868.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:03:32 2017
+
+第2869次升级
+当前时间： Sat Dec 16 12:03:40 2017
+
+升级截图编号：2017-12-16_12h04min46s_2869.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2870次升级
+当前时间： Sat Dec 16 12:05:56 2017
+
+升级截图编号：2017-12-16_12h07min15s_2870.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:08:15 2017
+
+第2871次升级
+当前时间： Sat Dec 16 12:08:23 2017
+
+升级截图编号：2017-12-16_12h09min45s_2871.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:10:45 2017
+
+第2872次升级
+当前时间： Sat Dec 16 12:10:53 2017
+
+升级截图编号：2017-12-16_12h12min13s_2872.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:13:13 2017
+
+第2873次升级
+当前时间： Sat Dec 16 12:13:21 2017
+
+升级截图编号：2017-12-16_12h14min31s_2873.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:15:31 2017
+
+第2874次升级
+当前时间： Sat Dec 16 12:15:40 2017
+
+升级截图编号：2017-12-16_12h17min03s_2874.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:18:04 2017
+
+第2875次升级
+当前时间： Sat Dec 16 12:18:12 2017
+
+升级截图编号：2017-12-16_12h19min33s_2875.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:20:34 2017
+
+第2876次升级
+当前时间： Sat Dec 16 12:20:42 2017
+
+升级截图编号：2017-12-16_12h21min52s_2876.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2877次升级
+当前时间： Sat Dec 16 12:23:00 2017
+
+升级截图编号：2017-12-16_12h24min19s_2877.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:25:19 2017
+
+第2878次升级
+当前时间： Sat Dec 16 12:25:28 2017
+
+升级截图编号：2017-12-16_12h26min36s_2878.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2879次升级
+当前时间： Sat Dec 16 12:27:45 2017
+
+升级截图编号：2017-12-16_12h29min09s_2879.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:30:10 2017
+
+第2880次升级
+当前时间： Sat Dec 16 12:30:18 2017
+
+升级截图编号：2017-12-16_12h31min40s_2880.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:32:40 2017
+
+第2881次升级
+当前时间： Sat Dec 16 12:32:48 2017
+
+升级截图编号：2017-12-16_12h33min56s_2881.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:34:59 2017
+
+第2882次升级
+当前时间： Sat Dec 16 12:35:07 2017
+
+升级截图编号：2017-12-16_12h36min26s_2882.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:37:27 2017
+
+第2883次升级
+当前时间： Sat Dec 16 12:37:35 2017
+
+升级截图编号：2017-12-16_12h38min50s_2883.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:39:50 2017
+
+第2884次升级
+当前时间： Sat Dec 16 12:39:58 2017
+
+升级截图编号：2017-12-16_12h41min18s_2884.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:42:18 2017
+
+第2885次升级
+当前时间： Sat Dec 16 12:42:27 2017
+
+升级截图编号：2017-12-16_12h43min47s_2885.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:44:48 2017
+
+第2886次升级
+当前时间： Sat Dec 16 12:44:56 2017
+
+升级截图编号：2017-12-16_12h46min15s_2886.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:47:15 2017
+
+第2887次升级
+当前时间： Sat Dec 16 12:47:23 2017
+
+升级截图编号：2017-12-16_12h48min28s_2887.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2888次升级
+当前时间： Sat Dec 16 12:49:51 2017
+
+升级截图编号：2017-12-16_12h51min00s_2888.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2889次升级
+当前时间： Sat Dec 16 12:52:08 2017
+
+升级截图编号：2017-12-16_12h53min17s_2889.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2890次升级
+当前时间： Sat Dec 16 12:54:25 2017
+
+升级截图编号：2017-12-16_12h55min41s_2890.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 12:56:41 2017
+
+第2891次升级
+当前时间： Sat Dec 16 12:56:50 2017
+
+升级截图编号：2017-12-16_12h57min58s_2891.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2892次升级
+当前时间： Sat Dec 16 12:59:06 2017
+
+升级截图编号：2017-12-16_13h00min14s_2892.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2893次升级
+当前时间： Sat Dec 16 13:01:23 2017
+
+升级截图编号：2017-12-16_13h02min28s_2893.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2894次升级
+当前时间： Sat Dec 16 13:03:53 2017
+
+升级截图编号：2017-12-16_13h05min17s_2894.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:06:18 2017
+
+第2895次升级
+当前时间： Sat Dec 16 13:06:26 2017
+
+升级截图编号：2017-12-16_13h07min48s_2895.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:08:48 2017
+
+第2896次升级
+当前时间： Sat Dec 16 13:08:56 2017
+
+升级截图编号：2017-12-16_13h10min08s_2896.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:11:08 2017
+
+第2897次升级
+当前时间： Sat Dec 16 13:11:16 2017
+
+升级截图编号：2017-12-16_13h12min22s_2897.png
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+第2898次升级
+当前时间： Sat Dec 16 13:13:44 2017
+
+升级截图编号：2017-12-16_13h14min52s_2898.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2899次升级
+当前时间： Sat Dec 16 13:16:01 2017
+
+升级截图编号：2017-12-16_13h17min16s_2899.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:18:17 2017
+
+第2900次升级
+当前时间： Sat Dec 16 13:18:25 2017
+
+升级截图编号：2017-12-16_13h19min33s_2900.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:20:36 2017
+
+第2901次升级
+当前时间： Sat Dec 16 13:20:44 2017
+
+升级截图编号：2017-12-16_13h22min01s_2901.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:23:02 2017
+
+第2902次升级
+当前时间： Sat Dec 16 13:23:10 2017
+
+升级截图编号：2017-12-16_13h24min15s_2902.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2903次升级
+当前时间： Sat Dec 16 13:25:26 2017
+
+升级截图编号：2017-12-16_13h26min35s_2903.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:27:42 2017
+
+第2904次升级
+当前时间： Sat Dec 16 13:27:50 2017
+
+升级截图编号：2017-12-16_13h29min06s_2904.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:30:06 2017
+
+第2905次升级
+当前时间： Sat Dec 16 13:30:14 2017
+
+升级截图编号：2017-12-16_13h31min22s_2905.png
+&lt;urlopen error [WinError 10065] 套接字操作尝试一个无法连接的主机。&gt;
+第2906次升级
+当前时间： Sat Dec 16 13:32:30 2017
+
+升级截图编号：2017-12-16_13h33min42s_2906.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:34:42 2017
+
+第2907次升级
+当前时间： Sat Dec 16 13:34:50 2017
+
+升级截图编号：2017-12-16_13h36min14s_2907.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:37:14 2017
+
+第2908次升级
+当前时间： Sat Dec 16 13:37:22 2017
+
+升级截图编号：2017-12-16_13h38min34s_2908.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:39:34 2017
+
+第2909次升级
+当前时间： Sat Dec 16 13:39:42 2017
+
+升级截图编号：2017-12-16_13h40min58s_2909.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:41:59 2017
+
+第2910次升级
+当前时间： Sat Dec 16 13:42:07 2017
+
+升级截图编号：2017-12-16_13h43min18s_2910.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:44:18 2017
+
+第2911次升级
+当前时间： Sat Dec 16 13:44:26 2017
+
+升级截图编号：2017-12-16_13h45min50s_2911.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:46:50 2017
+
+第2912次升级
+当前时间： Sat Dec 16 13:46:58 2017
+
+升级截图编号：2017-12-16_13h48min19s_2912.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:49:19 2017
+
+第2913次升级
+当前时间： Sat Dec 16 13:49:27 2017
+
+升级截图编号：2017-12-16_13h50min50s_2913.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:51:51 2017
+
+第2914次升级
+当前时间： Sat Dec 16 13:51:59 2017
+
+升级截图编号：2017-12-16_13h53min14s_2914.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:54:15 2017
+
+第2915次升级
+当前时间： Sat Dec 16 13:54:23 2017
+
+升级截图编号：2017-12-16_13h55min36s_2915.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:56:36 2017
+
+第2916次升级
+当前时间： Sat Dec 16 13:56:44 2017
+
+升级截图编号：2017-12-16_13h57min56s_2916.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 13:58:56 2017
+
+第2917次升级
+当前时间： Sat Dec 16 13:59:04 2017
+
+升级截图编号：2017-12-16_14h00min16s_2917.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 14:01:16 2017
+
+第2918次升级
+当前时间： Sat Dec 16 14:01:25 2017
+
+升级截图编号：2017-12-16_14h02min30s_2918.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 14:03:38 2017
+
+第2919次升级
+当前时间： Sat Dec 16 14:03:47 2017
+
+升级截图编号：2017-12-16_14h05min05s_2919.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 14:06:05 2017
+
+第2920次升级
+当前时间： Sat Dec 16 14:06:14 2017
+
+升级截图编号：2017-12-16_14h07min25s_2920.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 14:08:26 2017
+
+第2921次升级
+当前时间： Sat Dec 16 14:08:34 2017
+
+升级截图编号：2017-12-16_14h09min50s_2921.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 14:10:50 2017
+
+第2922次升级
+当前时间： Sat Dec 16 14:10:59 2017
+
+升级截图编号：2017-12-16_14h12min12s_2922.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 14:13:13 2017
+
+第2923次升级
+当前时间： Sat Dec 16 14:13:21 2017
+
+升级截图编号：2017-12-16_14h14min36s_2923.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 14:15:36 2017
+
+第2924次升级
+当前时间： Sat Dec 16 14:15:45 2017
+
+升级截图编号：2017-12-16_14h16min58s_2924.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 14:17:58 2017
+
+第2925次升级
+当前时间： Sat Dec 16 14:18:06 2017
+
+升级截图编号：2017-12-16_14h19min23s_2925.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 14:20:23 2017
+
+第2926次升级
+当前时间： Sat Dec 16 14:20:32 2017
+
+升级截图编号：2017-12-16_14h21min51s_2926.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 14:22:51 2017
+
+第2927次升级
+当前时间： Sat Dec 16 14:23:00 2017
+
+升级截图编号：2017-12-16_14h24min05s_2927.png
+&lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;
+第2928次升级
+当前时间： Sat Dec 16 14:25:15 2017
+
+升级截图编号：2017-12-16_14h26min28s_2928.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 14:27:28 2017
+
+第2929次升级
+当前时间： Sat Dec 16 14:27:36 2017
+
+升级截图编号：2017-12-16_14h28min54s_2929.png
+the result is : 200
+http://192.168.3.1/可以访问！
+请求http（lan口）时间: Sat Dec 16 14:29:55 2017
+
+end!----升级完成
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>总计</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</div>
+</body>
+</html>

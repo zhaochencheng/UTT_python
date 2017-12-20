@@ -1,0 +1,494 @@
+(null)
+Image Data Response Parsed
+VERSION: 0
+PAYLOAD TYPE: 0
+HLEN: 2
+RID: 0
+WBID: 1
+(null)
+Single Fragment
+Parsing Image Data Request...
+Parse Control Header
+MESSAGE_TYPE: 15
+SEQUENCE_NUMBER: 20
+MESSAGE_ELEMENT_LENwqeweqwGTH: 4
+FLAGS: 0
+(null)
+Image Data Request Parsed
+Parsing the image...
+ftp download...
+cmd :ftpget -u anonymous 192.168.2.252 /tmp/myImage AP2000-2C-S111SM006D092.bin
+cmd return code:0
+write the image...
+CWWTPGetImage:147
+CWWTPGetImage:152
+CWWTPGetImage: len:4186617
+ewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewewew
+firmware update success !!! 
+
+
+Assembling Image Data Response...
+1 Fragment
+Image Data Response Assembled
+Image Data request Sent
+
+Image Completed
+
+
+######### WTP enters in RUN State #########
+UTT DEBUG func:CWWTPEnterRun line:161 
+
+UTT DEBUG func:CWStartHeartbeatTimer line:854 
+
+Heartbeat Timer Started
+UTT DEBUG func:CWWTPEnterRun line:214 
+
+VERSION: 0
+PAYLOAD TYPE: 0
+HLEN: 2
+RID: 0
+WBID: 1
+(null)
+Single Fragment
+Parse Control Header
+MESSAGE_TYPE: 17
+SEQUENCE_NUMBER: 21
+MESSAGE_ELEMENT_LENGTH: 0
+FLAGS: 0
+(null)
+UTT DEBUG func:CWResetTimers line:907 
+
+UTT DEBUG func:CWResetTimers line:912 
+
+UTT DEBUG func:CWStopHeartbeatTimer line:868 
+
+Heartbeat Timer Stopped
+UTT DEBUG func:CWResetTimers line:917 
+
+UTT DEBUG func:CWStartHeartbeatTimer line:854 
+
+Heartbeat Timer Started
+Assembling Message Type 17 Response...
+1 Fragment
+Message Type: 1 Response Assembled
+Message Sent
+
+reboot...
+
+Sending renew...
+Lease of 192.168.2.108 obtained, lease time 300
+route: ioctl 0x890b failed: File exists
+RTNETLINK answers: File exists
+UTT DEBUG func:CWWTPHeartBeatTimerExpiredHandler line:698 
+
+UTT DEBUG func:CWStartNeighborDeadTimer line:882 
+
+NeighborDead Timer Started
+UTT DEBUG func:CWWTPHeartBeatTimerExpiredHandler line:707 
+
+UTT DEBUG func:CWWTPHeartBeatTimerExpiredHandler line:713 
+
+WTP HeartBeat Timer Expired... we send an ECHO Request
+
+
+#________ Echo Request Message (Run) ________#
+Assembling Echo Request...
+1 Fragment
+Echo Request Assembled
+UTT DEBUG func:CWStartHeartbeatTimer line:854 
+
+Heartbeat Timer Started
+UTT DEBUG func:CWWTPHeartBeatTimerExpiredHandler line:780 
+
+UTT DEBUG func:CWWTPHeartBeatTimerExpiredHandler line:698 
+
+UTT DEBUG func:CWWTPHeartBeatTimerExpiredHandler line:707 
+
+UTT DEBUG func:CWWTPHeartBeatTimerExpiredHandler line:713 
+
+WTP HeartBeat Timer Expired... we send an ECHO Request
+
+
+#________ Echo Request Message (Run) ________#
+Assembling Echo Request...
+1 Fragment
+Echo Request Assembled
+UTT DEBUG func:CWStartHeartbeatTimer line:854 
+
+Heartbeat Timer Started
+UTT DEBUG func:CWWTPHeartBeatTimerExpiredHandler line:780 
+
+Update sta Auth states, when ap reconnect
+AP Reconnect Event Request...
+
+1 Fragment
+UTT DEBUG func:CWWTPHeartBeatTimerExpiredHandler line:698 
+
+UTT DEBUG func:CWWTPHeartBeatTimerExpiredHandler line:707 
+
+UTT DEBUG func:CWWTPHeartBeatTimerExpiredHandler line:713 
+
+WTP HeartBeat Timer Expired... we send an ECHO Request
+
+
+#________ Echo Request Message (Run) ________#
+Assembling Echo Request...
+
+# 
+# 
+# ps
+  PID USER       VSZ STAT COMMAND
+    1 admin     3112 S    init  
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [ksoftirqd/0]
+    5 admin        0 SW   [kworker/u:0]
+    6 admin        0 SW<  [khelper]
+    7 admin        0 SW   [sync_supers]
+    8 admin        0 SW   [bdi-default]
+    9 admin        0 SW<  [kblockd]
+   10 admin        0 SW   [kswapd0]
+   11 admin        0 SW<  [crypto]
+   15 admin        0 SW   [mtdblock0]
+   16 admin        0 SW   [mtdblock1]
+   17 admin        0 SW   [mtdblock2]
+   18 admin        0 SW   [mtdblock3]
+   19 admin        0 SW   [mtdblock4]
+   62 admin        0 DW   [kworker/0:1]
+   94 admin     4156 S    speedweb 
+   95 admin     3320 S    nvram_daemon 
+  148 admin        0 SW   [kworker/u:1]
+  438 admin     4408 S    goahead 
+  546 admin     3108 S    telnetd 
+  560 admin     3132 S    -sh 
+  571 admin     5132 S    apd 
+  572 admin     5132 S    apd 
+  573 admin     5132 D    apd 
+  574 admin     5132 S    apd 
+  575 admin     5132 S    apd 
+  808 admin     3116 S    syslogd -C8 
+  951 admin     4156 S    speedweb 
+  952 admin     4156 S    speedweb 
+  953 admin     4156 S    speedweb 
+  954 admin     4156 S    speedweb 
+ 1121 admin     3128 S    udhcpc -i br0 -V Fit_AP -s /sbin/udhcpc.sh -p /var/ru
+ 1468 admin     5132 S    apd 
+ 1472 admin     7572 S    wifidog 
+ 7464 admin     3116 S    /bin/sh /sbin/guard-process.sh 
+ 9635 admin     7572 S    wifidog 
+ 9636 admin     7572 S    wifidog 
+ 9637 admin     7572 S    wifidog 
+ 9638 admin     7572 S    wifidog 
+ 9639 admin     7572 S    wifidog 
+ 9640 admin     7572 S    wifidog 
+ 9641 admin     7572 S    wifidog 
+ 9642 admin     7572 S    wifidog 
+ 9643 admin     7572 S    wifidog 
+10270 admin        0 SW   [kworker/0:2]
+10531 admin        0 SW   [RtmpCmdQTask]
+10532 admin        0 SW   [RtmpWscTask]
+10750 admin        0 SW   [RtmpCmdQTask]
+10751 admin        0 SW   [RtmpWscTask]
+28734 admin     3112 S    sh -c ifconfig ra0 down 1>/dev/null 2>&1;        ifco
+28736 admin        0 SW   [kworker/0:0]
+28737 admin     3108 D    ifconfig rai0 down 
+28789 admin     3108 S    sleep 10 
+28790 admin     3112 R    ps 
+# 
+# uname -a
+Linux DPTech 2.6.36 S111SM006D093 AP2000-2C unknown
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# ps
+  PID USER       VSZ STAT COMMAND
+    1 admin     3112 S    init  
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [ksoftirqd/0]
+    5 admin        0 SW   [kworker/u:0]
+    6 admin        0 SW<  [khelper]
+    7 admin        0 SW   [sync_supers]
+    8 admin        0 SW   [bdi-default]
+    9 admin        0 SW<  [kblockd]
+   10 admin        0 SW   [kswapd0]
+   11 admin        0 SW<  [crypto]
+   15 admin        0 SW   [mtdblock0]
+   16 admin        0 SW   [mtdblock1]
+   17 admin        0 SW   [mtdblock2]
+   18 admin        0 SW   [mtdblock3]
+   19 admin        0 SW   [mtdblock4]
+   62 admin        0 DW   [kworker/0:1]
+   94 admin     4156 S    speedweb 
+   95 admin     3320 S    nvram_daemon 
+  148 admin        0 SW   [kworker/u:1]
+  438 admin     4408 S    goahead 
+  546 admin     3108 S    telnetd 
+  560 admin     3132 S    -sh 
+  571 admin     5132 S    apd 
+  572 admin     5132 S    apd 
+  573 admin     5132 D    apd 
+  574 admin     5132 S    apd 
+  575 admin     5132 S    apd 
+  808 admin     3116 S    syslogd -C8 
+  951 admin     4156 S    speedweb 
+  952 admin     4156 S    speedweb 
+  953 admin     4156 S    speedweb 
+  954 admin     4156 S    speedweb 
+ 1121 admin     3128 S    udhcpc -i br0 -V Fit_AP -s /sbin/udhcpc.sh -p /var/ru
+ 1468 admin     5132 S    apd 
+ 1472 admin     7572 S    wifidog 
+ 7464 admin     3116 S    /bin/sh /sbin/guard-process.sh 
+ 9635 admin     7572 S    wifidog 
+ 9636 admin     7572 S    wifidog 
+ 9637 admin     7572 S    wifidog 
+ 9638 admin     7572 S    wifidog 
+ 9639 admin     7572 S    wifidog 
+ 9640 admin     7572 S    wifidog 
+ 9641 admin     7572 S    wifidog 
+ 9642 admin     7572 S    wifidog 
+ 9643 admin     7572 S    wifidog 
+10270 admin        0 SW   [kworker/0:2]
+10531 admin        0 SW   [RtmpCmdQTask]
+10532 admin        0 SW   [RtmpWscTask]
+10750 admin        0 SW   [RtmpCmdQTask]
+10751 admin        0 SW   [RtmpWscTask]
+28734 admin     3112 S    sh -c ifconfig ra0 down 1>/dev/null 2>&1;        ifco
+28736 admin        0 SW   [kworker/0:0]
+28737 admin     3108 D    ifconfig rai0 down 
+28856 admin     3108 S    sleep 10 
+28857 admin     3112 R    ps 
+# 
+# 
+# ps
+  PID USER       VSZ STAT COMMAND
+    1 admin     3112 S    init  
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [ksoftirqd/0]
+    5 admin        0 SW   [kworker/u:0]
+    6 admin        0 SW<  [khelper]
+    7 admin        0 SW   [sync_supers]
+    8 admin        0 SW   [bdi-default]
+    9 admin        0 SW<  [kblockd]
+   10 admin        0 SW   [kswapd0]
+   11 admin        0 SW<  [crypto]
+   15 admin        0 SW   [mtdblock0]
+   16 admin        0 SW   [mtdblock1]
+   17 admin        0 SW   [mtdblock2]
+   18 admin        0 SW   [mtdblock3]
+   19 admin        0 SW   [mtdblock4]
+   62 admin        0 DW   [kworker/0:1]
+   94 admin     4156 S    speedweb 
+   95 admin     3320 S    nvram_daemon 
+  148 admin        0 SW   [kworker/u:1]
+  438 admin     4408 S    goahead 
+  546 admin     3108 S    telnetd 
+  560 admin     3132 S    -sh 
+  571 admin     5132 S    apd 
+  572 admin     5132 S    apd 
+  573 admin     5132 D    apd 
+  574 admin     5132 S    apd 
+  575 admin     5132 S    apd 
+  808 admin     3116 S    syslogd -C8 
+  951 admin     4156 S    speedweb 
+  952 admin     4156 S    speedweb 
+  953 admin     4156 S    speedweb 
+  954 admin     4156 S    speedweb 
+ 1121 admin     3128 S    udhcpc -i br0 -V Fit_AP -s /sbin/udhcpc.sh -p /var/ru
+ 1468 admin     5132 S    apd 
+ 1472 admin     7572 S    wifidog 
+ 7464 admin     3116 S    /bin/sh /sbin/guard-process.sh 
+ 9635 admin     7572 S    wifidog 
+ 9636 admin     7572 S    wifidog 
+ 9637 admin     7572 S    wifidog 
+ 9638 admin     7572 S    wifidog 
+ 9639 admin     7572 S    wifidog 
+ 9640 admin     7572 S    wifidog 
+ 9641 admin     7572 S    wifidog 
+ 9642 admin     7572 S    wifidog 
+ 9643 admin     7572 S    wifidog 
+10270 admin        0 SW   [kworker/0:2]
+10531 admin        0 SW   [RtmpCmdQTask]
+10532 admin        0 SW   [RtmpWscTask]
+10750 admin        0 SW   [RtmpCmdQTask]
+10751 admin        0 SW   [RtmpWscTask]
+28734 admin     3112 S    sh -c ifconfig ra0 down 1>/dev/null 2>&1;        ifco
+28736 admin        0 SW   [kworker/0:0]
+28737 admin     3108 D    ifconfig rai0 down 
+28870 admin     3108 S    sleep 10 
+28871 admin     3112 R    ps 
+# 
+# 
+# ps
+  PID USER       VSZ STAT COMMAND
+    1 admin     3112 S    init  
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [ksoftirqd/0]
+    5 admin        0 SW   [kworker/u:0]
+    6 admin        0 SW<  [khelper]
+    7 admin        0 SW   [sync_supers]
+    8 admin        0 SW   [bdi-default]
+    9 admin        0 SW<  [kblockd]
+   10 admin        0 SW   [kswapd0]
+   11 admin        0 SW<  [crypto]
+   15 admin        0 SW   [mtdblock0]
+   16 admin        0 SW   [mtdblock1]
+   17 admin        0 SW   [mtdblock2]
+   18 admin        0 SW   [mtdblock3]
+   19 admin        0 SW   [mtdblock4]
+   62 admin        0 DW   [kworker/0:1]
+   94 admin     4156 S    speedweb 
+   95 admin     3320 S    nvram_daemon 
+  148 admin        0 SW   [kworker/u:1]
+  438 admin     4408 S    goahead 
+  546 admin     3108 S    telnetd 
+  560 admin     3132 S    -sh 
+  571 admin     5132 S    apd 
+  572 admin     5132 S    apd 
+  573 admin     5132 D    apd 
+  574 admin     5132 S    apd 
+  575 admin     5132 S    apd 
+  808 admin     3116 S    syslogd -C8 
+  951 admin     4156 S    speedweb 
+  952 admin     4156 S    speedweb 
+  953 admin     4156 S    speedweb 
+  954 admin     4156 S    speedweb 
+ 1121 admin     3128 S    udhcpc -i br0 -V Fit_AP -s /sbin/udhcpc.sh -p /var/ru
+ 1468 admin     5132 S    apd 
+ 1472 admin     7572 S    wifidog 
+ 7464 admin     3116 S    /bin/sh /sbin/guard-process.sh 
+ 9635 admin     7572 S    wifidog 
+ 9636 admin     7572 S    wifidog 
+ 9637 admin     7572 S    wifidog 
+ 9638 admin     7572 S    wifidog 
+ 9639 admin     7572 S    wifidog 
+ 9640 admin     7572 S    wifidog 
+ 9641 admin     7572 S    wifidog 
+ 9642 admin     7572 S    wifidog 
+ 9643 admin     7572 S    wifidog 
+10270 admin        0 SW   [kworker/0:2]
+10531 admin        0 SW   [RtmpCmdQTask]
+10532 admin        0 SW   [RtmpWscTask]
+10750 admin        0 SW   [RtmpCmdQTask]
+10751 admin        0 SW   [RtmpWscTask]
+28734 admin     3112 S    sh -c ifconfig ra0 down 1>/dev/null 2>&1;        ifco
+28736 admin        0 SW   [kworker/0:0]
+28737 admin     3108 D    ifconfig rai0 down 
+28870 admin     3108 S    sleep 10 
+28872 admin     3112 R    ps 
+# 
+# 
+# 
+# reboot
+No Message from AC for a long time... restart Discovery State
+UTT DEBUG func:CWStopHeartbeatTimer line:868 
+
+Heartbeat Timer Stopped
+UTT DEBUG func:CWStopAPInfoTimer line:811 
+
+AP info Timer Stopped
+func:main line:661 reset
+UTT DEBUG func:CWStopHeartbeatTimer line:868 
+
+Heartbeat Timer Stopped
+UTT DEBUG func:CWStopNeighborDeadTimer line:898 
+
+NeighborDead Timer Stopped
+UTT DEBUG func:CWStopAPInfoTimer line:811 
+
+AP info Timer Stopped
+func:main line:669 goto DISCOVER
+func:main line:630 enter DISCOVERY
+
+
+######### Discovery State #########
+receive 0 bytes. exit
+# 
+# 
+# ps
+  PID USER       VSZ STAT COMMAND
+    1 admin     3112 S    init  
+    2 admin        0 SW   [kthreadd]
+    3 admin        0 SW   [ksoftirqd/0]
+    5 admin        0 SW   [kworker/u:0]
+    6 admin        0 SW<  [khelper]
+    7 admin        0 SW   [sync_supers]
+    8 admin        0 SW   [bdi-default]
+    9 admin        0 SW<  [kblockd]
+   10 admin        0 SW   [kswapd0]
+   11 admin        0 SW<  [crypto]
+   15 admin        0 SW   [mtdblock0]
+   16 admin        0 SW   [mtdblock1]
+   17 admin        0 SW   [mtdblock2]
+   18 admin        0 SW   [mtdblock3]
+   19 admin        0 SW   [mtdblock4]
+   62 admin        0 DW   [kworker/0:1]
+   94 admin     4156 S    speedweb 
+   95 admin     3320 S    nvram_daemon 
+  148 admin        0 SW   [kworker/u:1]
+  438 admin     4408 S    goahead 
+  546 admin     3108 S    telnetd 
+  560 admin     3132 S    -sh 
+  571 admin     5132 S    apd 
+  572 admin     5132 S    apd 
+  573 admin     5132 D    apd 
+  574 admin     5132 S    apd 
+  575 admin     5132 S    apd 
+  808 admin     3116 S    syslogd -C8 
+  951 admin     4156 S    speedweb 
+  952 admin     4156 S    speedweb 
+  953 admin     4156 S    speedweb 
+  954 admin     4156 S    speedweb 
+ 1121 admin     3128 S    udhcpc -i br0 -V Fit_AP -s /sbin/udhcpc.sh -p /var/ru
+ 1472 admin     7572 S    wifidog 
+ 7464 admin     3116 S    /bin/sh /sbin/guard-process.sh 
+ 9635 admin     7572 S    wifidog 
+ 9636 admin     7572 S    wifidog 
+ 9637 admin     7572 S    wifidog 
+ 9638 admin     7572 S    wifidog 
+ 9639 admin     7572 S    wifidog 
+ 9640 admin     7572 S    wifidog 
+ 9641 admin     7572 S    wifidog 
+ 9642 admin     7572 S    wifidog 
+ 9643 admin     7572 S    wifidog 
+10270 admin        0 SW   [kworker/0:2]
+10531 admin        0 SW   [RtmpCmdQTask]
+10532 admin        0 SW   [RtmpWscTask]
+10750 admin        0 SW   [RtmpCmdQTask]
+10751 admin        0 SW   [RtmpWscTask]
+28734 admin     3112 S    sh -c ifconfig ra0 down 1>/dev/null 2>&1;        ifco
+28736 admin        0 SW   [kworker/0:0]
+28737 admin     3108 D    ifconfig rai0 down 
+28888 admin        0 Z    [autoReboot.sh]
+28902 admin     3108 S    sleep 10 
+28903 admin     3112 R    ps 
+# 
+# 
+# reboot
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# Sending renew...
+Lease of 192.168.2.108 obtained, lease time 300
+
+# 
+# 
+# 
+# 
+
+
+��λ�ã�
+   ��������һ���������ߣ�UTT-Hefei-test(û������)
+ֻ����֤1�� ��֤�˺ţ�test ���룺12345678
+ 
+
+
+
+# 
+# 
