@@ -51,7 +51,7 @@ def send_email(file):
     smtp.connect(smtpHost, smtpPort)
     smtp.login(sendAddr, password)
     smtp.sendmail(sendAddr, recipientAddrs, str(msg))
-    print("发送成功！")
+    print("邮件发送成功！")
     smtp.quit()
 
 

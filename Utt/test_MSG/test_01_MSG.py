@@ -32,7 +32,7 @@ class MSG(unittest.TestCase):
         # driver = self.driver
         file = open('count2.txt', 'w')
         # i = 1
-        for i in range(3200,3201):
+        for i in range(5800,6100):
             try:
                 # self.driver = webdriver.PhantomJS()
                 self.driver = webdriver.Chrome()
