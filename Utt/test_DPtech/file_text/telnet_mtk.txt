@@ -1,0 +1,149 @@
+----------------*********************---------------------
+Mon Jan 15 17:44:12 2018
+---------第0次导入-------
+  -*-*-*-再循环导入第0次-*-*-*-  
+  -*-*-*-再循环导入第1次-*-*-*-  
+  -*-*-*-再循环导入第2次-*-*-*-  
+
+
+
+BusyBox v1.12.1 (2018-01-15 20:33:45 CST) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+# cd /etc/config
+-sh: cd: can't cd to /etc/config
+# ls -l
+drwxr-xr-x   10 540      502             0 etc_ro
+lrwxrwxrwx    1 540      502            11 init -> bin/busybox
+drwxr-xr-x    2 540      502             0 bin
+drwxr-xr-x    3 0        0               0 dev
+drwxr-xr-x    5 0        0               0 tmp
+drwxr-xr-x    2 540      502             0 mnt
+dr-xr-xr-x   70 0        0               0 proc
+drwxr-xr-x    2 0        0               0 media
+drwxr-xr-x    2 540      502             0 sbin
+drwxr-xr-x    5 540      502             0 lib
+drwxr-xr-x    2 540      502             0 home
+drwxr-xr-x    5 540      502             0 usr
+drwxr-xr-x    4 540      502             0 etc
+drwxr-xr-x    5 540      502             0 var
+drwxr-xr-x   11 0        0               0 sys
+-rw-r--r--    1 0        0               0 null
+# 
+# cd /etc/config
+-sh: cd: can't cd to /etc/config
+# ls -l
+drwxr-xr-x   10 540      502             0 etc_ro
+lrwxrwxrwx    1 540      502            11 init -> bin/busybox
+drwxr-xr-x    2 540      502             0 bin
+drwxr-xr-x    3 0        0               0 dev
+drwxr-xr-x    5 0        0               0 tmp
+drwxr-xr-x    2 540      502             0 mnt
+dr-xr-xr-x   70 0        0               0 proc
+drwxr-xr-x    2 0        0               0 media
+drwxr-xr-x    2 540      502             0 sbin
+drwxr-xr-x    5 540      502             0 lib
+drwxr-xr-x    2 540      502             0 home
+drwxr-xr-x    5 540      502             0 usr
+drwxr-xr-x    4 540      502             0 etc
+drwxr-xr-x    5 540      502             0 var
+drwxr-xr-x   11 0        0               0 sys
+-rw-r--r--    1 0        0               0 null
+# 
+# cd /etc/config
+-sh: cd: can't cd to /etc/config
+# ls -l
+drwxr-xr-x   10 540      502             0 etc_ro
+lrwxrwxrwx    1 540      502            11 init -> bin/busybox
+drwxr-xr-x    2 540      502             0 bin
+drwxr-xr-x    3 0        0               0 dev
+drwxr-xr-x    5 0        0               0 tmp
+drwxr-xr-x    2 540      502             0 mnt
+dr-xr-xr-x   70 0        0               0 proc
+drwxr-xr-x    2 0        0               0 media
+drwxr-xr-x    2 540      502             0 sbin
+drwxr-xr-x    5 540      502             0 lib
+drwxr-xr-x    2 540      502             0 home
+drwxr-xr-x    5 540      502             0 usr
+drwxr-xr-x    4 540      502             0 etc
+drwxr-xr-x    5 540      502             0 var
+drwxr-xr-x   11 0        0               0 sys
+-rw-r--r--    1 0        0               0 null
+# 
+# exit
+telnet  success：1
+----------------*********************---------------------
+Mon Jan 15 17:44:27 2018
+---------第1次导入-------
+  -*-*-*-再循环导入第0次-*-*-*-  
+  -*-*-*-再循环导入第1次-*-*-*-  
+  -*-*-*-再循环导入第2次-*-*-*-  
+
+cd /etc/config
+
+
+BusyBox v1.12.1 (2018-01-15 20:33:45 CST) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+# cd /etc/config
+-sh: cd: can't cd to /etc/config
+# ls -l
+drwxr-xr-x   10 540      502             0 etc_ro
+lrwxrwxrwx    1 540      502            11 init -> bin/busybox
+drwxr-xr-x    2 540      502             0 bin
+drwxr-xr-x    3 0        0               0 dev
+drwxr-xr-x    5 0        0               0 tmp
+drwxr-xr-x    2 540      502             0 mnt
+dr-xr-xr-x   70 0        0               0 proc
+drwxr-xr-x    2 0        0               0 media
+drwxr-xr-x    2 540      502             0 sbin
+drwxr-xr-x    5 540      502             0 lib
+drwxr-xr-x    2 540      502             0 home
+drwxr-xr-x    5 540      502             0 usr
+drwxr-xr-x    4 540      502             0 etc
+drwxr-xr-x    5 540      502             0 var
+drwxr-xr-x   11 0        0               0 sys
+-rw-r--r--    1 0        0               0 null
+# 
+# cd /etc/config
+-sh: cd: can't cd to /etc/config
+# ls -l
+drwxr-xr-x   10 540      502             0 etc_ro
+lrwxrwxrwx    1 540      502            11 init -> bin/busybox
+drwxr-xr-x    2 540      502             0 bin
+drwxr-xr-x    3 0        0               0 dev
+drwxr-xr-x    5 0        0               0 tmp
+drwxr-xr-x    2 540      502             0 mnt
+dr-xr-xr-x   70 0        0               0 proc
+drwxr-xr-x    2 0        0               0 media
+drwxr-xr-x    2 540      502             0 sbin
+drwxr-xr-x    5 540      502             0 lib
+drwxr-xr-x    2 540      502             0 home
+drwxr-xr-x    5 540      502             0 usr
+drwxr-xr-x    4 540      502             0 etc
+drwxr-xr-x    5 540      502             0 var
+drwxr-xr-x   11 0        0               0 sys
+-rw-r--r--    1 0        0               0 null
+# 
+# cd /etc/config
+-sh: cd: can't cd to /etc/config
+# ls -l
+drwxr-xr-x   10 540      502             0 etc_ro
+lrwxrwxrwx    1 540      502            11 init -> bin/busybox
+drwxr-xr-x    2 540      502             0 bin
+drwxr-xr-x    3 0        0               0 dev
+drwxr-xr-x    5 0        0               0 tmp
+drwxr-xr-x    2 540      502             0 mnt
+dr-xr-xr-x   70 0        0               0 proc
+drwxr-xr-x    2 0        0               0 media
+drwxr-xr-x    2 540      502             0 sbin
+drwxr-xr-x    5 540      502             0 lib
+drwxr-xr-x    2 540      502             0 home
+drwxr-xr-x    5 540      502             0 usr
+drwxr-xr-x    4 540      502             0 etc
+drwxr-xr-x    5 540      502             0 var
+drwxr-xr-x   11 0        0               0 sys
+-rw-r--r--    1 0        0               0 null
+# 
+# exit
+telnet  success：2
