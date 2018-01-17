@@ -27,16 +27,20 @@ def Search_testReport(result_dir):
 
 def send_email(file):
     msg = email.mime.multipart.MIMEMultipart()
-    sendAddr='18856361920@163.com' #从该邮箱发送
+    sendAddr='18856361920@163.com' #发件人
     password='utt31801' # 在登录smtp时需要login中的密码应当使用授权码而非账户密码
-    recipientAddrs='zhao.chencheng@utt.com.cn' #发送到该邮箱
+    # 单个收件人
+    recipientAddrs=['zhao.chencheng@utt.com.cn']
+    # #多个收件人
+    # recipientAddrs = ['zhao.chencheng@utt.com.cn',"907779487@qq.com"]
+
     smtpHost = 'smtp.163.com'  # 163邮箱的smtp Sever地址
     smtpPort = '25'  # 开放的端口
 
     subject = '自动化测试报告'  #邮件主题
     content = '这是一封来自 Python 编写的测试邮件。' #邮件正文
     msg['from'] = sendAddr
-    msg['to'] = recipientAddrs
+    msg['to'] = ";".join(recipientAddrs)
     msg['subject'] = subject
 
     txt = email.mime.text.MIMEText(content, 'plain', 'utf-8')
@@ -53,8 +57,6 @@ def send_email(file):
     smtp.sendmail(sendAddr, recipientAddrs, str(msg))
     print("邮件发送成功！")
     smtp.quit()
-
-
 # if __name__ == '__main__':
 #     try:
 #         result_dir = 'F:\\untitled\\send_mail'

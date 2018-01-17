@@ -46,27 +46,41 @@ def Ap_offline():
         ap_count = driver.find_elements_by_xpath("//*[@id='ap_info_manage']/tbody/tr")
         len_ap_count = len(ap_count)
         print("\n当前在线ap个数:",len_ap_count)
-        for i in range(0,len_ap_count):
-            i = 1
-            # AP 型号
-            model = driver.find_element_by_xpath("//*[@id='ap_info_manage']/tbody/tr[%d]/td[2]"%i)
-            print("AP 型号",model.text)
-            #软件版本
-            version = driver.find_element_by_xpath("//*[@id='ap_info_manage']/tbody/tr[%d]/td[6]"%i)
-            print("软件版本:",version.text)
-            #状态信息
-            status_messages=driver.find_element_by_xpath("//*[@id='ap_info_manage']/tbody/tr[%d]/td[7]"%i)
-            print("状态信息:",status_messages.text)
-        # #点击将ap踢下线
-            ap_offline = driver.find_element_by_xpath(".//*[@id='ap_info_manage']/tbody/tr[%d]/td[10]/span[1]"%i)
-            ap_offline.click()
-            time.sleep(2)
-            # 接收alert 弹窗； 确定将ap下线；
-            a = driver.switch_to_alert()
-            print("弹窗内容：", a.text)
-            a.accept()
-            time.sleep(4)
-        break
+        # for i in range(0,len_ap_count):
+        #     i = 1
+        #     # AP 型号
+        #     model = driver.find_element_by_xpath("//*[@id='ap_info_manage']/tbody/tr[%d]/td[2]"%i)
+        #     print("AP 型号",model.text)
+        #     #软件版本
+        #     version = driver.find_element_by_xpath("//*[@id='ap_info_manage']/tbody/tr[%d]/td[6]"%i)
+        #     print("软件版本:",version.text)
+        #     #状态信息
+        #     status_messages=driver.find_element_by_xpath("//*[@id='ap_info_manage']/tbody/tr[%d]/td[7]"%i)
+        #     print("状态信息:",status_messages.text)
+        # # #点击将ap踢下线
+        #     ap_offline = driver.find_element_by_xpath(".//*[@id='ap_info_manage']/tbody/tr[%d]/td[10]/span[1]"%i)
+        #     ap_offline.click()
+        #     time.sleep(2)
+        #     # 接收alert 弹窗； 确定将ap下线；
+        #     a = driver.switch_to_alert()
+        #     print("弹窗内容：", a.text)
+        #     a.accept()
+        #     time.sleep(4)
+        # 点击刷新
+        fresh = driver.find_element_by_xpath(".//*[@id='fresh']/td/input[2]")
+        fresh.click()
+        time.sleep(2)
+        # 下线后 当前ap个数
+        ap_count_offline = driver.find_elements_by_xpath("//*[@id='ap_info_manage']/tbody/tr")
+        len_ap_count_offline = len(ap_count_offline)
+        print("*" * 30, '\n', "等待130s后当前ap个数：", len_ap_count_offline)
+        # if len_ap_count == len_ap_count_offline:
+        #     print("*" * 30, '\n', "被踢AP已上线。")
+        # else:
+        #     raise Exception("被踢AP未上线----请注意！！！")
+        #     # print("*!"*30,'\n',"被踢AP未上线----请注意！！！")
+        # break
+
     driver.quit()
 
 def test_ap_reboot():
@@ -144,6 +158,6 @@ def test_ap_reboot():
 
 
 if __name__ == '__main__':
-    # Ap_offline()
-    test_ap_reboot()
+    Ap_offline()
+    # test_ap_reboot()
 

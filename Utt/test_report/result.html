@@ -193,9 +193,9 @@ function showOutput(id, name) {
 
 <div class='page-header'>
 <h1>自动化测试报告,测试结果如下：</h1>
-<p class='attribute'><strong>开始时间:</strong> 2018-01-03 16:40:21</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:41.259618</p>
-<p class='attribute'><strong>状态:</strong> 错误 1</p>
+<p class='attribute'><strong>开始时间:</strong> 2018-01-17 14:27:57</p>
+<p class='attribute'><strong>运行时长:</strong> 0:03:57.394682</p>
+<p class='attribute'><strong>状态:</strong> 通过 1</p>
 
 </div>
 <p class='description'>用例执行情况：</p>
@@ -226,57 +226,50 @@ function showOutput(id, name) {
     <td>查看</td>
 </tr>
 
-<tr class='errorClass'>
-    <td>Utt.test_DP.test_002_AP_reboot.AP_reboot: 将在线ap踢下线</td>
+<tr class='passClass'>
+    <td>Utt.test_DP.test_001_AP_offline.AP_offline: 将在线ap踢下线</td>
+    <td>1</td>
     <td>1</td>
     <td>0</td>
     <td>0</td>
-    <td>1</td>
     <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
 </tr>
 
-<tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_ap_reboot: 将在线ap重启</div></td>
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_ap_offline: 将在线ap踢下线</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        错误</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        通过</a>
 
-    <div id='div_ft1.1' class="popup_window">
+    <div id='div_pt1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.1: 
+pt1.1: 
 再次打开浏览器
 ---AP管理---
 ---在线AP---
-当前在线ap个数: 2
-AP 型号 AP1000-1C
-软件版本: S111SM007D045
-状态信息: Mac: 00:24:AC:2A:5B:8B
-IP:192.168.2.106
+当前在线ap个数: 1
+****************************** 
+ AP 型号 AP1000-1C
+软件版本: S111SM007D046
+状态信息: Mac: 00:24:AC:55:92:6A
+IP:192.168.2.117
 状态:RUN
-Sta数:0
-弹窗内容： 确定要重启ap吗？
-Traceback (most recent call last):
-  File "F:\untitled\Utt\test_DP\test_002_AP_reboot.py", line 59, in test_ap_reboot
-    model = self.driver.find_element_by_xpath("//*[@id='ap_info_manage']/tbody/tr[%d]/td[2]" % i)
-  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 832, in find_element
-    'value': value})['value']
-  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 297, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='ap_info_manage']/tbody/tr[2]/td[2]"}
-  (Session info: chrome=60.0.3112.113)
-  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 10.0.15063 x86_64)
-
+Sta数:1
+****************************** 
+ 弹窗内容： 确定要使ap下线吗？
+****************************** 
+ 等待130s后当前ap个数： 1
+****************************** 
+ 被踢AP已上线。
+****************************** 
+ 退出管理员： 你确定要退出吗？
 
 
         </pre>
@@ -289,9 +282,9 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
 <tr id='total_row'>
     <td>总计</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td>&nbsp;</td>
 </tr>
 </table>

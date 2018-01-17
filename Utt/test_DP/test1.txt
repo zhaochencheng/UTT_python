@@ -1,0 +1,38 @@
+
+cd /etc
+
+
+BusyBox v1.12.1 (2018-01-05 05:03:44 CST) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+# cd /etc
+# ls -l
+-rwxr-xr-x    1 539      502          5964 authserver-offline.html
+-rwxr-xr-x    1 539      502           426 fstab
+-rwxr-xr-x    1 539      502          6461 wifidog-redir.html.front
+-rwxr-xr-x    1 539      502          7084 wifidog.conf
+-rwxr-xr-x    1 539      502          1359 apfree.ca
+-rw-r--r--    1 539      502          3725 wifidog-redir.html
+-rwxr-xr-x    1 539      502           171 config.ap
+-rw-r--r--    1 539      502          1662 wifidog-msg.html
+-rwxr-xr-x    1 539      502            17 settings.ap
+-rwxr-xr-x    1 539      502          1317 ethertypes
+-rwxr-xr-x    1 539      502            18 wifidog-redir.html.rear
+-rwxr-xr-x    1 539      502          4531 apfree.crt
+-rwxr-xr-x    1 539      502          1679 apfree.key
+-rwxr-xr-x    1 539      502          7817 internet-offline.html
+drwxr-xr-x    2 0        0               0 ppp
+-rw-r--r--    1 0        0             341 mdev.conf
+-rw-r--r--    1 0        0               0 utt-speedmsg
+-rw-r--r--    1 0        0               0 utt-nvramshm
+-rw-r--r--    1 0        0              30 group
+-rw-r--r--    1 0        0              42 hosts
+-rw-r--r--    1 0        0             135 passwd-
+-rw-r--r--    1 0        0             135 passwd
+drwxr-xr-x    4 0        0               0 Wireless
+-rw-r--r--    1 0        0               0 udhcpd.tmp
+-rw-r--r--    1 0        0               1 udhcpd.conf
+-rw-r--r--    1 0        0              27 resolv.conf
+-rw-r--r--    1 0        0              36 null
+# 
+# exit

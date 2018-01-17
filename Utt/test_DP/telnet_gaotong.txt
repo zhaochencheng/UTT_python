@@ -1,0 +1,90 @@
+----------------*********************---------------------
+Mon Jan 15 19:58:56 2018
+---------第0次导入-------
+  -*-*-*-再循环导入第0次-*-*-*-  
+  -*-*-*-再循环导入第1次-*-*-*-  
+  -*-*-*-再循环导入第2次-*-*-*-  
+
+cd /etc
+
+
+BusyBox v1.19.4 (2017-12-20 22:00:45 CST) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+ 
+ ---------------------------------------------------------------
+   For those about to rock... (QCA9558.LN, unknown)
+ ---------------------------------------------------------------
+root@DPtech:~# cd /etc
+root@DPtech:/etc# tftp -gr 1.txt  192.168.2.190 69
+ls -l|grep txt
+
+cd /etc
+tftp -gr 1.txt  192.168.2.190 69
+root@DPtech:/etc# ls -l|grep txt
+-rw-r--r--    1 root     root       1600000 Jan 15 19:59 1.txt
+root@DPtech:/etc# 
+root@DPtech:/etc# cd /etc
+root@DPtech:/etc# tftp -gr 1.txt  192.168.2.190 69
+ls -l|grep txt
+
+cd /etc
+tftp -gr 1.txt  192.168.2.190 69
+ls -l|grep txt
+
+exit
+root@DPtech:/etc# ls -l|grep txt
+-rw-r--r--    1 root     root       1600000 Jan 15 20:00 1.txt
+root@DPtech:/etc# 
+root@DPtech:/etc# cd /etc
+root@DPtech:/etc# tftp -gr 1.txt  192.168.2.190 69
+root@DPtech:/etc# ls -l|grep txt
+-rw-r--r--    1 root     root       1600000 Jan 15 20:00 1.txt
+root@DPtech:/etc# 
+root@DPtech:/etc# exit
+telnet  success：1
+----------------*********************---------------------
+Mon Jan 15 20:00:39 2018
+---------第1次导入-------
+  -*-*-*-再循环导入第0次-*-*-*-  
+  -*-*-*-再循环导入第1次-*-*-*-  
+  -*-*-*-再循环导入第2次-*-*-*-  
+
+cd /etc
+
+
+BusyBox v1.19.4 (2017-12-20 22:00:45 CST) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+ 
+ ---------------------------------------------------------------
+   For those about to rock... (QCA9558.LN, unknown)
+ ---------------------------------------------------------------
+root@DPtech:~# cd /etc
+root@DPtech:/etc# tftp -gr 1.txt  192.168.2.190 69
+ls -l|grep txt
+
+cd /etc
+tftp -gr 1.txt  192.168.2.190 69
+root@DPtech:/etc# ls -l|grep txt
+-rw-r--r--    1 root     root       1600000 Jan 15 20:01 1.txt
+root@DPtech:/etc# 
+root@DPtech:/etc# cd /etc
+root@DPtech:/etc# tftp -gr 1.txt  192.168.2.190 69
+ls -l|grep txt
+
+cd /etc
+tftp -gr 1.txt  192.168.2.190 69
+ls -l|grep txt
+
+exit
+root@DPtech:/etc# ls -l|grep txt
+-rw-r--r--    1 root     root       1600000 Jan 15 20:01 1.txt
+root@DPtech:/etc# 
+root@DPtech:/etc# cd /etc
+root@DPtech:/etc# tftp -gr 1.txt  192.168.2.190 69
+root@DPtech:/etc# ls -l|grep txt
+-rw-r--r--    1 root     root       1600000 Jan 15 20:02 1.txt
+root@DPtech:/etc# 
+root@DPtech:/etc# exit
+telnet  success：2

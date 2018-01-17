@@ -36,13 +36,13 @@ class AP_reboot(unittest.TestCase):
         '''退出web 管理员登陆'''
 
         #切换到默认frame
-        self.driver.switch_to_default_content()
+        self.driver.switch_to.default_content()
         frame2 = self.driver.find_element_by_xpath("//*[@id='BODY']")
         #退出 按钮定位
         admin_exit = frame2.find_element_by_xpath(".//*[@id='test-top-right']/table/tbody/tr/td[6]/span/a/span")
         admin_exit.click()
         #接受弹窗
-        a = self.driver.switch_to_alert()
+        a = self.driver.switch_to.alert
         print("弹窗内容：", a.text)
         a.accept()
         time.sleep(2)
