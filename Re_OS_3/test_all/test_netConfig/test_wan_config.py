@@ -83,9 +83,8 @@ class Wan_config(unittest.TestCase):
             Save_button = self.driver.find_element_by_xpath(".//button[@id='save']")
             Save_button.click()
             time.sleep(10)
-            waiwangpeizhi = self.driver.find_element_by_xpath(".//*[@id='content']/nav/ul/li[1]/a")
-            waiwangpeizhi.click()
-            time.sleep(1)
+            self.driver.refresh()
+            time.sleep(4)
 
             '''输出刚配置接口 在页面的显示信息'''
             #接口
@@ -103,6 +102,7 @@ class Wan_config(unittest.TestCase):
             print("子网掩码为：",web_netmark)
             print("网关地址为：",web_GWway)
             print("*" * 30, '\n')
+
 
 
             # 判断页面显示wan口ip 与 配置的wan口ip是否相同；
@@ -136,9 +136,8 @@ class Wan_config(unittest.TestCase):
                 shuaxin = self.driver.find_element_by_xpath(".//*[@id='otherBtns']/button")
                 shuaxin.click()
                 time.sleep(3)
-                waiwangpeizhi = self.driver.find_element_by_xpath(".//*[@id='content']/nav/ul/li[1]/a")
-                waiwangpeizhi.click()
-                time.sleep(1)
+                self.driver.refresh()
+                time.sleep(2)
                 delet_web_interface = self.driver.find_element_by_xpath(
                     ".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[1]/a" % (i + 1)).text
                 delet_web_connType = self.driver.find_element_by_xpath(
@@ -160,6 +159,8 @@ class Wan_config(unittest.TestCase):
                 print("网关地址为：", delet_web_GWway)
                 print("*" * 30, '\n')
                 self.assertEqual(delet_web_connect_status,'未配置',"%s 端口配置未删除"%delet_web_interface)
+                time.sleep(2)
+        time.sleep(2)
 
 
     def test_1_002_wan_config_DHCP(self):
@@ -209,9 +210,8 @@ class Wan_config(unittest.TestCase):
             shuaxin = self.driver.find_element_by_xpath(".//*[@id='otherBtns']/button[3]")
             shuaxin.click()
             time.sleep(10)
-            waiwangpeizhi = self.driver.find_element_by_xpath(".//*[@id='content']/nav/ul/li[1]/a")
-            waiwangpeizhi.click()
-            time.sleep(1)
+            self.driver.refresh()
+            time.sleep(2)
 
             '''输出刚配置接口 在页面的显示信息'''
             # 接口
@@ -235,6 +235,7 @@ class Wan_config(unittest.TestCase):
             print("子网掩码为：", web_netmark)
             print("网关地址为：", web_GWway)
             print("*" * 30, '\n')
+            time.sleep(2)
 
 
             # 判断端口状态
@@ -261,17 +262,19 @@ class Wan_config(unittest.TestCase):
             sf_web_connect_status = self.driver.find_element_by_xpath(
                 "//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[2]/a" % (i + 1))
             sf_web_connect_status.click()
+            time.sleep(1)
             #点击释放按钮
             shifang = self.driver.find_element_by_xpath(".//*[@id='otherBtns']/button[2]")
             shifang.click()
-            time.sleep(3)
+            time.sleep(4)
+            self.driver.refresh()
+            time.sleep(2)
             #点击刷新按钮
             shuaxin = self.driver.find_element_by_xpath(".//*[@id='otherBtns']/button[3]")
             shuaxin.click()
             time.sleep(5)
-            waiwangpeizhi = self.driver.find_element_by_xpath(".//*[@id='content']/nav/ul/li[1]/a")
-            waiwangpeizhi.click()
-            time.sleep(1)
+            self.driver.refresh()
+            time.sleep(2)
             '''输出释放接口后 在页面的显示信息'''
             # 接口
             web_interface = self.driver.find_element_by_xpath(
@@ -294,6 +297,8 @@ class Wan_config(unittest.TestCase):
             print("子网掩码为：", web_netmark)
             print("网关地址为：", web_GWway)
             print("*" * 30, '\n')
+            time.sleep(2)
+        time.sleep(2)
 
     def test_1_003_wan_config_PPPoE(self):
         u'''PPPoE的配置与挂断'''
@@ -340,6 +345,7 @@ class Wan_config(unittest.TestCase):
             save.click()
             time.sleep(10)
             self.driver.refresh()
+            time.sleep(4)
             # 页面wan口的连接状态
             web_connect_status = self.driver.find_element_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[2]/a" % (i + 1))
             # web_connect_status = WebDriverWait(self.driver,10,0.5).until(lambda x: x.find_element_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[2]/a" % (i + 1)))
@@ -351,9 +357,10 @@ class Wan_config(unittest.TestCase):
             # 点击刷新按钮
             shuaxin = self.driver.find_element_by_xpath(".//*[@id='otherBtns']/button[3]")
             shuaxin.click()
-            time.sleep(5)
-            waiwangpeizhi = self.driver.find_element_by_xpath(".//*[@id='content']/nav/ul/li[1]/a")
-            waiwangpeizhi.click()
+            time.sleep(2)
+            self.driver.refresh()
+            time.sleep(6)
+            self.driver.refresh()
             time.sleep(1)
 
             '''输出刚配置接口 在页面的显示信息'''
@@ -378,6 +385,8 @@ class Wan_config(unittest.TestCase):
             print("子网掩码为：", web_netmark)
             print("网关地址为：", web_GWway)
             print("*" * 30, '\n')
+            time.sleep(2)
+        time.sleep(2)
 
 
 

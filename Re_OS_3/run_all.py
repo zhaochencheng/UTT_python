@@ -25,7 +25,9 @@ report_abspath = os.path.join(report_path,"result.html")
 '''方法 二'''
 #手动添加单个用例
 suit = unittest.TestSuite()
-suit.addTest(Wan_config("test_wan_config_static"))
+suit.addTest(Wan_config("test_1_001_wan_config_static"))
+suit.addTest(Wan_config("test_1_002_wan_config_DHCP"))
+suit.addTest(Wan_config("test_1_003_wan_config_PPPoE"))
 
 
 fp = open(report_abspath,"wb")

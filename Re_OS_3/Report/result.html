@@ -193,9 +193,9 @@ function showOutput(id, name) {
 
 <div class='page-header'>
 <h1>自动化测试报告,测试结果如下：</h1>
-<p class='attribute'><strong>开始时间:</strong> 2018-01-21 14:06:26</p>
-<p class='attribute'><strong>运行时长:</strong> 0:01:10.145177</p>
-<p class='attribute'><strong>状态:</strong> 失败 1</p>
+<p class='attribute'><strong>开始时间:</strong> 2018-01-21 22:27:46</p>
+<p class='attribute'><strong>运行时长:</strong> 0:03:57.008137</p>
+<p class='attribute'><strong>状态:</strong> 错误 3</p>
 
 </div>
 <p class='description'>用例执行情况：</p>
@@ -226,22 +226,22 @@ function showOutput(id, name) {
     <td>查看</td>
 </tr>
 
-<tr class='failClass'>
-    <td>Re_OS_3.test_all.test_netConfig.test_wan_config.Wan_config</td>
-    <td>1</td>
+<tr class='errorClass'>
+    <td>Re_OS_3.test_all.test_netConfig.test_wan_config.Wan_config: **wan口配置**</td>
+    <td>3</td>
     <td>0</td>
-    <td>1</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
+    <td>3</td>
+    <td><a href="javascript:showClassDetail('c1',3)">详情</a></td>
 </tr>
 
 <tr id='ft1.1' class='none'>
-    <td class='failCase'><div class='testcase'>test_wan_config</div></td>
+    <td class='errorCase'><div class='testcase'>test_1_001_wan_config_static: --wan口固定ip配置与删除--</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
     <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        失败</a>
+        错误</a>
 
     <div id='div_ft1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
@@ -253,50 +253,147 @@ function showOutput(id, name) {
 ft1.1: 当前位置： 网络配置
 当前位置： 外网配置
 共有  4  wan口
-连接类型有： 3 种。
 ****************************** 
 
 当前接口为： WAN1
 连接状态： 已连接
 连接类型为： 固定接入
-wan口ip为： 192.168.30.115
+wan口ip为： 192.168.3.116
 子网掩码为： 255.255.255.0
-网关地址为： 192.168.30.1
+网关地址为： 192.168.3.5
 ****************************** 
 
 ping 192.168.30.1 is ok
-连接类型有： 3 种。
 ****************************** 
 
 当前接口为： WAN2
 连接状态： 已连接
 连接类型为： 固定接入
-wan口ip为： 192.168.30.117
+wan口ip为： 192.168.3.117
 子网掩码为： 255.255.255.0
-网关地址为： 192.168.30.1
+网关地址为： 192.168.3.5
 ****************************** 
 
-ping 192.168.30.1 is ok
-连接类型有： 3 种。
+ping 192.168.30.1 is fail
+Traceback (most recent call last):
+  File "F:\untitled\Re_OS_3\test_all\test_netConfig\test_wan_config.py", line 118, in test_1_001_wan_config_static
+    raise Exception('ping %s is fail,ping网关不通！' % GWaddr)
+Exception: ping 192.168.30.1 is fail,ping网关不通！
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_1_002_wan_config_DHCP: --wan口DHCP配置与释放--</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        错误</a>
+
+    <div id='div_ft1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.2: 当前位置： 网络配置
+当前位置： 外网配置
+共有  4  wan口
+****************************** 
+
+当前接口为： WAN2
+连接状态： 已连接
+连接类型为： 动态接入
+wan口ip为： 192.168.3.158
+子网掩码为： 255.255.255.0
+网关地址为： 192.168.3.5
+****************************** 
+
+ping 192.168.3.5 is ok
+Traceback (most recent call last):
+  File "F:\untitled\Re_OS_3\test_all\test_netConfig\test_wan_config.py", line 271, in test_1_002_wan_config_DHCP
+    shuaxin = self.driver.find_element_by_xpath(".//*[@id='otherBtns']/button[3]")
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 832, in find_element
+    'value': value})['value']
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 297, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id='otherBtns']/button[3]"}
+  (Session info: chrome=60.0.3112.113)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 10.0.15063 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_1_003_wan_config_PPPoE: PPPoE的配置与挂断</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
+        错误</a>
+
+    <div id='div_ft1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.3: 当前位置： 网络配置
+当前位置： 外网配置
+共有  4  wan口
+****************************** 
+
+当前接口为： WAN2
+连接状态： 已连接
+连接类型为： PPPoE接入
+wan口ip为： 10.69.33.68
+子网掩码为： 255.255.255.255
+网关地址为： 192.168.3.5
+****************************** 
+
 ****************************** 
 
 当前接口为： WAN3
-连接状态： 未连接
-连接类型为： 固定接入
-wan口ip为： 192.168.30.118
-子网掩码为： 255.255.255.0
-网关地址为： 192.168.30.1
+连接状态： 已连接
+连接类型为： PPPoE接入
+wan口ip为： 10.69.33.70
+子网掩码为： 255.255.255.255
+网关地址为： 192.168.3.5
 ****************************** 
 
 Traceback (most recent call last):
-  File "F:\untitled\Re_OS_3\test_all\test_netConfig\test_wan_config.py", line 105, in test_wan_config
-    self.assertEqual(web_connect_status, "已连接", "%s 端口连接状态错误--可能网线未连接或该端口有问题"%web_interface)
-AssertionError: '未连接' != '已连接'
-- 未连接
-? ^
-+ 已连接
-? ^
- : WAN3 端口连接状态错误--可能网线未连接或该端口有问题
+  File "F:\untitled\Re_OS_3\test_all\test_netConfig\test_wan_config.py", line 348, in test_1_003_wan_config_PPPoE
+    web_connect_status = self.driver.find_element_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[2]/a" % (i + 1))
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 832, in find_element
+    'value': value})['value']
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 297, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='1']/div/div/div[1]/table/tbody/tr[4]/td[2]/a"}
+  (Session info: chrome=60.0.3112.113)
+  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 10.0.15063 x86_64)
+
 
 
         </pre>
@@ -308,10 +405,10 @@ AssertionError: '未连接' != '已连接'
 
 <tr id='total_row'>
     <td>总计</td>
-    <td>1</td>
+    <td>3</td>
     <td>0</td>
-    <td>1</td>
     <td>0</td>
+    <td>3</td>
     <td>&nbsp;</td>
 </tr>
 </table>
