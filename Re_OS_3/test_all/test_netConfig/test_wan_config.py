@@ -136,6 +136,9 @@ class Wan_config(unittest.TestCase):
                 shuaxin = self.driver.find_element_by_xpath(".//*[@id='otherBtns']/button")
                 shuaxin.click()
                 time.sleep(3)
+                waiwangpeizhi = self.driver.find_element_by_xpath(".//*[@id='content']/nav/ul/li[1]/a")
+                waiwangpeizhi.click()
+                time.sleep(1)
                 delet_web_interface = self.driver.find_element_by_xpath(
                     ".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[1]/a" % (i + 1)).text
                 delet_web_connType = self.driver.find_element_by_xpath(
@@ -206,6 +209,9 @@ class Wan_config(unittest.TestCase):
             shuaxin = self.driver.find_element_by_xpath(".//*[@id='otherBtns']/button[3]")
             shuaxin.click()
             time.sleep(10)
+            waiwangpeizhi = self.driver.find_element_by_xpath(".//*[@id='content']/nav/ul/li[1]/a")
+            waiwangpeizhi.click()
+            time.sleep(1)
 
             '''输出刚配置接口 在页面的显示信息'''
             # 接口
@@ -262,7 +268,10 @@ class Wan_config(unittest.TestCase):
             #点击刷新按钮
             shuaxin = self.driver.find_element_by_xpath(".//*[@id='otherBtns']/button[3]")
             shuaxin.click()
-            time.sleep(4)
+            time.sleep(5)
+            waiwangpeizhi = self.driver.find_element_by_xpath(".//*[@id='content']/nav/ul/li[1]/a")
+            waiwangpeizhi.click()
+            time.sleep(1)
             '''输出释放接口后 在页面的显示信息'''
             # 接口
             web_interface = self.driver.find_element_by_xpath(
@@ -329,10 +338,11 @@ class Wan_config(unittest.TestCase):
             #点击保存
             save = self.driver.find_element_by_id("save")
             save.click()
-            time.sleep(5)
+            time.sleep(10)
+            self.driver.refresh()
             # 页面wan口的连接状态
-            # web_connect_status = self.driver.find_element_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[2]/a" % (i + 1))
-            web_connect_status = WebDriverWait(self.driver,10,0.5).until(lambda x: x.find_element_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[2]/a" % (i + 1)))
+            web_connect_status = self.driver.find_element_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[2]/a" % (i + 1))
+            # web_connect_status = WebDriverWait(self.driver,10,0.5).until(lambda x: x.find_element_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[2]/a" % (i + 1)))
             web_connect_status.click()
             #拨号
             baohao = self.driver.find_element_by_xpath(".//*[@id='otherBtns']/button[2]")
@@ -341,7 +351,10 @@ class Wan_config(unittest.TestCase):
             # 点击刷新按钮
             shuaxin = self.driver.find_element_by_xpath(".//*[@id='otherBtns']/button[3]")
             shuaxin.click()
-            time.sleep(3)
+            time.sleep(5)
+            waiwangpeizhi = self.driver.find_element_by_xpath(".//*[@id='content']/nav/ul/li[1]/a")
+            waiwangpeizhi.click()
+            time.sleep(1)
 
             '''输出刚配置接口 在页面的显示信息'''
             # 接口
