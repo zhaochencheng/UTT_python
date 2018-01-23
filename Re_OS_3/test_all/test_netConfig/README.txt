@@ -12,10 +12,10 @@
       对于页面 所有可操作元素 未完全覆盖到;
 *****************************************
 -----------------------------------------
-网络配置：
+网络配置：test_netConfig
     外网配置 test_wan_config.py
-           ----wan口固定ip 配置与删除     test_1_001_wan_config_static  [使用显性等待,减少定位不到元素问题]
-           ----wan口DHCP  配置与释放      test_1_002_wan_config_DHCP  [使用显性等待,减少定位不到元素问题]
+           ----wan口固定ip 配置与删除     test_1_001_wan_config_static  [使用显性等待,减少定位不到元素问题] [放自动截图]
+           ----wan口DHCP  配置与释放      test_1_002_wan_config_DHCP  [使用显性等待,减少定位不到元素问题] [放自动截图]
            ----wan口PPPOE 配置与删除      test_1_003_wan_config_PPPoE (引言,判断网通)
 
     内网配置 test_Lan_config.py
@@ -23,7 +23,11 @@
            ----vlan配置与删除             test_2_002_vlan_lanconfig
 
     DHCP服务
-    端口映射
+
+    端口映射 test_Port_mapping.py
+           ----静态映射配置,修改与删除    test_04_001_static_port_mapping[os对截图文件夹清空,再放截图]
+
     动态域名
+
     交换配置
 测试脚本

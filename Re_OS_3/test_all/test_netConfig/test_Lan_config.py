@@ -87,7 +87,7 @@ class Lan_config(unittest.TestCase):
         time.sleep(1)
         #在页面查看 配置的vlan id 是否生效
         tr = self.driver.find_elements_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr")
-        print(len(tr))
+        print("每页显示个数为:",len(tr))
         # # 判断配置的vlan 是否生效 并将其输出;
         for j in range(len(vlan_lanipname)):
             for i in range(1,len(tr)+1):
@@ -120,6 +120,7 @@ class Lan_config(unittest.TestCase):
                         ok = self.driver.find_element_by_id("u-cfm-ok")
                         ok.click()
                         time.sleep(4)
+                        print("已将%s -vlan删除"%name)
 
                     else:
                         pass
