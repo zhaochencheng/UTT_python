@@ -9,6 +9,7 @@ import os
 import unittest
 from Re_OS_3.Tool.mail import *
 from Re_OS_3.test_all.test_netConfig.test_wan_config import Wan_config
+from Re_OS_3.test_all.test_netConfig.test_Port_mapping import Port_mapping
 
 #用例路径
 case_path = os.path.join(os.getcwd(),"test_all")
@@ -25,9 +26,12 @@ report_abspath = os.path.join(report_path,"result.html")
 '''方法 二'''
 #手动添加单个用例
 suit = unittest.TestSuite()
-suit.addTest(Wan_config("test_1_001_wan_config_static"))
-suit.addTest(Wan_config("test_1_002_wan_config_DHCP"))
-suit.addTest(Wan_config("test_1_003_wan_config_PPPoE"))
+# suit.addTest(Wan_config("test_1_001_wan_config_static"))
+# suit.addTest(Wan_config("test_1_002_wan_config_DHCP"))
+# suit.addTest(Wan_config("test_1_003_wan_config_PPPoE"))
+suit.addTest(Port_mapping("test_04_001_static_port_mapping"))
+suit.addTest(Port_mapping("test_04_002_nat_rule"))
+suit.addTest(Port_mapping("test_04_003_DMZ"))
 
 
 fp = open(report_abspath,"wb")
