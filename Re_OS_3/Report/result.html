@@ -193,9 +193,9 @@ function showOutput(id, name) {
 
 <div class='page-header'>
 <h1>自动化测试报告,测试结果如下：</h1>
-<p class='attribute'><strong>开始时间:</strong> 2018-01-21 22:27:46</p>
-<p class='attribute'><strong>运行时长:</strong> 0:03:57.008137</p>
-<p class='attribute'><strong>状态:</strong> 错误 3</p>
+<p class='attribute'><strong>开始时间:</strong> 2018-01-27 22:27:07</p>
+<p class='attribute'><strong>运行时长:</strong> 0:02:11.088923</p>
+<p class='attribute'><strong>状态:</strong> 通过 3</p>
 
 </div>
 <p class='description'>用例执行情况：</p>
@@ -226,111 +226,43 @@ function showOutput(id, name) {
     <td>查看</td>
 </tr>
 
-<tr class='errorClass'>
-    <td>Re_OS_3.test_all.test_netConfig.test_wan_config.Wan_config: **wan口配置**</td>
+<tr class='passClass'>
+    <td>Re_OS_3.test_all.test_netConfig.test_Port_mapping.Port_mapping: **端口映射**</td>
+    <td>3</td>
     <td>3</td>
     <td>0</td>
     <td>0</td>
-    <td>3</td>
     <td><a href="javascript:showClassDetail('c1',3)">详情</a></td>
 </tr>
 
-<tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_1_001_wan_config_static: --wan口固定ip配置与删除--</div></td>
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_001_static_port_mapping: 静态映射配置,修改与删除</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        错误</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        通过</a>
 
-    <div id='div_ft1.1' class="popup_window">
+    <div id='div_pt1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.1: 当前位置： 网络配置
-当前位置： 外网配置
-共有  4  wan口
+pt1.1: 当前位置： 网络配置
+当前位置: 端口映射
+当前位置： 静态映射
+每页显示个数为: 50
 ****************************** 
 
-当前接口为： WAN1
-连接状态： 已连接
-连接类型为： 固定接入
-wan口ip为： 192.168.3.116
-子网掩码为： 255.255.255.0
-网关地址为： 192.168.3.5
+规则名称: AC12    内网IP地址: 192.168.2.33    端口映射关系: 80~80:8081~8081
+规则名称: AC23    内网IP地址: 192.168.2.55    端口映射关系: 88~88:8888~8888
 ****************************** 
 
-ping 192.168.30.1 is ok
+已将AC12 规则删除
+已将AC23 规则删除
 ****************************** 
-
-当前接口为： WAN2
-连接状态： 已连接
-连接类型为： 固定接入
-wan口ip为： 192.168.3.117
-子网掩码为： 255.255.255.0
-网关地址为： 192.168.3.5
-****************************** 
-
-ping 192.168.30.1 is fail
-Traceback (most recent call last):
-  File "F:\untitled\Re_OS_3\test_all\test_netConfig\test_wan_config.py", line 118, in test_1_001_wan_config_static
-    raise Exception('ping %s is fail,ping网关不通！' % GWaddr)
-Exception: ping 192.168.30.1 is fail,ping网关不通！
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='ft1.2' class='none'>
-    <td class='errorCase'><div class='testcase'>test_1_002_wan_config_DHCP: --wan口DHCP配置与释放--</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
-        错误</a>
-
-    <div id='div_ft1.2' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.2: 当前位置： 网络配置
-当前位置： 外网配置
-共有  4  wan口
-****************************** 
-
-当前接口为： WAN2
-连接状态： 已连接
-连接类型为： 动态接入
-wan口ip为： 192.168.3.158
-子网掩码为： 255.255.255.0
-网关地址为： 192.168.3.5
-****************************** 
-
-ping 192.168.3.5 is ok
-Traceback (most recent call last):
-  File "F:\untitled\Re_OS_3\test_all\test_netConfig\test_wan_config.py", line 271, in test_1_002_wan_config_DHCP
-    shuaxin = self.driver.find_element_by_xpath(".//*[@id='otherBtns']/button[3]")
-  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 832, in find_element
-    'value': value})['value']
-  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 297, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id='otherBtns']/button[3]"}
-  (Session info: chrome=60.0.3112.113)
-  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 10.0.15063 x86_64)
 
 
 
@@ -341,59 +273,72 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
     </td>
 </tr>
 
-<tr id='ft1.3' class='none'>
-    <td class='errorCase'><div class='testcase'>test_1_003_wan_config_PPPoE: PPPoE的配置与挂断</div></td>
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_002_nat_rule: NAT规则 配置与删除</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
-        错误</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        通过</a>
 
-    <div id='div_ft1.3' class="popup_window">
+    <div id='div_pt1.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.3: 当前位置： 网络配置
-当前位置： 外网配置
-共有  4  wan口
+pt1.2: 当前位置： 网络配置
+当前位置: 端口映射
+当前位置: NAT规则
+每页显示个数为: 50
 ****************************** 
 
-当前接口为： WAN2
-连接状态： 已连接
-连接类型为： PPPoE接入
-wan口ip为： 10.69.33.68
-子网掩码为： 255.255.255.255
-网关地址为： 192.168.3.5
+Easy IP 定位成功！！
+Easy IP 定位成功！！
 ****************************** 
 
+规则名称: 192.123  	NAT类型: Easy IP   内网起始IP地址: 192.168.2.3  内网结束IP地址: 192.168.2.5    绑定接口: WAN1
+规则名称: 1212  	NAT类型: Easy IP   内网起始IP地址: 192.168.2.22  内网结束IP地址: 192.168.2.25    绑定接口: WAN1
 ****************************** 
 
-当前接口为： WAN3
-连接状态： 已连接
-连接类型为： PPPoE接入
-wan口ip为： 10.69.33.70
-子网掩码为： 255.255.255.255
-网关地址为： 192.168.3.5
+将配置的 192.123 规则---删除
+将配置的 1212 规则---删除
 ****************************** 
 
-Traceback (most recent call last):
-  File "F:\untitled\Re_OS_3\test_all\test_netConfig\test_wan_config.py", line 348, in test_1_003_wan_config_PPPoE
-    web_connect_status = self.driver.find_element_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[2]/a" % (i + 1))
-  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 832, in find_element
-    'value': value})['value']
-  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 297, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='1']/div/div/div[1]/table/tbody/tr[4]/td[2]/a"}
-  (Session info: chrome=60.0.3112.113)
-  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 10.0.15063 x86_64)
 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_003_DMZ: DMZ主机配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        通过</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: 当前位置： 网络配置
+当前位置: 端口映射
+当前定位： DMZ主机
+已开启DMZ！
+wan1口DMZ主机ip为： 192.168.2.22
+wan2口DMZ主机ip为： 192.168.2.22
+wan3口DMZ主机ip为： 192.168.2.22
+wan4口DMZ主机ip为： 192.168.2.22
+各wan口配置ip与全局DMZ主机ip相同
 
 
         </pre>
@@ -406,9 +351,9 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
 <tr id='total_row'>
     <td>总计</td>
     <td>3</td>
-    <td>0</td>
-    <td>0</td>
     <td>3</td>
+    <td>0</td>
+    <td>0</td>
     <td>&nbsp;</td>
 </tr>
 </table>

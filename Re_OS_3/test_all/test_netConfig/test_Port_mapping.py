@@ -36,6 +36,9 @@ class Port_mapping(unittest.TestCase):
         port_map =self.driver.find_element_by_link_text("端口映射")
         port_map.click()
         print("当前位置:",port_map.text)
+        time.sleep(1)
+        static_mapping = self.driver.find_element_by_link_text("静态映射")
+        print("当前位置：",static_mapping.text)
 
         # 每页显示  --显示50条
         shownumber = self.driver.find_element_by_xpath(".//button[@id='1']")
@@ -193,6 +196,7 @@ class Port_mapping(unittest.TestCase):
         print("当前位置:", port_map.text)
         #nat规则
         nat_rule = self.driver.find_element_by_link_text("NAT规则")
+        print("当前位置:",nat_rule.text)
         nat_rule.click()
         time.sleep(3)
 
@@ -373,6 +377,7 @@ class Port_mapping(unittest.TestCase):
 
         #DMZ主机 定位
         DMZ = self.driver.find_element_by_link_text("DMZ主机")
+        print("当前定位：",DMZ.text)
         DMZ.click()
         time.sleep(2)
         #DMZ状态 定位

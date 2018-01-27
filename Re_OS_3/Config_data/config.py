@@ -67,11 +67,11 @@ globalDMZHost = "192.168.2.22"
 #*****************************************************************#
 '''路由配置'''
 #静态路由
-router_static_name =["333"]  #规则名称
-rou_static_destNet = ["192.168.3.22"] #目的网络
-rou_static_netmask= ["255.255.255.0"] #子网掩码
-rou_static_GWay =["192.168.2.112"] #网关地址
-rou_static_priority = ["1"] #优先级
+router_static_name =["333",'444']  #规则名称
+rou_static_destNet = ["192.168.3.22","192.168.4.23"] #目的网络
+rou_static_netmask= ["255.255.255.0","255.255.255.0"] #子网掩码
+rou_static_GWay =["192.168.2.112","192.168.3.4"] #网关地址
+rou_static_priority = ["1","2"] #优先级
 
 
 
