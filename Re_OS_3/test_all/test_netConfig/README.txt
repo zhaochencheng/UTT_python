@@ -12,7 +12,7 @@
       对于页面 所有可操作元素 未完全覆盖到;
 *****************************************
 -----------------------------------------
-网络配置：test_netConfig
+网络配置：test_netConfig  [放自动截图]
     外网配置 test_wan_config.py
            ----wan口固定ip 配置与删除     test_1_001_wan_config_static  [使用显性等待,减少定位不到元素问题] [放自动截图]
            ----wan口DHCP  配置与释放      test_1_002_wan_config_DHCP  [使用显性等待,减少定位不到元素问题] [放自动截图]
@@ -30,10 +30,11 @@
            ----DMZ主机配置               test_04_003_DMZ [#添加DMZ 生效 方法][#单个wan口DMZ 配置]
     路由配置 test_rouger_config.py
             ----静态路由配置与删除        test_05_001_staticRouter
-            ----策略路由 开启 、关闭与策略路由配置   test_05_002_strategyRouter
+            ----策略路由 开启 、关闭与策略路由配置   test_05_002_strategyRouter（未实现）
 
 
-    动态域名
+    动态域名 test_DDNS.py
+           -----动态域名的新增与删除   test_006_ddns[判断 ddns功能是否生效；-----如果打不开怎么办]
 
     交换配置
 
