@@ -219,7 +219,7 @@ class Router_config(unittest.TestCase):
 
     def test_05_002_strategyRouter(self):
         u'''策略路由 开启 、关闭与策略路由配置'''
-        pass
+        
 
 
 
