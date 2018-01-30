@@ -74,6 +74,11 @@ rou_static_GWay =["192.168.2.112","192.168.3.4"] #网关地址
 rou_static_priority = ["1","2"] #优先级
 
 
+#策略路由
+router_strategy_name = ["ap","ac"]
+router_RouteLevel = ['1','2']
+
+
 
 
 
