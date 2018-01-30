@@ -219,8 +219,33 @@ class Router_config(unittest.TestCase):
 
     def test_05_002_strategyRouter(self):
         u'''策略路由 开启 、关闭与策略路由配置'''
-        
 
+        # 显示等待
+        webwait = WebDriverWait(self.driver, 10, 1)
+        # 网络配置  定位
+        netconfig = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[3]/div/h4/span"))
+        netconfig.click()
+        print("当前位置:", netconfig.text)
+        # 路由配置 定位
+        router_config = self.driver.find_element_by_link_text("路由配置")
+        router_config.click()
+        print("当前位置:", router_config.text)
+        time.sleep(2)
+        #策略路由 定位
+        strategyrouter = self.driver.find_element_by_link_text("策略路由")
+        strategyrouter.click()
+        print("当前位置：",strategyrouter.text)
+        #策略路由开关按钮 定位
+        checkopen = self.driver.find_element_by_id("checkOpen")
+        # print(checkopen.get_attribute("checktype"))
+        # print(type(checkopen.get_attribute("checktype")))
+        if checkopen.get_attribute("checktype") == '0':
+            print("*" * 30, '\n')
+            print("策略路由功能未开启，现在开启！")
+            checkopen.click()
+        else:
+            print("*" * 30, '\n')
+            print("策略路由功能已开启。")
 
 
 

@@ -7,48 +7,50 @@
 # from nose.tools import assert_equal
 # coding:utf-8
 #
-
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-import unittest
-import time
 from selenium import webdriver
-from Re_OS_3.Public.Login_Router import Login
-from Re_OS_3.Config_data.config import *
+from time import sleep
+import unittest,re
+# import Readexcel
+import os
 
-driver = webdriver.Chrome()
-Login(driver).login_router(url,username,pwd)
-webwait = WebDriverWait(driver, 10, 1)
-# 网络配置  定位
-netconfig = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[3]/div/h4/span"))
-netconfig.click()
-print("当前位置：", netconfig.text)
-# 端口映射 定位
-port_map = driver.find_element_by_link_text("端口映射")
-port_map.click()
-print("当前位置:", port_map.text)
-# nat规则
-nat_rule = driver.find_element_by_link_text("NAT规则")
-nat_rule.click()
-time.sleep(3)
-# 新增 按钮 定位
-print("add qian ")
-# add = driver.find_element_by_id("add")
-adds = driver.find_elements_by_xpath("//*[@id='add']")
+#excel表格获取url、用户名、密码
+# B=Readexcel.read_xls_file()
+url1="192.168.2.1"
+username="admin1"
+pwd="admin"
 
-print(len(adds))
+def login_A():
+	print(url1)
+	driver.get("http://192.168.2.1")
+	driver.implicitly_wait(8)
+	driver.find_element_by_name("username").clear()
+	driver.find_element_by_name("username").send_keys(username)
+	driver.find_element_by_name("pwd").clear()
+	driver.find_element_by_name("pwd").send_keys(pwd)
+	driver.find_element_by_id("login_btn").click()
+	sleep(1)
 
-add = adds[1]
-print(add.get_attribute("data-local"))
-print(add)
-print("add.text:",add.text)
-print("add.is_enabled():",add.is_enabled())
-print("add.is_displayed():",add.is_displayed())
-# js = 'document.'
-# add.click()
-# add = webwait.until(lambda x: x.find_element_by_id("add"))
-add.click()
-time.sleep(3)
-
-driver.quit()
+def check():
+#检测是否登录成功
+	for num in range(1,3):
+		if "index.html" in driver.current_url:
+			print('login successful')
+			#break #跳出当前循环
+			return #跳出检测函数
+		else:
+			error_mes=driver.find_element_by_xpath(".//*[@id='warning-msg']").text #获取错误信息
+			print (error_mes)
+			sleep(1)
+			login_A()
+#检测最后是否登录成功
+	if "index.html" in driver.current_url:
+		print('login successful')
+	else:
+		print("ERROR!")
+        raise BaseException("无法登陆页面！")
+if __name__ == '__main__':
+    driver = webdriver.Chrome()
+    driver.implicitly_wait(10)
+    login_A()
+    check()
+    driver.quit()
