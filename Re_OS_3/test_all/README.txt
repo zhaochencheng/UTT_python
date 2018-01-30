@@ -37,10 +37,17 @@
 
     DHCP服务
 
-    端口映射 test_Port_mapping.py
+    端口映射 test_Port_mapping.py [未加判断该功能是否生效]
            ----静态映射配置,修改与删除    test_04_001_static_port_mapping[os对截图文件夹清空,再放截图][对配置的端口进行验证]
+           ----NAT规则 配置与删除        test_04_002_nat_rule
+           ----DMZ主机配置               test_04_003_DMZ [#添加DMZ 生效 方法][#单个wan口DMZ 配置]
+    路由配置 test_rouger_config.py
+            ----静态路由配置与删除        test_05_001_staticRouter
+            ----策略路由 开启 、关闭与策略路由配置   test_05_002_strategyRouter
 
-    动态域名
+
+    动态域名 test_DDNS.py
+           -----动态域名的新增与删除   test_006_ddns[判断 ddns功能是否生效；-----如果打不开怎么办]
 
     交换配置
 
