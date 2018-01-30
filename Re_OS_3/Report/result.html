@@ -193,9 +193,9 @@ function showOutput(id, name) {
 
 <div class='page-header'>
 <h1>自动化测试报告,测试结果如下：</h1>
-<p class='attribute'><strong>开始时间:</strong> 2018-01-27 22:27:07</p>
-<p class='attribute'><strong>运行时长:</strong> 0:02:11.088923</p>
-<p class='attribute'><strong>状态:</strong> 通过 3</p>
+<p class='attribute'><strong>开始时间:</strong> 2018-01-28 00:17:36</p>
+<p class='attribute'><strong>运行时长:</strong> 0:03:21.489117</p>
+<p class='attribute'><strong>状态:</strong> 通过 4</p>
 
 </div>
 <p class='description'>用例执行情况：</p>
@@ -348,10 +348,58 @@ wan4口DMZ主机ip为： 192.168.2.22
     </td>
 </tr>
 
+<tr class='passClass'>
+    <td>Re_OS_3.test_all.test_netConfig.test_router_config.Router_config: **路由配置**</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',1)">详情</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05_staticRouter: 静态路由配置与删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        通过</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: 当前位置: 网络配置
+当前位置: 路由配置
+当前位置: 静态路由
+规则名为： 333
+该规则为开启状态
+目的网络为： 192.168.3.0   网关地址为： 192.168.2.112   优先级为： 1   绑定接口为： WAN1
+规则名为： 444
+该规则为开启状态
+目的网络为： 192.168.4.0   网关地址为： 192.168.3.4   优先级为： 2   绑定接口为： WAN1
+****************************** 
+
+将333 规则，删除
+将444 规则，删除
+****************************** 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
 <tr id='total_row'>
     <td>总计</td>
-    <td>3</td>
-    <td>3</td>
+    <td>4</td>
+    <td>4</td>
     <td>0</td>
     <td>0</td>
     <td>&nbsp;</td>

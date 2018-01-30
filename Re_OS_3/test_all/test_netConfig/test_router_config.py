@@ -24,7 +24,7 @@ class Router_config(unittest.TestCase):
     def tearDown(self):
         time.sleep(5)
         self.driver.quit()
-    def test_05_staticRouter(self):
+    def test_05_001_staticRouter(self):
         u'''静态路由配置与删除'''
 
         # 显示等待
@@ -40,6 +40,7 @@ class Router_config(unittest.TestCase):
         time.sleep(2)
         statice_route = self.driver.find_element_by_link_text("静态路由")
         print("当前位置:",statice_route.text)
+        print("*" * 30, '\n')
 
 
         # # 静态路由配置  # #

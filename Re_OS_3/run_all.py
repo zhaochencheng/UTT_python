@@ -10,6 +10,7 @@ import unittest
 from Re_OS_3.Tool.mail import *
 from Re_OS_3.test_all.test_netConfig.test_wan_config import Wan_config
 from Re_OS_3.test_all.test_netConfig.test_Port_mapping import Port_mapping
+from Re_OS_3.test_all.test_netConfig.test_router_config import Router_config
 
 #用例路径
 case_path = os.path.join(os.getcwd(),"test_all")
@@ -32,6 +33,7 @@ suit = unittest.TestSuite()
 suit.addTest(Port_mapping("test_04_001_static_port_mapping"))
 suit.addTest(Port_mapping("test_04_002_nat_rule"))
 suit.addTest(Port_mapping("test_04_003_DMZ"))
+suit.addTest(Router_config("test_05_staticRouter"))
 
 
 fp = open(report_abspath,"wb")
