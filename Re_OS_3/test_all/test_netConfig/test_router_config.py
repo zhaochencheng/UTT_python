@@ -24,7 +24,7 @@ class Router_config(unittest.TestCase):
     def tearDown(self):
         time.sleep(5)
         self.driver.quit()
-    def test_05_staticRouter(self):
+    def test_05_001_staticRouter(self):
         u'''静态路由配置与删除'''
 
         # 显示等待
@@ -196,7 +196,7 @@ class Router_config(unittest.TestCase):
                     break
         print("*" * 30, '\n')
 
-    def test_05_strategyRouter(self):
+    def test_05_002_strategyRouter(self):
         u'''策略路由 开启 、关闭与策略路由配置'''
         pass
 
