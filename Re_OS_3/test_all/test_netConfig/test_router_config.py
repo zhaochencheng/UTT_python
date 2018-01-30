@@ -14,6 +14,7 @@ import time
 from selenium import webdriver
 from Re_OS_3.Public.Login_Router import Login
 from Re_OS_3.Config_data.config import *
+from Re_OS_3.Tool.Ping import Ping
 
 class Router_config(unittest.TestCase):
     u'''**路由配置**'''
@@ -79,6 +80,16 @@ class Router_config(unittest.TestCase):
                         pass
                 else:
                     break
+
+        #配置前 先ping 一下 要配置的IP 是否可以ping通
+
+        for j in range(len(router_static_name)):
+            try:
+                ping = Ping().ping_IP(rou_static_destNet[j])
+            except BaseException as E:
+                print(E)
+
+        time.sleep(2)
         #配置
         for j in range(len(router_static_name)):
             #新增 按钮
@@ -116,10 +127,11 @@ class Router_config(unittest.TestCase):
             Metrics.clear()
             Metrics.send_keys(rou_static_priority[j])
 
-            #绑定接口  绑定wan1 口   ---
+            #绑定接口  绑定wan1 口   -lan 口--
             #                     ---- 要考虑如何将所有接口都能绑定 进行测试
             interface = self.driver.find_element_by_xpath(".//select[@name='Profiles']")
-            Select(interface).select_by_value("WAN1")
+            # Select(interface).select_by_value("WAN1")
+            Select(interface).select_by_value("LAN")
             #点击保存
             save = self.driver.find_element_by_id("save")
             save.click()
@@ -168,6 +180,14 @@ class Router_config(unittest.TestCase):
                 else:
                     break
         print("*" * 30, '\n')
+
+
+        # # 配置后 ping 一下 要配置的IP 是否可以ping通
+        # # 判断路由是否生效
+        for j in range(len(router_static_name)):
+            ping = Ping().ping_IP(rou_static_destNet[j])
+
+        time.sleep(2)
         #删除配置 规则
         tr = self.driver.find_elements_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr")
         # print("每页显示个数为:", len(tr))

@@ -42,7 +42,7 @@
            ----NAT规则 配置与删除        test_04_002_nat_rule[对nat规则的判断]
            ----DMZ主机配置               test_04_003_DMZ[对单个wan口进行配置]
     路由配置 test_router_config.py
-           -----静态路由配置与删除        test_05_001_staticRouter
+           -----静态路由配置与删除        test_05_001_staticRouter[要考虑如何将所有接口都能绑定 进行测试]
 
     动态域名
 
