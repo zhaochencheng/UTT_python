@@ -25,7 +25,7 @@ class Wan_config(unittest.TestCase):
     def tearDown(self):
         time.sleep(5)
         self.driver.quit()
-    def test_1_001_wan_config_static(self):
+    def test_01_001_wan_config_static(self):
         u'''--wan口固定ip配置与删除--'''
 
         #网络配置  定位
@@ -163,7 +163,7 @@ class Wan_config(unittest.TestCase):
         time.sleep(2)
 
 
-    def test_1_002_wan_config_DHCP(self):
+    def test_01_002_wan_config_DHCP(self):
         u'''--wan口DHCP配置与释放--'''
 
         # 网络配置  定位
@@ -300,7 +300,7 @@ class Wan_config(unittest.TestCase):
             time.sleep(2)
         time.sleep(2)
 
-    def test_1_003_wan_config_PPPoE(self):
+    def test_01_003_wan_config_PPPoE(self):
         u'''PPPoE的配置与挂断'''
 
         # 网络配置  定位

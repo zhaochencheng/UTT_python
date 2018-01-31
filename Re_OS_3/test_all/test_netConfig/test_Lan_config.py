@@ -24,7 +24,7 @@ class Lan_config(unittest.TestCase):
         time.sleep(5)
         self.driver.quit()
 
-    # def test_2_001_lanconfig(self):
+    # def test_02_001_lanconfig(self):
     #     u'''lan口默认配置'''
     #     #显示等待
     #     webwait = WebDriverWait(self.driver,10,1)
@@ -37,7 +37,7 @@ class Lan_config(unittest.TestCase):
     #     lanconfig.click()
     #     print("当前位置：",lanconfig.text)
 
-    def test_2_002_vlan_lanconfig(self):
+    def test_02_002_vlan_lanconfig(self):
         u'''vlan配置与删除'''
         # 显示等待
         webwait = WebDriverWait(self.driver, 10, 1)

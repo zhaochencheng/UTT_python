@@ -38,7 +38,7 @@ class DDNS_config(unittest.TestCase):
 
 
 
-    def test_006_ddns(self):
+    def test_06_001_ddns(self):
         u'''动态域名的新增与删除，'''
         # 显示等待
         webwait = WebDriverWait(self.driver, 10, 1)
