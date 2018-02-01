@@ -20,16 +20,23 @@ class Ping():
             #如果ping 不通 会抛出异常
             raise BaseException("ping 不通该%s 地址 "%ip)
         else:
-            print(a)
+            # print(a)
             print('ping %s is ok' % ip)
             return False
 if __name__ == '__main__':
-    ip = ["192.168.34.1","192.168.36.2"]
+    ip = ["192.168.30.1","192.168.30.2"]
     # ping = Ping().ping_IP(ip)
-    for i in range(len(ip)):
-        try:
-            ping = Ping().ping_IP(ip[i])
-        except BaseException as E:
-            # print("ping 不通配置中的ip")
-            print(E)
+    # for i in range(len(ip)):
+        # ping = Ping().ping_IP(ip[i])
+    try:
+        ping = Ping().ping_IP("www.baidu.com")
+    except BaseException as E:
+        # print("ping 不通配置中的ip")
+        print("error",E)
+        print(type(E))
+        if E :
+            print("功能生效")
+        else:
+            raise BaseException("功能生效不生效；未禁ping")
+
     # ping.ping_IP(ip)

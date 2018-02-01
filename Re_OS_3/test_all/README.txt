@@ -47,15 +47,36 @@
 
 
     动态域名 test_DDNS.py
-           -----动态域名的新增与删除   test_006_ddns[判断 ddns功能是否生效；-----如果打不开怎么办]
+           -----动态域名的新增与删除   test_006_ddns[已加入判断 ddns功能是否生效][-----如果打不开怎么办]
 
     交换配置
 
-无线扩展
+无线扩展：test_WirelessExtension
+
+    网络名称
+
+    设备管理
+
+    射频模板
+
+    负载均衡
+
+    软件管理
+
 
 用户管理
 
-行为管理
+行为管理  test_BehaviorManagement
+
+    行为管理 test_BehaviorManage.py
+            ------ 行为管理配置与删除      test_17_001_behaviorMange[加入禁ping判断][考虑其他行为管理如何禁止]
+
+    域名过滤
+
+    白名单
+
+    电子通告
+
 
 流量管理
 
@@ -67,4 +88,3 @@ VPN配置
 
 系统配置
 
-测试脚本

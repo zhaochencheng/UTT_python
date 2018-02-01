@@ -12,6 +12,7 @@ import unittest
 import time
 from selenium import webdriver
 from Re_OS_3.Public.Login_Router import Login
+from Re_OS_3.Public.Output_web_info import Output_info
 from Re_OS_3.Config_data.config import *
 
 class DDNS_config(unittest.TestCase):
@@ -109,6 +110,7 @@ class DDNS_config(unittest.TestCase):
         refresh = self.driver.find_element_by_id("fresh")
         refresh.click()
 
+        # #将页面信息输出
         # 页面显示个数
         shownumber = self.driver.find_element_by_xpath(".//button[@id = '1']")
         shownumber.click()
@@ -117,7 +119,7 @@ class DDNS_config(unittest.TestCase):
         number_50 = self.driver.find_element_by_xpath("//*[@id='page-count-control']/div[1]/ul/li[3]/a")
         number_50.click()
         #
-        # 判断页面是否存在与配置 相同的配置
+        # 将页面信息输出
         tr = self.driver.find_elements_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr")
         # print("每页显示个数为:", len(tr))
         time.sleep(2)
@@ -142,8 +144,11 @@ class DDNS_config(unittest.TestCase):
             else:
                 break
         time.sleep(2)
-        #判断 ddns功能是否生效；-----如果打不开怎么办？
+
+        # #判断 ddns功能是否生效；-----如果打不开怎么办？
         self.openhostname(web_hostname)
+
+
 
         time.sleep(2)
         # 页面显示个数
@@ -154,7 +159,7 @@ class DDNS_config(unittest.TestCase):
         number_50 = self.driver.find_element_by_xpath("//*[@id='page-count-control']/div[1]/ul/li[3]/a")
         number_50.click()
         #
-        # 判断页面是否存在与配置 相同的配置
+        # 删除配置
         tr = self.driver.find_elements_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr")
         # print("每页显示个数为:", len(tr))
         time.sleep(2)

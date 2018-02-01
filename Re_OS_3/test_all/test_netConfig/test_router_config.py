@@ -13,6 +13,7 @@ import unittest
 import time
 from selenium import webdriver
 from Re_OS_3.Public.Login_Router import Login
+from Re_OS_3.Public.Output_web_info import Output_info
 from Re_OS_3.Config_data.config import *
 from Re_OS_3.Tool.Ping import Ping
 
@@ -137,6 +138,8 @@ class Router_config(unittest.TestCase):
             save.click()
             time.sleep(5)
         time.sleep(2)
+
+
         # 页面显示个数
         shownumber = self.driver.find_element_by_xpath(".//button[@id = '1']")
         shownumber.click()
@@ -180,6 +183,7 @@ class Router_config(unittest.TestCase):
                 else:
                     break
         print("*" * 30, '\n')
+
 
 
         # # 配置后 ping 一下 要配置的IP 是否可以ping通
