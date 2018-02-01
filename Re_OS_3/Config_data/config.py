@@ -90,3 +90,8 @@ ssid = ["1232",'345']
 #行为管理
 behavior_rulename =['12','43','额外']#规则名称
 servername = ["ping",'FTP','ICMP'] #应用服务
+
+
+#域名过滤
+DNS_filter_rulename = ["163","baidu"]
+DNS_filter_hostname = ["www.163.com","*.baidu.*"]
