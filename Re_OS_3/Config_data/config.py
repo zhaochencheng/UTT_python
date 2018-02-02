@@ -80,6 +80,7 @@ router_RouteLevel = ['1','2']
 
 
 #*****************************************************************#
+'''无线扩展'''
 #网络名称
 net_name = ['123','34']
 ssid = ["1232",'345']
@@ -87,6 +88,7 @@ ssid = ["1232",'345']
 
 
 #*****************************************************************#
+'''行为管理'''
 #行为管理
 behavior_rulename =['12','43','额外']#规则名称
 servername = ["ping",'FTP','ICMP'] #应用服务
@@ -94,4 +96,4 @@ servername = ["ping",'FTP','ICMP'] #应用服务
 
 #域名过滤
 DNS_filter_rulename = ["163","baidu"]
-DNS_filter_hostname = ["www.163.com","*.baidu.*"]
+DNS_filter_hostname = ["www.163.com","www.sina.com","www.taobao.com"]#过滤 域名

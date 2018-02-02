@@ -17,7 +17,8 @@
     行为管理 test_BehaviorManage.py
             ------ 行为管理配置与删除      test_17_001_behaviorMange[加入禁ping判断][考虑其他行为管理如何禁止]
 
-    域名过滤
+    域名过滤 test_Dns_dnsFilter.py
+            ------ 域名过滤开启与关闭      test_18_001_dnsfilter
 
     白名单
 
