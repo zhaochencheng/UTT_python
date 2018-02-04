@@ -193,9 +193,9 @@ function showOutput(id, name) {
 
 <div class='page-header'>
 <h1>自动化测试报告,测试结果如下：</h1>
-<p class='attribute'><strong>开始时间:</strong> 2018-01-28 00:17:36</p>
-<p class='attribute'><strong>运行时长:</strong> 0:03:21.489117</p>
-<p class='attribute'><strong>状态:</strong> 通过 4</p>
+<p class='attribute'><strong>开始时间:</strong> 2018-02-04 17:13:21</p>
+<p class='attribute'><strong>运行时长:</strong> 0:02:55.278903</p>
+<p class='attribute'><strong>状态:</strong> 通过 1</p>
 
 </div>
 <p class='description'>用例执行情况：</p>
@@ -227,16 +227,16 @@ function showOutput(id, name) {
 </tr>
 
 <tr class='passClass'>
-    <td>Re_OS_3.test_all.test_netConfig.test_Port_mapping.Port_mapping: **端口映射**</td>
-    <td>3</td>
-    <td>3</td>
+    <td>Re_OS_3.test_all.test_UserManage.test_accStatu.AccStatu: **用户状态**</td>
+    <td>1</td>
+    <td>1</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',3)">详情</a></td>
+    <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
 </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_04_001_static_port_mapping: 静态映射配置,修改与删除</div></td>
+    <td class='none'><div class='testcase'>test_14_001_accStatu: 用户状态显示与操作</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -250,141 +250,109 @@ function showOutput(id, name) {
         </div>
         <pre>
         
-pt1.1: 当前位置： 网络配置
-当前位置: 端口映射
-当前位置： 静态映射
-每页显示个数为: 50
+pt1.1: 标题子项： 15
 ****************************** 
 
-规则名称: AC12    内网IP地址: 192.168.2.33    端口映射关系: 80~80:8081~8081
-规则名称: AC23    内网IP地址: 192.168.2.55    端口映射关系: 88~88:8888~8888
+ID : 1
+用户名 : Guest1
+所属组 : 临时用户
+VLAN ID : 0
+IP 地址 : 192.168.2.37
+MAC地址 : 00:24:11:43:65:87
+认证方式 : 无
+在线时长 : 14分
+上传数据(Mbyte) : 0
+下载数据(Mbyte) : 0
+上传速度(Kbyte/s) : 0
+下载速度(Kbyte/s) : 0
+该 ‘ Guest1 ’ 信息已全部输出 
 ****************************** 
 
-已将AC12 规则删除
-已将AC23 规则删除
 ****************************** 
 
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_04_002_nat_rule: NAT规则 配置与删除</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
-        通过</a>
-
-    <div id='div_pt1.2' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt1.2: 当前位置： 网络配置
-当前位置: 端口映射
-当前位置: NAT规则
-每页显示个数为: 50
+ID : 2
+用户名 : Guest2
+所属组 : 临时用户
+VLAN ID : 0
+IP 地址 : 192.168.2.190
+MAC地址 : 00:e0:4c:30:12:7e
+认证方式 : 无
+在线时长 : 15分
+上传数据(Mbyte) : 5
+下载数据(Mbyte) : 4
+上传速度(Kbyte/s) : 1
+下载速度(Kbyte/s) : 115
+该 ‘ Guest2 ’ 信息已全部输出 
 ****************************** 
 
-Easy IP 定位成功！！
-Easy IP 定位成功！！
 ****************************** 
 
-规则名称: 192.123  	NAT类型: Easy IP   内网起始IP地址: 192.168.2.3  内网结束IP地址: 192.168.2.5    绑定接口: WAN1
-规则名称: 1212  	NAT类型: Easy IP   内网起始IP地址: 192.168.2.22  内网结束IP地址: 192.168.2.25    绑定接口: WAN1
+ID : 3
+用户名 : Guest3
+所属组 : 临时用户
+VLAN ID : 0
+IP 地址 : 192.168.2.252
+MAC地址 : 00:24:ac:e7:34:4d
+认证方式 : 无
+在线时长 : 15分
+上传数据(Mbyte) : 0
+下载数据(Mbyte) : 0
+上传速度(Kbyte/s) : 0
+下载速度(Kbyte/s) : 0
+该 ‘ Guest3 ’ 信息已全部输出 
 ****************************** 
 
-将配置的 192.123 规则---删除
-将配置的 1212 规则---删除
+当前分组个数为： 1
+标题子项： 15
 ****************************** 
 
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt1.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_04_003_DMZ: DMZ主机配置</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
-        通过</a>
-
-    <div id='div_pt1.3' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt1.3: 当前位置： 网络配置
-当前位置: 端口映射
-当前定位： DMZ主机
-已开启DMZ！
-wan1口DMZ主机ip为： 192.168.2.22
-wan2口DMZ主机ip为： 192.168.2.22
-wan3口DMZ主机ip为： 192.168.2.22
-wan4口DMZ主机ip为： 192.168.2.22
-各wan口配置ip与全局DMZ主机ip相同
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr class='passClass'>
-    <td>Re_OS_3.test_all.test_netConfig.test_router_config.Router_config: **路由配置**</td>
-    <td>1</td>
-    <td>1</td>
-    <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c2',1)">详情</a></td>
-</tr>
-
-<tr id='pt2.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_05_staticRouter: 静态路由配置与删除</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
-        通过</a>
-
-    <div id='div_pt2.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt2.1: 当前位置: 网络配置
-当前位置: 路由配置
-当前位置: 静态路由
-规则名为： 333
-该规则为开启状态
-目的网络为： 192.168.3.0   网关地址为： 192.168.2.112   优先级为： 1   绑定接口为： WAN1
-规则名为： 444
-该规则为开启状态
-目的网络为： 192.168.4.0   网关地址为： 192.168.3.4   优先级为： 2   绑定接口为： WAN1
+ID : 1
+用户名 : arpd_1
+所属组 : 1232131
+VLAN ID : 0
+IP 地址 : 192.168.2.37
+MAC地址 : 00:24:11:43:65:87
+认证方式 : IP/Mac绑定
+在线时长 : 0分
+上传数据(Mbyte) : 0
+下载数据(Mbyte) : 0
+上传速度(Kbyte/s) : 0
+下载速度(Kbyte/s) : 0
+该 ‘ arpd_2 ’ 信息已全部输出 
 ****************************** 
 
-将333 规则，删除
-将444 规则，删除
+****************************** 
+
+ID : 2
+用户名 : arpd_2
+所属组 : 1232131
+VLAN ID : 0
+IP 地址 : 192.168.2.190
+MAC地址 : 00:e0:4c:30:12:7e
+认证方式 : IP/Mac绑定
+在线时长 : 0分
+上传数据(Mbyte) : 0
+下载数据(Mbyte) : 0
+上传速度(Kbyte/s) : 0
+下载速度(Kbyte/s) : 0
+该 ‘ arpd_2 ’ 信息已全部输出 
+****************************** 
+
+****************************** 
+
+ID : 3
+用户名 : arpd_3
+所属组 : 1232131
+VLAN ID : 0
+IP 地址 : 192.168.2.252
+MAC地址 : 00:24:ac:e7:34:4d
+认证方式 : IP/Mac绑定
+在线时长 : 1分
+上传数据(Mbyte) : 0
+下载数据(Mbyte) : 0
+上传速度(Kbyte/s) : 0
+下载速度(Kbyte/s) : 0
+该 ‘ arpd_3 ’ 信息已全部输出 
 ****************************** 
 
 
@@ -398,8 +366,8 @@ pt2.1: 当前位置: 网络配置
 
 <tr id='total_row'>
     <td>总计</td>
-    <td>4</td>
-    <td>4</td>
+    <td>1</td>
+    <td>1</td>
     <td>0</td>
     <td>0</td>
     <td>&nbsp;</td>

@@ -67,12 +67,12 @@
 用户管理
     组织用户
 
-    用户状态
+    用户状态 test_accStatu.py
+            ------用户状态显示与操作             test_14_001_accStatu[将用户加入黑名单并判断该用户能否被拉黑]
 
     用户认证
 
     黑名单
-
 
 行为管理  test_BehaviorManagement
     行为管理 test_BehaviorManage.py

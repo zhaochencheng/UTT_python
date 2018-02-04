@@ -73,7 +73,8 @@ class AccStatu(unittest.TestCase):
         accStatus = self.driver.find_element_by_link_text("用户状态")
         accStatus.click()
         #将页面 用户状态列表 信息输出
-        # Output_info(self.driver).output_all()
+        Output_info(self.driver).output_all()
+
         #将临时用户加入分组中
         self.Users_joingroups()
 
@@ -82,6 +83,8 @@ class AccStatu(unittest.TestCase):
         self.driver.refresh()
         time.sleep(3)
         Output_info(self.driver).output_all()
+
+        '''黑名单生效'''
 
 
 
