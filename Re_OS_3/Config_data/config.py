@@ -5,8 +5,8 @@
 # @File    : config.py
 # @Software: PyCharm Community Edition
 #登陆 url 用户名 密码
-# url ="http://192.168.2.1"
-url ="http://117.71.57.195:8888"
+url ="http://192.168.2.1"
+# url ="http://117.71.57.195:8888"
 username = "admin"
 pwd = "admin"
 
