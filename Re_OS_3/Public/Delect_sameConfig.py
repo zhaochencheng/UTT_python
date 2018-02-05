@@ -11,6 +11,7 @@ class Delect_config():
     def __init__(self,driver):
         self.driver = driver
     def delect_sameconfig(self,config_name):
+        u'''将页面与配置信息 相同的配置删除'''
         # #页面显示个数
         shownumber = self.driver.find_element_by_xpath(".//button[@id = '1']")
         shownumber.click()

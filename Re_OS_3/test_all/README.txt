@@ -65,7 +65,8 @@
 
 
 用户管理
-    组织用户
+   组织用户  test_organize_member.py
+            ------组织成员配置与操作             test_13_001_accStatu[如何与下面的功能关联在一起]
 
     用户状态 test_accStatu.py
             ------用户状态显示与操作             test_14_001_accStatu[将用户加入黑名单并判断该用户能否被拉黑]
@@ -83,8 +84,8 @@
 
     白名单
 
-    电子通告
-
+    电子通告 test_LectronicsNotice.py
+            ------ 电子通告开启与关闭       test_20_001_lectronicsNotice
 
 流量管理
     应用优先

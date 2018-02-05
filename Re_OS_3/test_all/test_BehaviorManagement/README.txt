@@ -22,6 +22,7 @@
 
     白名单
 
-    电子通告
+    电子通告 test_LectronicsNotice.py
+            ------ 电子通告开启与关闭    test_20_001_lectronicsNotice
 
 

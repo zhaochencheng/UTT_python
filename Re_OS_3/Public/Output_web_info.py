@@ -72,6 +72,7 @@ class Output_info():
         number_50.click()
         # 标题栏 中有多少个子项
         head_all = self.driver.find_elements_by_xpath("//*[@id='1']/div/div/div[1]/table/thead/tr/th")
+
         print("标题子项：", len(head_all))
         #  #展开
         tr = self.driver.find_elements_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr")
