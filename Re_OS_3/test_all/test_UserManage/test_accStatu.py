@@ -139,11 +139,6 @@ class AccStatu(unittest.TestCase):
 
 
 
-
-
-
-
-
     def test_14_001_accStatu(self):
         u'''用户状态显示与操作'''
         # 显示等待
