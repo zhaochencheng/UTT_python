@@ -158,6 +158,93 @@ class NetManageStrate(unittest.TestCase):
         time.sleep(2)
         self.delect_add_system_admin(admin_username)
 
+    # def test_30_002_Intranet_access_control(self):
+    #     u'''内网访问控制配置与操作'''
+    #     pass
+
+    def check_remote_effective(self):
+        u'''开启远程管理并检查其是否生效'''
+
+        # 状态 关闭定位
+        status_off = self.driver.find_element_by_xpath(".//input[@name='HttpEnable' and @ value='0']")
+        if status_off.is_selected():
+            print("*" * 30, '\n')
+            print("远程管理 已关闭！")
+
+        else:
+            status_off.click()
+            print("*" * 30, '\n')
+            print("现在关闭 远程管理！")
+
+            # 保存定位
+            save = self.driver.find_element_by_id("save")
+            save.click()
+        time.sleep(2)
+        remote_Outport1 = self.driver.find_element_by_xpath(".//input[@name='OutPort']")
+        port = remote_Outport1.get_attribute("value")
+        print("端口为：", port)
+        print("*" * 30, '\n')
+        time.sleep(3)
+        # 开启远程管理  ---判断 能否 远程登陆 远程管理 ip
+        httpcode().http200("http://" + "192.168.30.115" + ":" + port)
+
+
+        #状态 开启定位
+        status_open = self.driver.find_element_by_xpath(".//input[@name='HttpEnable' and @ value='1']")
+        if status_open.is_selected():
+            print("*" * 30, '\n')
+            print("远程管理 已开启！")
+
+        else:
+            print("*" * 30, '\n')
+            status_open.click()
+            print("现在开启 远程管理！")
+
+            #保存定位
+            save =self.driver.find_element_by_id("save")
+            save.click()
+        time.sleep(2)
+        remote_Outport = self.driver.find_element_by_xpath(".//input[@name='OutPort']")
+        port = remote_Outport.get_attribute("value")
+        print("端口为：",port)
+        print("*" * 30, '\n')
+        time.sleep(3)
+        #开启远程管理  ---判断 能否 远程登陆 远程管理 ip
+        httpcode().http200("http://"+"192.168.30.115"+":"+port)
+
+
+    def test_30_003_Remote_management(self):
+        u'''远程管理配置与操作'''
+
+        # 显示等待
+        webwait = WebDriverWait(self.driver, 10, 1)
+        # 系统配置 定位
+        Sysconfig = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[11]/div/h4/span"))
+        Sysconfig.click()
+        print("当前位置：", Sysconfig.text)
+        # 网管策略 定位
+        netmanageStrate = self.driver.find_element_by_link_text("网管策略")
+        netmanageStrate.click()
+        print("当前位置：", netmanageStrate.text)
+        #远程管理 定位
+        remote_management = self.driver.find_element_by_link_text("远程管理")
+        remote_management.click()
+        print("当前位置：",remote_management.text)
+        time.sleep(2)
+
+        # # **开启远程管理** # #
+
+        #开启远程管理并检查其是否生效
+        self.check_remote_effective()
+
+    def test_30_004_Net_management_access_strategy(self):
+        u'''网管访问策略配置与操作'''
+        pass
+    def test_30_005_language_select(self):
+        u'''语言选择'''
+        pass
+
+
 
 
 

@@ -34,13 +34,13 @@ class httpcode():
         except Exception as  E:
             print(E)
             if E:
-                print("功能生效,无法访问该%s 地址！"%url)
+                print("无法访问该%s 地址！"%url)
             else:
                 raise BaseException("功能不生效")
 
 #
 if __name__ == '__main__':
-    httpcode().http200(url)
-    httpcode().http200("http://www.sina.com")
+    # httpcode().http200(url)
+    httpcode().http200("http://"+"192.168.30.115:8081")
 
 # http200(url2)

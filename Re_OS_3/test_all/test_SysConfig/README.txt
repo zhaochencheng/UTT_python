@@ -13,7 +13,12 @@
 *****************************************
 -----------------------------------------
 系统配置
-        网管策略
+        网管策略 test_NetManageStrate.py
+                ------系统管理员的配置    test_30_001_System_administrator[多种方法论证 管理员的读写权限]
+                ------内网访问控制        test_30_002_Intranet_access_control(未实现)
+                ------远程管理            test_30_003_Remote_management[如何获取wan口ip，从页面获取？还是后台读wan口ip]
+                ------网管访问策略         test_30_004_Net_management_access_strategy
+                ------语言配置            test_30_005_language_select
 
         时钟管理
 
