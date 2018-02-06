@@ -212,6 +212,22 @@ class NetManageStrate(unittest.TestCase):
         #开启远程管理  ---判断 能否 远程登陆 远程管理 ip
         httpcode().http200("http://"+"192.168.30.115"+":"+port)
 
+    def check_status(self,location):
+        if location.is_selected():
+            print("*" * 30, '\n')
+            print("远程管理 已关闭！")
+
+        else:
+            location.click()
+            print("*" * 30, '\n')
+            print("现在关闭 远程管理！")
+            time.sleep(1)
+            # 保存定位
+            save = self.driver.find_element_by_id("save")
+            save.click()
+
+
+
 
     def test_30_003_Remote_management(self):
         u'''远程管理配置与操作'''
@@ -235,11 +251,52 @@ class NetManageStrate(unittest.TestCase):
         # # **开启远程管理** # #
 
         #开启远程管理并检查其是否生效
-        self.check_remote_effective()
+
+         # 状态 关闭定位
+        status_off = self.driver.find_element_by_xpath(".//input[@name='HttpEnable' and @ value='0']")
+        self.check_status(status_off)
+        #端口定位
+        remote_Outport1 = self.driver.find_element_by_xpath(".//input[@name='OutPort']")
+        port = remote_Outport1.get_attribute("value")
+        print("端口为：", port)
+        print("*" * 30, '\n')
+        time.sleep(3)
+        # 关闭远程管理  ---判断 能否 远程登陆 远程管理 ip
+        httpcode().http200("http://" + "192.168.30.115" + ":" + port)
+
+         #状态 开启定位
+        status_open = self.driver.find_element_by_xpath(".//input[@name='HttpEnable' and @ value='1']")
+        self.check_status(status_open)
+        time.sleep(2)
+        #端口 定位
+        remote_Outport = self.driver.find_element_by_xpath(".//input[@name='OutPort']")
+        port = remote_Outport.get_attribute("value")
+        print("端口为：",port)
+        print("*" * 30, '\n')
+        time.sleep(3)
+        #开启远程管理  ---判断 能否 远程登陆 远程管理 ip
+        httpcode().http200("http://"+"192.168.30.115"+":"+port)
 
     def test_30_004_Net_management_access_strategy(self):
         u'''网管访问策略配置与操作'''
-        pass
+         # 显示等待
+        webwait = WebDriverWait(self.driver, 10, 1)
+        # 系统配置 定位
+        Sysconfig = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[11]/div/h4/span"))
+        Sysconfig.click()
+        print("当前位置：", Sysconfig.text)
+        # 网管策略 定位
+        netmanageStrate = self.driver.find_element_by_link_text("网管策略")
+        netmanageStrate.click()
+        print("当前位置：", netmanageStrate.text)
+        #网管访问策略 定位
+        access_strategy = self.driver.find_element_by_link_text("网管访问策略")
+        access_strategy.click()
+
+
+
+
+
     def test_30_005_language_select(self):
         u'''语言选择'''
         pass
