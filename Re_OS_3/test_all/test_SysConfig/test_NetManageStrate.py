@@ -158,9 +158,9 @@ class NetManageStrate(unittest.TestCase):
         time.sleep(2)
         self.delect_add_system_admin(admin_username)
 
-    # def test_30_002_Intranet_access_control(self):
-    #     u'''内网访问控制配置与操作'''
-    #     pass
+    def test_30_002_Intranet_access_control(self):
+        u'''内网访问控制配置与操作'''
+        pass
 
     def check_remote_effective(self):
         u'''开启远程管理并检查其是否生效'''
