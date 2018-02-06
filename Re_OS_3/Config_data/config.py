@@ -5,8 +5,8 @@
 # @File    : config.py
 # @Software: PyCharm Community Edition
 #登陆 url 用户名 密码
-url ="http://192.168.2.1"
-# url ="http://117.71.57.195:8888"
+# url ="http://192.168.2.1"
+url ="http://117.71.57.195:8888"
 username = "admin"
 pwd = "admin"
 
@@ -116,3 +116,6 @@ DNS_filter_hostname = ["www.163.com","www.sina.com","www.taobao.com"]#过滤 域
 #网管策略
 admin_username =["reader","root"] # reader 权限为 ‘读’     root 权限为 ‘读写’
 admin_password = ["reader","root"]
+
+#时钟管理
+NtpServerip = ["202.108.6.95","24.56.178.140" ]#服务器1 IP地址

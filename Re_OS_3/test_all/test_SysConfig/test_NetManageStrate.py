@@ -213,14 +213,15 @@ class NetManageStrate(unittest.TestCase):
         httpcode().http200("http://"+"192.168.30.115"+":"+port)
 
     def check_status(self,location):
+        u'''检查radio 标签是否被选中'''
         if location.is_selected():
             print("*" * 30, '\n')
-            print("远程管理 已关闭！")
+            print("已选中该操作！")
 
         else:
             location.click()
             print("*" * 30, '\n')
-            print("现在关闭 远程管理！")
+            print("现该操作未被选中，现在选中")
             time.sleep(1)
             # 保存定位
             save = self.driver.find_element_by_id("save")
@@ -299,7 +300,28 @@ class NetManageStrate(unittest.TestCase):
 
     def test_30_005_language_select(self):
         u'''语言选择'''
-        pass
+         # 显示等待
+        webwait = WebDriverWait(self.driver, 10, 1)
+        # 系统配置 定位
+        Sysconfig = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[11]/div/h4/span"))
+        Sysconfig.click()
+        print("当前位置：", Sysconfig.text)
+        # 网管策略 定位
+        netmanageStrate = self.driver.find_element_by_link_text("网管策略")
+        netmanageStrate.click()
+        print("当前位置：", netmanageStrate.text)
+        #语言选择 定位
+        language = self.driver.find_element_by_link_text("语言选择")
+        language.click()
+        print("当前位置：",language.text)
+        #中文定位
+        chinese = self.driver.find_element_by_xpath(".//input[@name='langSelection']")
+        self.check_status(chinese)
+        time.sleep(3)
+        chinese_name =self.driver.find_element_by_xpath("//*[@id='5']/table/tbody/tr/td[2]/span")
+        print("当前语言为：",chinese_name.text)
+
+
 
 
 
