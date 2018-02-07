@@ -30,7 +30,11 @@ class System_maintenance(unittest.TestCase):
         self.driver.quit()
     def check_upgardesuccess(self):
         u'''检查升级是否成功'''
-        pass
+        #此时在上传版本
+        time.sleep(30)
+        #ping lan口 看是否重启
+        # 是否重启，最好看设备的运行时间；
+
 
     def test_32_001_System_upgrade(self):
         u'''系统升级操作'''
@@ -72,6 +76,16 @@ class System_maintenance(unittest.TestCase):
         #确认 定位
         # ok = self.driver.find_element_by_id("u-cfm-ok")
         # ok.click()
+
+    def test_32_002_Application_feature_library(self):
+        u'''应用特征库显示'''
+        pass
+    def test_32_003_Configuration_management(self):
+        u'''配置管理'''
+        pass
+    def test_32_004_Reboot_DUT(self):
+        u'''重启操作'''
+        pass
 
 if __name__ == '__main__':
     unittest.main()
