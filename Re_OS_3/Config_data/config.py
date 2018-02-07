@@ -119,3 +119,6 @@ admin_password = ["reader","root"]
 
 #时钟管理
 NtpServerip = ["202.108.6.95","24.56.178.140" ]#服务器1 IP地址
+
+#系统升级
+update_path= "C:\\Users\\utt\\Desktop\\QV4240Gv3.0.0-171106.bin"

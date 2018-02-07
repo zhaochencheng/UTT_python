@@ -28,6 +28,9 @@ class System_maintenance(unittest.TestCase):
     def tearDown(self):
         time.sleep(5)
         self.driver.quit()
+    def check_upgardesuccess(self):
+        u'''检查升级是否成功'''
+        pass
 
     def test_32_001_System_upgrade(self):
         u'''系统升级操作'''
@@ -49,16 +52,26 @@ class System_maintenance(unittest.TestCase):
         softwareVersion = self.driver.find_element_by_xpath(".//input[@name = 'softwareVersion1']")
         version = softwareVersion.get_attribute("value")
         print("软件版本为：",version)
-        # time.sleep(4)
-        # self.driver.refresh()
-        # time.sleep(10)
+        time.sleep(4)
+        self.driver.refresh()
+        time.sleep(4)
         #版本检测情况
         check_version = self.driver.find_element_by_xpath("//*[@id='iframe1']/table/tbody/tr[2]/td[3]/span")
         print("版本检查情况：",check_version.text)
         #输入 软件
-        # send_software = self.driver.find_element_by_name("updatesoftware")
-        #     # .send_keys("//*[@id='iframe1']/table/tbody/tr[3]/td[2]/input[2]")
-        # send_software.send_keys("‪C:\\Users\\zcc\\Desktop\\123.txt")
+        time.sleep(2) # 必加等待！！！
+        # self.driver.find_element_by_name("updatesoftware").clear()#不能有clear
+        sendsoftware = self.driver.find_element_by_name("updatesoftware")
+        sendsoftware.send_keys(update_path)#考虑以下这个路径怎么写
+        time.sleep(2)
+        print("software:",sendsoftware.get_attribute("placeholder"))
+        #升级 button 定位
+        upgarde = self.driver.find_element_by_id("update")
+        upgarde.click()
+        time.sleep(2)
+        #确认 定位
+        # ok = self.driver.find_element_by_id("u-cfm-ok")
+        # ok.click()
 
 if __name__ == '__main__':
     unittest.main()
