@@ -79,13 +79,69 @@ class System_maintenance(unittest.TestCase):
 
     def test_32_002_Application_feature_library(self):
         u'''应用特征库显示'''
-        pass
+        # 显示等待
+        webwait = WebDriverWait(self.driver, 10, 1)
+        # 系统配置 定位
+        Sysconfig = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[11]/div/h4/span"))
+        Sysconfig.click()
+        print("当前位置：", Sysconfig.text)
+        # 系统维护 定位
+        system_maintenance = self.driver.find_element_by_link_text("系统维护")
+        system_maintenance.click()
+        print("当前位置：", system_maintenance.text)
+        #应用特征库 定位
+        time.sleep(2)
+        library = self.driver.find_element_by_link_text("应用特征库")
+        library.click()
+        print("当前位置:",library.text)
+        time.sleep(3)
+        print("*" * 30, '\n')
+        #应用策略库版本 定位
+        strategyname = self.driver.find_element_by_xpath("//b[@name = 'strategyName']")
+        print("应用策略库版本:",strategyname.text)
+        #应用优先模板版本
+        priorityname = self.driver.find_element_by_xpath(".//*[@name= 'priorityName']")
+        print("应用优先模板版本:",priorityname.text)
+        #版本状态  定位
+        showstate = self.driver.find_element_by_xpath(".//*[@id = 'showState']/span")
+        print("版本状态:",showstate.text)
+
+
+
+
+
     def test_32_003_Configuration_management(self):
         u'''配置管理'''
         pass
     def test_32_004_Reboot_DUT(self):
         u'''重启操作'''
-        pass
+        # 显示等待
+        webwait = WebDriverWait(self.driver, 10, 1)
+        # 系统配置 定位
+        Sysconfig = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[11]/div/h4/span"))
+        Sysconfig.click()
+        print("当前位置：", Sysconfig.text)
+        # 系统维护 定位
+        system_maintenance = self.driver.find_element_by_link_text("系统维护")
+        system_maintenance.click()
+        print("当前位置：", system_maintenance.text)
+        #重启设备 定位
+        time.sleep(2)
+        rebootDUT = self.driver.find_element_by_link_text("重启设备")
+        rebootDUT.click()
+        print("当前位置:",rebootDUT.text)
+        #重启按钮 定位
+        reboot_button= self.driver.find_element_by_id("reboot")
+        reboot_button.click()
+        print("点击重启按钮!")
+        # 确认 重启 定位
+        time.sleep(2)
+        ok = self.driver.find_element_by_id("u-cfm-ok")
+        ok.click()
+        print("确认重启....正在启动中...")
+
+        '''此处加入 重启生效的判断方法'''
+
 
 if __name__ == '__main__':
     unittest.main()

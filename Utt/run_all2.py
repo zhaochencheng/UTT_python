@@ -1,4 +1,9 @@
-# coding:utf-8
+# -*- coding: utf-8 -*-
+# @Time    : 2018/2/7 21:10
+# @Author  : zhao.chencheng
+# @Email   : 907779487@qq.com
+# @File    : run_all2.py
+# @Software: PyCharm Community Edition
 import unittest
 import os
 import HTMLTestRunnerXL
@@ -6,6 +11,7 @@ from Utt.test_DP.test_001_AP_offline import *
 from Utt.test_DP.test_002_AP_reboot import *
 from Utt.test_DP.test_003_AP_Poe import AP_Poe
 from Utt.test_DP.test_006_switch import Switch
+from Utt.test_DP.test_005_APconfig import APconfig
 from Utt.tool.mail import *
 
 import  HTMLTestRunner
@@ -17,7 +23,7 @@ try:
     report_path = os.path.join(os.getcwd(), "test_report")
     # html报告文件
     report_abspath = os.path.join(
-        report_path, "result_switch.html")
+        report_path, "result_config.html")
 
     # 遍历case_path目录下；批量执行test_用例
     # discover = unittest.defaultTestLoader.discover(case_path,
@@ -25,7 +31,7 @@ try:
     #                                                 top_level_dir=None)
     # #单个执行用例
     suit = unittest.TestSuite()
-    suit.addTest(Switch("test_switch"))
+    suit.addTest(APconfig("test_APconfig"))
     # time.sleep(1)
     # suit.addTest(AP_Poe("test_AP_poe"))
     fp = open(report_abspath, "wb")

@@ -50,6 +50,7 @@ class AP_Poe(unittest.TestCase):
     def test_AP_poe(self):
         '''对AC 系统管理---以太网供电口 进行开/关操作'''
 
+
         file = open("2.txt", "w")
         # 系统管理
         System_Managment = self.driver.find_element_by_xpath(".//*[@id='menu_M_System_Managment']/a/span")

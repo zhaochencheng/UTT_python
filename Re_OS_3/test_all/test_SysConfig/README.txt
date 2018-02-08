@@ -24,7 +24,10 @@
                 ------时钟管理的配置       test_31_001_Clock_management
 
         系统维护 test_System_maintenance.py
-                ------系统升级              test_32_001_System_upgrade(上传软件)
+                ------系统升级              test_32_001_System_upgrade(加入软件升级生效 判断)
+                ------应用特征库显示         test_32_002_Application_feature_library
+                ------配置管理               test_32_003_Configuration_management(未实现)
+                ------重启操作               test_32_004_Reboot_DUT(加入重启生效 判断)
 
         网络工具
 

@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>自动化测试报告,测试结果如下：</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.3"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { word-wrap:break-word;word-break:break-all;overflow:auto;}
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 2ex;
+    margin-bottom: 3ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    /* width: 500px;*/
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 99%;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #74A474; }
+.failClass  { background-color: #FDD283; }
+.errorClass { background-color: #FF6600; }
+.passCase   { color: #6c6; }
+.failCase   { color: #FF6600; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+#div_base {
+            position:absolute;
+            top:0%;
+            left:5%;
+            right:5%;
+            width: auto;
+            height: auto;
+            margin: -15px 0 0 0;
+}
+</style>
+
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+<div id="div_base">
+
+<div class='page-header'>
+<h1>自动化测试报告,测试结果如下：</h1>
+<p class='attribute'><strong>开始时间:</strong> 2018-02-07 22:31:09</p>
+<p class='attribute'><strong>运行时长:</strong> 7:37:25.977858</p>
+<p class='attribute'><strong>状态:</strong> 通过 1</p>
+
+</div>
+<p class='description'>用例执行情况：</p>
+
+
+
+<div class="btn-group btn-group-sm">
+<button class="btn btn-default" onclick='javascript:showCase(0)'>总结</button>
+<button class="btn btn-default" onclick='javascript:showCase(1)'>失败</button>
+<button class="btn btn-default" onclick='javascript:showCase(2)'>全部</button>
+</div>
+<p></p>
+<table id='result_table' class="table table-bordered">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>测试套件/测试用例</td>
+    <td>总数</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>查看</td>
+</tr>
+
+<tr class='passClass'>
+    <td>Utt.test_DP.test_005_APconfig.APconfig: 从ac下发配置</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_APconfig</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        通过</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: 
+再次打开浏览器
+---AP管理---
+---AP配置---
+第1次---当前ssid为： 29
+当前时间： Wed Feb  7 22:31:33 2018
+第2次---当前ssid为： 9
+当前时间： Wed Feb  7 22:33:05 2018
+第3次---当前ssid为： 20
+当前时间： Wed Feb  7 22:34:36 2018
+第4次---当前ssid为： 31
+当前时间： Wed Feb  7 22:36:07 2018
+第5次---当前ssid为： 4
+当前时间： Wed Feb  7 22:37:39 2018
+第6次---当前ssid为： 5
+当前时间： Wed Feb  7 22:39:10 2018
+第7次---当前ssid为： 36
+当前时间： Wed Feb  7 22:40:41 2018
+第8次---当前ssid为： 18
+当前时间： Wed Feb  7 22:42:13 2018
+第9次---当前ssid为： 33
+当前时间： Wed Feb  7 22:43:44 2018
+第10次---当前ssid为： 44
+当前时间： Wed Feb  7 22:45:15 2018
+第11次---当前ssid为： 1
+当前时间： Wed Feb  7 22:46:47 2018
+第12次---当前ssid为： 26
+当前时间： Wed Feb  7 22:48:18 2018
+第13次---当前ssid为： 44
+当前时间： Wed Feb  7 22:49:50 2018
+第14次---当前ssid为： 41
+当前时间： Wed Feb  7 22:51:21 2018
+第15次---当前ssid为： 13
+当前时间： Wed Feb  7 22:52:52 2018
+第16次---当前ssid为： 32
+当前时间： Wed Feb  7 22:54:24 2018
+第17次---当前ssid为： 35
+当前时间： Wed Feb  7 22:55:55 2018
+第18次---当前ssid为： 15
+当前时间： Wed Feb  7 22:57:26 2018
+第19次---当前ssid为： 50
+当前时间： Wed Feb  7 22:58:58 2018
+第20次---当前ssid为： 48
+当前时间： Wed Feb  7 23:00:29 2018
+第21次---当前ssid为： 5
+当前时间： Wed Feb  7 23:02:00 2018
+第22次---当前ssid为： 43
+当前时间： Wed Feb  7 23:03:32 2018
+第23次---当前ssid为： 10
+当前时间： Wed Feb  7 23:05:03 2018
+第24次---当前ssid为： 18
+当前时间： Wed Feb  7 23:06:35 2018
+第25次---当前ssid为： 6
+当前时间： Wed Feb  7 23:08:06 2018
+第26次---当前ssid为： 43
+当前时间： Wed Feb  7 23:09:37 2018
+第27次---当前ssid为： 30
+当前时间： Wed Feb  7 23:11:09 2018
+第28次---当前ssid为： 29
+当前时间： Wed Feb  7 23:12:40 2018
+第29次---当前ssid为： 14
+当前时间： Wed Feb  7 23:14:12 2018
+第30次---当前ssid为： 1
+当前时间： Wed Feb  7 23:15:43 2018
+第31次---当前ssid为： 25
+当前时间： Wed Feb  7 23:17:15 2018
+第32次---当前ssid为： 1
+当前时间： Wed Feb  7 23:18:46 2018
+第33次---当前ssid为： 9
+当前时间： Wed Feb  7 23:20:17 2018
+第34次---当前ssid为： 27
+当前时间： Wed Feb  7 23:21:49 2018
+第35次---当前ssid为： 35
+当前时间： Wed Feb  7 23:23:20 2018
+第36次---当前ssid为： 47
+当前时间： Wed Feb  7 23:24:52 2018
+第37次---当前ssid为： 26
+当前时间： Wed Feb  7 23:26:23 2018
+第38次---当前ssid为： 42
+当前时间： Wed Feb  7 23:27:54 2018
+第39次---当前ssid为： 29
+当前时间： Wed Feb  7 23:29:26 2018
+第40次---当前ssid为： 24
+当前时间： Wed Feb  7 23:30:57 2018
+第41次---当前ssid为： 40
+当前时间： Wed Feb  7 23:32:29 2018
+第42次---当前ssid为： 2
+当前时间： Wed Feb  7 23:34:00 2018
+第43次---当前ssid为： 38
+当前时间： Wed Feb  7 23:35:32 2018
+第44次---当前ssid为： 25
+当前时间： Wed Feb  7 23:37:03 2018
+第45次---当前ssid为： 18
+当前时间： Wed Feb  7 23:38:34 2018
+第46次---当前ssid为： 47
+当前时间： Wed Feb  7 23:40:06 2018
+第47次---当前ssid为： 25
+当前时间： Wed Feb  7 23:41:37 2018
+第48次---当前ssid为： 20
+当前时间： Wed Feb  7 23:43:09 2018
+第49次---当前ssid为： 50
+当前时间： Wed Feb  7 23:44:40 2018
+第50次---当前ssid为： 12
+当前时间： Wed Feb  7 23:46:12 2018
+第51次---当前ssid为： 11
+当前时间： Wed Feb  7 23:47:43 2018
+第52次---当前ssid为： 4
+当前时间： Wed Feb  7 23:49:15 2018
+第53次---当前ssid为： 41
+当前时间： Wed Feb  7 23:50:46 2018
+第54次---当前ssid为： 15
+当前时间： Wed Feb  7 23:52:18 2018
+第55次---当前ssid为： 17
+当前时间： Wed Feb  7 23:53:49 2018
+第56次---当前ssid为： 48
+当前时间： Wed Feb  7 23:55:20 2018
+第57次---当前ssid为： 39
+当前时间： Wed Feb  7 23:56:52 2018
+第58次---当前ssid为： 19
+当前时间： Wed Feb  7 23:58:23 2018
+第59次---当前ssid为： 20
+当前时间： Wed Feb  7 23:59:55 2018
+第60次---当前ssid为： 40
+当前时间： Thu Feb  8 00:01:26 2018
+第61次---当前ssid为： 49
+当前时间： Thu Feb  8 00:02:58 2018
+第62次---当前ssid为： 20
+当前时间： Thu Feb  8 00:04:29 2018
+第63次---当前ssid为： 32
+当前时间： Thu Feb  8 00:06:01 2018
+第64次---当前ssid为： 13
+当前时间： Thu Feb  8 00:07:32 2018
+第65次---当前ssid为： 23
+当前时间： Thu Feb  8 00:09:04 2018
+第66次---当前ssid为： 33
+当前时间： Thu Feb  8 00:10:35 2018
+第67次---当前ssid为： 26
+当前时间： Thu Feb  8 00:12:07 2018
+第68次---当前ssid为： 20
+当前时间： Thu Feb  8 00:13:38 2018
+第69次---当前ssid为： 18
+当前时间： Thu Feb  8 00:15:10 2018
+第70次---当前ssid为： 45
+当前时间： Thu Feb  8 00:16:41 2018
+第71次---当前ssid为： 46
+当前时间： Thu Feb  8 00:18:13 2018
+第72次---当前ssid为： 46
+当前时间： Thu Feb  8 00:19:44 2018
+第73次---当前ssid为： 47
+当前时间： Thu Feb  8 00:21:16 2018
+第74次---当前ssid为： 37
+当前时间： Thu Feb  8 00:22:48 2018
+第75次---当前ssid为： 10
+当前时间： Thu Feb  8 00:24:19 2018
+第76次---当前ssid为： 39
+当前时间： Thu Feb  8 00:25:50 2018
+第77次---当前ssid为： 30
+当前时间： Thu Feb  8 00:27:22 2018
+第78次---当前ssid为： 45
+当前时间： Thu Feb  8 00:28:53 2018
+第79次---当前ssid为： 16
+当前时间： Thu Feb  8 00:30:25 2018
+第80次---当前ssid为： 22
+当前时间： Thu Feb  8 00:31:57 2018
+第81次---当前ssid为： 9
+当前时间： Thu Feb  8 00:33:28 2018
+第82次---当前ssid为： 16
+当前时间： Thu Feb  8 00:35:00 2018
+第83次---当前ssid为： 37
+当前时间： Thu Feb  8 00:36:31 2018
+第84次---当前ssid为： 43
+当前时间： Thu Feb  8 00:38:03 2018
+第85次---当前ssid为： 1
+当前时间： Thu Feb  8 00:39:34 2018
+第86次---当前ssid为： 32
+当前时间： Thu Feb  8 00:41:06 2018
+第87次---当前ssid为： 41
+当前时间： Thu Feb  8 00:42:37 2018
+第88次---当前ssid为： 46
+当前时间： Thu Feb  8 00:44:09 2018
+第89次---当前ssid为： 1
+当前时间： Thu Feb  8 00:45:40 2018
+第90次---当前ssid为： 15
+当前时间： Thu Feb  8 00:47:12 2018
+第91次---当前ssid为： 48
+当前时间： Thu Feb  8 00:48:43 2018
+第92次---当前ssid为： 42
+当前时间： Thu Feb  8 00:50:15 2018
+第93次---当前ssid为： 3
+当前时间： Thu Feb  8 00:51:47 2018
+第94次---当前ssid为： 31
+当前时间： Thu Feb  8 00:53:18 2018
+第95次---当前ssid为： 20
+当前时间： Thu Feb  8 00:54:50 2018
+第96次---当前ssid为： 42
+当前时间： Thu Feb  8 00:56:21 2018
+第97次---当前ssid为： 38
+当前时间： Thu Feb  8 00:57:53 2018
+第98次---当前ssid为： 44
+当前时间： Thu Feb  8 00:59:24 2018
+第99次---当前ssid为： 20
+当前时间： Thu Feb  8 01:00:56 2018
+第100次---当前ssid为： 18
+当前时间： Thu Feb  8 01:02:27 2018
+第101次---当前ssid为： 3
+当前时间： Thu Feb  8 01:03:59 2018
+第102次---当前ssid为： 41
+当前时间： Thu Feb  8 01:05:31 2018
+第103次---当前ssid为： 26
+当前时间： Thu Feb  8 01:07:02 2018
+第104次---当前ssid为： 4
+当前时间： Thu Feb  8 01:08:34 2018
+第105次---当前ssid为： 23
+当前时间： Thu Feb  8 01:10:05 2018
+第106次---当前ssid为： 2
+当前时间： Thu Feb  8 01:11:37 2018
+第107次---当前ssid为： 47
+当前时间： Thu Feb  8 01:13:09 2018
+第108次---当前ssid为： 23
+当前时间： Thu Feb  8 01:14:40 2018
+第109次---当前ssid为： 33
+当前时间： Thu Feb  8 01:16:12 2018
+第110次---当前ssid为： 15
+当前时间： Thu Feb  8 01:17:43 2018
+第111次---当前ssid为： 37
+当前时间： Thu Feb  8 01:19:15 2018
+第112次---当前ssid为： 29
+当前时间： Thu Feb  8 01:20:46 2018
+第113次---当前ssid为： 6
+当前时间： Thu Feb  8 01:22:18 2018
+第114次---当前ssid为： 37
+当前时间： Thu Feb  8 01:23:50 2018
+第115次---当前ssid为： 18
+当前时间： Thu Feb  8 01:25:21 2018
+第116次---当前ssid为： 46
+当前时间： Thu Feb  8 01:26:53 2018
+第117次---当前ssid为： 30
+当前时间： Thu Feb  8 01:28:24 2018
+第118次---当前ssid为： 42
+当前时间： Thu Feb  8 01:29:56 2018
+第119次---当前ssid为： 39
+当前时间： Thu Feb  8 01:31:28 2018
+第120次---当前ssid为： 34
+当前时间： Thu Feb  8 01:32:59 2018
+第121次---当前ssid为： 20
+当前时间： Thu Feb  8 01:34:31 2018
+第122次---当前ssid为： 12
+当前时间： Thu Feb  8 01:36:03 2018
+第123次---当前ssid为： 4
+当前时间： Thu Feb  8 01:37:34 2018
+第124次---当前ssid为： 21
+当前时间： Thu Feb  8 01:39:06 2018
+第125次---当前ssid为： 36
+当前时间： Thu Feb  8 01:40:37 2018
+第126次---当前ssid为： 34
+当前时间： Thu Feb  8 01:42:09 2018
+第127次---当前ssid为： 35
+当前时间： Thu Feb  8 01:43:41 2018
+第128次---当前ssid为： 36
+当前时间： Thu Feb  8 01:45:12 2018
+第129次---当前ssid为： 50
+当前时间： Thu Feb  8 01:46:44 2018
+第130次---当前ssid为： 15
+当前时间： Thu Feb  8 01:48:16 2018
+第131次---当前ssid为： 27
+当前时间： Thu Feb  8 01:49:47 2018
+第132次---当前ssid为： 6
+当前时间： Thu Feb  8 01:51:19 2018
+第133次---当前ssid为： 39
+当前时间： Thu Feb  8 01:52:51 2018
+第134次---当前ssid为： 9
+当前时间： Thu Feb  8 01:54:22 2018
+第135次---当前ssid为： 32
+当前时间： Thu Feb  8 01:55:54 2018
+第136次---当前ssid为： 43
+当前时间： Thu Feb  8 01:57:26 2018
+第137次---当前ssid为： 9
+当前时间： Thu Feb  8 01:58:57 2018
+第138次---当前ssid为： 41
+当前时间： Thu Feb  8 02:00:29 2018
+第139次---当前ssid为： 15
+当前时间： Thu Feb  8 02:02:01 2018
+第140次---当前ssid为： 28
+当前时间： Thu Feb  8 02:03:32 2018
+第141次---当前ssid为： 11
+当前时间： Thu Feb  8 02:05:04 2018
+第142次---当前ssid为： 36
+当前时间： Thu Feb  8 02:06:36 2018
+第143次---当前ssid为： 23
+当前时间： Thu Feb  8 02:08:07 2018
+第144次---当前ssid为： 39
+当前时间： Thu Feb  8 02:09:39 2018
+第145次---当前ssid为： 48
+当前时间： Thu Feb  8 02:11:11 2018
+第146次---当前ssid为： 10
+当前时间： Thu Feb  8 02:12:42 2018
+第147次---当前ssid为： 48
+当前时间： Thu Feb  8 02:14:14 2018
+第148次---当前ssid为： 23
+当前时间： Thu Feb  8 02:15:45 2018
+第149次---当前ssid为： 3
+当前时间： Thu Feb  8 02:17:17 2018
+第150次---当前ssid为： 43
+当前时间： Thu Feb  8 02:18:49 2018
+第151次---当前ssid为： 11
+当前时间： Thu Feb  8 02:20:20 2018
+第152次---当前ssid为： 4
+当前时间： Thu Feb  8 02:21:52 2018
+第153次---当前ssid为： 6
+当前时间： Thu Feb  8 02:23:24 2018
+第154次---当前ssid为： 28
+当前时间： Thu Feb  8 02:24:55 2018
+第155次---当前ssid为： 26
+当前时间： Thu Feb  8 02:26:27 2018
+第156次---当前ssid为： 22
+当前时间： Thu Feb  8 02:27:59 2018
+第157次---当前ssid为： 40
+当前时间： Thu Feb  8 02:29:31 2018
+第158次---当前ssid为： 2
+当前时间： Thu Feb  8 02:31:03 2018
+第159次---当前ssid为： 49
+当前时间： Thu Feb  8 02:32:34 2018
+第160次---当前ssid为： 18
+当前时间： Thu Feb  8 02:34:06 2018
+第161次---当前ssid为： 42
+当前时间： Thu Feb  8 02:35:37 2018
+第162次---当前ssid为： 9
+当前时间： Thu Feb  8 02:37:09 2018
+第163次---当前ssid为： 18
+当前时间： Thu Feb  8 02:38:41 2018
+第164次---当前ssid为： 43
+当前时间： Thu Feb  8 02:40:12 2018
+第165次---当前ssid为： 7
+当前时间： Thu Feb  8 02:41:44 2018
+第166次---当前ssid为： 6
+当前时间： Thu Feb  8 02:43:16 2018
+第167次---当前ssid为： 39
+当前时间： Thu Feb  8 02:44:47 2018
+第168次---当前ssid为： 11
+当前时间： Thu Feb  8 02:46:19 2018
+第169次---当前ssid为： 43
+当前时间： Thu Feb  8 02:47:51 2018
+第170次---当前ssid为： 9
+当前时间： Thu Feb  8 02:49:23 2018
+第171次---当前ssid为： 18
+当前时间： Thu Feb  8 02:50:55 2018
+第172次---当前ssid为： 3
+当前时间： Thu Feb  8 02:52:27 2018
+第173次---当前ssid为： 26
+当前时间： Thu Feb  8 02:53:59 2018
+第174次---当前ssid为： 35
+当前时间： Thu Feb  8 02:55:31 2018
+第175次---当前ssid为： 37
+当前时间： Thu Feb  8 02:57:02 2018
+第176次---当前ssid为： 8
+当前时间： Thu Feb  8 02:58:34 2018
+第177次---当前ssid为： 2
+当前时间： Thu Feb  8 03:00:06 2018
+第178次---当前ssid为： 29
+当前时间： Thu Feb  8 03:01:38 2018
+第179次---当前ssid为： 26
+当前时间： Thu Feb  8 03:03:10 2018
+第180次---当前ssid为： 16
+当前时间： Thu Feb  8 03:04:42 2018
+第181次---当前ssid为： 29
+当前时间： Thu Feb  8 03:06:13 2018
+第182次---当前ssid为： 25
+当前时间： Thu Feb  8 03:07:45 2018
+第183次---当前ssid为： 27
+当前时间： Thu Feb  8 03:09:17 2018
+第184次---当前ssid为： 40
+当前时间： Thu Feb  8 03:10:48 2018
+第185次---当前ssid为： 4
+当前时间： Thu Feb  8 03:12:20 2018
+第186次---当前ssid为： 26
+当前时间： Thu Feb  8 03:13:52 2018
+第187次---当前ssid为： 31
+当前时间： Thu Feb  8 03:15:24 2018
+第188次---当前ssid为： 12
+当前时间： Thu Feb  8 03:16:56 2018
+第189次---当前ssid为： 24
+当前时间： Thu Feb  8 03:18:27 2018
+第190次---当前ssid为： 40
+当前时间： Thu Feb  8 03:19:59 2018
+第191次---当前ssid为： 4
+当前时间： Thu Feb  8 03:21:31 2018
+第192次---当前ssid为： 2
+当前时间： Thu Feb  8 03:23:03 2018
+第193次---当前ssid为： 11
+当前时间： Thu Feb  8 03:24:34 2018
+第194次---当前ssid为： 41
+当前时间： Thu Feb  8 03:26:06 2018
+第195次---当前ssid为： 26
+当前时间： Thu Feb  8 03:27:38 2018
+第196次---当前ssid为： 36
+当前时间： Thu Feb  8 03:29:10 2018
+第197次---当前ssid为： 5
+当前时间： Thu Feb  8 03:30:42 2018
+第198次---当前ssid为： 44
+当前时间： Thu Feb  8 03:32:14 2018
+第199次---当前ssid为： 20
+当前时间： Thu Feb  8 03:33:46 2018
+第200次---当前ssid为： 22
+当前时间： Thu Feb  8 03:35:17 2018
+第201次---当前ssid为： 47
+当前时间： Thu Feb  8 03:36:49 2018
+第202次---当前ssid为： 44
+当前时间： Thu Feb  8 03:38:21 2018
+第203次---当前ssid为： 29
+当前时间： Thu Feb  8 03:39:53 2018
+第204次---当前ssid为： 34
+当前时间： Thu Feb  8 03:41:25 2018
+第205次---当前ssid为： 5
+当前时间： Thu Feb  8 03:42:57 2018
+第206次---当前ssid为： 32
+当前时间： Thu Feb  8 03:44:29 2018
+第207次---当前ssid为： 12
+当前时间： Thu Feb  8 03:46:00 2018
+第208次---当前ssid为： 3
+当前时间： Thu Feb  8 03:47:32 2018
+第209次---当前ssid为： 24
+当前时间： Thu Feb  8 03:49:04 2018
+第210次---当前ssid为： 3
+当前时间： Thu Feb  8 03:50:35 2018
+第211次---当前ssid为： 8
+当前时间： Thu Feb  8 03:52:07 2018
+第212次---当前ssid为： 41
+当前时间： Thu Feb  8 03:53:39 2018
+第213次---当前ssid为： 47
+当前时间： Thu Feb  8 03:55:11 2018
+第214次---当前ssid为： 49
+当前时间： Thu Feb  8 03:56:43 2018
+第215次---当前ssid为： 12
+当前时间： Thu Feb  8 03:58:15 2018
+第216次---当前ssid为： 13
+当前时间： Thu Feb  8 03:59:46 2018
+第217次---当前ssid为： 14
+当前时间： Thu Feb  8 04:01:18 2018
+第218次---当前ssid为： 41
+当前时间： Thu Feb  8 04:02:50 2018
+第219次---当前ssid为： 47
+当前时间： Thu Feb  8 04:04:22 2018
+第220次---当前ssid为： 38
+当前时间： Thu Feb  8 04:05:54 2018
+第221次---当前ssid为： 31
+当前时间： Thu Feb  8 04:07:26 2018
+第222次---当前ssid为： 27
+当前时间： Thu Feb  8 04:08:58 2018
+第223次---当前ssid为： 45
+当前时间： Thu Feb  8 04:10:30 2018
+第224次---当前ssid为： 1
+当前时间： Thu Feb  8 04:12:02 2018
+第225次---当前ssid为： 46
+当前时间： Thu Feb  8 04:13:34 2018
+第226次---当前ssid为： 49
+当前时间： Thu Feb  8 04:15:05 2018
+第227次---当前ssid为： 6
+当前时间： Thu Feb  8 04:16:37 2018
+第228次---当前ssid为： 44
+当前时间： Thu Feb  8 04:18:09 2018
+第229次---当前ssid为： 16
+当前时间： Thu Feb  8 04:19:41 2018
+第230次---当前ssid为： 47
+当前时间： Thu Feb  8 04:21:13 2018
+第231次---当前ssid为： 3
+当前时间： Thu Feb  8 04:22:44 2018
+第232次---当前ssid为： 2
+当前时间： Thu Feb  8 04:24:16 2018
+第233次---当前ssid为： 1
+当前时间： Thu Feb  8 04:25:48 2018
+第234次---当前ssid为： 2
+当前时间： Thu Feb  8 04:27:20 2018
+第235次---当前ssid为： 32
+当前时间： Thu Feb  8 04:28:52 2018
+第236次---当前ssid为： 44
+当前时间： Thu Feb  8 04:30:24 2018
+第237次---当前ssid为： 9
+当前时间： Thu Feb  8 04:31:55 2018
+第238次---当前ssid为： 45
+当前时间： Thu Feb  8 04:33:27 2018
+第239次---当前ssid为： 28
+当前时间： Thu Feb  8 04:34:59 2018
+第240次---当前ssid为： 4
+当前时间： Thu Feb  8 04:36:31 2018
+第241次---当前ssid为： 15
+当前时间： Thu Feb  8 04:38:03 2018
+第242次---当前ssid为： 20
+当前时间： Thu Feb  8 04:39:35 2018
+第243次---当前ssid为： 11
+当前时间： Thu Feb  8 04:41:07 2018
+第244次---当前ssid为： 35
+当前时间： Thu Feb  8 04:42:38 2018
+第245次---当前ssid为： 33
+当前时间： Thu Feb  8 04:44:10 2018
+第246次---当前ssid为： 39
+当前时间： Thu Feb  8 04:45:42 2018
+第247次---当前ssid为： 16
+当前时间： Thu Feb  8 04:47:14 2018
+第248次---当前ssid为： 20
+当前时间： Thu Feb  8 04:48:46 2018
+第249次---当前ssid为： 29
+当前时间： Thu Feb  8 04:50:18 2018
+第250次---当前ssid为： 31
+当前时间： Thu Feb  8 04:51:50 2018
+第251次---当前ssid为： 27
+当前时间： Thu Feb  8 04:53:22 2018
+第252次---当前ssid为： 3
+当前时间： Thu Feb  8 04:54:54 2018
+第253次---当前ssid为： 4
+当前时间： Thu Feb  8 04:56:26 2018
+第254次---当前ssid为： 49
+当前时间： Thu Feb  8 04:57:58 2018
+第255次---当前ssid为： 3
+当前时间： Thu Feb  8 04:59:29 2018
+第256次---当前ssid为： 27
+当前时间： Thu Feb  8 05:01:01 2018
+第257次---当前ssid为： 44
+当前时间： Thu Feb  8 05:02:33 2018
+第258次---当前ssid为： 35
+当前时间： Thu Feb  8 05:04:05 2018
+第259次---当前ssid为： 30
+当前时间： Thu Feb  8 05:05:37 2018
+第260次---当前ssid为： 34
+当前时间： Thu Feb  8 05:07:09 2018
+第261次---当前ssid为： 16
+当前时间： Thu Feb  8 05:08:41 2018
+第262次---当前ssid为： 1
+当前时间： Thu Feb  8 05:10:13 2018
+第263次---当前ssid为： 42
+当前时间： Thu Feb  8 05:11:45 2018
+第264次---当前ssid为： 35
+当前时间： Thu Feb  8 05:13:17 2018
+第265次---当前ssid为： 20
+当前时间： Thu Feb  8 05:14:49 2018
+第266次---当前ssid为： 43
+当前时间： Thu Feb  8 05:16:21 2018
+第267次---当前ssid为： 6
+当前时间： Thu Feb  8 05:17:53 2018
+第268次---当前ssid为： 26
+当前时间： Thu Feb  8 05:19:25 2018
+第269次---当前ssid为： 23
+当前时间： Thu Feb  8 05:20:57 2018
+第270次---当前ssid为： 41
+当前时间： Thu Feb  8 05:22:29 2018
+第271次---当前ssid为： 18
+当前时间： Thu Feb  8 05:24:01 2018
+第272次---当前ssid为： 31
+当前时间： Thu Feb  8 05:25:33 2018
+第273次---当前ssid为： 31
+当前时间： Thu Feb  8 05:27:05 2018
+第274次---当前ssid为： 32
+当前时间： Thu Feb  8 05:28:37 2018
+第275次---当前ssid为： 47
+当前时间： Thu Feb  8 05:30:09 2018
+第276次---当前ssid为： 25
+当前时间： Thu Feb  8 05:31:41 2018
+第277次---当前ssid为： 30
+当前时间： Thu Feb  8 05:33:13 2018
+第278次---当前ssid为： 12
+当前时间： Thu Feb  8 05:34:45 2018
+第279次---当前ssid为： 29
+当前时间： Thu Feb  8 05:36:17 2018
+第280次---当前ssid为： 36
+当前时间： Thu Feb  8 05:37:49 2018
+第281次---当前ssid为： 41
+当前时间： Thu Feb  8 05:39:21 2018
+第282次---当前ssid为： 35
+当前时间： Thu Feb  8 05:40:53 2018
+第283次---当前ssid为： 33
+当前时间： Thu Feb  8 05:42:25 2018
+第284次---当前ssid为： 31
+当前时间： Thu Feb  8 05:43:57 2018
+第285次---当前ssid为： 35
+当前时间： Thu Feb  8 05:45:29 2018
+第286次---当前ssid为： 2
+当前时间： Thu Feb  8 05:47:01 2018
+第287次---当前ssid为： 35
+当前时间： Thu Feb  8 05:48:33 2018
+第288次---当前ssid为： 40
+当前时间： Thu Feb  8 05:50:05 2018
+第289次---当前ssid为： 11
+当前时间： Thu Feb  8 05:51:37 2018
+第290次---当前ssid为： 36
+当前时间： Thu Feb  8 05:53:09 2018
+第291次---当前ssid为： 5
+当前时间： Thu Feb  8 05:54:41 2018
+第292次---当前ssid为： 39
+当前时间： Thu Feb  8 05:56:13 2018
+第293次---当前ssid为： 15
+当前时间： Thu Feb  8 05:57:45 2018
+第294次---当前ssid为： 41
+当前时间： Thu Feb  8 05:59:17 2018
+第295次---当前ssid为： 9
+当前时间： Thu Feb  8 06:00:49 2018
+第296次---当前ssid为： 17
+当前时间： Thu Feb  8 06:02:21 2018
+第297次---当前ssid为： 9
+当前时间： Thu Feb  8 06:03:53 2018
+第298次---当前ssid为： 5
+当前时间： Thu Feb  8 06:05:25 2018
+第299次---当前ssid为： 41
+当前时间： Thu Feb  8 06:06:57 2018
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>总计</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+
+BusyBox v1.12.1 (2017-11-06 19:03:37 CST) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+# uname -v
+QV4240G v3.0.0-171106
+# exit
