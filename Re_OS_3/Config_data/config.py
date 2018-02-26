@@ -111,9 +111,10 @@ DNS_filter_hostname = ["www.163.com","www.sina.com","www.taobao.com"]#过滤 域
 #*****************************************************************#
 '''VPN配置'''
 #ipsec
-tunnelName = ['AUTO_test']
-remoteip = ["172.168.0.1"]
-shareKey = ["123456789"]
+tunnelName = ['AUTO_test','AUTO_test2'] #隧道名称
+remoteip = ["172.168.0.1","172.168.0.0"]#远端内网地址
+peerip = ['192.168.30.101','192.168.30.101']#远端网段地址（域名）
+shareKey = ["123456789","123456789"]
 
 
 
