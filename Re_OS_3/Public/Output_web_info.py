@@ -83,8 +83,12 @@ class Output_info():
             # tr中 td个数;若该条没有vlan 配置,td数为1;  如果不比较,会导致定位不到元素,,而报错
             td = self.driver.find_elements_by_xpath(".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td" % i)
             if len(td) > 1:
-                name_rule = self.driver.find_element_by_xpath(
-                    ".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[3]/span" % i).text
+                try:
+                    name_rule = self.driver.find_element_by_xpath(
+                        ".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[3]/span" % i).text
+                except BaseException as E:
+                    pass
+
                 # 标题栏 与 内容 同步输出！
                 print("*" * 30, '\n')
                 for k in range(1, len(head_all) + 1):
@@ -101,7 +105,7 @@ class Output_info():
                         pass
 
                 time.sleep(2)
-                print("该 ‘ %s ’ 信息已全部输出 " % name_rule)
+                # print("该 ‘ %s ’ 信息已全部输出 " % name_rule)
                 print("*" * 30, '\n')
 
             else:

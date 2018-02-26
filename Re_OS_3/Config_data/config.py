@@ -108,6 +108,21 @@ DNS_filter_hostname = ["www.163.com","www.sina.com","www.taobao.com"]#过滤 域
 
 
 
+#*****************************************************************#
+'''VPN配置'''
+#ipsec
+tunnelName = ['AUTO_test']
+remoteip = ["172.168.0.1"]
+shareKey = ["123456789"]
+
+
+
+
+
+
+
+
+
 
 
 

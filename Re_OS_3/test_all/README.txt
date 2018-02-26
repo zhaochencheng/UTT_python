@@ -88,9 +88,10 @@
             ------ 电子通告开启与关闭       test_20_001_lectronicsNotice
 
 流量管理 test_TrafficManagement
-        -----应用优先   test_Application_priority.py
-        -----流量管理
-
+       应用优先   test_Application_priority.py
+            -----应用管理开启-操作-关闭        test_21_001_Application_priority
+       流量管理
+            -----
 
 
 防火墙
