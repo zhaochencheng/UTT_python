@@ -10,6 +10,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import time
+from Re_OS_3.Public.Output_web_info import Output_info
+from Re_OS_3.Public.Get_screenshot import Get_Screenshot
 #导入Select 模块
 from selenium.webdriver.support.select import Select
 from Re_OS_3.Public.Login_Router import Login
@@ -48,6 +50,9 @@ class Wan_config(unittest.TestCase):
         back.click()
         time.sleep(2)
         for i in range(len(all_interface)):
+            #配置前先 截图
+            Get_Screenshot(self.driver).get_screenshot("wan_config_wan%d_configure_before"%i)
+            #编辑
             edit_again = self.driver.find_element_by_class_name("glyphicon-edit")
             edit_again.click()
             # 接口
@@ -66,7 +71,7 @@ class Wan_config(unittest.TestCase):
             #ip 地址
             IP = self.driver.find_element_by_xpath(".//input[@name = 'staticIp']")
             IP.clear()
-            IP.send_keys(wan_ip1[i])
+            IP.send_keys(wan_ip[i])
             #子网掩码
             Static_netmark = self.driver.find_element_by_xpath(".//input[@name = 'staticNetmask']")
             Static_netmark.clear()
@@ -74,7 +79,7 @@ class Wan_config(unittest.TestCase):
             #网关地址
             GateWay = self.driver.find_element_by_xpath(".//input[@name = 'staticGateway']")
             GateWay.clear()
-            GateWay.send_keys(GWaddr1)
+            GateWay.send_keys(GWaddr)
             # 主DNS
             DNS = self.driver.find_element_by_xpath(".//input[@name = 'staticPriDns']")
             DNS.clear()
@@ -102,11 +107,13 @@ class Wan_config(unittest.TestCase):
             print("子网掩码为：",web_netmark)
             print("网关地址为：",web_GWway)
             print("*" * 30, '\n')
+            # 配置后 截图
+            Get_Screenshot(self.driver).get_screenshot("wan_config_wan%d_configure_after"%i)
 
 
-
+            #
             # 判断页面显示wan口ip 与 配置的wan口ip是否相同；
-            self.assertEqual(web_ip, wan_ip1[i], "%s 配置IP与页面生效IP不一致"%web_interface)
+            self.assertEqual(web_ip, wan_ip[i], "%s 配置IP与页面生效IP不一致"%web_interface)
 
             # 判断端口状态
             self.assertEqual(web_connect_status, "已连接", "%s 端口连接状态错误--可能网线未连接或该端口有问题"%web_interface)
@@ -160,6 +167,8 @@ class Wan_config(unittest.TestCase):
                 print("*" * 30, '\n')
                 self.assertEqual(delet_web_connect_status,'未配置',"%s 端口配置未删除"%delet_web_interface)
                 time.sleep(2)
+                # 删除后 截图
+                Get_Screenshot(self.driver).get_screenshot("wan_config__wan%d_delete_after"%i)
         time.sleep(2)
 
 

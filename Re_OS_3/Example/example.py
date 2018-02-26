@@ -6,25 +6,26 @@
 # @Software: PyCharm Community Edition
 # from nose.tools import assert_equal
 # coding:utf-8
-import unittest
-import time
-from selenium import webdriver
-from Re_OS_3.Public.Login_Router import Login
-from Re_OS_3.Config_data.config import *
-import random
-# *trailing,current = [12,23,43,54,13,4,12,"sd"]
-# print(*trailing)
-# print(current)
-# print(type(current))
-from collections import deque
-q = deque()
-q.append(1)
-q.append(2)
-q.append(3)
-print(q)
-q.append(4)
-print(q)
-q.appendleft(6)
-print(q)
-print(q.pop())
-print(q)
+import os
+#
+# cwd = os.getcwd()
+# print(cwd)
+# # print(os.listdir())
+# parent_path = os.path.dirname(cwd)
+# print("上级目录为：",parent_path)
+# ScreenShot = parent_path + "\Screenshot"
+# print(ScreenShot)
+# print(os.listdir(ScreenShot))
+# print(os.path.basename(cwd))
+# print(os.path.splitext(os.path.basename(cwd)))
+path = r"G:\github\UTT_python\Re_OS_3\Screenshot"
+def del_file(path):
+    ls = os.listdir(path)
+    for i in ls:
+        c_path = os.path.join(path, i)
+        if os.path.isdir(c_path):
+            del_file(c_path)
+        else:
+            os.remove(c_path)
+
+del_file(path)

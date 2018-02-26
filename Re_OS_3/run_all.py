@@ -8,10 +8,20 @@ import HTMLTestRunner
 import os
 import unittest
 from Re_OS_3.Tool.mail import *
+from Re_OS_3.Public.Delect_file import Del_file
 from Re_OS_3.test_all.test_netConfig.test_wan_config import Wan_config
 from Re_OS_3.test_all.test_netConfig.test_Port_mapping import Port_mapping
 from Re_OS_3.test_all.test_netConfig.test_router_config import Router_config
 from Re_OS_3.test_all.test_UserManage.test_accStatu import AccStatu
+
+#对Screenshot 文件夹进行清空
+cwd = os.getcwd()
+print(cwd)
+ScreenShot = cwd + "\Screenshot"
+print(ScreenShot)
+Del_file().delect_file(ScreenShot)
+
+
 
 #用例路径
 case_path = os.path.join(os.getcwd(),"test_all")

@@ -87,10 +87,9 @@
     电子通告 test_LectronicsNotice.py
             ------ 电子通告开启与关闭       test_20_001_lectronicsNotice
 
-流量管理
-    应用优先
-
-    流量管理
+流量管理 test_TrafficManagement
+        -----应用优先   test_Application_priority.py
+        -----流量管理
 
 
 
@@ -129,10 +128,9 @@ VPN配置
                 ------配置管理               test_32_003_Configuration_management(未实现)
                 ------重启操作               test_32_004_Reboot_DUT(加入重启生效 判断)
 
-
-        网络工具
+        网络工具 test_Network_tools.py (未实现)
 
         系统日志
 
-        计划任务
+        计划任务 test_Task_plan.py (未实现)
 
