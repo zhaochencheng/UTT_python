@@ -20,13 +20,12 @@ print(cwd)
 ScreenShot = cwd + "\Screenshot"
 print(ScreenShot)
 Del_file().delect_file(ScreenShot)
-
-
-
+# 当前脚本所在文件真实路径
+cur_path = os.path.dirname(os.path.realpath(__file__))
 #用例路径
-case_path = os.path.join(os.getcwd(),"test_all")
+case_path = os.path.join(cur_path,"test_all")
 #报告存放路径
-report_path = os.path.join(os.getcwd(),"Report")
+report_path = os.path.join(cur_path,"Report")
 #html报告文件
 report_abspath = os.path.join(report_path,"result.html")
 
@@ -38,20 +37,16 @@ report_abspath = os.path.join(report_path,"result.html")
 '''方法 二'''
 #手动添加单个用例
 suit = unittest.TestSuite()
-
 # suit.addTest(Wan_config("test_1_001_wan_config_static"))
 # suit.addTest(Wan_config("test_1_002_wan_config_DHCP"))
 # suit.addTest(Wan_config("test_1_003_wan_config_PPPoE"))
-
-# suit.addTest(Port_mapping("test_04_001_static_port_mapping"))
-# suit.addTest(Port_mapping("test_04_002_nat_rule"))
-# suit.addTest(Port_mapping("test_04_003_DMZ"))
-
+suit.addTest(Port_mapping("test_04_006_nat_rule_config_EasyIP"))
+suit.addTest(Port_mapping("test_04_007_nat_rule_show_EasyIP"))
+suit.addTest(Port_mapping("test_04_008_nat_rule_EasyIP_validate"))
+suit.addTest(Port_mapping("test_04_009_nat_rule_del_EasyIP"))
 # suit.addTest(Router_config("test_05_staticRouter"))
 # 用户管理------用户状态
-suit.addTest(AccStatu("test_14_001_accStatu"))
-
-
+# suit.addTest(AccStatu("test_14_001_accStatu"))
 fp = open(report_abspath,"wb")
 #Html报告格式
 runner = HTMLTestRunner.HTMLTestRunner(stream=fp,

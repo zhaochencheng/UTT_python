@@ -1,17 +1,13 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2018/1/19 15:57
+# @Time    : 2018/2/28 9:26
 # @Author  : zhao.chencheng
 # @Email   : 907779487@qq.com
-# @File    : Login_Router.py
+# @File    : login_web.py
 # @Software: PyCharm Community Edition
-'''
-路由器web 登陆
-
-'''
 from selenium import webdriver
 import time
 import unittest
-
+from send_mail.operate_excel.excel import read_excel
 class Login():
     '''登陆'''
     #公共类须 初始化：
@@ -43,6 +39,10 @@ class T(unittest.TestCase):
         self.driver.quit()
     def test_001(self):
         print(self.driver.title)
+
+
+
 if __name__ == '__main__':
     unittest.main()
+
 

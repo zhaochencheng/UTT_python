@@ -28,18 +28,38 @@
 网络配置：test_netConfig
     外网配置 test_wan_config.py
            ----wan口固定ip 配置与删除     test_01_001_wan_config_static  [使用显性等待,减少定位不到元素问题] [放自动截图]
+                                            --2018/02/28 已添加显性等待、自动截图
            ----wan口DHCP  配置与释放      test_01_002_wan_config_DHCP  [使用显性等待,减少定位不到元素问题] [放自动截图]
+                                            --2018/02/28 已添加显性等待、自动截图
            ----wan口PPPOE 配置与删除      test_01_003_wan_config_PPPoE (引言,判断网通)
 
     内网配置 test_Lan_config.py
            ----lan口默认配置              test_02_001_lanconfig (待实现)
-           ----vlan配置与删除             test_02_002_vlan_lanconfig
+           ----vlan配置与删除
+                    vlan配置                      test_02_002_vlan_Lan_configure
+                    将页面配置的vlan lan输出       test_02_003_vlan_Lan_web_show
+                    将配置的vlan lan 删除          test_02_004_vlan_Lan_dele_config
 
     DHCP服务
 
     端口映射 test_Port_mapping.py [未加判断该功能是否生效]
-           ----静态映射配置,修改与删除    test_04_001_static_port_mapping[os对截图文件夹清空,再放截图][对配置的端口进行验证]
-           ----NAT规则 配置与删除        test_04_002_nat_rule
+           ----静态映射配置,修改与删除
+                     静态映射配置                     test_04_001_static_port_mapping_config
+                     静态映射配置-页面信息正确              test_04_002_static_port_mapping_show[加出错自动截图]
+                     对配置静态端口映射 进行验证       test_04_003_static_port_mapping_validate (未实现)
+                     静态映射删除                     test_04_004_static_port_mapping_delect
+
+           ----NAT规则 配置与删除
+                     NAT规则EasyIP 配置                 test_04_006_nat_rule_config_EasyIP
+                     EasyIP配置-页面信息正确             test_04_007_nat_rule_show_EasyIP[加出错自动截图]
+                     验证EasyIP功能生效                  test_04_008_nat_rule_EasyIP_validate (未实现)
+                     将配置的EasyIP 信息删除             test_04_009_nat_rule_del_EasyIP
+
+                     NAT规则 One2One配置                  test_04_011_nat_rule_config_One2One(未实现)
+                     One2One配置-页面信息正确             test_04_012_nat_rule_show_One2One(未实现)
+                     验证One2One功能生效                  test_04_013_nat_rule_One2One_validate (未实现)
+                     将配置的One2One 信息删除             test_04_014_nat_rule_del_One2One(未实现)
+
            ----DMZ主机配置               test_04_003_DMZ [#添加DMZ 生效 方法][#单个wan口DMZ 配置]
     路由配置 test_rouger_config.py
             ----静态路由配置与删除        test_05_001_staticRouter

@@ -17,6 +17,9 @@ from selenium.webdriver.support.select import Select
 from Re_OS_3.Public.Login_Router import Login
 from Re_OS_3.Config_data.config import *
 import os
+from Re_OS_3.Tool.Ping import Ping
+from Re_OS_3.Tool.http200 import httpcode
+
 
 class Wan_config(unittest.TestCase):
     u'''**wan口配置**'''
@@ -30,8 +33,10 @@ class Wan_config(unittest.TestCase):
     def test_01_001_wan_config_static(self):
         u'''--wan口固定ip配置与删除--'''
 
-        #网络配置  定位
-        netconfig = self.driver.find_element_by_xpath("//*[@id='sidebar']/ul/li[3]/div/h4/span")
+        # 显示等待
+        webwait = WebDriverWait(self.driver, 10, 1)
+        # 网络配置  定位
+        netconfig = webwait.until(lambda x:x.find_element_by_xpath("//*[@id='sidebar']/ul/li[3]/div/h4/span"))
         netconfig.click()
         print("当前位置：",netconfig.text)
         #外网配置 定位
@@ -50,8 +55,8 @@ class Wan_config(unittest.TestCase):
         back.click()
         time.sleep(2)
         for i in range(len(all_interface)):
-            #配置前先 截图
-            Get_Screenshot(self.driver).get_screenshot("wan_config_wan%d_configure_before"%i)
+            '''#配置前先 截图#'''
+            Get_Screenshot(self.driver).get_screenshot("wan_static_wan%d_configure_before"%(i+1))
             #编辑
             edit_again = self.driver.find_element_by_class_name("glyphicon-edit")
             edit_again.click()
@@ -107,27 +112,31 @@ class Wan_config(unittest.TestCase):
             print("子网掩码为：",web_netmark)
             print("网关地址为：",web_GWway)
             print("*" * 30, '\n')
-            # 配置后 截图
-            Get_Screenshot(self.driver).get_screenshot("wan_config_wan%d_configure_after"%i)
 
+            '''# 配置后 截图'''
+            Get_Screenshot(self.driver).get_screenshot("wan_static_wan%d_configure_after"%(i+1))
 
-            #
+            '''判断配置是否成功'''
             # 判断页面显示wan口ip 与 配置的wan口ip是否相同；
-            self.assertEqual(web_ip, wan_ip[i], "%s 配置IP与页面生效IP不一致"%web_interface)
+            try:
+                self.assertEqual(web_ip, wan_ip[i], "%s 配置IP与页面生效IP不一致"%web_interface)
+            except BaseException as E:
+                Get_Screenshot(self.driver).get_screenshot("wan_static_wan%d_configure_error" % (i + 1))
+                raise
 
             # 判断端口状态
-            self.assertEqual(web_connect_status, "已连接", "%s 端口连接状态错误--可能网线未连接或该端口有问题"%web_interface)
+            try:
+                self.assertEqual(web_connect_status, "已连接", "%s 端口连接状态错误--可能网线未连接或该端口有问题"%web_interface)
+            except BaseException as  E:
+                Get_Screenshot(self.driver).get_screenshot("wan_static_wan%d_configure_erroe" % (i + 1))
+                raise
 
-            #ping 网关
-            return1 = os.system('ping -n 2 -w 2 %s' % GWaddr)
-            if return1:
-                print('ping %s is fail' % GWaddr)
-                raise Exception('ping %s is fail,ping网关不通！' % GWaddr)
-                count_False = 1
-            else:
-                print('ping %s is ok' % GWaddr)
-                count_True = 1
-            #删除刚才的配置
+            '''# # 判断配置wan口后 网络是否生效 # #'''
+            Ping().ping_IP(GWaddr) # ping 网关
+            # Ping().ping_IP("www.baidu.com") # ping 百度
+            httpcode().http200ok("http://" + "www.163.com") #访问163.com 查看http 状态码
+
+            '''# # 删除刚才的配置 # # '''
             if i == 0 :
                 #因为wan1口不可删除，在该处跳过，
                 pass
@@ -168,15 +177,18 @@ class Wan_config(unittest.TestCase):
                 self.assertEqual(delet_web_connect_status,'未配置',"%s 端口配置未删除"%delet_web_interface)
                 time.sleep(2)
                 # 删除后 截图
-                Get_Screenshot(self.driver).get_screenshot("wan_config__wan%d_delete_after"%i)
+                Get_Screenshot(self.driver).get_screenshot("wan_static__wan%d_delete_after"%(i+1))
         time.sleep(2)
 
 
     def test_01_002_wan_config_DHCP(self):
         u'''--wan口DHCP配置与释放--'''
 
+
+        # 显示等待
+        webwait = WebDriverWait(self.driver, 10, 1)
         # 网络配置  定位
-        netconfig = self.driver.find_element_by_xpath("//*[@id='sidebar']/ul/li[3]/div/h4/span")
+        netconfig = webwait.until(lambda x:x.find_element_by_xpath("//*[@id='sidebar']/ul/li[3]/div/h4/span"))
         netconfig.click()
         print("当前位置：", netconfig.text)
         # 外网配置 定位
@@ -194,6 +206,10 @@ class Wan_config(unittest.TestCase):
         back.click()
         time.sleep(2)
         for i in range(1,len(all_interface)): # 应从0开始，
+            '''#配置前先 截图#'''
+            Get_Screenshot(self.driver).get_screenshot("wan_DHCP_wan%d_configure_before" % (i+1))
+            '''开始配置'''
+            #编辑 定位
             edit_again = self.driver.find_element_by_class_name("glyphicon-edit")
             edit_again.click()
             # 接口
@@ -246,28 +262,23 @@ class Wan_config(unittest.TestCase):
             print("*" * 30, '\n')
             time.sleep(2)
 
+            '''#配置完成后 截图#'''
+            Get_Screenshot(self.driver).get_screenshot("wan_DHCP_wan%d_configure_after" % (i+1))
 
-            # 判断端口状态
+
+            '''# 判断端口状态'''
             try:
                 self.assertEqual(web_connect_status, "已连接", "%s 端口连接状态错误--可能网线未连接或该端口有问题" % web_interface)
             except Exception as  E:
-                print(E)
-                nowTime = time.strftime("%Y%m%d.%H_%M_%S")
-                #截图存放路径  相对路径
-                # png_path = os.path.dirname(os.getcwd()) + '\Screenshot'
-                self.driver.get_screenshot_as_file(r'F:\untitled\Re_OS_3\Screenshot\%s.jpg' % (nowTime+'_wan_config_DHCP'))
+                Get_Screenshot(self.driver).get_screenshot("wan_DHCP_wan%d_configure_after_error" % (i+1))
                 raise
-            # ping 网关 ---判断网通？
-            return1 = os.system('ping -n 2 -w 2 %s' % web_GWway)
-            if return1:
-                print('ping %s is fail' % web_GWway)
-                raise Exception('ping %s is fail,ping网关不通！' % web_GWway)
-                count_False = 1
-            else:
-                print('ping %s is ok' % web_GWway)
-                count_True = 1
 
-            # 释放wan口
+            '''# ping 网关 ---判断网通？'''
+            Ping().ping_IP(web_GWway)  # ping 网关
+            # Ping().ping_IP("www.baidu.com") # ping 百度
+            httpcode().http200ok("http://" + "www.163.com")  # 访问163.com 查看http 状态码
+
+            '''# 释放wan口'''
             sf_web_connect_status = self.driver.find_element_by_xpath(
                 "//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[2]/a" % (i + 1))
             sf_web_connect_status.click()
@@ -307,13 +318,19 @@ class Wan_config(unittest.TestCase):
             print("网关地址为：", web_GWway)
             print("*" * 30, '\n')
             time.sleep(2)
+            '''#释放接口后 截图#'''
+            Get_Screenshot(self.driver).get_screenshot("wan_DHCP_wan%d_configure_release" %(i+1))
+
         time.sleep(2)
 
     def test_01_003_wan_config_PPPoE(self):
         u'''PPPoE的配置与挂断'''
+        # 显示等待
+        webwait = WebDriverWait(self.driver, 10, 1)
 
         # 网络配置  定位
-        netconfig = self.driver.find_element_by_xpath("//*[@id='sidebar']/ul/li[3]/div/h4/span")
+        # netconfig = self.driver.find_element_by_xpath("//*[@id='sidebar']/ul/li[3]/div/h4/span")
+        netconfig = webwait.until(lambda x:x.find_element_by_xpath("//*[@id='sidebar']/ul/li[3]/div/h4/span"))
         netconfig.click()
         print("当前位置：", netconfig.text)
         # 外网配置 定位
@@ -331,6 +348,10 @@ class Wan_config(unittest.TestCase):
         back.click()
         time.sleep(2)
         for i in range(1, len(all_interface)):  # 应从0开始，
+            '''#配置前先 截图#'''
+            Get_Screenshot(self.driver).get_screenshot("wan_PPPOE_wan%d_configure_before" % (i + 1))
+            '''开始配置'''
+            #编辑 定位
             edit_again = self.driver.find_element_by_class_name("glyphicon-edit")
             edit_again.click()
             # 接口
@@ -395,6 +416,17 @@ class Wan_config(unittest.TestCase):
             print("网关地址为：", web_GWway)
             print("*" * 30, '\n')
             time.sleep(2)
+            '''#配置后 截图#'''
+            Get_Screenshot(self.driver).get_screenshot("wan_PPPOE_wan%d_configure_after" % (i + 1))
+
+            '''判断 PPPOE 生效'''
+
+            '''删除pppoe配置'''
+
+            '''#删除配置后 截图#'''
+            Get_Screenshot(self.driver).get_screenshot("wan_PPPOE_wan%d_configure_delete" % (i + 1))
+
+
         time.sleep(2)
 
 

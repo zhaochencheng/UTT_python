@@ -6,9 +6,9 @@
 # @Software: PyCharm Community Edition
 import xlrd
 from datetime import datetime,date
-def read_excel():
+def read_excel(path):
     # 打开文件
-    workbook = xlrd.open_workbook(r'G:\github\UTT_python\test.xlsx')
+    workbook = xlrd.open_workbook(path)
     logininformation = workbook.sheet_by_name("登陆信息")
     # print(logininformation.cell(1,1).value)
     # print("sheet的名称:%s，行数:%s，列数:%s" % (logininformation.name,logininformation.nrows, logininformation.ncols))
@@ -17,14 +17,17 @@ def read_excel():
         name = logininformation.cell(i,0).value
         # print(name)
         username.append(name)
-    print("用户名为：",username)
+    # print("用户名为：",username)
     password= []
     for i in range(1, logininformation.nrows):
         for j in range(1, logininformation.ncols):
             pwd = logininformation.cell(i, j).value
             # print(pwd)
             password.append(pwd)
-    print("密码为：", password)
+    # print("密码为：", password)
+    #返回 用户名 和 密码；
+    #(['admin', 'test'], ['admin', 'test1']) 格式如下：用户名在一个列表中，密码在一个列表中
+    return username,password
     # # 获取所有sheet
     # print("获取所有sheet",workbook.sheet_names())
     # # 根据sheet索引或者名称获取sheet内容
@@ -53,4 +56,11 @@ def read_excel():
 
 
 if __name__ == '__main__':
-    read_excel()
+    path = r'G:\github\UTT_python\test.xlsx'
+    a = read_excel(path)
+    print(a)
+    #username
+    print(a[0])
+    print("用户名个数：",len(a[0]))
+    for i in range(len(a[0])):
+        print(a[0][i])

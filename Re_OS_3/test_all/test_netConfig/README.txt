@@ -13,14 +13,19 @@
 *****************************************
 -----------------------------------------
 网络配置：test_netConfig  [放自动截图]
-    外网配置 test_wan_config.py
+     外网配置 test_wan_config.py
            ----wan口固定ip 配置与删除     test_01_001_wan_config_static  [使用显性等待,减少定位不到元素问题] [放自动截图]
+                                            --2018/02/28 已添加显性等待、自动截图
            ----wan口DHCP  配置与释放      test_01_002_wan_config_DHCP  [使用显性等待,减少定位不到元素问题] [放自动截图]
+                                            --2018/02/28 已添加显性等待、自动截图
            ----wan口PPPOE 配置与删除      test_01_003_wan_config_PPPoE (引言,判断网通)
 
     内网配置 test_Lan_config.py
            ----lan口默认配置              test_02_001_lanconfig (待实现)
-           ----vlan配置与删除             test_02_002_vlan_lanconfig
+           ----vlan配置与删除
+                    vlan配置                      test_02_002_vlan_Lan_configure
+                    将页面配置的vlan lan输出       test_02_003_vlan_Lan_web_show
+                    将配置的vlan lan 删除          test_02_004_vlan_Lan_dele_config
 
     DHCP服务
 

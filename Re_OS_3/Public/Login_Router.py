@@ -30,7 +30,11 @@ class Login():
         #点击登陆按钮
         self.driver.find_element_by_id("login_btn").click()
         # print("当前页面为：%s"%self.driver.title)
-        time.sleep(3)
+        time.sleep(2)
+        #最大化浏览器窗口 方便截图完整
+        self.driver.maximize_window()
+        time.sleep(1)
+
 
 
 #下为： 类的实例化 调用
@@ -42,7 +46,9 @@ class T(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
     def test_001(self):
+        # self.driver.maximize_window()
         print(self.driver.title)
+        time.sleep(3)
 if __name__ == '__main__':
     unittest.main()
 

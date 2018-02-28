@@ -13,6 +13,8 @@ import time
 from selenium import webdriver
 from Re_OS_3.Public.Login_Router import Login
 from Re_OS_3.Config_data.config import *
+from Re_OS_3.Public.Delect_sameConfig import Delect_config
+from Re_OS_3.Public.Get_screenshot import Get_Screenshot
 
 class Port_mapping(unittest.TestCase):
     u'''**端口映射**'''
@@ -23,9 +25,8 @@ class Port_mapping(unittest.TestCase):
     def tearDown(self):
         time.sleep(5)
         self.driver.quit()
-
-    def test_04_001_static_port_mapping(self):
-        u'''静态映射配置,修改与删除'''
+    def enter_port_map(self):
+        "页面操作：网络配置--端口映射"
         # 显示等待
         webwait = WebDriverWait(self.driver, 10, 1)
         # 网络配置  定位
@@ -36,10 +37,8 @@ class Port_mapping(unittest.TestCase):
         port_map =self.driver.find_element_by_link_text("端口映射")
         port_map.click()
         print("当前位置:",port_map.text)
-        time.sleep(1)
-        static_mapping = self.driver.find_element_by_link_text("静态映射")
-        print("当前位置：",static_mapping.text)
-
+    def del_static_port_sameconfig(self):
+        u'先匹配页面是否与配置相同的配置文件，若有，则删除'
         # 每页显示  --显示50条
         shownumber = self.driver.find_element_by_xpath(".//button[@id='1']")
         shownumber.click()
@@ -67,13 +66,63 @@ class Port_mapping(unittest.TestCase):
                         ok = self.driver.find_element_by_id("u-cfm-ok")
                         ok.click()
                         time.sleep(4)
-                        print("已有%s 规则，先将其删除" % name_rule,"*" * 30, '\n')
+                        print("有%s 规则，先将其删除\n" % name_rule,"*" * 30, '\n')
                     else:
                         pass
                 else:
                     break
-        #配置 静态映射
+    def show_static_port_config(self):
+        u'''将配置的信息输出'''
+        # 每页显示  --显示50条
+        shownumber = self.driver.find_element_by_xpath(".//button[@id='1']")
+        shownumber.click()
+        time.sleep(1)
+        number_50 = self.driver.find_element_by_xpath("//*[@id='page-count-control']/div[1]/ul/li[3]/a")
+        number_50.click()
+        time.sleep(1)
+        # 在页面查看 配置的 静态映射 是否生效
+        tr = self.driver.find_elements_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr")
+        print("每页显示个数为:", len(tr))
+        print("*" * 30, '\n')
+        # # 判断配置的静态映射 是否生效 并将其输出;
+        for j in range(len(new_rulename)):
+            for i in range(1, len(tr) + 1):
+                # tr中 td个数;若该条没有vlan 配置,td数为1;  如果不比较,会导致定位不到元素,,而报错
+                td = self.driver.find_elements_by_xpath(".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td" % i)
+                if len(td) > 1:
+                    name_rule = self.driver.find_element_by_xpath(
+                        ".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[2]/span" % i).text
+                    if name_rule == new_rulename[j]:
+                        ipaddr = self.driver.find_element_by_xpath(
+                            ".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[4]/span" % i).text
+                        self.assertEqual(ipaddr, inaddr[j], "配置IP与页面生效ip不一致")
+                        port = self.driver.find_element_by_xpath(
+                            ".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[6]/span" % i).text
+                        # self.assertEqual(vid, vlan_id[j], "配置vlan id 与页面生效vlan id不一致")
+                        print("规则名称:", name_rule, "   内网IP地址:", ipaddr, "   端口映射关系:", port)
+                    else:
+                        pass
+                else:
+                    break
+
+    def test_04_001_static_port_mapping_config(self):
+        u'''静态映射配置'''
+        # 显示等待
+        webwait = WebDriverWait(self.driver, 10, 1)
+        #进入端口映射页面
+        self.enter_port_map()
+        time.sleep(1)
+        #点击静态映射
+        static_mapping = self.driver.find_element_by_link_text("静态映射")
+        print("当前位置：",static_mapping.text)
+
+
+        '''#先匹配页面是否与配置相同的配置文件，若有，则删除'''
+        self.del_static_port_sameconfig()
+        '''#配置 静态映射'''
         for j in  range(len(new_rulename)):
+            '''#配置前先 截图#'''
+            Get_Screenshot(self.driver).get_screenshot("%s_static_port_mapping_configure_before" % (new_rulename[j]))
 
             # 新增 按钮 定位
             add = self.driver.find_element_by_id("add")
@@ -109,98 +158,64 @@ class Port_mapping(unittest.TestCase):
             save = self.driver.find_element_by_id("save")
             save.click()
             time.sleep(4)
+            '''#配置完成 截图#'''
+            Get_Screenshot(self.driver).get_screenshot("%s_static_port_mapping_configure_after" % (new_rulename[j]))
+        #
 
-        # 每页显示  --显示50条
-        shownumber = self.driver.find_element_by_xpath(".//button[@id='1']")
-        shownumber.click()
-        time.sleep(1)
-        number_50 = self.driver.find_element_by_xpath("//*[@id='page-count-control']/div[1]/ul/li[3]/a")
-        number_50.click()
-        time.sleep(1)
-        # 在页面查看 配置的 静态映射 是否生效
-        tr = self.driver.find_elements_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr")
-        print("每页显示个数为:",len(tr))
-        print("*" * 30, '\n')
-        # # 判断配置的静态映射 是否生效 并将其输出;
-        for j in range(len(new_rulename)):
-            for i in range(1, len(tr) + 1):
-                # tr中 td个数;若该条没有vlan 配置,td数为1;  如果不比较,会导致定位不到元素,,而报错
-                td = self.driver.find_elements_by_xpath(".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td" % i)
-                if len(td) > 1:
-                    name_rule = self.driver.find_element_by_xpath(
-                        ".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[2]/span" % i).text
-                    if name_rule == new_rulename[j]:
-                        ipaddr = self.driver.find_element_by_xpath(
-                            ".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[4]/span" % i).text
-                        self.assertEqual(ipaddr, inaddr[j], "配置IP与页面生效ip不一致")
-                        port = self.driver.find_element_by_xpath(
-                            ".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[6]/span" % i).text
-                        # self.assertEqual(vid, vlan_id[j], "配置vlan id 与页面生效vlan id不一致")
-                        print("规则名称:", name_rule, "   内网IP地址:", ipaddr, "   端口映射关系:", port)
-                    else:
-                        pass
-                else:
-                    break
-        # #将配置好的页面截图
-        # nowTime = time.strftime("%Y%m%d.%H_%M_%S")
-        # # 截图存放路径  相对路径
-        # # png_path = os.path.dirname(os.getcwd()) + '\Screenshot'
-        # self.driver.get_screenshot_as_file(
-        #     r'F:\untitled\Re_OS_3\Screenshot\net_config_png\port_mapping_png\%s.png' % (nowTime + '_add_static_port_mapping'))
-
+        # # #将配置好的页面截图
+        #
+        #
         # #将配置的 静态映射 删除
         time.sleep(2)
         print("*" * 30, '\n')
-        for j in range(len(new_rulename)):
-            for i in range(1, len(tr) + 1):
-                # tr中 td个数;若该条没有vlan 配置,td数为1;  如果不比较,会导致定位不到元素,,而报错
-                td = self.driver.find_elements_by_xpath(".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td" % i)
-                if len(td) > 1:
-                    name_rule = self.driver.find_element_by_xpath(
-                        ".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[2]/span" % i).text
-                    if name_rule == new_rulename[j]:
-                        # 删除按钮 定位
-                        delete = self.driver.find_element_by_xpath(
-                            ".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[8]/span[2]" % i)
-                        delete.click()
-                        # 确认删除 定位
-                        ok = self.driver.find_element_by_id("u-cfm-ok")
-                        ok.click()
-                        time.sleep(4)
-                        print("已将%s 规则删除"%name_rule)
-                    else:
-                        pass
-                else:
-                    break
-        print("*" * 30, '\n')
-        # # 将删除配置 的页面截图
-        # nowTime = time.strftime("%Y%m%d.%H_%M_%S")
-        # # 截图存放路径  相对路径
-        # # png_path = os.path.dirname(os.getcwd()) + '\Screenshot'
-        # self.driver.get_screenshot_as_file(
-        #     r'F:\untitled\Re_OS_3\Screenshot\net_config_png\port_mapping_png\%s.png' % (
-        #     nowTime + '_del_static_port_mapping'))
 
 
-    def test_04_002_nat_rule(self):
-        u'''NAT规则 配置与删除'''
+    def test_04_002_static_port_mapping_show(self):
+        u'''静态映射配置-页面信息正确 '''
+        #进入端口映射页面
+        self.enter_port_map()
+        # 点击静态映射
+        static_mapping = self.driver.find_element_by_link_text("静态映射")
+        print("当前位置：", static_mapping.text)
+        #输出 配置信息
+        self.show_static_port_config()
+        '''# 输出 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("_static_port_mapping_configure_show")
 
-        webwait = WebDriverWait(self.driver, 10, 1)
-        # 网络配置  定位
-        netconfig = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[3]/div/h4/span"))
-        netconfig.click()
-        print("当前位置：", netconfig.text)
-        # 端口映射 定位
-        port_map = self.driver.find_element_by_link_text("端口映射")
-        port_map.click()
-        print("当前位置:", port_map.text)
-        #nat规则
+    def test_04_003_static_port_mapping_validate(self):
+        u'''对配置静态端口映射 进行验证'''
+        '''
+        再此处实现对配置 静态映射 的验证方式
+        '''
+        pass
+
+    def test_04_004_static_port_mapping_delect(self):
+        u'''静态映射删除 '''
+
+        # 进入端口映射页面
+        self.enter_port_map()
+        # 点击静态映射
+        static_mapping = self.driver.find_element_by_link_text("静态映射")
+        print("当前位置：", static_mapping.text)
+        #删除配置
+        self.del_static_port_sameconfig()
+        '''# 删除配置后 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("_static_port_mapping_configure_delect")
+
+    def enter_nat_rule(self):
+        u'''进入 nat规则 页面'''
+
+        #进入 端口映射页面
+        self.enter_port_map()
+        #进入 nat规则 页面
         nat_rule = self.driver.find_element_by_link_text("NAT规则")
         print("当前位置:",nat_rule.text)
         nat_rule.click()
         time.sleep(3)
-
-       # 每页显示  --显示50条
+    def del_nat_rule_sameconfig(self):
+        u'''删除相同配置'''
+        webwait = WebDriverWait(self.driver, 10, 1)
+        # 每页显示  --显示50条
         shownumbers = self.driver.find_elements_by_xpath(".//button[@id='1']")
         shownumber = shownumbers[1]
         shownumber.click()
@@ -211,10 +226,10 @@ class Port_mapping(unittest.TestCase):
         time.sleep(1)
         # 在页面查看 配置的 静态映射 是否生效
         tr = self.driver.find_elements_by_xpath("//*[@id='2']/div/div/div[1]/table/tbody/tr")
-        print("每页显示个数为:",len(tr))
+        print("每页显示个数为:", len(tr))
         print("*" * 30, '\n')
         time.sleep(2)
-        #判断是否已存在配置文件中的 配置 若有 则删除；
+        # 判断是否已存在配置文件中的 配置 若有 则删除；
         for j in range(len(NAT_rulename)):
             for i in range(1, len(tr) + 1):
                 # tr中 td个数;若该条没有vlan 配置,td数为1;  如果不比较,会导致定位不到元素,,而报错
@@ -223,28 +238,73 @@ class Port_mapping(unittest.TestCase):
                     name_rule = self.driver.find_element_by_xpath(
                         ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[2]/span" % i).text
                     if name_rule == NAT_rulename[j]:
-                       delete = self.driver.find_element_by_xpath(".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[8]/span[2]"%i)
-                       delete.click()
-                       # time.sleep(2)
-                       ok = webwait.until(lambda x: x.find_element_by_id("u-cfm-ok"))
-                       # ok = self.driver.find_element_by_id("u-cfm-ok")
-                       ok.click()
-                       time.sleep(4)
-                       print("已有%s 规则，先将其删除"%name_rule)
-                       # # 将删除配置 的页面截图
-                       # nowTime = time.strftime("%Y%m%d.%H_%M_%S")
-                       # # 截图存放路径  相对路径
-                       # # png_path = os.path.dirname(os.getcwd()) + '\Screenshot'
-                       # self.driver.get_screenshot_as_file(
-                       #     r'F:\untitled\Re_OS_3\Screenshot\net_config_png\port_mapping_png\%s.png' % (
-                       #         nowTime + '删除Nat规则'))
+                        delete = self.driver.find_element_by_xpath(
+                            ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[8]/span[2]" % i)
+                        delete.click()
+                        # time.sleep(2)
+                        ok = webwait.until(lambda x: x.find_element_by_id("u-cfm-ok"))
+                        # ok = self.driver.find_element_by_id("u-cfm-ok")
+                        ok.click()
+                        time.sleep(4)
+                        print("有%s 规则，先将其删除" % name_rule)
 
                     else:
                         pass
                 else:
                     break
-        # 开始配置
+
+    def nat_rule_show(self):
+        '''判断配置的静态映射 是否生效 并将其输出'''
+        webwait = WebDriverWait(self.driver, 10, 1)
+        # 每页显示  --显示50条
+        shownumbers = self.driver.find_elements_by_xpath(".//button[@id='1']")
+        shownumber = shownumbers[1]
+        shownumber.click()
+        time.sleep(1)
+        numbers_50 = self.driver.find_elements_by_xpath("//*[@id='page-count-control']/div[1]/ul/li[3]/a")
+        number_50 = numbers_50[1]
+        number_50.click()
+        time.sleep(1)
+        # 在页面查看 配置的 静态映射 是否生效
+        tr = self.driver.find_elements_by_xpath("//*[@id='2']/div/div/div[1]/table/tbody/tr")
+        print("每页显示个数为:", len(tr))
+        print("*" * 30, '\n')
+        time.sleep(2)
+        # 判断配置的静态映射 是否生效 并将其输出;
         for j in range(len(NAT_rulename)):
+            for i in range(1, len(tr) + 1):
+                # tr中 td个数;若该条没有vlan 配置,td数为1;  如果不比较,会导致定位不到元素,,而报错
+                td = self.driver.find_elements_by_xpath(
+                    ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td" % i)
+                if len(td) > 1:
+                    name_rule = self.driver.find_element_by_xpath(
+                        ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[2]/span" % i).text
+                    if name_rule == NAT_rulename[j]:
+                        ipaddr = self.driver.find_element_by_xpath(
+                            ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[4]/span" % i).text
+                        self.assertEqual(ipaddr, inaddr_begin[j], "配置 内网起始IP地址 与页面生效ip不一致")
+                        nat_type = self.driver.find_element_by_xpath(
+                            ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[3]/span" % i).text
+                        ipaddrend = self.driver.find_element_by_xpath(
+                            ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[5]/span" % i).text
+                        self.assertEqual(ipaddrend, inaddr_end[j], "配置 内网结束IP地址 与页面生效ip不一致")
+                        interface = self.driver.find_element_by_xpath(
+                            ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[7]/span" % i).text
+
+                        print("规则名称:", name_rule, " 	NAT类型:", nat_type, "  内网起始IP地址:", ipaddr,
+                              " 内网结束IP地址:", ipaddrend, "   绑定接口:", interface)
+                    else:
+                        pass
+                else:
+                    break
+
+
+    def test_04_006_nat_rule_config_EasyIP(self):
+        u'''NAT规则EasyIP 配置'''
+        self.enter_nat_rule()
+        for j in range(len(NAT_rulename)):
+            '''# 配置前 截图#'''
+            Get_Screenshot(self.driver).get_screenshot("%s_nat_rule_configure_EasyIP_before"%(NAT_rulename[j]))
            # 新增 按钮 定位
             time.sleep(1)
             adds = self.driver.find_elements_by_id("add")
@@ -290,123 +350,77 @@ class Port_mapping(unittest.TestCase):
             save.click()
 
             time.sleep(4)
-        # 将配置好的页面截图
-        # nowTime = time.strftime("%Y%m%d.%H_%M_%S")
-        # # 截图存放路径  相对路径
-        # # png_path = os.path.dirname(os.getcwd()) + '\Screenshot'
-        # self.driver.get_screenshot_as_file(
-        #     r'F:\untitled\Re_OS_3\Screenshot\net_config_png\port_mapping_png\%s.png' % (
-        #         nowTime + '新增Nat规则'))
+            '''# 配置完成 截图#'''
+            Get_Screenshot(self.driver).get_screenshot("%s_nat_rule_configure_EasyIP_after" % (NAT_rulename[j]))
         time.sleep(2)
         print("*" * 30, '\n')
-        # 判断配置的静态映射 是否生效 并将其输出;
-        for j in range(len(NAT_rulename)):
-            for i in range(1, len(tr) + 1):
-                # tr中 td个数;若该条没有vlan 配置,td数为1;  如果不比较,会导致定位不到元素,,而报错
-                td = self.driver.find_elements_by_xpath(
-                    ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td" % i)
-                if len(td) > 1:
-                    name_rule = self.driver.find_element_by_xpath(
-                        ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[2]/span" % i).text
-                    if name_rule == NAT_rulename[j]:
-                        ipaddr = self.driver.find_element_by_xpath(
-                            ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[4]/span" % i).text
-                        self.assertEqual(ipaddr, inaddr_begin[j], "配置 内网起始IP地址 与页面生效ip不一致")
-                        nat_type = self.driver.find_element_by_xpath(
-                            ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[3]/span" % i).text
-                        ipaddrend = self.driver.find_element_by_xpath(
-                            ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[5]/span" % i).text
-                        self.assertEqual(ipaddrend, inaddr_end[j], "配置 内网结束IP地址 与页面生效ip不一致")
-                        interface = self.driver.find_element_by_xpath(
-                            ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[7]/span" % i).text
 
-                        print("规则名称:", name_rule, " 	NAT类型:", nat_type, "  内网起始IP地址:", ipaddr,
-                              " 内网结束IP地址:", ipaddrend, "   绑定接口:", interface)
-                    else:
-                        pass
-                else:
-                    break
-        #将配置的 静态映射 删除
-        print("*" * 30, '\n')
-        for j in range(len(NAT_rulename)):
-            for i in range(1, len(tr) + 1):
-                # tr中 td个数;若该条没有vlan 配置,td数为1;  如果不比较,会导致定位不到元素,,而报错
-                td = self.driver.find_elements_by_xpath(".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td" % i)
-                if len(td) > 1:
-                    name_rule = self.driver.find_element_by_xpath(
-                        ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[2]/span" % i).text
-                    if name_rule == NAT_rulename[j]:
-                        delete = self.driver.find_element_by_xpath(
-                            ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[8]/span[2]" % i)
-                        delete.click()
-                        # time.sleep(2)
-                        ok = webwait.until(lambda x: x.find_element_by_id("u-cfm-ok"))
-                        # ok = self.driver.find_element_by_id("u-cfm-ok")
-                        ok.click()
-                        time.sleep(4)
-                        print("将配置的 %s 规则---删除" % name_rule)
-                        # # 将删除配置 的页面截图
-                        # nowTime = time.strftime("%Y%m%d.%H_%M_%S")
-                        # # 截图存放路径  相对路径
-                        # # png_path = os.path.dirname(os.getcwd()) + '\Screenshot'
-                        # self.driver.get_screenshot_as_file(
-                        #     r'F:\untitled\Re_OS_3\Screenshot\net_config_png\port_mapping_png\%s.png' % (
-                        #         nowTime + '删除Nat规则'))
-
-                    else:
-                        pass
-                else:
-                    break
-        print("*" * 30, '\n')
+    def test_04_007_nat_rule_show_EasyIP(self):
+        u"EasyIP配置-页面信息正确"
+        self.enter_nat_rule()
+        #将信息输出
+        self.nat_rule_show()
+        '''# 输出后 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("nat_rule_configure_show_EasyIP")
+    def test_04_008_nat_rule_EasyIP_validate(self):
+        u"验证EasyIP功能生效"
+        pass
+    def test_04_009_nat_rule_del_EasyIP(self):
+        u"将配置的EasyIP 信息删除"
+        self.enter_nat_rule()
+        #删除EasyIP 信息
+        self.del_nat_rule_sameconfig()
+        '''# 删除后 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("nat_rule_configure_delete_EasyIP")
 
 
-    def test_04_003_DMZ(self):
-        u'''DMZ主机配置'''
-
-        # 显示等待
-        webwait = WebDriverWait(self.driver, 10, 1)
-        # 网络配置  定位
-        netconfig = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[3]/div/h4/span"))
-        netconfig.click()
-        print("当前位置：", netconfig.text)
-        # 端口映射 定位
-        port_map = self.driver.find_element_by_link_text("端口映射")
-        port_map.click()
-        print("当前位置:", port_map.text)
-        time.sleep(2)
-
-        #DMZ主机 定位
-        DMZ = self.driver.find_element_by_link_text("DMZ主机")
-        print("当前定位：",DMZ.text)
-        DMZ.click()
-        time.sleep(2)
-        #DMZ状态 定位
-        open_DMZ = self.driver.find_element_by_xpath(".//input[@name = 'DMZEnable' and @value='on']")
-        if open_DMZ.is_selected():
-            print("已开启DMZ！")
-        else:
-            open_DMZ.click()
-            print("现在开启DMZ！")
-        time.sleep(3)
-        # 全局DMZ主机 定位
-        globalDMZ = self.driver.find_element_by_xpath(".//input[@name='GlobalDMZ']")
-        globalDMZ.clear()
-        globalDMZ.send_keys(globalDMZHost)
-        #保存 定位
-        save = self.driver.find_element_by_id('save')
-        save.click()
-        time.sleep(2)
-        #判断全局DMZ主机 在页面 是否生效
-        for i in range(1,5):
-            wan_DMZ = self.driver.find_element_by_xpath(".//input[@name='WAN%iDMZ']"%i)
-            if wan_DMZ.is_displayed():
-                print("wan%d口DMZ主机ip为："%i,wan_DMZ.get_attribute("value"))
-                self.assertEqual(wan_DMZ.get_attribute("value"), globalDMZHost, "全局DMZ主机ip和wan1口DMZ主机IP不一致")
-        print("各wan口配置ip与全局DMZ主机ip相同")
-
-        #添加DMZ 生效 方法
-
-        #单个wan口DMZ 配置
+    # def test_04_003_DMZ(self):
+        #     u'''DMZ主机配置'''
+        #
+        #     # 显示等待
+        #     webwait = WebDriverWait(self.driver, 10, 1)
+        #     # 网络配置  定位
+        #     netconfig = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[3]/div/h4/span"))
+        #     netconfig.click()
+        #     print("当前位置：", netconfig.text)
+        #     # 端口映射 定位
+        #     port_map = self.driver.find_element_by_link_text("端口映射")
+        #     port_map.click()
+        #     print("当前位置:", port_map.text)
+        #     time.sleep(2)
+        #
+        #     #DMZ主机 定位
+        #     DMZ = self.driver.find_element_by_link_text("DMZ主机")
+        #     print("当前定位：",DMZ.text)
+        #     DMZ.click()
+        #     time.sleep(2)
+        #     #DMZ状态 定位
+        #     open_DMZ = self.driver.find_element_by_xpath(".//input[@name = 'DMZEnable' and @value='on']")
+        #     if open_DMZ.is_selected():
+        #         print("已开启DMZ！")
+        #     else:
+        #         open_DMZ.click()
+        #         print("现在开启DMZ！")
+        #     time.sleep(3)
+        #     # 全局DMZ主机 定位
+        #     globalDMZ = self.driver.find_element_by_xpath(".//input[@name='GlobalDMZ']")
+        #     globalDMZ.clear()
+        #     globalDMZ.send_keys(globalDMZHost)
+        #     #保存 定位
+        #     save = self.driver.find_element_by_id('save')
+        #     save.click()
+        #     time.sleep(2)
+        #     #判断全局DMZ主机 在页面 是否生效
+        #     for i in range(1,5):
+        #         wan_DMZ = self.driver.find_element_by_xpath(".//input[@name='WAN%iDMZ']"%i)
+        #         if wan_DMZ.is_displayed():
+        #             print("wan%d口DMZ主机ip为："%i,wan_DMZ.get_attribute("value"))
+        #             self.assertEqual(wan_DMZ.get_attribute("value"), globalDMZHost, "全局DMZ主机ip和wan1口DMZ主机IP不一致")
+        #     print("各wan口配置ip与全局DMZ主机ip相同")
+        #
+        #     #添加DMZ 生效 方法
+        #
+        #     #单个wan口DMZ 配置
 
 
 

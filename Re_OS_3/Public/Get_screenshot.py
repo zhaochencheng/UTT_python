@@ -17,14 +17,32 @@ class Get_Screenshot():
         png = self.cd_screenshot_path(string)
         self.driver.get_screenshot_as_file(png)
     def cd_screenshot_path(self,string):
-        # 获取当前路径
-        cwd = os.getcwd()
-        # cd 到Re_OS_3 的位置   ------局限性
-        parent_path = os.path.dirname(os.path.dirname(cwd))
-        print("上级目录为：", parent_path)
+        # 当前脚本所在文件真实路径
+        cur_path = os.path.realpath(__file__)
+        # cur_path = r"G:\github\UTT_python\Re_OS_3\test_all\test_netConfig\test_DDNS.py"
+        # print(cur_path)
+        while 1:
+            path = []
+            if os.path.isdir(cur_path):
+                list = os.listdir(cur_path)
+                for i in list:
+                    # print(i,"-",type(i))
+                    if i != "Screenshot":
+                        pass
+                    else:
+                        path = cur_path
+                        # print("path:-----", path)
+                        break
+                if len(path) != 0:
+                    break
+                cur_path = os.path.dirname(cur_path)
+                # print(cur_path)
+            elif os.path.isfile(cur_path):
+                print(cur_path,"is file")
+                cur_path = os.path.dirname(cur_path)
         nowTime = time.strftime("%Y%m%d.%H_%M_%S")
         # cd 到截图保存文件夹
-        ScreenShot = parent_path + "\Screenshot\%s.png" % (string+nowTime)
+        ScreenShot = path + "\Screenshot\%s.png" % (nowTime+'_'+string)
         print('截图保存文件夹路径为:', ScreenShot)
         #返回 截图文件的路径
         return ScreenShot
@@ -36,3 +54,25 @@ if __name__ == '__main__':
     Get_Screenshot(driver).get_screenshot("test")
     time.sleep(2)
     driver.quit()
+    # 当前脚本所在文件真实路径
+    # cur_path = os.path.dirname(os.path.realpath(__file__))
+    # print(cur_path)
+    # list = os.listdir(cur_path)
+    # print(list)
+    # cur_path = os.path.dirname(cur_path)
+    # print(cur_path)
+    # list1 = os.listdir(cur_path)
+    # print(list1[7])
+    # print(type(list1[7]))
+    # print(type("Screenshot"))
+
+
+    # # 获取当前路径
+    # cwd = os.getcwd()
+    # # cd 到Re_OS_3 的位置   ------局限性
+    # parent_path = os.path.dirname(os.path.dirname(cur_path))
+    # print("上级目录为：", parent_path)
+    # nowTime = time.strftime("%Y%m%d.%H_%M_%S")
+    # # cd 到截图保存文件夹
+    # ScreenShot = parent_path + "\Screenshot\%s.png" % (nowTime+'_'+string)
+    # print('截图保存文件夹路径为:', ScreenShot)
