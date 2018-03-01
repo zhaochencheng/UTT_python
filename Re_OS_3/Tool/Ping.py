@@ -23,6 +23,10 @@ class Ping():
             # print(a)
             print('ping %s is ok' % ip)
             return False
+
+
+
+
 if __name__ == '__main__':
     ip = ["192.168.30.1","192.168.30.2"]
     # ping = Ping().ping_IP(ip)

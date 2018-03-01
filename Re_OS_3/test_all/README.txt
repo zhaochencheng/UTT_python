@@ -55,14 +55,24 @@
                      验证EasyIP功能生效                  test_04_008_nat_rule_EasyIP_validate (未实现)
                      将配置的EasyIP 信息删除             test_04_009_nat_rule_del_EasyIP
 
-                     NAT规则 One2One配置                  test_04_011_nat_rule_config_One2One(未实现)
-                     One2One配置-页面信息正确             test_04_012_nat_rule_show_One2One(未实现)
+                     NAT规则 One2One配置                  test_04_011_nat_rule_config_One2One
+                     One2One配置-页面信息正确             test_04_012_nat_rule_show_One2One
                      验证One2One功能生效                  test_04_013_nat_rule_One2One_validate (未实现)
-                     将配置的One2One 信息删除             test_04_014_nat_rule_del_One2One(未实现)
+                     将配置的One2One 信息删除             test_04_014_nat_rule_del_One2One
 
            ----DMZ主机配置               test_04_003_DMZ [#添加DMZ 生效 方法][#单个wan口DMZ 配置]
+
+
+
+
+
     路由配置 test_rouger_config.py
-            ----静态路由配置与删除        test_05_001_staticRouter
+            ----静态路由配置与删除
+                    静态路由——配置        test_05_001_staticRouter_config
+                    静态路由 页面信息正确  test_05_002_staticRouter_show
+                    静态路由功能生效-判断  test_05_003_statciRouter_validate[考虑ping怎么验证最为恰当]
+                    静态路由配置信息 删除  test_05_004_staticRouter_del
+
             ----策略路由 开启 、关闭与策略路由配置   test_05_002_strategyRouter（未实现）
 
 
@@ -146,7 +156,7 @@ VPN配置
         系统维护 test_System_maintenance.py
                 ------系统升级              test_32_001_System_upgrade(加入软件升级生效 判断)
                 ------应用特征库显示         test_32_002_Application_feature_library
-                ------配置管理               test_32_003_Configuration_management(未实现)
+                ------配置管理               test_ 32_003_Configuration_management(未实现)
                 ------重启操作               test_32_004_Reboot_DUT(加入重启生效 判断)
 
         网络工具 test_Network_tools.py (未实现)

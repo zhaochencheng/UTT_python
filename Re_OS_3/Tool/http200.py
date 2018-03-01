@@ -48,7 +48,7 @@ class httpcode():
         resp = urlopen(Url)
         code = resp.getcode()
         if code == 200:
-            print("%s" % url + "可以访问！")
+            print("%s" % Url + "可以访问！")
         else:
             pass
             # continue
@@ -66,6 +66,6 @@ class httpcode():
 #
 if __name__ == '__main__':
     # httpcode().http200(url)
-    httpcode().http200ok("http://" + "www.163.com")
+    httpcode().http200ok("http://1160504195.uttcare.com:8081")
 
 # http200(url2)

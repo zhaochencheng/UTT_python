@@ -23,13 +23,16 @@ class Get_Screenshot():
         # print(cur_path)
         while 1:
             path = []
+            #判断当前路径 是文件 or 目录
             if os.path.isdir(cur_path):
+                #目录 则获取目录下的文件夹名或文件名 进行比较
                 list = os.listdir(cur_path)
                 for i in list:
                     # print(i,"-",type(i))
                     if i != "Screenshot":
                         pass
                     else:
+                        #如果文件名为：Screenshot 则保存当前路径，作为存放截图的路径
                         path = cur_path
                         # print("path:-----", path)
                         break
@@ -40,6 +43,7 @@ class Get_Screenshot():
             elif os.path.isfile(cur_path):
                 print(cur_path,"is file")
                 cur_path = os.path.dirname(cur_path)
+
         nowTime = time.strftime("%Y%m%d.%H_%M_%S")
         # cd 到截图保存文件夹
         ScreenShot = path + "\Screenshot\%s.png" % (nowTime+'_'+string)
