@@ -180,7 +180,6 @@ class Wan_config(unittest.TestCase):
                 Get_Screenshot(self.driver).get_screenshot("wan_static__wan%d_delete_after"%(i+1))
         time.sleep(2)
 
-
     def test_01_002_wan_config_DHCP(self):
         u'''--wan口DHCP配置与释放--'''
 

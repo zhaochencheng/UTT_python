@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_study</title>
+</head>
+<body>
+<p>javaScript能够直接写到HTML中</p>
+<script>
+    document.write("<h1>this is javaScript</h1>")
+    document.write("<p>this is javaScript</p>")
+</script>
+<p>这是一个弹窗</p>
+<button type="button" onclick="alert('welcome')">点击这里</button>
+<p id="demo">JavaScript 能改变HTML 元素</p>
+<script>
+    function myFunction()
+    {
+    x = document.getElementById("demo");// 找到元素
+    x.innerHTML = 'Hello javascript!';// 改变内容
+    x.style.color = '#ff0000';//改变样式
+    }
+</script>
+<button type="button" onclick="myFunction()">click here</button>
+
+
+<h1 id="myH1"></h1>
+
+<p id="myP"></p>
+
+<script>
+// 输出标题：
+document.getElementById("myH1").innerHTML="Welcome to my Homepage";
+// 输出段落：
+document.getElementById("myP").innerHTML="This is my first paragraph.";
+</script>
+
+<p><b>注释：</b>注释不会被执行。</p>
+
+
+
+
+</body>
+</html>
