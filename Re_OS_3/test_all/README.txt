@@ -25,8 +25,8 @@
       对于页面 所有可操作元素 未完全覆盖到;
 *****************************************
 -----------------------------------------
-网络配置：test_netConfig
-    外网配置 test_wan_config.py
+网络配置：test_netConfig  [放自动截图]
+     外网配置 test_wan_config.py
            ----wan口固定ip 配置与删除     test_01_001_wan_config_static  [使用显性等待,减少定位不到元素问题] [放自动截图]
                                             --2018/02/28 已添加显性等待、自动截图
            ----wan口DHCP  配置与释放      test_01_002_wan_config_DHCP  [使用显性等待,减少定位不到元素问题] [放自动截图]
@@ -42,44 +42,49 @@
 
     DHCP服务
 
-    端口映射 test_Port_mapping.py [未加判断该功能是否生效]
-           ----静态映射配置,修改与删除
-                     静态映射配置                     test_04_001_static_port_mapping_config
-                     静态映射配置-页面信息正确              test_04_002_static_port_mapping_show[加出错自动截图]
-                     对配置静态端口映射 进行验证       test_04_003_static_port_mapping_validate (未实现)
-                     静态映射删除                     test_04_004_static_port_mapping_delect
+    端口映射 test_Port_mapping.py
+           ----静态映射
+                    静态映射配置          test_04_001_static_port_mapping_config
+                    静态映射配置-页面信息正确  test_04_002_static_port_mapping_show
+                    对配置静态端口映射 进行验证  test_04_003_static_port_mapping_validate(未实现)
+                    静态映射删除          test_04_004_static_port_mapping_delect
 
-           ----NAT规则 配置与删除
-                     NAT规则EasyIP 配置                 test_04_006_nat_rule_config_EasyIP
-                     EasyIP配置-页面信息正确             test_04_007_nat_rule_show_EasyIP[加出错自动截图]
-                     验证EasyIP功能生效                  test_04_008_nat_rule_EasyIP_validate (未实现)
-                     将配置的EasyIP 信息删除             test_04_009_nat_rule_del_EasyIP
+           ----NAT规则
+                    NAT规则EasyIP 配置           test_04_006_nat_rule_config_EasyIP
+                    EasyIP配置-页面信息正确      test_04_007_nat_rule_show_EasyIP
+                    验证EasyIP功能生效           test_04_008_nat_rule_EasyIP_validate(未实现)
+                    将配置的EasyIP 信息删除      test_04_009_nat_rule_del_EasyIP
 
-                     NAT规则 One2One配置                  test_04_011_nat_rule_config_One2One
-                     One2One配置-页面信息正确             test_04_012_nat_rule_show_One2One
-                     验证One2One功能生效                  test_04_013_nat_rule_One2One_validate (未实现)
-                     将配置的One2One 信息删除             test_04_014_nat_rule_del_One2One
+                    NAT规则 One2One配置          test_04_011_nat_rule_config_One2One
+                    One2One配置-页面信息正确     test_04_012_nat_rule_show_One2One
+                    验证One2One配置功能生效      test_04_013_nat_rule_One2One_validate(未实现)
+                    将One2One配置 信息删除       test_04_014_nat_rule_del_One2One
+
 
            ----DMZ主机配置               test_04_003_DMZ [#添加DMZ 生效 方法][#单个wan口DMZ 配置]
 
-
-
-
-
     路由配置 test_rouger_config.py
             ----静态路由配置与删除
-                    静态路由——配置        test_05_001_staticRouter_config
+                    静态路由——配置         test_05_001_staticRouter_config
                     静态路由 页面信息正确  test_05_002_staticRouter_show
-                    静态路由功能生效-判断  test_05_003_statciRouter_validate[考虑ping怎么验证最为恰当]
+                    静态路由功能生效-判断  test_05_003_statciRouter_validate
                     静态路由配置信息 删除  test_05_004_staticRouter_del
 
-            ----策略路由 开启 、关闭与策略路由配置   test_05_002_strategyRouter（未实现）
+            ----策略路由 开启 、关闭与策略路由配置   test_05_006_strategyRouter(重构)
 
 
     动态域名 test_DDNS.py
-           -----动态域名的新增与删除   test_006_ddns[已加入判断 ddns功能是否生效][-----如果打不开怎么办]
+           -----动态域名
+                    配置DDNS-uttcare            test_06_001_DDNS_uttcare_config
+                    DDNS-uttcare信息输出        test_06_002_DDNS_uttcare_show
+                    DDNS-uttcare功能生效验证    test_06_003_DDNS_uttcare_validate
+                    DDNS-uttcare信息删除        test_06_004_DDNS_uttcare_del
+
+
 
     交换配置
+
+
 
 无线扩展：test_WirelessExtension
 
