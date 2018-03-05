@@ -63,8 +63,9 @@ from Re_OS_3.Tool.Ping import Ping
 #         print('ping %s is ok' % ip)
 #         return False
 # ping12("192.168.34.1")
-l = []
-print(len(l))
-if l == None :
-    print("0")
+# l = []
+# print(len(l))
+# if l == None :
+#     print("0")
 
+print("%d"%1)

@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6e9ed0f-74bb-4425-9095-53d9b62798e4" name="Default" comment="3.0 代码重构1 ddns /portmapping/ router_config">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_study/game.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_study/水仙花数.py" />
+    <list default="true" id="f6e9ed0f-74bb-4425-9095-53d9b62798e4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Re_OS_3/test_all/README.txt" afterPath="$PROJECT_DIR$/Re_OS_3/test_all/README.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Re_OS_3/test_all/test_netConfig/README.txt" afterPath="$PROJECT_DIR$/Re_OS_3/test_all/test_netConfig/README.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Re_OS_3/Example/example.py" afterPath="$PROJECT_DIR$/Re_OS_3/Example/example.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Re_OS_3/test_all/test_BehaviorManagement/test_BehaviorManage.py" afterPath="$PROJECT_DIR$/Re_OS_3/test_all/test_BehaviorManagement/test_BehaviorManage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Re_OS_3/test_all/test_BehaviorManagement/test_Dns_dnsFilter.py" afterPath="$PROJECT_DIR$/Re_OS_3/test_all/test_BehaviorManagement/test_Dns_dnsFilter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Re_OS_3/test_all/test_BehaviorManagement/test_LectronicsNotice.py" afterPath="$PROJECT_DIR$/Re_OS_3/test_all/test_BehaviorManagement/test_LectronicsNotice.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Re_OS_3/test_all/test_SysConfig/test_Clock_management.py" afterPath="$PROJECT_DIR$/Re_OS_3/test_all/test_SysConfig/test_Clock_management.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Re_OS_3/test_all/test_SysConfig/test_NetManageStrate.py" afterPath="$PROJECT_DIR$/Re_OS_3/test_all/test_SysConfig/test_NetManageStrate.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Re_OS_3/test_all/test_SysConfig/test_Network_tools.py" afterPath="$PROJECT_DIR$/Re_OS_3/test_all/test_SysConfig/test_Network_tools.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Re_OS_3/test_all/test_SysConfig/test_System_maintenance.py" afterPath="$PROJECT_DIR$/Re_OS_3/test_all/test_SysConfig/test_System_maintenance.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Re_OS_3/test_all/test_SysConfig/test_Task_plan.py" afterPath="$PROJECT_DIR$/Re_OS_3/test_all/test_SysConfig/test_Task_plan.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Re_OS_3/test_all/test_TrafficManagement/test_Application_priority.py" afterPath="$PROJECT_DIR$/Re_OS_3/test_all/test_TrafficManagement/test_Application_priority.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Re_OS_3/test_all/test_UserManage/test_accStatu.py" afterPath="$PROJECT_DIR$/Re_OS_3/test_all/test_UserManage/test_accStatu.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Re_OS_3/test_all/test_UserManage/test_organize_member.py" afterPath="$PROJECT_DIR$/Re_OS_3/test_all/test_UserManage/test_organize_member.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Re_OS_3/test_all/test_VPNconfig/test_IPsec.py" afterPath="$PROJECT_DIR$/Re_OS_3/test_all/test_VPNconfig/test_IPsec.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Re_OS_3/test_all/test_netConfig/test_Port_mapping.py" afterPath="$PROJECT_DIR$/Re_OS_3/test_all/test_netConfig/test_Port_mapping.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Re_OS_3/Public/Delect_sameConfig.py" afterPath="$PROJECT_DIR$/Re_OS_3/Public/Delect_Config.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,12 +28,69 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Re_OS_3/test_all/README.txt">
+      <file leaf-file-name="test_Application_priority.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Re_OS_3/test_all/test_TrafficManagement/test_Application_priority.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="152" column="43" lean-forward="true" selection-start-line="152" selection-start-column="43" selection-end-line="152" selection-end-column="43" />
+            <state relative-caret-position="391">
+              <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+              <folding>
+                <element signature="e#191#243#0" expanded="true" />
+                <element signature="e#799#889#0" expanded="false" />
+                <element signature="e#923#963#0" expanded="false" />
+                <element signature="e#1010#1311#0" expanded="false" />
+                <element signature="e#1360#1891#0" expanded="false" />
+                <element signature="e#1940#2479#0" expanded="false" />
+                <element signature="e#2522#2993#0" expanded="false" />
+                <element signature="e#3054#4536#0" expanded="false" />
+                <element signature="e#3734#4536#0" expanded="false" />
+                <element signature="e#3734#3809#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Delect_Config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Re_OS_3/Public/Delect_Config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="104" column="32" lean-forward="true" selection-start-line="104" selection-start-column="32" selection-end-line="104" selection-end-column="32" />
+              <folding>
+                <element signature="e#374#2972#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="example.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Re_OS_3/Example/example.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_router_config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Re_OS_3/test_all/test_netConfig/test_router_config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="418" column="41" lean-forward="false" selection-start-line="418" selection-start-column="33" selection-end-line="418" selection-end-column="41" />
+              <folding>
+                <element signature="e#186#238#0" expanded="true" />
+                <element signature="e#997#1461#0" expanded="false" />
+                <element signature="e#1506#3950#0" expanded="false" />
+                <element signature="e#3993#7093#0" expanded="false" />
+                <element signature="e#7138#9231#0" expanded="false" />
+                <element signature="e#9278#9523#0" expanded="false" />
+                <element signature="e#9523#9560#0" expanded="false" />
+                <element signature="e#18582#18931#0" expanded="false" />
+                <element signature="e#18985#19323#0" expanded="false" />
+                <element signature="e#19382#19434#0" expanded="false" />
+                <element signature="e#19487#19758#0" expanded="false" />
+                <element signature="e#19807#20346#0" expanded="false" />
+                <element signature="e#20398#20821#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,7 +136,6 @@
         <option value="$PROJECT_DIR$/Re_OS_3/test_all/test_SysConfig/test_System_maintenance.py" />
         <option value="$PROJECT_DIR$/Re_OS_3/Example/telnet.txt" />
         <option value="$PROJECT_DIR$/Re_OS_3/test_all/test_TrafficManagement/README.txt" />
-        <option value="$PROJECT_DIR$/Re_OS_3/test_all/test_TrafficManagement/test_Application_priority.py" />
         <option value="$PROJECT_DIR$/Re_OS_3/Screenshot/12.py" />
         <option value="$PROJECT_DIR$/Re_OS_3/Public/Delect_file.py" />
         <option value="$PROJECT_DIR$/Re_OS_3/Screenshot/233.py" />
@@ -90,27 +157,29 @@
         <option value="$PROJECT_DIR$/Re_OS_3/test_all/test_netConfig/test_Port_mapping.py" />
         <option value="$PROJECT_DIR$/Re_OS_3/Tool/Ping.py" />
         <option value="$PROJECT_DIR$/Re_OS_3/Tool/http200.py" />
-        <option value="$PROJECT_DIR$/Re_OS_3/Example/example.py" />
         <option value="$PROJECT_DIR$/Re_OS_3/test_all/test_netConfig/test_DDNS.py" />
         <option value="$PROJECT_DIR$/Re_OS_3/test_all/test_netConfig/test_router_config.py" />
         <option value="$PROJECT_DIR$/send_mail/operate_excel/test12312.py" />
         <option value="$PROJECT_DIR$/python_study/study_os.py" />
         <option value="$PROJECT_DIR$/python_study/maopaopaixu.py" />
         <option value="$PROJECT_DIR$/Re_OS_3/test_all/test_netConfig/test_wan_config.py" />
-        <option value="$PROJECT_DIR$/Re_OS_3/test_all/test_BehaviorManagement/test_BehaviorManage.py" />
         <option value="$PROJECT_DIR$/js_study/js1.html" />
         <option value="$PROJECT_DIR$/python_study/水仙花数.py" />
         <option value="$PROJECT_DIR$/python_study/game.py" />
         <option value="$PROJECT_DIR$/Re_OS_3/test_all/test_netConfig/README.txt" />
         <option value="$PROJECT_DIR$/Re_OS_3/test_all/README.txt" />
+        <option value="$PROJECT_DIR$/Re_OS_3/test_all/test_BehaviorManagement/test_BehaviorManage.py" />
+        <option value="$PROJECT_DIR$/Re_OS_3/Example/example.py" />
+        <option value="$PROJECT_DIR$/Re_OS_3/Public/Delect_Config.py" />
+        <option value="$PROJECT_DIR$/Re_OS_3/test_all/test_TrafficManagement/test_Application_priority.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="268" />
-    <option name="y" value="32" />
-    <option name="width" value="1403" />
-    <option name="height" value="881" />
+    <option name="x" value="461" />
+    <option name="y" value="19" />
+    <option name="width" value="1456" />
+    <option name="height" value="1003" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -140,6 +209,18 @@
               <item name="UTT_python" type="b2602c69:ProjectViewProjectNode" />
               <item name="UTT_python" type="462c0819:PsiDirectoryNode" />
               <item name="Re_OS_3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UTT_python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UTT_python" type="462c0819:PsiDirectoryNode" />
+              <item name="Re_OS_3" type="462c0819:PsiDirectoryNode" />
+              <item name="Example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UTT_python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UTT_python" type="462c0819:PsiDirectoryNode" />
+              <item name="Re_OS_3" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UTT_python" type="b2602c69:ProjectViewProjectNode" />
@@ -188,7 +269,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.game">
+  <component name="RunManager" selected="Python tests.Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority_delect">
     <configuration name="水仙花数" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -240,46 +321,60 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="Unittests for test_BehaviorManage.BehaviorManage.test_17_002_behaviorMange_show" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_Application_priority.Application_priority.test_21_001_Application_priority_open" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Re_OS_3/test_all/test_BehaviorManagement" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Re_OS_3/test_all/test_TrafficManagement" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="UTT_python" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_BehaviorManage.BehaviorManage.test_17_002_behaviorMange_show&quot;" />
+      <option name="_new_target" value="&quot;test_Application_priority.Application_priority.test_21_001_Application_priority_open&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for test_BehaviorManage.BehaviorManage.test_17_003_behaviorMange_validate" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Re_OS_3/test_all/test_BehaviorManagement" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Re_OS_3/test_all/test_TrafficManagement" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="UTT_python" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_BehaviorManage.BehaviorManage.test_17_003_behaviorMange_validate&quot;" />
+      <option name="_new_target" value="&quot;test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for test_BehaviorManage.BehaviorManage.test_17_004_behaviorMange_delete" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority_delect" type="tests" factoryName="Unittests" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Re_OS_3/test_all/test_BehaviorManagement" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Re_OS_3/test_all/test_TrafficManagement" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="UTT_python" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_BehaviorManage.BehaviorManage.test_17_004_behaviorMange_delete&quot;" />
+      <option name="_new_target" value="&quot;test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority_delect&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority_show" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Re_OS_3/test_all/test_TrafficManagement" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="UTT_python" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority_show&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="Unittests for test_DDNS.DDNS_config.test_06_003_DDNS_uttcare_validate" type="tests" factoryName="Unittests" nameIsGenerated="true">
@@ -664,46 +759,47 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="32">
-      <item index="0" class="java.lang.String" itemvalue="Python.game" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for test_DDNS.DDNS_config.test_06_003_DDNS_uttcare_validate" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_Port_mapping.Port_mapping.test_04_012_nat_rule_show_One2One" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_router_config.Router_config.test_05_001_staticRouter_config" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test_router_config.Router_config.test_05_002_staticRouter_show" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests for test_router_config.Router_config.test_05_006_strategyRouter" />
-      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests in test_DDNS.py" />
-      <item index="7" class="java.lang.String" itemvalue="Python tests.Unittests for test_Lan_config.Lan_config.test_02_002_vlan_Lan_configure" />
-      <item index="8" class="java.lang.String" itemvalue="Python tests.Unittests for test_Lan_config.Lan_config.test_02_003_vlan_Lan_web_show" />
-      <item index="9" class="java.lang.String" itemvalue="Python tests.Unittests for test_Port_mapping.Port_mapping.test_04_001_static_port_mapping" />
-      <item index="10" class="java.lang.String" itemvalue="Python tests.Unittests for test_Port_mapping.Port_mapping.test_04_002_static_port_mapping_show" />
-      <item index="11" class="java.lang.String" itemvalue="Python tests.Unittests in Login_Router.py" />
-      <item index="12" class="java.lang.String" itemvalue="Python.Get_screenshot" />
-      <item index="13" class="java.lang.String" itemvalue="Python tests.Unittests for test_IPsec.IPSec.test_26_002_IPsec" />
-      <item index="14" class="java.lang.String" itemvalue="Python tests.Unittests for test_wan_config.Wan_config.test_01_001_wan_config_static" />
-      <item index="15" class="java.lang.String" itemvalue="Python tests.Unittests in test_IPsec.py" />
-      <item index="16" class="java.lang.String" itemvalue="Python.run_all (1)" />
-      <item index="17" class="java.lang.String" itemvalue="Python.Telnet_router" />
-      <item index="18" class="java.lang.String" itemvalue="Python tests.Unittests for test_System_maintenance.System_maintenance.test_32_002_Application_feature_library" />
-      <item index="19" class="java.lang.String" itemvalue="Python tests.Unittests in test_Application_priority.py" />
-      <item index="20" class="java.lang.String" itemvalue="Python tests.Unittests in test_005_APconfig.py" />
-      <item index="21" class="java.lang.String" itemvalue="Python tests.Unittests in test_006_switch.py" />
-      <item index="22" class="java.lang.String" itemvalue="Python.run_all2" />
-      <item index="23" class="java.lang.String" itemvalue="Python tests.Unittests in test_System_maintenance.py" />
-      <item index="24" class="java.lang.String" itemvalue="Python.http200" />
-      <item index="25" class="java.lang.String" itemvalue="Python tests.Unittests for test_NetManageStrate.NetManageStrate.test_30_003_Remote_management" />
-      <item index="26" class="java.lang.String" itemvalue="Python.example" />
-      <item index="27" class="java.lang.String" itemvalue="Python.excel" />
-      <item index="28" class="java.lang.String" itemvalue="Python tests.Unittests for test_BehaviorManage.BehaviorManage.test_17_002_behaviorMange_show" />
-      <item index="29" class="java.lang.String" itemvalue="Python tests.Unittests for test_BehaviorManage.BehaviorManage.test_17_003_behaviorMange_validate" />
-      <item index="30" class="java.lang.String" itemvalue="Python tests.Unittests for test_BehaviorManage.BehaviorManage.test_17_004_behaviorMange_delete" />
-      <item index="31" class="java.lang.String" itemvalue="Python.水仙花数" />
+    <list size="33">
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority_delect" />
+      <item index="1" class="java.lang.String" itemvalue="Python.game" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_DDNS.DDNS_config.test_06_003_DDNS_uttcare_validate" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_Port_mapping.Port_mapping.test_04_012_nat_rule_show_One2One" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test_router_config.Router_config.test_05_001_staticRouter_config" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests for test_router_config.Router_config.test_05_002_staticRouter_show" />
+      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests for test_router_config.Router_config.test_05_006_strategyRouter" />
+      <item index="7" class="java.lang.String" itemvalue="Python tests.Unittests in test_DDNS.py" />
+      <item index="8" class="java.lang.String" itemvalue="Python tests.Unittests for test_Lan_config.Lan_config.test_02_002_vlan_Lan_configure" />
+      <item index="9" class="java.lang.String" itemvalue="Python tests.Unittests for test_Lan_config.Lan_config.test_02_003_vlan_Lan_web_show" />
+      <item index="10" class="java.lang.String" itemvalue="Python tests.Unittests for test_Port_mapping.Port_mapping.test_04_001_static_port_mapping" />
+      <item index="11" class="java.lang.String" itemvalue="Python tests.Unittests for test_Port_mapping.Port_mapping.test_04_002_static_port_mapping_show" />
+      <item index="12" class="java.lang.String" itemvalue="Python tests.Unittests in Login_Router.py" />
+      <item index="13" class="java.lang.String" itemvalue="Python.Get_screenshot" />
+      <item index="14" class="java.lang.String" itemvalue="Python tests.Unittests for test_IPsec.IPSec.test_26_002_IPsec" />
+      <item index="15" class="java.lang.String" itemvalue="Python tests.Unittests for test_wan_config.Wan_config.test_01_001_wan_config_static" />
+      <item index="16" class="java.lang.String" itemvalue="Python tests.Unittests in test_IPsec.py" />
+      <item index="17" class="java.lang.String" itemvalue="Python.run_all (1)" />
+      <item index="18" class="java.lang.String" itemvalue="Python.Telnet_router" />
+      <item index="19" class="java.lang.String" itemvalue="Python tests.Unittests for test_System_maintenance.System_maintenance.test_32_002_Application_feature_library" />
+      <item index="20" class="java.lang.String" itemvalue="Python tests.Unittests in test_Application_priority.py" />
+      <item index="21" class="java.lang.String" itemvalue="Python tests.Unittests in test_005_APconfig.py" />
+      <item index="22" class="java.lang.String" itemvalue="Python tests.Unittests in test_006_switch.py" />
+      <item index="23" class="java.lang.String" itemvalue="Python.run_all2" />
+      <item index="24" class="java.lang.String" itemvalue="Python tests.Unittests in test_System_maintenance.py" />
+      <item index="25" class="java.lang.String" itemvalue="Python.http200" />
+      <item index="26" class="java.lang.String" itemvalue="Python tests.Unittests for test_NetManageStrate.NetManageStrate.test_30_003_Remote_management" />
+      <item index="27" class="java.lang.String" itemvalue="Python.example" />
+      <item index="28" class="java.lang.String" itemvalue="Python.excel" />
+      <item index="29" class="java.lang.String" itemvalue="Python tests.Unittests for test_Application_priority.Application_priority.test_21_001_Application_priority_open" />
+      <item index="30" class="java.lang.String" itemvalue="Python tests.Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority" />
+      <item index="31" class="java.lang.String" itemvalue="Python tests.Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority_show" />
+      <item index="32" class="java.lang.String" itemvalue="Python.水仙花数" />
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.水仙花数" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for test_BehaviorManage.BehaviorManage.test_17_004_behaviorMange_delete" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_BehaviorManage.BehaviorManage.test_17_003_behaviorMange_validate" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_BehaviorManage.BehaviorManage.test_17_002_behaviorMange_show" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority_show" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_Application_priority.Application_priority.test_21_001_Application_priority_open" />
+        <item index="3" class="java.lang.String" itemvalue="Python.水仙花数" />
       </list>
     </recent_temporary>
   </component>
@@ -809,53 +905,61 @@
       <option name="project" value="LOCAL" />
       <updated>1519895042103</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="3.0 代码重构1 README">
+      <created>1520238319046</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1520238319046</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_BehaviorManage_BehaviorManage_test_17_001_behaviorMange_config - 2018.03.02 at 10h 54m 16s.xml">
-      <configuration name="Unittests for test_BehaviorManage.BehaviorManage.test_17_001_behaviorMange_config" configurationId="tests" />
+    <history-entry file="Unittests_for_test_Application_priority_Application_priority_test_21_002_Application_priority_Office_priority - 2018.03.05 at 16h 55m 16s.xml">
+      <configuration name="Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_BehaviorManage_BehaviorManage_test_17_002_behaviorMange_show - 2018.03.02 at 10h 56m 47s.xml">
-      <configuration name="Unittests for test_BehaviorManage.BehaviorManage.test_17_002_behaviorMange_show" configurationId="tests" />
+    <history-entry file="Unittests_for_test_Application_priority_Application_priority_test_21_002_Application_priority_Office_priority_delect - 2018.03.05 at 17h 21m 09s.xml">
+      <configuration name="Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority_delect" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_BehaviorManage_BehaviorManage_test_17_003_behaviorMange_validate - 2018.03.02 at 11h 43m 57s.xml">
-      <configuration name="Unittests for test_BehaviorManage.BehaviorManage.test_17_003_behaviorMange_validate" configurationId="tests" />
+    <history-entry file="Unittests_for_test_Application_priority_Application_priority_test_21_002_Application_priority_Office_priority_delect - 2018.03.05 at 17h 25m 13s.xml">
+      <configuration name="Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority_delect" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_BehaviorManage_BehaviorManage_test_17_004_behaviorMange_delete - 2018.03.02 at 11h 45m 20s.xml">
-      <configuration name="Unittests for test_BehaviorManage.BehaviorManage.test_17_004_behaviorMange_delete" configurationId="tests" />
+    <history-entry file="Unittests_for_test_Application_priority_Application_priority_test_21_002_Application_priority_Office_priority_delect - 2018.03.05 at 17h 28m 23s.xml">
+      <configuration name="Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority_delect" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_DDNS_DDNS_config_test_06_003_DDNS_uttcare_validate - 2018.03.01 at 15h 55m 51s.xml">
-      <configuration name="Unittests for test_DDNS.DDNS_config.test_06_003_DDNS_uttcare_validate" configurationId="tests" />
+    <history-entry file="Unittests_for_test_Application_priority_Application_priority_test_21_002_Application_priority_Office_priority_delect - 2018.03.05 at 17h 40m 09s.xml">
+      <configuration name="Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority_delect" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_DDNS_DDNS_config_test_06_003_DDNS_uttcare_validate - 2018.03.01 at 15h 56m 39s.xml">
-      <configuration name="Unittests for test_DDNS.DDNS_config.test_06_003_DDNS_uttcare_validate" configurationId="tests" />
+    <history-entry file="Unittests_for_test_Application_priority_Application_priority_test_21_002_Application_priority_Office_priority_delect - 2018.03.05 at 17h 45m 24s.xml">
+      <configuration name="Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority_delect" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_DDNS_DDNS_config_test_06_003_DDNS_uttcare_validate - 2018.03.01 at 15h 59m 09s.xml">
-      <configuration name="Unittests for test_DDNS.DDNS_config.test_06_003_DDNS_uttcare_validate" configurationId="tests" />
+    <history-entry file="Unittests_for_test_Application_priority_Application_priority_test_21_002_Application_priority_Office_priority_delect - 2018.03.05 at 17h 56m 44s.xml">
+      <configuration name="Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority_delect" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_DDNS_py - 2018.03.01 at 16h 12m 27s.xml">
-      <configuration name="Unittests in test_DDNS.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_Application_priority_Application_priority_test_21_002_Application_priority_Office_priority_delect - 2018.03.05 at 18h 02m 27s.xml">
+      <configuration name="Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority_delect" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_DDNS_py - 2018.03.01 at 16h 22m 22s.xml">
-      <configuration name="Unittests in test_DDNS.py" configurationId="tests" />
+    <history-entry file="Unittests_for_test_Application_priority_Application_priority_test_21_002_Application_priority_Office_priority_show - 2018.03.05 at 17h 05m 29s.xml">
+      <configuration name="Unittests for test_Application_priority.Application_priority.test_21_002_Application_priority_Office_priority_show" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_router_config_py - 2018.03.01 at 16h 33m 08s.xml">
-      <configuration name="Unittests in test_router_config.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_Application_priority_py - 2018.03.05 at 17h 18m 16s.xml">
+      <configuration name="Unittests in test_Application_priority.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="268" y="32" width="1403" height="881" extended-state="0" />
+    <frame x="461" y="19" width="1456" height="1003" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19434103" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18696275" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.62138087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3112426" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31613755" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24984306" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39695713" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15857989" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33061224" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -864,7 +968,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969698" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -901,7 +1004,8 @@
     <MESSAGE value="add test" />
     <MESSAGE value="3.0 代码重构1" />
     <MESSAGE value="3.0 代码重构1 ddns /portmapping/ router_config" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.0 代码重构1 ddns /portmapping/ router_config" />
+    <MESSAGE value="3.0 代码重构1 README" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.0 代码重构1 README" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -912,134 +1016,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="17" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/unittestpy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Report/result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/run_all.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Screenshot/20180228.18_06_07_nat_rule_configure_show_EasyIP.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Screenshot/20180228.18_06_58_nat_rule_configure_delete_EasyIP.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Screenshot/20180301.11_31_33_nat_rule_configure_show_One2One.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Screenshot/20180301.11_32_22_nat_rule_configure_delete_One2One.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Public/Output_web_info.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Tool/Ping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="24" column="24" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Example/example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="67" column="3" lean-forward="false" selection-start-line="67" selection-start-column="3" selection-end-line="67" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Screenshot/20180301.16_20_38_DDNS_uttcare_config_after.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Screenshot/20180301.16_20_30_DDNS_uttcare_config_before.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Tool/http200.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="66" column="26" lean-forward="true" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Screenshot/20180301.16_21_03_DDNS_uttcare_config_show.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Screenshot/20180301.16_21_37_DDNS_uttcare_config_validate.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Screenshot/20180301.16_22_06_DDNS_uttcare_config_delect.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Public/Get_screenshot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Screenshot/20180301.16_32_23_333_static_router_delete_before.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Screenshot/20180301.16_32_29_333_static_router_delete_after.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/Screenshot/20180301.16_32_29_444_static_router_delete_before.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Re_OS_3/Screenshot/20180301.16_32_36_444_static_router_delete_after.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1131,13 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/test_all/test_BehaviorManagement/test_BehaviorManage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="241" column="0" lean-forward="true" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python_study/水仙花数.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -1196,42 +1170,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Re_OS_3/test_all/test_netConfig/test_router_config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding>
-            <element signature="e#997#1461#0" expanded="false" />
-            <element signature="e#1506#3950#0" expanded="false" />
-            <element signature="e#3993#7093#0" expanded="false" />
-            <element signature="e#7138#9231#0" expanded="false" />
-            <element signature="e#9278#9523#0" expanded="false" />
-            <element signature="e#9523#9560#0" expanded="false" />
-            <element signature="e#18985#19323#0" expanded="false" />
-            <element signature="e#19807#20346#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Re_OS_3/test_all/test_netConfig/test_Port_mapping.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="492" column="40" lean-forward="true" selection-start-line="492" selection-start-column="8" selection-end-line="492" selection-end-column="40" />
           <folding>
-            <element signature="e#958#1380#0" expanded="false" />
-            <element signature="e#1431#3054#0" expanded="false" />
-            <element signature="e#3102#4854#0" expanded="false" />
-            <element signature="e#4918#7347#0" expanded="false" />
-            <element signature="e#7408#7778#0" expanded="false" />
-            <element signature="e#7992#8362#0" expanded="false" />
-            <element signature="e#8402#8641#0" expanded="false" />
-            <element signature="e#8689#10534#0" expanded="false" />
-            <element signature="e#10572#12946#0" expanded="false" />
-            <element signature="e#13007#15527#0" expanded="false" />
-            <element signature="e#15584#15785#0" expanded="false" />
-            <element signature="e#15930#18098#0" expanded="false" />
-            <element signature="e#18159#20686#0" expanded="false" />
-            <element signature="e#20744#20947#0" expanded="false" />
+            <element signature="e#954#1376#0" expanded="false" />
+            <element signature="e#1427#3050#0" expanded="false" />
+            <element signature="e#3098#4850#0" expanded="false" />
+            <element signature="e#4914#7343#0" expanded="false" />
+            <element signature="e#7404#7774#0" expanded="false" />
+            <element signature="e#7988#8358#0" expanded="false" />
+            <element signature="e#8398#8637#0" expanded="false" />
+            <element signature="e#8685#10530#0" expanded="false" />
+            <element signature="e#10568#12942#0" expanded="false" />
+            <element signature="e#13003#15523#0" expanded="false" />
+            <element signature="e#15580#15781#0" expanded="false" />
+            <element signature="e#15926#18094#0" expanded="false" />
+            <element signature="e#18155#20682#0" expanded="false" />
+            <element signature="e#20740#20943#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1264,9 +1221,222 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Re_OS_3/test_all/README.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="152" column="43" lean-forward="true" selection-start-line="152" selection-start-column="43" selection-end-line="152" selection-end-column="43" />
+        <state relative-caret-position="602">
+          <caret line="126" column="25" lean-forward="false" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Re_OS_3/test_all/test_UserManage/test_organize_member.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2136">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Re_OS_3/test_all/test_WirelessExtension/test_Netname.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66">
+          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/json/encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="200" column="0" lean-forward="false" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="229" column="0" lean-forward="false" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/selenium/webdriver/remote/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/string.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="1265" column="0" lean-forward="false" selection-start-line="1265" selection-start-column="0" selection-end-line="1265" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/selenium/webdriver/remote/remote_connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="463" column="0" lean-forward="false" selection-start-line="463" selection-start-column="0" selection-end-line="463" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="299" column="0" lean-forward="false" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/selenium/webdriver/remote/webelement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="647" column="0" lean-forward="false" selection-start-line="647" selection-start-column="0" selection-end-line="647" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/unittest/suite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/unittestpy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="280" column="0" lean-forward="false" selection-start-line="280" selection-start-column="0" selection-end-line="280" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/unittest/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/unittest/runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="220" column="0" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/_jb_unittest_runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Re_OS_3/Public/Delect_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Re_OS_3/test_all/test_BehaviorManagement/test_BehaviorManage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Re_OS_3/Public/Output_web_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="e#372#2692#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Re_OS_3/test_all/test_netConfig/test_router_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="418" column="41" lean-forward="false" selection-start-line="418" selection-start-column="33" selection-end-line="418" selection-end-column="41" />
+          <folding>
+            <element signature="e#186#238#0" expanded="true" />
+            <element signature="e#997#1461#0" expanded="false" />
+            <element signature="e#1506#3950#0" expanded="false" />
+            <element signature="e#3993#7093#0" expanded="false" />
+            <element signature="e#7138#9231#0" expanded="false" />
+            <element signature="e#9278#9523#0" expanded="false" />
+            <element signature="e#9523#9560#0" expanded="false" />
+            <element signature="e#18582#18931#0" expanded="false" />
+            <element signature="e#18985#19323#0" expanded="false" />
+            <element signature="e#19382#19434#0" expanded="false" />
+            <element signature="e#19487#19758#0" expanded="false" />
+            <element signature="e#19807#20346#0" expanded="false" />
+            <element signature="e#20398#20821#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Re_OS_3/Example/example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Re_OS_3/Public/Delect_Config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="104" column="32" lean-forward="true" selection-start-line="104" selection-start-column="32" selection-end-line="104" selection-end-column="32" />
+          <folding>
+            <element signature="e#374#2972#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Re_OS_3/test_all/test_TrafficManagement/test_Application_priority.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+          <folding>
+            <element signature="e#191#243#0" expanded="true" />
+            <element signature="e#799#889#0" expanded="false" />
+            <element signature="e#923#963#0" expanded="false" />
+            <element signature="e#1010#1311#0" expanded="false" />
+            <element signature="e#1360#1891#0" expanded="false" />
+            <element signature="e#1940#2479#0" expanded="false" />
+            <element signature="e#2522#2993#0" expanded="false" />
+            <element signature="e#3054#4536#0" expanded="false" />
+            <element signature="e#3734#4536#0" expanded="false" />
+            <element signature="e#3734#3809#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

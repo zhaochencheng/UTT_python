@@ -13,7 +13,7 @@ import time
 from selenium import webdriver
 from Re_OS_3.Public.Login_Router import Login
 from Re_OS_3.Public.Output_web_info import Output_info
-from Re_OS_3.Public.Delect_sameConfig import Delect_config
+from Re_OS_3.Public.Delect_Config import Delect_config
 from Re_OS_3.Config_data.config import *
 from Re_OS_3.Tool.Ping import Ping
 
@@ -54,22 +54,43 @@ class Application_priority(unittest.TestCase):
                 # Output_info(self.driver).output_all()
                 time.sleep(2)
 
+    def switch_check_open(self,state):
+        u"0代表关闭,1代表开启"
+        # 策略路由开关按钮 定位
+        checkopen = self.driver.find_element_by_id("checkOpen")
+        checkopen_status = int(checkopen.get_attribute("checktype"))
+        # print("checkopen_status:",checkopen_status,type(checkopen_status))
+        # print("state:",state,type(state))
+        if checkopen_status == state:
+            print("no operation")
+            pass
+        else:
+            checkopen = self.driver.find_element_by_id("checkOpen")
+            checkopen.click()
+            print("操作按钮")
+        time.sleep(2)
+    def enter_app_priority(self):
+        u'''进入流量管理---应用优先页面'''
+
+        # 显示等待
+        webwait = WebDriverWait(self.driver, 10, 1)
+        # 流量管理 菜单栏 定位
+        trafficManagement = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[7]/div/h4/span"))
+        trafficManagement.click()
+        print("当前位置:", trafficManagement.text)
+        # 应用优先 定位
+        app_priority = self.driver.find_element_by_link_text("应用优先")
+        app_priority.click()
+        print("当前位置:", app_priority.text)
 
 
 
 
     def test_21_001_Application_priority(self):
         u'''应用管理开启-操作-关闭'''
-        # 显示等待
-        webwait = WebDriverWait(self.driver, 10, 1)
-        #流量管理 菜单栏 定位
-        trafficManagement = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[7]/div/h4/span"))
-        trafficManagement.click()
-        print("当前位置:",trafficManagement.text)
-        #应用优先 定位
-        app_priority =self.driver.find_element_by_link_text("应用优先")
-        app_priority.click()
-        print("当前位置:",app_priority.text)
+        #
+        self.enter_app_priority()
+
         #检查应用优先总开关 是否开启
         img = self.driver.find_element_by_id("checkOpen")
         self.check_imgopen(img)
@@ -107,6 +128,57 @@ class Application_priority(unittest.TestCase):
             #     # 输出配置的 模板样式
             #     # Output_info(self.driver).output_all()
             #     time.sleep(2)
+
+    def test_21_001_Application_priority_open(self):
+        u"应用管理--开启"
+        #进入流量管理---应用优先页面
+        self.enter_app_priority()
+        #开启应用优先按钮
+        #0代表关闭,1代表开启
+        self.switch_check_open(1)
+        '''判断按钮是否开启'''
+        checkopen = self.driver.find_element_by_id("checkOpen")
+        checktype = checkopen.get_attribute("checktype")
+        self.assertEqual(int(checktype),1,"按钮当前状态为关闭状态；开启功能--失败！！")
+        print("现在已开启--应用优先 功能")
+    def test_21_002_Application_priority_Office_priority_config(self):
+        u'''办公优先配置'''
+        # 进入流量管理---应用优先页面
+        self.enter_app_priority()
+        #选择办公优先
+        # 选择应用场景:
+        apptype = self.driver.find_element_by_xpath(".//select[@name='appType']")
+        Select(apptype).select_by_visible_text("办公优先")
+        # 确定 定位
+        changeAppType = self.driver.find_element_by_id("changeAppType")
+        changeAppType.click()
+    def test_21_002_Application_priority_Office_priority_show(self):
+        u'''办公优先配置页面内容输出'''
+        # 进入流量管理---应用优先页面
+        self.enter_app_priority()
+        #输出页面内容
+        Output_info(self.driver).output_all()
+    def test_21_002_Application_priority_Office_priority_validate(self):
+        u'''办公优先配置 功能生效'''
+        pass
+    def test_21_002_Application_priority_Office_priority_delect(self):
+        u'''办公优先配置删除'''
+        # 进入流量管理---应用优先页面
+        self.enter_app_priority()
+        #删除 办公优先配置
+        Delect_config(self.driver).delect_all_config()
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

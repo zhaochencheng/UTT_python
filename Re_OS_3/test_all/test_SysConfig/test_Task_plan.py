@@ -14,7 +14,7 @@ import time,random
 from selenium import webdriver
 from Re_OS_3.Public.Login_Router import Login
 from Re_OS_3.Public.Output_web_info import Output_info
-from Re_OS_3.Public.Delect_sameConfig import Delect_config
+from Re_OS_3.Public.Delect_Config import Delect_config
 from Re_OS_3.Config_data.config import *
 from Re_OS_3.Tool.http200 import httpcode
 from Re_OS_3.Tool.Ping import Ping
