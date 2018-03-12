@@ -21,8 +21,8 @@ def caishuzi():
     print("标准值",c,"方便自己猜数！！！")
     while 1:
         d = input("请输入猜测数字：")
-        if d == '':
-            print("输入值不能为空!")
+        if d == '' or d.isdigit() != True:
+            print("输入值非数字!")
         else:
             if int(d) < c:
                 print("当前数字 %s 小于 标准值"%d)

@@ -41,7 +41,7 @@ class Get_Screenshot():
                 cur_path = os.path.dirname(cur_path)
                 # print(cur_path)
             elif os.path.isfile(cur_path):
-                print(cur_path,"is file")
+                # print(cur_path,"is file")
                 cur_path = os.path.dirname(cur_path)
 
         nowTime = time.strftime("%Y%m%d.%H_%M_%S")

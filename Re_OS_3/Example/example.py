@@ -68,4 +68,4 @@ from Re_OS_3.Tool.Ping import Ping
 # if l == None :
 #     print("0")
 
-print("%d"%1)
+print(1!=1)

@@ -41,6 +41,11 @@
                     将配置的vlan lan 删除          test_02_004_vlan_Lan_dele_config
 
     DHCP服务
+           -----DHCP服务
+                     DHCP服务配置               test_03_001_DHCP_server_config
+                     将DHCP页面信息输出         test_03_002_DHCP_server_show
+                     DHCP功能生效判断           test_03_003_DHCP_server_validate(未实现)(思路：查看DHCP客户端列表；看是否有主机)
+                     DHCP服务配置删除           test_03_004_DHCP_server_delete
 
     端口映射 test_Port_mapping.py
            ----静态映射
@@ -147,9 +152,19 @@
 
 
 VPN配置
-    IPSec
+    IPSec test_IPsec.py
+        -----IPsec配置--对方动态连接到本地                 test_26_001_IPsec_dynamically_connected_local_config
+        -----IPsec配置信息输出--对方动态连接到本地         test_26_002_IPsec_dynamically_connected_local_show
+        -----IPsec功能验证--对方动态连接到本地             test_26_003_IPsec_dynamically_connected_local_validate
+        -----IPsec配置删除--对方动态连接到本地             test_26_004_IPsec_dynamically_connected_local_delete
+
+        -----IPsec配置--动态连接到网关                     test_26_006_IPsec_dynamically_connected_gateway_config
+        -----IPsec信息显示--动态连接到网关                  test_26_007_IPsec_dynamically_connected_gateway_show
+        -----IPsec功能验证--动态连接到网关                  test_26_008_IPsec_dynamically_connected_gateway_validate
+        -----IPsec配置删除--动态连接到网关                  test_26_009_IPsec_dynamically_connected_gateway_delete
 
     PPTP/L2TP
+
 
 系统对象
     时间计划
@@ -157,12 +172,23 @@ VPN配置
     地址组
 
 系统配置
-        网管策略 test_NetManageStrate.py
-                ------系统管理员的配置    test_30_001_System_administrator[多种方法论证 管理员的读写权限]
-                ------内网访问控制        test_30_002_Intranet_access_control(未实现)
-                ------远程管理            test_30_003_Remote_management[如何获取wan口ip，从页面获取？还是后台读wan口ip]
-                ------网管访问策略         test_30_004_Net_management_access_strategy(未实现)
-                ------语言配置            test_30_005_language_select
+       网管策略 test_NetManageStrate.py
+                ------系统管理员的配置
+                           系统管理员的配置          test_30_001_System_administrator_config
+                           系统管理员页面信息输出    test_30_002_System_administrator_show
+                           系统管理员功能生效验证    test_30_003_System_administrator_validate[多种方法论证 管理员的读写权限]
+                           系统管理员配置删除        test_30_004_System_administrator_delect
+
+                ------内网访问控制                   test_30_006_Intranet_access_control(未实现)
+
+                ------远程管理
+                           远程管理-开启              test_30_008_Remote_management_open
+                           远程管理功能生效判断        test_30_009_Remote_management_validate[如何获取wan口ip，从页面获取？还是后台读wan口ip]
+                           远程管理-关闭              test_30_010_Remote_managment_close
+
+                ------网管访问策略                   test_30_012_Net_management_access_strategy(未实现)
+
+                ------语言配置               test_30_013_language_select
 
         时钟管理 test_Clock_management.py
                 ------时钟管理的配置       test_31_001_Clock_management

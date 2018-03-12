@@ -28,6 +28,11 @@
                     将配置的vlan lan 删除          test_02_004_vlan_Lan_dele_config
 
     DHCP服务
+           -----DHCP服务
+                     DHCP服务配置               test_03_001_DHCP_server_config
+                     将DHCP页面信息输出         test_03_002_DHCP_server_show
+                     DHCP功能生效判断           test_03_003_DHCP_server_validate(未实现)(思路：查看DHCP客户端列表；看是否有主机)
+                     DHCP服务配置删除           test_03_004_DHCP_server_delete
 
     端口映射 test_Port_mapping.py
            ----静态映射

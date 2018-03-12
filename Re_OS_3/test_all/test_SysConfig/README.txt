@@ -14,11 +14,22 @@
 -----------------------------------------
 系统配置
         网管策略 test_NetManageStrate.py
-                ------系统管理员的配置    test_30_001_System_administrator[多种方法论证 管理员的读写权限]
-                ------内网访问控制        test_30_002_Intranet_access_control(未实现)
-                ------远程管理            test_30_003_Remote_management[如何获取wan口ip，从页面获取？还是后台读wan口ip]
-                ------网管访问策略         test_30_004_Net_management_access_strategy(未实现)
-                ------语言配置            test_30_005_language_select
+                ------系统管理员的配置
+                           系统管理员的配置          test_30_001_System_administrator_config
+                           系统管理员页面信息输出    test_30_002_System_administrator_show
+                           系统管理员功能生效验证    test_30_003_System_administrator_validate[多种方法论证 管理员的读写权限]
+                           系统管理员配置删除        test_30_004_System_administrator_delect
+
+                ------内网访问控制                   test_30_006_Intranet_access_control(未实现)
+
+                ------远程管理
+                           远程管理-开启              test_30_008_Remote_management_open
+                           远程管理功能生效判断        test_30_009_Remote_management_validate[如何获取wan口ip，从页面获取？还是后台读wan口ip]
+                           远程管理-关闭              test_30_010_Remote_managment_close
+
+                ------网管访问策略                   test_30_012_Net_management_access_strategy(未实现)
+
+                ------语言配置               test_30_013_language_select
 
         时钟管理 test_Clock_management.py
                 ------时钟管理的配置       test_31_001_Clock_management
