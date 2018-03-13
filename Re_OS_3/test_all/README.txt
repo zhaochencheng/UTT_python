@@ -113,7 +113,11 @@
 
     用户认证
 
-    黑名单
+    黑名单 test_BlackList.py
+            ----黑名单配置                              test_16_001_blacklist_config
+            ----黑名单页面信息显示                      test_16_002_blacklist_show
+            ----黑名单功能验证                          test_16_003_blacklist_validate(未实现)
+            ----黑名单配置删除                          test_16_004_blacklist_delete
 
 行为管理  test_BehaviorManagement
     行为管理 test_BehaviorManage.py
