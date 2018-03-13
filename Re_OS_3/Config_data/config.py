@@ -123,9 +123,17 @@ remoteip = ["172.168.0.1","172.168.0.0"]#远端内网地址
 peerip = ['192.168.30.101','192.168.30.101']#远端网段地址（域名）
 shareKey = ["123456789","123456789"]
 
-
-
-
+#PPTP/L2TP
+PPTP_tunnelname = ['PPTPserver','PPTPclient','L2TPserver','L2TPclient']#隧道名称
+PPTP_username = ["12",'21',"12",'21']#用户名
+PPTP_password = ["12",'21',"12",'21']#密码
+PPTP_remoteInIp = ["172.168.0.1",'172.168.0.1',"172.168.0.1",'172.168.0.1']#远端内网地址
+PPTP_remoteInIPMask = ["255.255.0.0",'255.255.0.0',"255.255.0.0",'255.255.0.0']#远端内网子网掩码
+PPTP_asclient_tunSrvAddr = ["192.168.32.101"]#隧道服务器地址
+#对端设备的外网地址映射
+End_to_end_wanip_url= ["http://192.168.32.101:888"]
+End_to_end_wan_username = ["admin"]
+End_to_end_wan_password = ["admin"]
 
 
 

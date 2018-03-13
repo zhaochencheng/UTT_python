@@ -67,5 +67,16 @@ from Re_OS_3.Tool.Ping import Ping
 # print(len(l))
 # if l == None :
 #     print("0")
-
-print(1!=1)
+#
+# a = [1,2]
+# b = ['a','b']
+# c = []
+# for i in range(len(a)):
+#     add = str(a[i])+b[i]
+#     c.append(add)
+# print(c)
+# for i in range(1,3):
+#     print(i)
+# a = [1,2,3,4]
+# print("len（a）:",len(a))
+Ping().ping_IP(PPTP_remoteInIp[0])

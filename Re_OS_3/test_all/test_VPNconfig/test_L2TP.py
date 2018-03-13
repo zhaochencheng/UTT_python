@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2018/2/26 13:55
+# @Time    : 2018/3/13 14:51
 # @Author  : zhao.chencheng
 # @Email   : 907779487@qq.com
-# @File    : test_PPTP.py
+# @File    : test_L2TP.py
 # @Software: PyCharm Community Edition
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
@@ -18,8 +18,8 @@ from Re_OS_3.Config_data.config import *
 from Re_OS_3.Tool.Ping import Ping
 from Re_OS_3.Public.Get_screenshot import Get_Screenshot
 
-class PPTP(unittest.TestCase):
-    u'''**PPTP配置与操作**'''
+class L2TP(unittest.TestCase):
+    u'''**L2TP配置与操作**'''
     def setUp(self):
         self.driver = webdriver.Chrome()
         Login(self.driver).login_router(url,username,pwd)
@@ -40,14 +40,14 @@ class PPTP(unittest.TestCase):
         pptp.click()
         print("当前位置：",pptp.text)
 
-    def open_pptp_server(self):
-        u'''开启pptp服务器'''
+    def open_L2TP_server(self):
+        u'''开启L2TP服务器'''
         self.enter_pptp()
         #pptp服务器全局配置
         time.sleep(2)
-        PPTP_server_global_configuration= self.driver.find_element_by_link_text("PPTP服务器全局配置")
-        PPTP_server_global_configuration.click()
-        print("当前位置：",PPTP_server_global_configuration.text)
+        L2TP_server_global_configuration= self.driver.find_element_by_link_text("L2TP服务器全局配置")
+        L2TP_server_global_configuration.click()
+        print("当前位置：",L2TP_server_global_configuration.text)
         time.sleep(2)
         #判断 服务器状态是否开启
         state_open = self.driver.find_element_by_xpath(".//input[@name = 'enable' and @value = 'ENABLE']")
@@ -73,8 +73,8 @@ class PPTP(unittest.TestCase):
         save = self.driver.find_element_by_id("save")
         save.click()
 
-    def PPTP_config(self):
-        u'''PPTP配置---做服务端'''
+    def L2TP_config(self):
+        u'''L2TP配置---做服务端'''
         #新增 定位
         add = self.driver.find_element_by_id("add")
         add.click()
@@ -87,36 +87,36 @@ class PPTP(unittest.TestCase):
             workMode.click()
             print("现在选择服务端（拨入）")
         #协议类型
-        protoType = self.driver.find_element_by_xpath(".//input[@name='protoType' and @value='PPTP']")
+        protoType = self.driver.find_element_by_xpath(".//input[@name='protoType' and @value='L2TP']")
         protoType.click()
         #隧道名称
         TunNames = self.driver.find_element_by_xpath(".//input[@name = 'TunNames']")
         TunNames.clear()
-        TunNames.send_keys(PPTP_tunnelname[0])
+        TunNames.send_keys(PPTP_tunnelname[2])
         #用户类型
         userType = self.driver.find_element_by_xpath(".//select[@name = 'userType']")
         Select(userType).select_by_visible_text("LAN到LAN")
         #用户名
         userNames = self.driver.find_element_by_xpath(".//input[@name = 'userNames']")
         userNames.clear()
-        userNames.send_keys(PPTP_username[0])
+        userNames.send_keys(PPTP_username[2])
         #密码
         password = self.driver.find_element_by_xpath(".//input[@name = 'password']")
         password.clear()
-        password.send_keys(PPTP_password[0])
+        password.send_keys(PPTP_password[2])
         #远端内网地址
         remoteInIp = self.driver.find_element_by_xpath(".//input[@name = 'remoteInIp']")
         remoteInIp.clear()
-        remoteInIp.send_keys(PPTP_remoteInIp[0])
+        remoteInIp.send_keys(PPTP_remoteInIp[2])
         #远端内网子网掩码
         remoteInIPMask =self.driver.find_element_by_xpath(".//input[@name = 'remoteInIPMask']")
         remoteInIPMask.clear()
-        remoteInIPMask.send_keys(PPTP_remoteInIPMask[0])
+        remoteInIPMask.send_keys(PPTP_remoteInIPMask[2])
         #保存
         save =self.driver.find_element_by_id("save")
         save.click()
-    def PPTP_check(self,config_name):
-        u'''PPTP功能验证----做服务端'''
+    def L2TP_check(self,config_name):
+        u'''L2TP功能验证----做服务端'''
         self.driver1 = webdriver.Chrome()
         Login(self.driver1).login_router(End_to_end_wanip_url[0],End_to_end_wan_username,End_to_end_wan_password)
         # 显示等待
@@ -175,8 +175,8 @@ class PPTP(unittest.TestCase):
                 else:
                     break
         self.driver1.close()
-    def PPTP_delete(self,config_name):
-        u'''PPTP 配置删除'''
+    def L2TP_delete(self,config_name):
+        u'''L2TP 配置删除'''
         # #页面显示个数
         shownumber = self.driver.find_element_by_xpath(".//button[@id = '1']")
         shownumber.click()
@@ -226,10 +226,8 @@ class PPTP(unittest.TestCase):
                         pass
                 else:
                     break
-
-
-    def PPTP_config_as_client(self):
-        u'''PPTP配置---做客户端(拨出)'''
+    def L2TP_config_as_client(self):
+        u'''L2TP配置---做客户端(拨出)'''
         #新增 定位
         add = self.driver.find_element_by_id("add")
         add.click()
@@ -242,12 +240,12 @@ class PPTP(unittest.TestCase):
             workMode.click()
             print("现在选择客户端(拨出)")
         #协议类型
-        protoType = self.driver.find_element_by_xpath(".//input[@name='protoType' and @value='PPTP']")
+        protoType = self.driver.find_element_by_xpath(".//input[@name='protoType' and @value='L2TP']")
         protoType.click()
         #隧道名称
         TunNames = self.driver.find_element_by_xpath(".//input[@name = 'TunNames']")
         TunNames.clear()
-        TunNames.send_keys(PPTP_tunnelname[1])
+        TunNames.send_keys(PPTP_tunnelname[3])
         #隧道服务器地址
         TunNamesIP = self.driver.find_element_by_xpath(".//input[@name = 'TunNamesIP']")
         TunNamesIP.clear()
@@ -255,19 +253,19 @@ class PPTP(unittest.TestCase):
         #用户名
         userNames = self.driver.find_element_by_xpath(".//input[@name = 'userNames']")
         userNames.clear()
-        userNames.send_keys(PPTP_username[1])
+        userNames.send_keys(PPTP_username[3])
         #密码
         password = self.driver.find_element_by_xpath(".//input[@name = 'password']")
         password.clear()
-        password.send_keys(PPTP_password[1])
+        password.send_keys(PPTP_password[3])
         #远端内网地址
         remoteInIp = self.driver.find_element_by_xpath(".//input[@name = 'remoteInIp']")
         remoteInIp.clear()
-        remoteInIp.send_keys(PPTP_remoteInIp[1])
+        remoteInIp.send_keys(PPTP_remoteInIp[3])
         #远端内网子网掩码
         remoteInIPMask =self.driver.find_element_by_xpath(".//input[@name = 'remoteInIPMask']")
         remoteInIPMask.clear()
-        remoteInIPMask.send_keys(PPTP_remoteInIPMask[1])
+        remoteInIPMask.send_keys(PPTP_remoteInIPMask[3])
         #保存
         save =self.driver.find_element_by_id("save")
         save.click()
@@ -275,75 +273,75 @@ class PPTP(unittest.TestCase):
 
 
 
-    def test_27_001_PPTP_server_config(self):
-        u'''PPTP服务器配置'''
-        #开启PPTP服务器
-        self.open_pptp_server()
+    def test_27_012_L2TP_server_config(self):
+        u'''L2TP服务器配置'''
+        #开启L2TP服务器
+        self.open_L2TP_server()
         '''#配置后 截图#'''
-        Get_Screenshot(self.driver).get_screenshot("PPTP_server_config")
-    def test_27_002_PPTP_as_server_config(self):
-        u'''PPTP配置--做服务端'''
+        Get_Screenshot(self.driver).get_screenshot("L2TP_server_config")
+    def test_27_013_L2TP_as_server_config(self):
+        u'''L2TP配置--做服务端'''
         #进入VPN配置--PPTP/L2TP页面
         self.enter_pptp()
-        '''进行PPTP配置'''
+        '''进行L2TP配置'''
         time.sleep(2)
-        self.PPTP_config()
-        print("PPTP配置---做服务器端  配置完成！")
+        self.L2TP_config()
+        print("L2TP配置---做服务器端  配置完成！")
         '''#配置后 截图#'''
-        Get_Screenshot(self.driver).get_screenshot("PPTP_as_server_config")
-    def test_27_003_PPTP_as_server_show(self):
-        u'''PPTP信息显示--做服务端'''
+        Get_Screenshot(self.driver).get_screenshot("L2TP_as_server_config")
+    def test_27_014_L2TP_as_server_show(self):
+        u'''L2TP信息显示--做服务端'''
         # 进入VPN配置--PPTP/L2TP页面
         self.enter_pptp()
-        #PPTP web页面信息输出
+        #L2TP web页面信息输出
         Output_info(self.driver).output_all()
-        '''#输出信息后 截图#'''
-        Get_Screenshot(self.driver).get_screenshot("PPTP_as_server_show")
-    def test_27_004_PPTP_as_server_validate(self):
-        u'''PPTP功能验证--做服务端'''
+        '''#输出后 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("L2TP_as_server_show")
+    def test_27_015_L2TP_as_server_validate(self):
+        u'''L2TP功能验证--做服务端'''
         # 进入VPN配置--PPTP/L2TP页面
         self.enter_pptp()
         '''做服务端 怎么验证，配置好，需要到客户端页面去拨号；'''
         '''内网可以通过进 对端设备的映射地址 去拨号'''
-        self.PPTP_check(PPTP_tunnelname)
+        self.L2TP_check(PPTP_tunnelname)
         time.sleep(3)
         #会话状态
         connectStatus = self.driver.find_element_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr[1]/td[4]/span")
         print('页面显示会话状态:',connectStatus.text)
         self.assertEqual(connectStatus.text,"正常","当前会话状态错误")
-        '''#验证后 截图#'''
-        Get_Screenshot(self.driver).get_screenshot("PPTP_as_server_validate")
+        '''#验证-后 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("L2TP_as_server_validate")
         '''工具判断vpn是否生效'''
-        Ping().ping_IP(PPTP_remoteInIp[0])
-    def test_27_005_PPTP_as_server_delete(self):
-        u'''PPTP配置删除--做服务端'''
+        Ping().ping_IP(PPTP_remoteInIp[2])
+    def test_27_016_L2TP_as_server_delete(self):
+        u'''L2TP配置删除--做服务端'''
         #进入VPN配置--PPTP/L2TP页面
         self.enter_pptp()
-        '''删除PPTP配置'''
-        self.PPTP_delete(PPTP_tunnelname)
+        '''删除L2TP配置'''
+        self.L2TP_delete(PPTP_tunnelname)
         '''#删除后 截图#'''
-        Get_Screenshot(self.driver).get_screenshot("PPTP_as_server_delete")
+        Get_Screenshot(self.driver).get_screenshot("L2TP_as_server_delete")
 
-    def test_27_007_PPTP_as_Client_config(self):
-        u''''PPTP配置--做客户端'''
+    def test_27_018_L2TP_as_Client_config(self):
+        u''''L2TP配置--做客户端'''
         # 进入VPN配置--PPTP/L2TP页面
         self.enter_pptp()
-        '''进行PPTP配置---做客户端'''
+        '''进行L2TP配置---做客户端'''
         time.sleep(2)
-        self.PPTP_config_as_client()
+        self.L2TP_config_as_client()
         print("PPTP配置---做客户端  配置完成！")
         '''#配置后 截图#'''
-        Get_Screenshot(self.driver).get_screenshot("PPTP_as_Client_config")
-    def test_27_008_PPTP_as_Client_show(self):
-        u'''PPTP信息显示--做客户端'''
+        Get_Screenshot(self.driver).get_screenshot("L2TP_as_Client_config")
+    def test_27_019_L2TP_as_Client_show(self):
+        u'''L2TP信息显示--做客户端'''
         # 进入VPN配置--PPTP/L2TP页面
         self.enter_pptp()
-        # PPTP web页面信息输出
+        # L2TP web页面信息输出
         Output_info(self.driver).output_all()
-        '''#输出信息后 截图#'''
-        Get_Screenshot(self.driver).get_screenshot("PPTP_as_Client_show")
-    def test_27_009_PPTP_as_Client_validate(self):
-        u'''PPTP功能验证--做服务端'''
+        '''#输出后 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("L2TP_as_Client_show")
+    def test_27_020_L2TP_as_Client_validate(self):
+        u'''L2TP功能验证--做服务端'''
         # 进入VPN配置--PPTP/L2TP页面
         self.enter_pptp()
         '''做客户端 要拨号 到服务端'''
@@ -351,29 +349,18 @@ class PPTP(unittest.TestCase):
         connectStatus = self.driver.find_element_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr[1]/td[4]/span")
         print('页面显示会话状态:', connectStatus.text)
         self.assertEqual(connectStatus.text, "正常", "当前会话状态错误")
-        '''#验证后 截图#'''
-        Get_Screenshot(self.driver).get_screenshot("PPTP_as_Client_validate")
+        '''#验证-后 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("L2TP_as_Client_validate")
         '''工具判断vpn是否生效'''
         Ping().ping_IP(PPTP_remoteInIp[1])
-    def test_27_010_PPTP_as_Client_delete(self):
-        u'''PPTP配置删除--做客户端'''
+    def test_27_021_L2TP_as_Client_delete(self):
+        u'''L2TP配置删除--做客户端'''
         # 进入VPN配置--PPTP/L2TP页面
         self.enter_pptp()
-        '''删除PPTP配置'''
-        self.PPTP_delete(PPTP_tunnelname)
+        '''删除L2TP配置'''
+        self.L2TP_delete(PPTP_tunnelname)
         '''#删除后 截图#'''
-        Get_Screenshot(self.driver).get_screenshot("PPTP_as_Client_delete")
-
-
-
-
-
-
-
-
-
-
-
+        Get_Screenshot(self.driver).get_screenshot("L2TP_as_Client_delete")
 
 if __name__ == '__main__':
     unittest.main()
