@@ -26,3 +26,24 @@ VPN配置
         -----IPsec配置删除--动态连接到网关                  test_26_009_IPsec_dynamically_connected_gateway_delete
 
     PPTP/L2TP
+        -----PPTP服务器配置                               test_27_001_PPTP_server_config
+        -----PPTP配置--做服务端                            test_27_002_PPTP_as_server_config
+        -----PPTP信息显示--做服务端                        test_27_003_PPTP_as_server_show
+        -----PPTP功能验证--做服务端                        test_27_004_PPTP_as_server_validate
+        -----PPTP配置删除--做服务端                        test_27_005_PPTP_as_server_delete
+
+        -----PPTP配置--做客户端                            test_27_007_PPTP_as_Client_config
+        -----PPTP信息显示--做客户端                         test_27_008_PPTP_as_Client_show
+        -----PPTP功能验证--做服务端                         test_27_009_PPTP_as_Client_validate
+        -----PPTP配置删除--做客户端                         test_27_010_PPTP_as_Client_delete
+
+        ----L2TP服务器配置                                  test_27_012_L2TP_server_config
+        ----L2TP配置--做服务端                              test_27_013_L2TP_as_server_config
+        ----L2TP信息显示--做服务端                           test_27_014_L2TP_as_server_show
+        ----L2TP功能验证--做服务端                           test_27_015_L2TP_as_server_validate
+        ----L2TP配置删除--做服务端                           test_27_016_L2TP_as_server_delete
+
+        ----L2TP配置--做客户端                              test_27_018_L2TP_as_Client_config
+        ----L2TP信息显示--做客户端                          test_27_019_L2TP_as_Client_show
+        ----L2TP功能验证--做客户端                          test_27_020_L2TP_as_Client_validate
+        ----L2TP配置删除--做客户端                           test_27_021_L2TP_as_Client_delete

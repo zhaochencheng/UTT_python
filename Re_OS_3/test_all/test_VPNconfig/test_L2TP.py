@@ -323,7 +323,7 @@ class L2TP(unittest.TestCase):
         Get_Screenshot(self.driver).get_screenshot("L2TP_as_server_delete")
 
     def test_27_018_L2TP_as_Client_config(self):
-        u''''L2TP配置--做客户端'''
+        u'''L2TP配置--做客户端'''
         # 进入VPN配置--PPTP/L2TP页面
         self.enter_pptp()
         '''进行L2TP配置---做客户端'''
@@ -341,7 +341,7 @@ class L2TP(unittest.TestCase):
         '''#输出后 截图#'''
         Get_Screenshot(self.driver).get_screenshot("L2TP_as_Client_show")
     def test_27_020_L2TP_as_Client_validate(self):
-        u'''L2TP功能验证--做服务端'''
+        u'''L2TP功能验证--做客户端'''
         # 进入VPN配置--PPTP/L2TP页面
         self.enter_pptp()
         '''做客户端 要拨号 到服务端'''
