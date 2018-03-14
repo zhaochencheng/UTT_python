@@ -18,6 +18,7 @@ from Re_OS_3.Public.Delect_Config import Delect_config
 from Re_OS_3.Config_data.config import *
 from Re_OS_3.Tool.http200 import httpcode
 from Re_OS_3.Tool.Ping import Ping
+from Re_OS_3.Public.Get_screenshot import Get_Screenshot
 
 class Organization_member(unittest.TestCase):
     u'''**组织成员**'''
@@ -143,27 +144,38 @@ class Organization_member(unittest.TestCase):
                     break
         # print("页面无相同信息！")
 
-    def test_13_001_accStatu(self):
-        u'''组织成员配置与操作'''
+    def enter_Organization_member(self):
+        '''进入用户管理---组织成员页面'''
         # 显示等待
         webwait = WebDriverWait(self.driver, 10, 1)
-        #用户管理 定位
+        # 用户管理 定位
         usermanage = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[5]/div/h4/span"))
         usermanage.click()
-        print("当前位置：",usermanage.text)
-        #组织成员 定位
+        print("当前位置：", usermanage.text)
+        # 组织成员 定位
         organization_member = self.driver.find_element_by_link_text("组织成员")
         organization_member.click()
-        print("当前位置：",organization_member.text)
-        #将页面与配置信息 相同的配置删除
-        # self.delect_sameconfig(newtree)
-        #创建分组
-        # self.add_newTree()
-        #输出 成员列表 信息
+        print("当前位置：", organization_member.text)
+
+
+    def test_13_001_Organization_member_config(self):
+        u'''组织成员配置'''
+        #进入用户管理---组织成员页面
+        self.enter_Organization_member()
+        '''组织成员配置'''
+        self.add_newTree()
+        print("组织成员配置-完成")
+        '''#配置后 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("Organization_member_config")
+
+    def test_13_002_Organization_member_show(self):
+        u'''组织成员页面信息输出'''
+        # 进入用户管理---组织成员页面
+        self.enter_Organization_member()
+        '''组织成员页面信息输出'''
         self.output_member()
-
-
-
+        '''#输出后 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("Organization_member_show")
 
 if __name__ == '__main__':
     unittest.main()

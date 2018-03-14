@@ -40,6 +40,7 @@ import os
 # elif os.path.isfile(cur_path):
 #     print("file")
 #
+
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -79,4 +80,22 @@ from Re_OS_3.Tool.Ping import Ping
 #     print(i)
 # a = [1,2,3,4]
 # print("len（a）:",len(a))
-Ping().ping_IP(PPTP_remoteInIp[0])
+# Ping().ping_IP(PPTP_remoteInIp[0])from selenium import webdriver
+from selenium.webdriver.support import expected_conditions
+from selenium import webdriver
+from PIL import Image
+driver = webdriver.Chrome()
+driver.get('http://www.baidu.com/')
+
+driver.save_screenshot('button.png')
+element = driver.find_element_by_id("su")
+print(element.location)
+print(element.size)
+left = element.location['x']
+top = element.location['y']
+right = element.location['x'] + element.size['width']
+bottom = element.location['y'] + element.size['height']
+im = Image.open('button.png')
+im = im.crop((left,top,right,bottom))
+im.save('button.png')
+driver.quit()

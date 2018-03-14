@@ -7,6 +7,8 @@
 
 from urllib.request import urlopen
 
+from Re_OS_3.Config_data.config import DNS_filter_hostname
+
 url = 'http://www.baidu.com'
 url1 = 'http://www.163.com'
 url2 = 'http://www.utt.com.cn'
@@ -49,8 +51,9 @@ class httpcode():
         code = resp.getcode()
         if code == 200:
             print("%s" % Url + "可以访问！")
+            return True
         else:
-            pass
+            return False
             # continue
         # for i in range(1, 2):
         #     url = Url
@@ -66,6 +69,10 @@ class httpcode():
 #
 if __name__ == '__main__':
     # httpcode().http200(url)
+
     httpcode().http200ok("http://1160504195.uttcare.com:8081")
+
+    # httpcode().http200ok("http://www.baidu.com")
+# httpcode().http200("http://"+DNS_filter_hostname[1])
 
 # http200(url2)

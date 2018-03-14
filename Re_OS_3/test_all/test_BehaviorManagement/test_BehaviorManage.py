@@ -16,6 +16,7 @@ from Re_OS_3.Public.Output_web_info import Output_info
 from Re_OS_3.Public.Delect_Config import Delect_config
 from Re_OS_3.Config_data.config import *
 from Re_OS_3.Tool.Ping import Ping
+from Re_OS_3.Public.Get_screenshot import Get_Screenshot
 
 class BehaviorManage(unittest.TestCase):
     u'''**行为管理配置**'''
@@ -221,12 +222,16 @@ class BehaviorManage(unittest.TestCase):
         self.behaviorMange_delect()
         '''配置行为管理---'''
         self.behaviorMange_config(behavior_rulename)
+        '''#配置后 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("behaviorMange_config")
     def test_17_002_behaviorMange_show(self):
         u"行为管理页面信息核对"
         # 进入行为管理页面
         self.enter_behaviorMg()
         '''行为管理页面信息核对'''
         self.behaviorMange_show()
+        '''#信息输出后 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("behaviorMange_show")
 
     def test_17_003_behaviorMange_validate(self):
         u"行为管理页面功能生效判断"
@@ -237,6 +242,8 @@ class BehaviorManage(unittest.TestCase):
         self.enter_behaviorMg()
         '''行为管理信息删除'''
         self.behaviorMange_delect()
+        '''#配置删除 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("behaviorMange_delete")
 
 
 

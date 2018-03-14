@@ -38,7 +38,6 @@ class AccStatu(unittest.TestCase):
         move.click()
         #分组 定位
         groupArr = self.driver.find_element_by_xpath(".//select[@name='groupArr']")
-        l = []
         l= Select(groupArr).options
         print("当前分组个数为：",len(l))
         if len(l)==0:
@@ -137,6 +136,16 @@ class AccStatu(unittest.TestCase):
         #输出黑名单页面信息
         Output_info(self.driver).output_all()
 
+    def enter_accStatu(self):
+        # 进入用户管理---用户状态页面
+        # 显示等待
+        webwait = WebDriverWait(self.driver, 10, 1)
+        # 用户管理 定位
+        usermanage = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[5]/div/h4/span"))
+        usermanage.click()
+        # 用户状态 定位
+        accStatus = self.driver.find_element_by_link_text("用户状态")
+        accStatus.click()
 
 
     def test_14_001_accStatu(self):
@@ -166,6 +175,13 @@ class AccStatu(unittest.TestCase):
         '''
 
         # self.blackList()
+
+    def test_14_001_accStatu_Users_joingroups(self):
+        u'''将临时用户加入分组中'''
+        #进入用户管理---用户状态页面
+        self.enter_accStatu()
+        #将临时用户加入分组中
+        self.Users_joingroups()
 
 
 
