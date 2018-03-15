@@ -212,6 +212,9 @@ class DNS_filter(unittest.TestCase):
         self.enter_dnsfilter()
         '''开启域名过滤功能'''
         self.dnsfilter_open()
+        print("开启域名过滤功能")
+        '''#开启域名后 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("dnsfilter_open")
     def test_18_002_dnsfilter_config(self):
         u'''配置域名过滤'''
         #进入行为管理---域名过滤页面
@@ -219,6 +222,8 @@ class DNS_filter(unittest.TestCase):
         '''配置域名过滤'''
         self.dnsfilter_config()
         print("域名过滤配置完成")
+        '''#配置后 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("dnsfilter_config")
     def test_18_003_dnsfilter_show(self):
         u'''域名配置信息输出'''
         # 进入行为管理---域名过滤页面
@@ -226,6 +231,8 @@ class DNS_filter(unittest.TestCase):
         '''域名配置信息输出'''
         self.dnsfilter_show()
         print("域名过滤列表输出完成")
+        '''#输出后 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("dnsfilter_show")
     def test_18_004_dnsfilter_validate(self):
         u'''域名过滤功能验证'''
         #域名配置信息输出
@@ -238,6 +245,9 @@ class DNS_filter(unittest.TestCase):
         self.enter_dnsfilter()
         '''域名过滤功能关闭'''
         self.dnsfilter_close()
+        print("域名过滤功能关闭")
+        '''#输出后 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("dnsfilter_close")
     def test_18_006_dnsfilter_close_check(self):
         u'''域名过滤关闭功能验证'''
         '''域名过滤关闭功能验证'''

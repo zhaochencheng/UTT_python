@@ -100,7 +100,7 @@ newtree = ["分组1","内网","god"]# 分组名称
 
 #黑名单
 blacklist_name = ["拉黑用户"]
-blacklist_mac= ["66:24:AC:2A:34:86"]
+blacklist_mac= ["fc:2f:ef:e9:0a:af"]
 
 
 

@@ -105,20 +105,22 @@
 
 
 用户管理
-   组织用户  test_organize_member.py
-            ------组织成员配置                test_13_001_Organization_member_config[如何与下面的功能关联在一起]
-            ------组织成员页面信息输出        test_13_002_Organization_member_show
+    组织用户 test_organize_member.py
+            ------组织成员配置                test_13_001_Organization_member_config
+            ------组织成员页面信息输出         test_13_002_Organization_member_show
 
-   用户状态 test_accStatu.py
-            ------用户状态显示与操作             test_14_001_accStatu[将本机ip拉黑导致无法再进入web页面。拉黑别的ip如何测试]
+    用户状态 test_accStatu.py
+            ------将临时用户加入分组中            test_14_001_accStatu_Users_joingroups
+            ------将用户信息输出                  test_14_002_accStatu_Users_show
+            -------将某个用户拉黑                 test_14_003_accStatu_User_into_blacklist
 
     用户认证
 
     黑名单 test_BlackList.py
-            ----黑名单配置                              test_16_001_blacklist_config
-            ----黑名单页面信息显示                      test_16_002_blacklist_show
-            ----黑名单功能验证                          test_16_003_blacklist_validate(未实现)
-            ----黑名单配置删除                          test_16_004_blacklist_delete
+        ----黑名单配置                                 test_16_001_blacklist_config
+        ----黑名单页面信息显示                         test_16_002_blacklist_show
+        ----黑名单功能验证                             test_16_003_blacklist_validate(未实现)
+        ----黑名单配置删除                             test_16_004_blacklist_delete
 
 行为管理  test_BehaviorManagement
 
@@ -140,7 +142,10 @@
     白名单
 
     电子通告 test_LectronicsNotice.py
-            ------ 电子通告开启与关闭       test_20_001_lectronicsNotice
+            -------电子通告开启与配置            test_20_001_lectronicsNotic_config
+            -------电子通告功能验证             test_20_002_lectronicsNotic_validate
+            -------电子通告功能关闭             test_20_003_lectronicsNotic_close
+
 
 流量管理 test_TrafficManagement
         -----应用优先     test_Application_priority.py

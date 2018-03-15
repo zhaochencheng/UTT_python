@@ -31,6 +31,8 @@
     白名单
 
     电子通告 test_LectronicsNotice.py
-            ------ 电子通告开启与关闭    test_20_001_lectronicsNotice
+            -------电子通告开启与配置            test_20_001_lectronicsNotic_config
+            -------电子通告功能验证             test_20_002_lectronicsNotic_validate
+            -------电子通告功能关闭             test_20_003_lectronicsNotic_close
 
 

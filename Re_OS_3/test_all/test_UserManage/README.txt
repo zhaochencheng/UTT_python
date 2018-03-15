@@ -15,10 +15,13 @@
 
 用户管理
     组织用户 test_organize_member.py
-            ------组织成员配置与操作             test_13_001_accStatu[如何与下面的功能关联在一起]
+            ------组织成员配置                test_13_001_Organization_member_config
+            ------组织成员页面信息输出         test_13_002_Organization_member_show
 
     用户状态 test_accStatu.py
-            ------用户状态显示与操作             test_14_001_accStatu[将本机ip拉黑导致无法再进入web页面。拉黑别的ip如何测试]
+            ------将临时用户加入分组中            test_14_001_accStatu_Users_joingroups
+            ------将用户信息输出                  test_14_002_accStatu_Users_show
+            -------将某个用户拉黑                 test_14_003_accStatu_User_into_blacklist
 
     用户认证
 
