@@ -193,9 +193,9 @@ function showOutput(id, name) {
 
 <div class='page-header'>
 <h1>自动化测试报告,测试结果如下：</h1>
-<p class='attribute'><strong>开始时间:</strong> 2018-02-28 18:05:08</p>
-<p class='attribute'><strong>运行时长:</strong> 0:01:58.318036</p>
-<p class='attribute'><strong>状态:</strong> 通过 4</p>
+<p class='attribute'><strong>开始时间:</strong> 2018-03-16 15:01:59</p>
+<p class='attribute'><strong>运行时长:</strong> 1:31:04.701564</p>
+<p class='attribute'><strong>状态:</strong> 通过 100 失败 5 错误 9</p>
 
 </div>
 <p class='description'>用例执行情况：</p>
@@ -227,16 +227,16 @@ function showOutput(id, name) {
 </tr>
 
 <tr class='passClass'>
-    <td>Re_OS_3.test_all.test_netConfig.test_Port_mapping.Port_mapping: **端口映射**</td>
-    <td>4</td>
-    <td>4</td>
+    <td>Re_OS_3.test_all.test_netConfig.test_wan_config.Wan_config: wan口配置</td>
+    <td>12</td>
+    <td>12</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',4)">详情</a></td>
+    <td><a href="javascript:showClassDetail('c1',12)">详情</a></td>
 </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_04_006_nat_rule_config_EasyIP: NAT规则EasyIP 配置</div></td>
+    <td class='none'><div class='testcase'>test_01_001_wan_static_config: wan口固定IP配置</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -251,20 +251,13 @@ function showOutput(id, name) {
         <pre>
         
 pt1.1: 当前位置： 网络配置
-当前位置: 端口映射
-当前位置: NAT规则
-G:\github\UTT_python\Re_OS_3\Public\Get_screenshot.py is file
-截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180228.18_05_22_192.123_nat_rule_configure_EasyIP_before.png
-Easy IP 定位成功！！
-G:\github\UTT_python\Re_OS_3\Public\Get_screenshot.py is file
-截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180228.18_05_30_192.123_nat_rule_configure_EasyIP_after.png
-G:\github\UTT_python\Re_OS_3\Public\Get_screenshot.py is file
-截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180228.18_05_30_1212_nat_rule_configure_EasyIP_before.png
-Easy IP 定位成功！！
-G:\github\UTT_python\Re_OS_3\Public\Get_screenshot.py is file
-截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180228.18_05_38_1212_nat_rule_configure_EasyIP_after.png
-****************************** 
-
+当前位置： 外网配置
+共有  4  wan口
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_02_14_wan_static_wan1_configure_before.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_02_36_wan_static_wan2_configure_before.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_02_53_wan_static_wan3_configure_before.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_03_21_wan_static_wan4_configure_before.png
+wan口固定IP配置配置完成
 
 
         </pre>
@@ -275,7 +268,7 @@ G:\github\UTT_python\Re_OS_3\Public\Get_screenshot.py is file
 </tr>
 
 <tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_04_007_nat_rule_show_EasyIP: EasyIP配置-页面信息正确</div></td>
+    <td class='none'><div class='testcase'>test_01_002_wan_static_show: wan口固定ip配置web页面显示</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -290,15 +283,49 @@ G:\github\UTT_python\Re_OS_3\Public\Get_screenshot.py is file
         <pre>
         
 pt1.2: 当前位置： 网络配置
-当前位置: 端口映射
-当前位置: NAT规则
-每页显示个数为: 50
+当前位置： 外网配置
+共有  4  wan口
 ****************************** 
 
-规则名称: 192.123  	NAT类型: Easy IP   内网起始IP地址: 192.168.2.3  内网结束IP地址: 192.168.2.5    绑定接口: WAN1
-规则名称: 1212  	NAT类型: Easy IP   内网起始IP地址: 192.168.2.22  内网结束IP地址: 192.168.2.25    绑定接口: WAN1
-G:\github\UTT_python\Re_OS_3\Public\Get_screenshot.py is file
-截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180228.18_06_07_nat_rule_configure_show_EasyIP.png
+当前接口为： WAN1
+连接状态： 已连接
+连接类型为： 固定接入
+wan口ip为： 192.168.1.116
+子网掩码为： 255.255.255.0
+网关地址为： 192.168.1.1
+****************************** 
+
+****************************** 
+
+当前接口为： WAN2
+连接状态： 已连接
+连接类型为： 固定接入
+wan口ip为： 192.168.1.117
+子网掩码为： 255.255.255.0
+网关地址为： 192.168.1.1
+****************************** 
+
+****************************** 
+
+当前接口为： WAN3
+连接状态： 已连接
+连接类型为： 固定接入
+wan口ip为： 192.168.1.118
+子网掩码为： 255.255.255.0
+网关地址为： 192.168.1.1
+****************************** 
+
+****************************** 
+
+当前接口为： WAN4
+连接状态： 已连接
+连接类型为： 固定接入
+wan口ip为： 192.168.1.119
+子网掩码为： 255.255.255.0
+网关地址为： 192.168.1.1
+****************************** 
+
+wan口固定IP配置页面信息已全部输出
 
 
         </pre>
@@ -309,12 +336,42 @@ G:\github\UTT_python\Re_OS_3\Public\Get_screenshot.py is file
 </tr>
 
 <tr id='pt1.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_04_008_nat_rule_EasyIP_validate: 验证EasyIP功能生效</div></td>
-    <td colspan='5' align='center'>通过</td>
+    <td class='none'><div class='testcase'>test_01_003_wan_static_webcheck: wan口固定ip配置web页面信息核对</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        通过</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: 当前位置： 网络配置
+当前位置： 外网配置
+共有  4  wan口
+WAN1 配置IP与页面生效IP一致
+ wan口固定ip配置web页面信息核对--正确
+WAN2 配置IP与页面生效IP一致
+ wan口固定ip配置web页面信息核对--正确
+WAN3 配置IP与页面生效IP一致
+ wan口固定ip配置web页面信息核对--正确
+WAN4 配置IP与页面生效IP一致
+ wan口固定ip配置web页面信息核对--正确
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='pt1.4' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_04_009_nat_rule_del_EasyIP: 将配置的EasyIP 信息删除</div></td>
+    <td class='none'><div class='testcase'>test_01_004_wan_static_validate: wan口固定ip配置功能生效</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -328,7 +385,865 @@ G:\github\UTT_python\Re_OS_3\Public\Get_screenshot.py is file
         </div>
         <pre>
         
-pt1.4: 当前位置： 网络配置
+pt1.4: ping www.baidu.com is ok
+http://www.163.com可以访问！
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01_005_wan_static_config_delete: wan口固定ip配置删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        通过</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: 当前位置： 网络配置
+当前位置： 外网配置
+共有  4  wan口
+****************************** 
+ 删除后接口信息为： 
+
+当前接口为： WAN2
+连接状态： 未配置
+连接类型为： 
+wan口ip为： 
+子网掩码为： 
+网关地址为： 
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_05_44_wan_static__wan2_delete_after.png
+****************************** 
+ 删除后接口信息为： 
+
+当前接口为： WAN3
+连接状态： 未配置
+连接类型为： 
+wan口ip为： 
+子网掩码为： 
+网关地址为： 
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_06_02_wan_static__wan3_delete_after.png
+****************************** 
+ 删除后接口信息为： 
+
+当前接口为： WAN4
+连接状态： 未配置
+连接类型为： 
+wan口ip为： 
+子网掩码为： 
+网关地址为： 
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_06_24_wan_static__wan4_delete_after.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01_007_wan_DHCP_config: wan口DHCP配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        通过</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.6: 当前位置： 网络配置
+当前位置： 外网配置
+共有  4  wan口
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_06_46_wan_DHCP_wan2_configure_before.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_07_13_wan_DHCP_wan3_configure_before.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_07_41_wan_DHCP_wan4_configure_before.png
+wan口DHCP配置配置完成
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01_008_wan_DHCP_show: wan口DHCP页面信息输出</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7')" >
+        通过</a>
+
+    <div id='div_pt1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.7: 当前位置： 网络配置
+当前位置： 外网配置
+共有  4  wan口
+****************************** 
+
+当前接口为： WAN1
+连接状态： 已连接
+连接类型为： 固定接入
+wan口ip为： 192.168.1.116
+子网掩码为： 255.255.255.0
+网关地址为： 192.168.1.1
+****************************** 
+
+****************************** 
+
+当前接口为： WAN2
+连接状态： 已连接
+连接类型为： 动态接入
+wan口ip为： 192.168.1.158
+子网掩码为： 255.255.255.0
+网关地址为： 192.168.1.1
+****************************** 
+
+****************************** 
+
+当前接口为： WAN3
+连接状态： 已连接
+连接类型为： 动态接入
+wan口ip为： 192.168.1.159
+子网掩码为： 255.255.255.0
+网关地址为： 192.168.1.1
+****************************** 
+
+****************************** 
+
+当前接口为： WAN4
+连接状态： 已连接
+连接类型为： 动态接入
+wan口ip为： 192.168.1.160
+子网掩码为： 255.255.255.0
+网关地址为： 192.168.1.1
+****************************** 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01_009_wan_DHCP_webcheck: wan口DHCP页面信息核对</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8')" >
+        通过</a>
+
+    <div id='div_pt1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.8: 当前位置： 网络配置
+当前位置： 外网配置
+共有  4  wan口
+ wan口固定ip配置web页面信息核对--正确
+ wan口固定ip配置web页面信息核对--正确
+ wan口固定ip配置web页面信息核对--正确
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01_010_wan_DHCP_validate: wan口DHCP功能验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9')" >
+        通过</a>
+
+    <div id='div_pt1.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.9: 当前位置： 网络配置
+当前位置： 外网配置
+ping www.163.com is ok
+http://www.163.com可以访问！
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01_011_wan_DHCP_delete: wan口DHCP删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.10')" >
+        通过</a>
+
+    <div id='div_pt1.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.10: 当前位置： 网络配置
+当前位置： 外网配置
+共有  4  wan口
+****************************** 
+ 释放后接口信息为： 
+
+当前接口为： WAN2
+连接状态： 未连接
+连接类型为： 动态接入
+wan口ip为： 
+子网掩码为： 
+网关地址为： 
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_09_55_wan_DHCP_wan2_configure_release.png
+****************************** 
+ 释放后接口信息为： 
+
+当前接口为： WAN3
+连接状态： 未连接
+连接类型为： 动态接入
+wan口ip为： 
+子网掩码为： 
+网关地址为： 
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_10_12_wan_DHCP_wan3_configure_release.png
+****************************** 
+ 释放后接口信息为： 
+
+当前接口为： WAN4
+连接状态： 未连接
+连接类型为： 动态接入
+wan口ip为： 
+子网掩码为： 
+网关地址为： 
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_10_29_wan_DHCP_wan4_configure_release.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01_013_wan_PPPoE_config: PPPoE配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.11')" >
+        通过</a>
+
+    <div id='div_pt1.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.11: 当前位置： 网络配置
+当前位置： 外网配置
+共有  4  wan口
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_10_49_wan_PPPOE_wan2_configure_before.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_11_05_wan_PPPOE_wan3_configure_before.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_11_24_wan_PPPOE_wan4_configure_before.png
+PPPoE配置完成
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01_014_wan_PPPoE_show</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.12')" >
+        通过</a>
+
+    <div id='div_pt1.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.12: 当前位置： 网络配置
+当前位置： 外网配置
+共有  4  wan口
+****************************** 
+
+当前接口为： WAN2
+连接状态： 已连接
+连接类型为： PPPoE接入
+wan口ip为： 10.66.32.14
+子网掩码为： 255.255.255.255
+网关地址为： 192.168.1.1
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_12_02_wan_PPPOE_wan2_configure_after.png
+****************************** 
+
+当前接口为： WAN3
+连接状态： 已连接
+连接类型为： PPPoE接入
+wan口ip为： 10.66.32.15
+子网掩码为： 255.255.255.255
+网关地址为： 192.168.1.1
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_12_04_wan_PPPOE_wan3_configure_after.png
+****************************** 
+
+当前接口为： WAN4
+连接状态： 已连接
+连接类型为： PPPoE接入
+wan口ip为： 10.66.32.16
+子网掩码为： 255.255.255.255
+网关地址为： 192.168.1.1
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_12_07_wan_PPPOE_wan4_configure_after.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Re_OS_3.test_all.test_netConfig.test_Lan_config.Lan_config: **Lan口配置**</td>
+    <td>3</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',3)">详情</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02_002_vlan_Lan_configure: vlan配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        通过</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: 当前位置： 网络配置
+当前位置： 内网配置
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_12_26_Vlan222_Lan_configure_before.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_12_33_Vlan222_Lan_configure_after.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_12_33_Vlan223_Lan_configure_before.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_12_39_Vlan223_Lan_configure_after.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_12_39_Vlan224_Lan_configure_before.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_12_45_Vlan224_Lan_configure_after.png
+vlan配置配置完成
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02_003_vlan_Lan_web_show: 将页面配置的vlan lan输出 并比较页面显示与配置是否一致</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')" >
+        通过</a>
+
+    <div id='div_pt2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.2: 当前位置： 网络配置
+当前位置： 内网配置
+每页显示个数为: 50
+名称: 222    IP地址: 192.168.222.1    vlan id: 222
+名称: 223    IP地址: 192.168.223.1    vlan id: 223
+名称: 224    IP地址: 192.168.224.1    vlan id: 224
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02_004_vlan_Lan_dele_config: 将配置的vlan lan 删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.3')" >
+        通过</a>
+
+    <div id='div_pt2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.3: 当前位置： 网络配置
+当前位置： 内网配置
+每页显示个数为: 50
+已将222 -vlan删除
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_13_35_Vlan222_Lan_configure_delete.png
+已将223 -vlan删除
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_13_39_Vlan223_Lan_configure_delete.png
+已将224 -vlan删除
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_13_44_Vlan224_Lan_configure_delete.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Re_OS_3.test_all.test_netConfig.test_DHCP_server.DHCP_config: **Lan口配置**</td>
+    <td>4</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',4)">详情</a></td>
+</tr>
+
+<tr id='pt3.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03_001_DHCP_server_config: DHCP服务配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
+        通过</a>
+
+    <div id='div_pt3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.1: 当前位置： 网络配置
+当前位置： DHCP服务
+当前位置： DHCP服务配置
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_14_17_Vlanvid_222_DHCP_server_config.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_14_31_Vlanvid_223_DHCP_server_config.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_14_45_Vlanvid_224_DHCP_server_config.png
+配置DHCP完成
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03_002_DHCP_server_show: 将DHCP页面信息输出</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.2')" >
+        通过</a>
+
+    <div id='div_pt3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.2: 当前位置： 网络配置
+当前位置： DHCP服务
+标题子项： 15
+接口名称: 222
+起始地址: 192.168.222.3
+结束地址: 192.168.222.200
+子网掩码: 255.255.255.0
+网关地址: 192.168.222.1
+主DNS服务器: 114.114.114.114
+
+接口名称: 223
+起始地址: 192.168.223.3
+结束地址: 192.168.223.200
+子网掩码: 255.255.255.0
+网关地址: 192.168.223.1
+主DNS服务器: 114.114.114.114
+
+接口名称: 224
+起始地址: 192.168.224.3
+结束地址: 192.168.224.200
+子网掩码: 255.255.255.0
+网关地址: 192.168.224.1
+主DNS服务器: 114.114.114.114
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_15_10_Vlan_DHCP_server_config_show.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03_003_DHCP_server_validate: DHCP功能生效判断</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.3')" >
+        通过</a>
+
+    <div id='div_pt3.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.3: 当前位置： 网络配置
+当前位置： DHCP服务
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03_004_DHCP_server_delete: DHCP服务配置删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.4')" >
+        通过</a>
+
+    <div id='div_pt3.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.4: 当前位置： 网络配置
+当前位置： DHCP服务
+标题子项： 15
+****************************** 
+
+先将‘ 222 ’与配置文件相同规则删除！  
+****************************** 
+
+****************************** 
+
+先将‘ 223 ’与配置文件相同规则删除！  
+****************************** 
+
+****************************** 
+
+先将‘ 224 ’与配置文件相同规则删除！  
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_16_49_Vlan_DHCP_server_delete.png
+当前位置： 网络配置
+当前位置： 内网配置
+每页显示个数为: 50
+已将222 -vlan删除
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_16_58_Vlanvid222_DHCP_server_delete.png
+已将223 -vlan删除
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_17_02_Vlanvid223_DHCP_server_delete.png
+已将224 -vlan删除
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_17_07_Vlanvid224_DHCP_server_delete.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Re_OS_3.test_all.test_netConfig.test_Port_mapping.Port_mapping: **端口映射**</td>
+    <td>13</td>
+    <td>13</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',13)">详情</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_001_static_port_mapping_config: 静态映射配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')" >
+        通过</a>
+
+    <div id='div_pt4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.1: 当前位置： 网络配置
+当前位置: 端口映射
+当前位置： 静态映射
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_17_31_AC12_static_port_mapping_configure_before.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_17_38_AC12_static_port_mapping_configure_after.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_17_39_AC23_static_port_mapping_configure_before.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_17_46_AC23_static_port_mapping_configure_after.png
+****************************** 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_002_static_port_mapping_show: 静态映射配置-页面信息正确</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.2')" >
+        通过</a>
+
+    <div id='div_pt4.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.2: 当前位置： 网络配置
+当前位置: 端口映射
+当前位置： 静态映射
+每页显示个数为: 50
+****************************** 
+
+规则名称: AC12    内网IP地址: 192.168.2.33    端口映射关系: 80~80:8081~8081
+规则名称: AC23    内网IP地址: 192.168.2.55    端口映射关系: 88~88:8888~8888
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_18_09__static_port_mapping_configure_show.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_003_static_port_mapping_validate: 对配置静态端口映射 进行验证</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
+
+<tr id='pt4.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_004_static_port_mapping_delect: 静态映射删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.4')" >
+        通过</a>
+
+    <div id='div_pt4.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.4: 当前位置： 网络配置
+当前位置: 端口映射
+当前位置： 静态映射
+有AC12 规则，先将其删除
+ ****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_19_13__static_port_mapping_configure_delect.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_006_nat_rule_config_EasyIP: NAT规则EasyIP 配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.5')" >
+        通过</a>
+
+    <div id='div_pt4.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.5: 当前位置： 网络配置
+当前位置: 端口映射
+当前位置: NAT规则
+每页显示个数为: 50
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_19_39_192.123_nat_rule_configure_EasyIP_before.png
+Easy IP 定位成功！！
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_19_47_192.123_nat_rule_configure_EasyIP_after.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_19_47_1212_nat_rule_configure_EasyIP_before.png
+Easy IP 定位成功！！
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_19_55_1212_nat_rule_configure_EasyIP_after.png
+****************************** 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_007_nat_rule_show_EasyIP: EasyIP配置-页面信息正确</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.6')" >
+        通过</a>
+
+    <div id='div_pt4.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.6: 当前位置： 网络配置
+当前位置: 端口映射
+当前位置: NAT规则
+每页显示个数为: 50
+****************************** 
+
+规则名称: 192.123  	NAT类型: Easy IP   内网起始IP地址: 192.168.2.3  内网结束IP地址: 192.168.2.5    绑定接口: WAN1
+规则名称: 1212  	NAT类型: Easy IP   内网起始IP地址: 192.168.2.22  内网结束IP地址: 192.168.2.25    绑定接口: WAN1
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_20_23_nat_rule_configure_show_EasyIP.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_008_nat_rule_EasyIP_validate: 验证EasyIP功能生效</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
+
+<tr id='pt4.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_009_nat_rule_del_EasyIP: 将配置的EasyIP 信息删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.8')" >
+        通过</a>
+
+    <div id='div_pt4.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.8: 当前位置： 网络配置
 当前位置: 端口映射
 当前位置: NAT规则
 每页显示个数为: 50
@@ -336,8 +1251,3666 @@ pt1.4: 当前位置： 网络配置
 
 有192.123 规则，先将其删除
 有1212 规则，先将其删除
-G:\github\UTT_python\Re_OS_3\Public\Get_screenshot.py is file
-截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180228.18_06_58_nat_rule_configure_delete_EasyIP.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_21_13_nat_rule_configure_delete_EasyIP.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_011_nat_rule_config_One2One: NAT规则 One2One配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.9')" >
+        通过</a>
+
+    <div id='div_pt4.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.9: 当前位置： 网络配置
+当前位置: 端口映射
+当前位置: NAT规则
+每页显示个数为: 50
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_21_38_192.123_nat_rule_configure_One2One_before.png
+Easy IP 定位成功！！
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_21_46_192.123_nat_rule_configure_One2One_after.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_21_47_1212_nat_rule_configure_One2One_before.png
+Easy IP 定位成功！！
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_21_55_1212_nat_rule_configure_One2One_after.png
+****************************** 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_012_nat_rule_show_One2One: One2One配置-页面信息正确</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.10')" >
+        通过</a>
+
+    <div id='div_pt4.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.10: 当前位置： 网络配置
+当前位置: 端口映射
+当前位置: NAT规则
+每页显示个数为: 50
+****************************** 
+
+规则名称: 192.123  	NAT类型: One2One   内网起始IP地址: 192.168.2.3  内网结束IP地址: 192.168.2.5    绑定接口: WAN1
+规则名称: 1212  	NAT类型: One2One   内网起始IP地址: 192.168.2.22  内网结束IP地址: 192.168.2.25    绑定接口: WAN1
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_22_24_nat_rule_configure_show_One2One.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_013_nat_rule_One2One_validate: 验证One2One配置功能生效</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
+
+<tr id='pt4.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_014_nat_rule_del_One2One: 将One2One配置 信息删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.12')" >
+        通过</a>
+
+    <div id='div_pt4.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.12: 当前位置： 网络配置
+当前位置: 端口映射
+当前位置: NAT规则
+每页显示个数为: 50
+****************************** 
+
+有192.123 规则，先将其删除
+有1212 规则，先将其删除
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_23_18_nat_rule_configure_delete_One2One.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_016_DMZ: DMZ主机配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.13')" >
+        通过</a>
+
+    <div id='div_pt4.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.13: 当前位置： 网络配置
+当前位置: 端口映射
+当前定位： DMZ主机
+现在开启DMZ！
+wan1口DMZ主机ip为： 192.168.2.22
+wan2口DMZ主机ip为： 192.168.2.22
+wan3口DMZ主机ip为： 192.168.2.22
+wan4口DMZ主机ip为： 192.168.2.22
+各wan口配置ip与全局DMZ主机ip相同
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>Re_OS_3.test_all.test_netConfig.test_router_config.Router_config: **路由配置**</td>
+    <td>5</td>
+    <td>4</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c5',5)">详情</a></td>
+</tr>
+
+<tr id='pt5.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05_001_staticRouter_config: 静态路由——配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.1')" >
+        通过</a>
+
+    <div id='div_pt5.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.1: 当前位置: 网络配置
+当前位置: 路由配置
+当前位置: 静态路由
+****************************** 
+
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_24_12_333_static_router_config_before.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_24_20_333_static_router_config_after.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_24_20_444_static_router_config_before.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_24_29_444_static_router_config_after.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05_002_staticRouter_show: 静态路由 页面信息正确</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.2')" >
+        通过</a>
+
+    <div id='div_pt5.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.2: 当前位置: 网络配置
+当前位置: 路由配置
+当前位置: 静态路由
+****************************** 
+
+规则名为： 333
+该规则为开启状态
+目的网络为： 192.168.3.0   网关地址为： 192.168.2.112   优先级为： 1   绑定接口为： LAN
+规则名为： 444
+该规则为开启状态
+目的网络为： 192.168.4.0   网关地址为： 192.168.3.4   优先级为： 2   绑定接口为： LAN
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_24_57_static_router_show.png
+****************************** 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft5.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_05_003_statciRouter_validate: 静态路由功能生效-判断</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.3')" >
+        错误</a>
+
+    <div id='div_ft5.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.3: ping 192.168.3.22 is fail
+ping 不通该192.168.3.22 地址 
+Traceback (most recent call last):
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_netConfig\test_router_config.py", line 421, in test_05_003_statciRouter_validate
+    self.static_router_validate()
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_netConfig\test_router_config.py", line 204, in static_router_validate
+    Ping().ping_IP(rou_static_destNet[j])
+  File "G:\github\UTT_python\Re_OS_3\Tool\Ping.py", line 21, in ping_IP
+    raise BaseException("ping 不通该%s 地址 "%ip)
+BaseException: ping 不通该192.168.3.22 地址 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05_004_staticRouter_del: 静态路由配置信息 删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.4')" >
+        通过</a>
+
+    <div id='div_pt5.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.4: 当前位置: 网络配置
+当前位置: 路由配置
+当前位置: 静态路由
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_25_40_333_static_router_delete_before.png
+将333 规则，删除
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_25_46_333_static_router_delete_after.png
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_25_47_444_static_router_delete_before.png
+将444 规则，删除
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_25_53_444_static_router_delete_after.png
+****************************** 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05_006_strategyRouter: 策略路由 开启 、关闭与策略路由配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.5')" >
+        通过</a>
+
+    <div id='div_pt5.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.5: 当前位置: 网络配置
+当前位置: 路由配置
+当前位置： 策略路由
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_26_13_strategyRouter_config_before.png
+no operation
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>Re_OS_3.test_all.test_netConfig.test_DDNS.DDNS_config: **动态域名配置**</td>
+    <td>4</td>
+    <td>3</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c6',4)">详情</a></td>
+</tr>
+
+<tr id='pt6.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_06_001_DDNS_uttcare_config: 配置DDNS-uttcare</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.1')" >
+        通过</a>
+
+    <div id='div_pt6.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.1: 当前位置: 网络配置
+当前位置： 动态域名
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_26_36_DDNS_uttcare_config_before.png
+主机名 url为： 1160504195.uttcare.com
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_26_44_DDNS_uttcare_config_after.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_06_002_DDNS_uttcare_show: DDNS-uttcare信息输出</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.2')" >
+        通过</a>
+
+    <div id='div_pt6.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.2: 当前位置: 网络配置
+当前位置： 动态域名
+****************************** 
+
+绑定接口为： WAN1  连接状态： 已连接  服务商： uttcare.com  主机名： 1160504195.uttcare.com  ip地址： 192.168.1.116  更新时间： 2018/3/16 15:26:42
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_27_10_DDNS_uttcare_config_show.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_06_003_DDNS_uttcare_validate: DDNS-uttcare功能生效验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.3')" >
+        错误</a>
+
+    <div id='div_ft6.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.3: 当前位置: 网络配置
+当前位置： 动态域名
+****************************** 
+
+Traceback (most recent call last):
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_netConfig\test_DDNS.py", line 360, in test_06_003_DDNS_uttcare_validate
+    self.DDNS_uttcare_validate()
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_netConfig\test_DDNS.py", line 196, in DDNS_uttcare_validate
+    self.openhostname(web_hostname[0])
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_netConfig\test_DDNS.py", line 33, in openhostname
+    Login(self.driver1).login_router(url, username, pwd)
+  File "G:\github\UTT_python\Re_OS_3\Public\Login_Router.py", line 25, in login_router
+    self.driver.find_element_by_name("username").clear()
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 426, in find_element_by_name
+    return self.find_element(by=By.NAME, value=name)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 832, in find_element
+    'value': value})['value']
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 297, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"name","selector":"username"}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.15063 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_06_004_DDNS_uttcare_del: 将配置的DDNS-uttcare信息删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.4')" >
+        通过</a>
+
+    <div id='div_pt6.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.4: 当前位置: 网络配置
+当前位置： 动态域名
+****************************** 
+
+将1160504195.uttcare.com删除
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_29_17_DDNS_uttcare_config_delect.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>Re_OS_3.test_all.test_UserManage.test_organize_member.Organization_member: **组织成员**</td>
+    <td>2</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c7',2)">详情</a></td>
+</tr>
+
+<tr id='ft7.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_13_001_Organization_member_config: 组织成员配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft7.1')" >
+        错误</a>
+
+    <div id='div_ft7.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft7.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft7.1: 当前位置： 用户管理
+当前位置： 组织成员
+Traceback (most recent call last):
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_UserManage\test_organize_member.py", line 166, in test_13_001_Organization_member_config
+    self.add_newTree()
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_UserManage\test_organize_member.py", line 36, in add_newTree
+    add.click()
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 78, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 499, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 297, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;span class="button add" id="addBtn_newTree_1" onfocus="this.blur();" data-hover-title="新增子组" data-hover-sign="1521185380051"&gt;&lt;/span&gt; is not clickable at point (259, 134). Other element would receive the click: &lt;div id="modal-addGroup" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="false" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.15063 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_13_002_Organization_member_show: 组织成员页面信息输出</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.2')" >
+        通过</a>
+
+    <div id='div_pt7.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.2: 当前位置： 用户管理
+当前位置： 组织成员
+标题子项： 13
+****************************** 
+
+ID : 1
+用户名 : 122
+所属组 : Root
+认证方式 : 
+认证账号 : 
+IP 地址 : 
+MAC地址 : 
+绑定方式 : 
+摘要 : 子组: 0 ; 用户: 0
+备注 : 
+编辑 : 
+该 ‘ 122 ’ 信息已全部输出 
+****************************** 
+
+****************************** 
+
+ID : 2
+用户名 : 分组1
+所属组 : Root
+认证方式 : 
+认证账号 : 
+IP 地址 : 
+MAC地址 : 
+绑定方式 : 
+摘要 : 子组: 0 ; 用户: 0
+备注 : 
+编辑 : 
+该 ‘ 分组1 ’ 信息已全部输出 
+****************************** 
+
+****************************** 
+
+ID : 3
+用户名 : 内网
+所属组 : Root
+认证方式 : 
+认证账号 : 
+IP 地址 : 
+MAC地址 : 
+绑定方式 : 
+摘要 : 子组: 0 ; 用户: 0
+备注 : 
+编辑 : 
+该 ‘ 内网 ’ 信息已全部输出 
+****************************** 
+
+****************************** 
+
+ID : 4
+用户名 : god
+所属组 : Root
+认证方式 : 
+认证账号 : 
+IP 地址 : 
+MAC地址 : 
+绑定方式 : 
+摘要 : 子组: 0 ; 用户: 0
+备注 : 
+编辑 : 
+该 ‘ god ’ 信息已全部输出 
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_31_37_Organization_member_show.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>Re_OS_3.test_all.test_UserManage.test_accStatu.AccStatu: **用户状态**</td>
+    <td>3</td>
+    <td>2</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c8',3)">详情</a></td>
+</tr>
+
+<tr id='pt8.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_14_001_accStatu_Users_joingroups: 将临时用户加入分组中</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.1')" >
+        通过</a>
+
+    <div id='div_pt8.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.1: 当前分组个数为： 4
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_31_59_accStatu_Users_joingroups.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_14_002_accStatu_Users_show: 将用户信息输出</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.2')" >
+        通过</a>
+
+    <div id='div_pt8.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.2: 标题子项： 15
+****************************** 
+
+ID : 1
+用户名 : arpd_1
+所属组 : 122
+VLAN ID : 0
+IP 地址 : 192.168.2.14
+MAC地址 : 00:24:ac:2a:34:77
+认证方式 : IP/Mac绑定
+在线时长 : 0分
+上传数据(Mbyte) : 0
+下载数据(Mbyte) : 0
+上传速度(Kbyte/s) : 0
+下载速度(Kbyte/s) : 0
+****************************** 
+
+****************************** 
+
+ID : 2
+用户名 : arpd_2
+所属组 : 122
+VLAN ID : 0
+IP 地址 : 192.168.2.190
+MAC地址 : 00:e0:4c:30:12:7e
+认证方式 : IP/Mac绑定
+在线时长 : 0分
+上传数据(Mbyte) : 0
+下载数据(Mbyte) : 0
+上传速度(Kbyte/s) : 0
+下载速度(Kbyte/s) : 0
+****************************** 
+
+****************************** 
+
+ID : 3
+用户名 : arpd_3
+所属组 : 122
+VLAN ID : 0
+IP 地址 : 192.168.2.252
+MAC地址 : 00:24:ac:e7:34:4d
+认证方式 : IP/Mac绑定
+在线时长 : 1分
+上传数据(Mbyte) : 0
+下载数据(Mbyte) : 0
+上传速度(Kbyte/s) : 0
+下载速度(Kbyte/s) : 0
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_33_32_accStatu_Users_show.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft8.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_14_003_accStatu_User_into_blacklist: 将某个用户拉黑</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft8.3')" >
+        失败</a>
+
+    <div id='div_ft8.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft8.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft8.3: 标题子项： 15
+当前位置： 黑名单
+标题子项： 7
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_33_58_accStatu_User_into_blacklist.png
+Traceback (most recent call last):
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_UserManage\test_accStatu.py", line 291, in test_14_003_accStatu_User_into_blacklist
+    self.accStatu_User_into_blacklist(blacklist_mac)
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_UserManage\test_accStatu.py", line 265, in accStatu_User_into_blacklist
+    self.assertIn(blacklist_mac[0],blackmac,"被拉黑用户不在黑名单列表中")
+AssertionError: 'fc:2f:ef:e9:0a:af' not found in [] : 被拉黑用户不在黑名单列表中
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Re_OS_3.test_all.test_UserManage.test_BlackList.Black_List: **黑名单**</td>
+    <td>4</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c9',4)">详情</a></td>
+</tr>
+
+<tr id='pt9.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_16_001_blacklist_config: 黑名单配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.1')" >
+        通过</a>
+
+    <div id='div_pt9.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt9.1: 当前位置： 用户管理
+当前位置： 黑名单
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_34_19_blacklist_config.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt9.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_16_002_blacklist_show: 黑名单页面信息显示</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.2')" >
+        通过</a>
+
+    <div id='div_pt9.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt9.2: 当前位置： 用户管理
+当前位置： 黑名单
+标题子项： 7
+****************************** 
+
+ID : 1
+用户名 : 拉黑用户
+MAC地址 : fc:2f:ef:e9:0a:af
+加入时间 : 2018-3-16 15:34:19
+备注 : 
+编辑 : 
+该 ‘ 拉黑用户 ’ 规则信息已全部输出 
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_34_53_blacklist_show.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt9.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_16_003_blacklist_validate: 黑名单功能验证</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
+
+<tr id='pt9.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_16_004_blacklist_delete: 黑名单配置删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.4')" >
+        通过</a>
+
+    <div id='div_pt9.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt9.4: 当前位置： 用户管理
+当前位置： 黑名单
+标题子项： 7
+****************************** 
+
+先将‘ 拉黑用户 ’与配置文件相同规则删除！  
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_35_50_blacklist_delete.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Re_OS_3.test_all.test_BehaviorManagement.test_BehaviorManage.BehaviorManage: **行为管理配置**</td>
+    <td>4</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c10',4)">详情</a></td>
+</tr>
+
+<tr id='pt10.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_17_001_behaviorMange_config: 行为管理开启与配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.1')" >
+        通过</a>
+
+    <div id='div_pt10.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.1: 当前位置： 行为管理
+当前位置： 行为管理
+操作按钮
+标题子项： 9
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_37_07_behaviorMange_config.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_17_002_behaviorMange_show: 行为管理页面信息核对</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.2')" >
+        通过</a>
+
+    <div id='div_pt10.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.2: 当前位置： 行为管理
+当前位置： 行为管理
+标题子项： 9
+****************************** 
+
+ID : 3
+规则名称 : 12
+适用用户 : 全部用户
+应用服务 : PING, PING …
+生效时间 : 全天
+备注 : 
+编辑 : 
+该 ‘ 12 ’ 规则信息已全部输出 
+****************************** 
+
+****************************** 
+
+ID : 4
+规则名称 : 43
+适用用户 : 全部用户
+应用服务 : FTP上传文件, F …
+生效时间 : 全天
+备注 : 
+编辑 : 
+该 ‘ 43 ’ 规则信息已全部输出 
+****************************** 
+
+****************************** 
+
+ID : 5
+规则名称 : 额外
+适用用户 : 全部用户
+应用服务 : 其他ICMP协议, …
+生效时间 : 全天
+备注 : 
+编辑 : 
+该 ‘ 额外 ’ 规则信息已全部输出 
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_38_38_behaviorMange_show.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_17_003_behaviorMange_validate: 行为管理页面功能生效判断</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.3')" >
+        通过</a>
+
+    <div id='div_pt10.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.3: ping www.baidu.com is fail
+error ping 不通该www.baidu.com 地址 
+功能生效
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_17_004_behaviorMange_delete: 行为管理信息删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.4')" >
+        通过</a>
+
+    <div id='div_pt10.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.4: 当前位置： 行为管理
+当前位置： 行为管理
+标题子项： 9
+****************************** 
+
+先将‘ 12 ’与配置文件相同规则删除！  
+****************************** 
+
+****************************** 
+
+先将‘ 43 ’与配置文件相同规则删除！  
+****************************** 
+
+****************************** 
+
+先将‘ 额外 ’与配置文件相同规则删除！  
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_40_15_behaviorMange_delete.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Re_OS_3.test_all.test_BehaviorManagement.test_Dns_dnsFilter.DNS_filter: **域名过滤开启与关闭**</td>
+    <td>6</td>
+    <td>6</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c11',6)">详情</a></td>
+</tr>
+
+<tr id='pt11.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_18_001_dnsfilter_open: 开启域名过滤功能</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.1')" >
+        通过</a>
+
+    <div id='div_pt11.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.1: 当前位置： 行为管理
+当前位置： 域名过滤
+现在开启域名过滤
+开启域名过滤功能
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_40_36_dnsfilter_open.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_18_002_dnsfilter_config: 配置域名过滤</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.2')" >
+        通过</a>
+
+    <div id='div_pt11.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.2: 当前位置： 行为管理
+当前位置： 域名过滤
+域名过滤配置完成
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_41_01_dnsfilter_config.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_18_003_dnsfilter_show: 域名配置信息输出</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.3')" >
+        通过</a>
+
+    <div id='div_pt11.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.3: 当前位置： 行为管理
+当前位置： 域名过滤
+域名列表个数： 3
+域名列表：
+www.sina.com
+www.163.com
+www.taobao.com
+域名过滤列表输出完成
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_41_19_dnsfilter_show.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_18_004_dnsfilter_validate: 域名过滤功能验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.4')" >
+        通过</a>
+
+    <div id='div_pt11.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.4: 当前位置： 行为管理
+当前位置： 域名过滤
+&lt;urlopen error [Errno 11001] getaddrinfo failed&gt;
+无法访问该http://www.163.com 地址！
+&lt;urlopen error [Errno 11001] getaddrinfo failed&gt;
+无法访问该http://www.sina.com 地址！
+&lt;urlopen error [Errno 11001] getaddrinfo failed&gt;
+无法访问该http://www.taobao.com 地址！
+****************************** 
+
+随机选择其中一条域名 进行删除,www.taobao.com
+http://www.taobao.com可以访问！
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_18_005_dnsfilter_close: 域名过滤功能关闭</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.5')" >
+        通过</a>
+
+    <div id='div_pt11.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.5: 当前位置： 行为管理
+当前位置： 域名过滤
+关闭域名过滤！
+域名过滤功能关闭
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_42_35_dnsfilter_close.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_18_006_dnsfilter_close_check: 域名过滤关闭功能验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.6')" >
+        通过</a>
+
+    <div id='div_pt11.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.6: http://www.163.com可以访问！
+http://www.sina.com可以访问！
+http://www.taobao.com可以访问！
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Re_OS_3.test_all.test_BehaviorManagement.test_LectronicsNotice.lectronicsNotice: **电子通告开启与关闭**</td>
+    <td>3</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c12',3)">详情</a></td>
+</tr>
+
+<tr id='pt12.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_20_001_lectronicsNotic_config: 电子通告开启与配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.1')" >
+        通过</a>
+
+    <div id='div_pt12.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.1: 当前位置： 行为管理
+当前位置： 电子通告
+现在开启电子通告
+电子通告配置完成！
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_43_13_lectronicsNotic_config.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_20_002_lectronicsNotic_validate: 电子通告功能验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.2')" >
+        通过</a>
+
+    <div id='div_pt12.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.2: 当前页面url为： http://192.168.2.1/noAuth/info_page.html?type=Notice&amp;ip=192.168.2.190&amp;501a9d2
+电子通告生效
+当前网页标题为: 消息通告
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_43_35_lectronicsNotic_validate.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_20_003_lectronicsNotic_close: 电子通告功能关闭</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.3')" >
+        通过</a>
+
+    <div id='div_pt12.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.3: 当前位置： 行为管理
+当前位置： 电子通告
+现在关闭电子通告！
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_43_56_lectronicsNotic_close.png
+http://www.163.com/
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.15_44_26_lectronicsNotic_close_validate.png
+电子通告功能关闭生效！
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Re_OS_3.test_all.test_TrafficManagement.test_Application_priority.Application_priority: **应用优先**</td>
+    <td>10</td>
+    <td>10</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c13',10)">详情</a></td>
+</tr>
+
+<tr id='pt13.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_21_001_Application_priority_open: 应用管理--开启</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.1')" >
+        通过</a>
+
+    <div id='div_pt13.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.1: 当前位置: 流量管理
+当前位置: 应用优先
+操作按钮
+现在已开启--应用优先 功能
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt13.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_21_002_Application_priority_Office_priority_config: 办公优先配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.2')" >
+        通过</a>
+
+    <div id='div_pt13.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.2: 当前位置: 流量管理
+当前位置: 应用优先
+办公优先模板--现在生成
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt13.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_21_003_Application_priority_Office_priority_show: 办公优先配置页面内容输出</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.3')" >
+        通过</a>
+
+    <div id='div_pt13.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.3: 当前位置: 流量管理
+当前位置: 应用优先
+标题子项： 13
+****************************** 
+
+ID : 1
+规则名称 : 办公优先1
+执行顺序 : 1
+优先级 : 1
+适用用户 : 全部用户
+应用服务 : Skype, YY语 …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 2
+规则名称 : 办公优先2
+执行顺序 : 2
+优先级 : 2
+适用用户 : 全部用户
+应用服务 : Weaver, Ta …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 3
+规则名称 : 办公优先3
+执行顺序 : 3
+优先级 : 3
+适用用户 : 全部用户
+应用服务 : 今目标(办公OA), …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 4
+规则名称 : 办公优先4
+执行顺序 : 4
+优先级 : 4
+适用用户 : 全部用户
+应用服务 : 滴滴出行, 搜房网, …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 5
+规则名称 : 办公优先5
+执行顺序 : 5
+优先级 : 5
+适用用户 : 全部用户
+应用服务 : 有道词典, 新浪邮箱 …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 6
+规则名称 : 办公优先6
+执行顺序 : 6
+优先级 : 6
+适用用户 : 全部用户
+应用服务 : 360云盘, 360 …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 7
+规则名称 : 办公优先7
+执行顺序 : 7
+优先级 : 7
+适用用户 : 全部用户
+应用服务 : 美图秀秀&amp;美颜相机, …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 8
+规则名称 : 办公优先8
+执行顺序 : 8
+优先级 : 8
+适用用户 : 全部用户
+应用服务 : 欢乐斗地主, 球球大 …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 9
+规则名称 : 办公优先9
+执行顺序 : 9
+优先级 : 9
+适用用户 : 全部用户
+应用服务 : 爱奇艺PPS, 优酷 …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 10
+规则名称 : 办公优先10
+执行顺序 : 10
+优先级 : 10
+适用用户 : 全部用户
+应用服务 : PPTV, Qvod …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 11
+规则名称 : 办公优先11
+执行顺序 : 11
+优先级 : 11
+适用用户 : 全部用户
+应用服务 : QQ远程协助, SS …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 12
+规则名称 : 办公优先12
+执行顺序 : 12
+优先级 : 12
+适用用户 : 全部用户
+应用服务 : 其他TCP协议
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 13
+规则名称 : 办公优先13
+执行顺序 : 13
+优先级 : 13
+适用用户 : 全部用户
+应用服务 : IosUpdate( …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 14
+规则名称 : 办公优先14
+执行顺序 : 14
+优先级 : 14
+适用用户 : 全部用户
+应用服务 : 其他UDP协议
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 15
+规则名称 : 办公优先15
+执行顺序 : 15
+优先级 : 15
+适用用户 : 全部用户
+应用服务 : FTP上传文件, F …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 16
+规则名称 : 办公优先16
+执行顺序 : 16
+优先级 : 16
+适用用户 : 全部用户
+应用服务 : 酷狗, 百度音乐, …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt13.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_21_004_Application_priority_Office_priority_validate: 办公优先配置 功能生效</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
+
+<tr id='pt13.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_21_005_Application_priority_Office_priority_delect: 办公优先配置删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.5')" >
+        通过</a>
+
+    <div id='div_pt13.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.5: 当前位置: 流量管理
+当前位置: 应用优先
+标题子项： 13
+****************************** 
+
+将‘ 办公优先1 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 办公优先2 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 办公优先3 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 办公优先4 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 办公优先5 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 办公优先6 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 办公优先7 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 办公优先8 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 办公优先9 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 办公优先10 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 办公优先11 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 办公优先12 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 办公优先13 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 办公优先14 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 办公优先15 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 办公优先16 ’配置删除！  
+****************************** 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt13.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_21_007_Application_priority_Entertainment_priority_config: 娱乐优先配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.6')" >
+        通过</a>
+
+    <div id='div_pt13.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.6: 当前位置: 流量管理
+当前位置: 应用优先
+娱乐优先模板--现在生成
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt13.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_21_008_Application_priority_Entertainment_priority_show: 娱乐优先配置页面内容输出</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.7')" >
+        通过</a>
+
+    <div id='div_pt13.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.7: 当前位置: 流量管理
+当前位置: 应用优先
+标题子项： 13
+****************************** 
+
+ID : 1
+规则名称 : 娱乐优先1
+执行顺序 : 1
+优先级 : 1
+适用用户 : 全部用户
+应用服务 : 欢乐斗地主, 球球大 …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 2
+规则名称 : 娱乐优先2
+执行顺序 : 2
+优先级 : 2
+适用用户 : 全部用户
+应用服务 : 当当网, 苏宁易购, …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 3
+规则名称 : 娱乐优先3
+执行顺序 : 3
+优先级 : 3
+适用用户 : 全部用户
+应用服务 : 滴滴出行, 搜房网, …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 4
+规则名称 : 娱乐优先4
+执行顺序 : 4
+优先级 : 4
+适用用户 : 全部用户
+应用服务 : Weaver, Ta …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 5
+规则名称 : 娱乐优先5
+执行顺序 : 5
+优先级 : 5
+适用用户 : 全部用户
+应用服务 : Skype, YY语 …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 6
+规则名称 : 娱乐优先6
+执行顺序 : 6
+优先级 : 6
+适用用户 : 全部用户
+应用服务 : 有道词典, 美图秀秀 …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 7
+规则名称 : 娱乐优先7
+执行顺序 : 7
+优先级 : 7
+适用用户 : 全部用户
+应用服务 : 爱奇艺PPS, 优酷 …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 8
+规则名称 : 娱乐优先8
+执行顺序 : 8
+优先级 : 8
+适用用户 : 全部用户
+应用服务 : PPTV, Qvod …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 9
+规则名称 : 娱乐优先9
+执行顺序 : 9
+优先级 : 9
+适用用户 : 全部用户
+应用服务 : 新浪邮箱, QQ邮箱 …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 10
+规则名称 : 娱乐优先10
+执行顺序 : 10
+优先级 : 10
+适用用户 : 全部用户
+应用服务 : 360云盘, 360 …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 11
+规则名称 : 娱乐优先11
+执行顺序 : 11
+优先级 : 11
+适用用户 : 全部用户
+应用服务 : QQ远程协助, SS …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 12
+规则名称 : 娱乐优先12
+执行顺序 : 12
+优先级 : 12
+适用用户 : 全部用户
+应用服务 : 其他TCP协议
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 13
+规则名称 : 娱乐优先13
+执行顺序 : 13
+优先级 : 13
+适用用户 : 全部用户
+应用服务 : IosUpdate( …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 14
+规则名称 : 娱乐优先14
+执行顺序 : 14
+优先级 : 14
+适用用户 : 全部用户
+应用服务 : 其他UDP协议
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 15
+规则名称 : 娱乐优先15
+执行顺序 : 15
+优先级 : 15
+适用用户 : 全部用户
+应用服务 : FTP上传文件, F …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+****************************** 
+
+ID : 16
+规则名称 : 娱乐优先16
+执行顺序 : 16
+优先级 : 16
+适用用户 : 全部用户
+应用服务 : 酷狗, 百度音乐, …
+上传速度 : 不限制
+下载速度 : 不限制
+生效时间 : 全天
+说明 : 
+编辑 : 
+****************************** 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt13.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_21_009_Application_priority_Entertainment_priority_validate: 娱乐优先配置 功能生效</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
+
+<tr id='pt13.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_21_010_Application_priority_Entertainment_priority_delect: 娱乐优先配置删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.9')" >
+        通过</a>
+
+    <div id='div_pt13.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.9: 当前位置: 流量管理
+当前位置: 应用优先
+标题子项： 13
+****************************** 
+
+将‘ 娱乐优先1 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 娱乐优先2 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 娱乐优先3 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 娱乐优先4 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 娱乐优先5 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 娱乐优先6 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 娱乐优先7 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 娱乐优先8 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 娱乐优先9 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 娱乐优先10 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 娱乐优先11 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 娱乐优先12 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 娱乐优先13 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 娱乐优先14 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 娱乐优先15 ’配置删除！  
+****************************** 
+
+****************************** 
+
+将‘ 娱乐优先16 ’配置删除！  
+****************************** 
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt13.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_21_011_Application_priority_close: 应用管理--关闭</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.10')" >
+        通过</a>
+
+    <div id='div_pt13.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.10: 当前位置: 流量管理
+当前位置: 应用优先
+操作按钮
+现在已关闭--应用优先 功能
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>Re_OS_3.test_all.test_VPNconfig.test_IPsec.IPSec: **IPSec配置与操作**</td>
+    <td>8</td>
+    <td>6</td>
+    <td>0</td>
+    <td>2</td>
+    <td><a href="javascript:showClassDetail('c14',8)">详情</a></td>
+</tr>
+
+<tr id='pt14.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_26_001_IPsec_dynamically_connected_local_config: IPsec配置--对方动态连接到本地</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt14.1')" >
+        通过</a>
+
+    <div id='div_pt14.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt14.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt14.1: 当前位置： VPN配置
+当前位置： IPSec
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_10_19_IPsec_config_connected_local_config.png
+IPsec配置--对方动态连接到本地---配置完成
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt14.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_26_002_IPsec_dynamically_connected_local_show: IPsec配置信息输出--对方动态连接到本地</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt14.2')" >
+        通过</a>
+
+    <div id='div_pt14.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt14.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt14.2: 当前位置： VPN配置
+当前位置： IPSec
+标题子项： 12
+****************************** 
+
+隧道名称 : AUTO_test
+会话状态 : 未建立
+协商模式 : 野蛮模式
+远端网关 : 0.0.0.0
+远端内网 : 172.168.0.1
+本地绑定 : WAN1
+本地内网 : 192.168.2.1
+生存时间(秒) : 28800
+编辑 : 
+该 ‘ AUTO_test ’ 规则信息已全部输出 
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_11_14_IPsec_config_connected_local_show.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft14.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_26_003_IPsec_dynamically_connected_local_validate: IPsec功能验证--对方动态连接到本地</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.3')" >
+        错误</a>
+
+    <div id='div_ft14.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.3: ping 172.168.0.1 is fail
+Traceback (most recent call last):
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_VPNconfig\test_IPsec.py", line 247, in test_26_003_IPsec_dynamically_connected_local_validate
+    Ping().ping_IP(remoteip[0])
+  File "G:\github\UTT_python\Re_OS_3\Tool\Ping.py", line 21, in ping_IP
+    raise BaseException("ping 不通该%s 地址 "%ip)
+BaseException: ping 不通该172.168.0.1 地址 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt14.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_26_004_IPsec_dynamically_connected_local_delete: IPsec配置删除--对方动态连接到本地</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt14.4')" >
+        通过</a>
+
+    <div id='div_pt14.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt14.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt14.4: 当前位置： VPN配置
+当前位置： IPSec
+标题子项： 12
+****************************** 
+
+先将‘ AUTO_test ’与配置文件相同规则删除！  
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_12_17_IPsec_config_connected_local_delete.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt14.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_26_006_IPsec_dynamically_connected_gateway_config: IPsec配置--动态连接到网关</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt14.5')" >
+        通过</a>
+
+    <div id='div_pt14.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt14.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt14.5: 当前位置： VPN配置
+当前位置： IPSec
+IPsec配置--动态连接到网关---配置完成
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_12_37_IPsec_dynamically_connected_gateway_config.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt14.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_26_007_IPsec_dynamically_connected_gateway_show: IPsec信息显示--动态连接到网关</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt14.6')" >
+        通过</a>
+
+    <div id='div_pt14.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt14.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt14.6: 当前位置： VPN配置
+当前位置： IPSec
+标题子项： 12
+****************************** 
+
+隧道名称 : AUTO_test2
+会话状态 : 未建立
+协商模式 : 野蛮模式
+远端网关 : 192.168.32.101
+远端内网 : 172.168.0.0
+本地绑定 : WAN1
+本地内网 : 192.168.2.1
+生存时间(秒) : 28800
+编辑 : 
+该 ‘ AUTO_test2 ’ 规则信息已全部输出 
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_13_33_IPsec_dynamically_connected_gateway_show.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft14.7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_26_008_IPsec_dynamically_connected_gateway_validate: IPsec功能验证--动态连接到网关</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft14.7')" >
+        错误</a>
+
+    <div id='div_ft14.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft14.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft14.7: ping 172.168.0.0 is fail
+Traceback (most recent call last):
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_VPNconfig\test_IPsec.py", line 374, in test_26_008_IPsec_dynamically_connected_gateway_validate
+    Ping().ping_IP(remoteip[1])
+  File "G:\github\UTT_python\Re_OS_3\Tool\Ping.py", line 21, in ping_IP
+    raise BaseException("ping 不通该%s 地址 "%ip)
+BaseException: ping 不通该172.168.0.0 地址 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt14.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_26_009_IPsec_dynamically_connected_gateway_delete: IPsec配置删除--动态连接到网关</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt14.8')" >
+        通过</a>
+
+    <div id='div_pt14.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt14.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt14.8: 当前位置： VPN配置
+当前位置： IPSec
+标题子项： 12
+****************************** 
+
+先将‘ AUTO_test2 ’与配置文件相同规则删除！  
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_14_35_IPsec_dynamically_connected_gateway_delete.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>Re_OS_3.test_all.test_VPNconfig.test_PPTP.PPTP: **PPTP配置与操作**</td>
+    <td>9</td>
+    <td>7</td>
+    <td>2</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c15',9)">详情</a></td>
+</tr>
+
+<tr id='pt15.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_27_001_PPTP_server_config: PPTP服务器配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.1')" >
+        通过</a>
+
+    <div id='div_pt15.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.1: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+当前位置： PPTP服务器全局配置
+目前状态为开启状态
+地址池起始地址: 192.168.55.40
+最大连接数 : 50
+服务器端IP地址: 192.168.55.0
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_14_58_PPTP_server_config.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt15.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_27_002_PPTP_as_server_config: PPTP配置--做服务端</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.2')" >
+        通过</a>
+
+    <div id='div_pt15.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.2: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+已选择服务端（拨入）
+PPTP配置---做服务器端  配置完成！
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_15_22_PPTP_as_server_config.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt15.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_27_003_PPTP_as_server_show: PPTP信息显示--做服务端</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.3')" >
+        通过</a>
+
+    <div id='div_pt15.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.3: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+标题子项： 14
+****************************** 
+
+隧道名称 : PPTPserver
+会话状态 : 离线
+协议类型 : PPTP
+工作模式 : 服务端(拨入)
+用户类型 : LAN到LAN
+远端网关IP地址 : 0.0.0.0
+远端内网IP地址 : 172.168.0.1
+会话时间 : -
+出流量(Byte) : -
+入流量(Byte) : -
+编辑 : 
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_16_26_PPTP_as_server_show.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft15.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_27_004_PPTP_as_server_validate: PPTP功能验证--做服务端</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft15.4')" >
+        失败</a>
+
+    <div id='div_ft15.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft15.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft15.4: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+当前位置： VPN配置
+当前位置： PPTP/L2TP
+标题子项： 14
+页面显示会话状态: 离线
+Traceback (most recent call last):
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_VPNconfig\test_PPTP.py", line 310, in test_27_004_PPTP_as_server_validate
+    self.assertEqual(connectStatus.text,"正常","当前会话状态错误")
+AssertionError: '离线' != '正常'
+- 离线
++ 正常
+ : 当前会话状态错误
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt15.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_27_005_PPTP_as_server_delete: PPTP配置删除--做服务端</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.5')" >
+        通过</a>
+
+    <div id='div_pt15.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.5: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+标题子项： 14
+****************************** 
+
+将‘ PPTPserver ’与配置文件相同规则删除！  
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_17_43_PPTP_as_server_delete.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt15.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_27_007_PPTP_as_Client_config: 'PPTP配置--做客户端</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.6')" >
+        通过</a>
+
+    <div id='div_pt15.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.6: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+现在选择客户端(拨出)
+PPTP配置---做客户端  配置完成！
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_18_06_PPTP_as_Client_config.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt15.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_27_008_PPTP_as_Client_show: PPTP信息显示--做客户端</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.7')" >
+        通过</a>
+
+    <div id='div_pt15.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.7: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+标题子项： 14
+****************************** 
+
+隧道名称 : PPTPclient
+会话状态 : 正在连接...
+协议类型 : PPTP
+工作模式 : 客户端(拨出)
+用户类型 : -
+远端网关IP地址 : 192.168.32.101
+远端内网IP地址 : 172.168.0.1
+会话时间 : -
+出流量(Byte) : -
+入流量(Byte) : -
+编辑 : 
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_19_10_PPTP_as_Client_show.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft15.8' class='none'>
+    <td class='failCase'><div class='testcase'>test_27_009_PPTP_as_Client_validate: PPTP功能验证--做服务端</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft15.8')" >
+        失败</a>
+
+    <div id='div_ft15.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft15.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft15.8: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+页面显示会话状态: 正在连接
+Traceback (most recent call last):
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_VPNconfig\test_PPTP.py", line 350, in test_27_009_PPTP_as_Client_validate
+    self.assertEqual(connectStatus.text, "正常", "当前会话状态错误")
+AssertionError: '正在连接' != '正常'
+- 正在连接
++ 正常
+ : 当前会话状态错误
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt15.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_27_010_PPTP_as_Client_delete: PPTP配置删除--做客户端</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.9')" >
+        通过</a>
+
+    <div id='div_pt15.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.9: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+标题子项： 14
+****************************** 
+
+将‘ PPTPclient ’与配置文件相同规则删除！  
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_20_08_PPTP_as_Client_delete.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>Re_OS_3.test_all.test_VPNconfig.test_L2TP.L2TP: **L2TP配置与操作**</td>
+    <td>9</td>
+    <td>7</td>
+    <td>2</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c16',9)">详情</a></td>
+</tr>
+
+<tr id='pt16.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_27_012_L2TP_server_config: L2TP服务器配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt16.1')" >
+        通过</a>
+
+    <div id='div_pt16.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt16.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt16.1: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+当前位置： L2TP服务器全局配置
+目前状态为开启状态
+地址池起始地址: 192.168.44.40
+最大连接数 : 50
+服务器端IP地址: 192.168.44.0
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_20_31_L2TP_server_config.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt16.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_27_013_L2TP_as_server_config: L2TP配置--做服务端</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt16.2')" >
+        通过</a>
+
+    <div id='div_pt16.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt16.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt16.2: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+已选择服务端（拨入）
+L2TP配置---做服务器端  配置完成！
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_20_53_L2TP_as_server_config.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt16.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_27_014_L2TP_as_server_show: L2TP信息显示--做服务端</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt16.3')" >
+        通过</a>
+
+    <div id='div_pt16.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt16.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt16.3: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+标题子项： 14
+****************************** 
+
+隧道名称 : L2TPserver
+会话状态 : 离线
+协议类型 : L2TP
+工作模式 : 服务端(拨入)
+用户类型 : LAN到LAN
+远端网关IP地址 : --
+远端内网IP地址 : 172.168.0.1
+会话时间 : -
+出流量(Byte) : -
+入流量(Byte) : -
+编辑 : 
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_21_58_L2TP_as_server_show.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft16.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_27_015_L2TP_as_server_validate: L2TP功能验证--做服务端</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft16.4')" >
+        失败</a>
+
+    <div id='div_ft16.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft16.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft16.4: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+当前位置： VPN配置
+当前位置： PPTP/L2TP
+标题子项： 14
+页面显示会话状态: 离线
+Traceback (most recent call last):
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_VPNconfig\test_L2TP.py", line 311, in test_27_015_L2TP_as_server_validate
+    self.assertEqual(connectStatus.text,"正常","当前会话状态错误")
+AssertionError: '离线' != '正常'
+- 离线
++ 正常
+ : 当前会话状态错误
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt16.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_27_016_L2TP_as_server_delete: L2TP配置删除--做服务端</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt16.5')" >
+        通过</a>
+
+    <div id='div_pt16.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt16.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt16.5: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+标题子项： 14
+****************************** 
+
+将‘ L2TPserver ’与配置文件相同规则删除！  
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_23_13_L2TP_as_server_delete.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt16.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_27_018_L2TP_as_Client_config: L2TP配置--做客户端</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt16.6')" >
+        通过</a>
+
+    <div id='div_pt16.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt16.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt16.6: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+现在选择客户端(拨出)
+PPTP配置---做客户端  配置完成！
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_23_37_L2TP_as_Client_config.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt16.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_27_019_L2TP_as_Client_show: L2TP信息显示--做客户端</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt16.7')" >
+        通过</a>
+
+    <div id='div_pt16.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt16.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt16.7: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+标题子项： 14
+****************************** 
+
+隧道名称 : L2TPclient
+会话状态 : 离线
+协议类型 : L2TP
+工作模式 : 客户端(拨出)
+用户类型 : -
+远端网关IP地址 : 192.168.32.101
+远端内网IP地址 : 172.168.0.1
+会话时间 : -
+出流量(Byte) : -
+入流量(Byte) : -
+编辑 : 
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_24_42_L2TP_as_Client_show.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft16.8' class='none'>
+    <td class='failCase'><div class='testcase'>test_27_020_L2TP_as_Client_validate: L2TP功能验证--做客户端</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft16.8')" >
+        失败</a>
+
+    <div id='div_ft16.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft16.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft16.8: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+页面显示会话状态: 离线
+Traceback (most recent call last):
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_VPNconfig\test_L2TP.py", line 351, in test_27_020_L2TP_as_Client_validate
+    self.assertEqual(connectStatus.text, "正常", "当前会话状态错误")
+AssertionError: '离线' != '正常'
+- 离线
++ 正常
+ : 当前会话状态错误
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt16.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_27_021_L2TP_as_Client_delete: L2TP配置删除--做客户端</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt16.9')" >
+        通过</a>
+
+    <div id='div_pt16.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt16.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt16.9: 当前位置： VPN配置
+当前位置： PPTP/L2TP
+标题子项： 14
+****************************** 
+
+将‘ L2TPclient ’与配置文件相同规则删除！  
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_25_41_L2TP_as_Client_delete.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>Re_OS_3.test_all.test_SysConfig.test_NetManageStrate.NetManageStrate: **网管策略**</td>
+    <td>10</td>
+    <td>8</td>
+    <td>0</td>
+    <td>2</td>
+    <td><a href="javascript:showClassDetail('c17',10)">详情</a></td>
+</tr>
+
+<tr id='ft17.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_30_001_System_administrator_config: 系统管理员的配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft17.1')" >
+        错误</a>
+
+    <div id='div_ft17.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft17.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft17.1: 当前位置： 系统配置
+当前位置： 网管策略
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_26_04_System_administrator_configure_reader.png
+Traceback (most recent call last):
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_SysConfig\test_NetManageStrate.py", line 208, in test_30_001_System_administrator_config
+    self.add_system_admin()
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_SysConfig\test_NetManageStrate.py", line 50, in add_system_admin
+    add.click()
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 78, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 499, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 297, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;button id="add" class="btn-sm btn-primary " data-local="{add}"&gt;...&lt;/button&gt; is not clickable at point (1824, 138). Other element would receive the click: &lt;div id="modal-add" class="modal fade in" tabindex="-1" role="dialog" aria-hidden="false" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.15063 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt17.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_30_002_System_administrator_show: 系统管理员页面信息输出</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt17.2')" >
+        通过</a>
+
+    <div id='div_pt17.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt17.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt17.2: 当前位置： 系统配置
+当前位置： 网管策略
+标题子项： 4
+****************************** 
+
+用户名 : reader
+权限 : 读
+编辑 : 
+将‘ reader ’与配置文件相同规则删除！  
+****************************** 
+
+****************************** 
+
+用户名 : root
+权限 : 读写
+编辑 : 
+将‘ root ’与配置文件相同规则删除！  
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_26_50_System_administrator_configure_show.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt17.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_30_003_System_administrator_validate: 系统管理员功能生效验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt17.3')" >
+        通过</a>
+
+    <div id='div_pt17.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt17.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt17.3: 当前使用账户为： reader
+账号权限： 只读
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_27_17_System_administrator_configure_reader_validate.png
+当前使用账户为： root
+账号权限:读写
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_27_40_System_administrator_configure_root_validate.png
+Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='header']/header/ul/li[1]/span[1]"}
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.15063 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt17.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_30_004_System_administrator_delect: 系统管理员配置删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt17.4')" >
+        通过</a>
+
+    <div id='div_pt17.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt17.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt17.4: 当前位置： 系统配置
+当前位置： 网管策略
+标题子项： 4
+****************************** 
+
+将‘ reader ’与配置文件相同规则删除！  
+****************************** 
+
+****************************** 
+
+将‘ root ’与配置文件相同规则删除！  
+****************************** 
+
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_28_38_System_administrator_configure_delect.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt17.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_30_006_Intranet_access_control: 内网访问控制配置与操作</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
+
+<tr id='pt17.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_30_008_Remote_management_open: 远程管理-开启</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt17.6')" >
+        通过</a>
+
+    <div id='div_pt17.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt17.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt17.6: 当前位置： 系统配置
+当前位置： 网管策略
+当前位置： 远程管理
+****************************** 
+
+现该操作未被选中，现在选中
+端口为： 8081
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_29_18_Remote_management_config_open.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt17.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_30_009_Remote_management_validate: 远程管理功能生效判断</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt17.7')" >
+        通过</a>
+
+    <div id='div_pt17.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt17.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt17.7: 当前位置： 网络配置
+192.168.1.116
+&lt;urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&gt;
+无法访问该http://192.168.1.116:8081 地址！
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft17.8' class='none'>
+    <td class='errorCase'><div class='testcase'>test_30_010_Remote_managment_close: 远程管理-关闭</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft17.8')" >
+        错误</a>
+
+    <div id='div_ft17.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft17.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft17.8: 当前位置： 系统配置
+当前位置： 网管策略
+当前位置： 远程管理
+****************************** 
+
+现该操作未被选中，现在选中
+Traceback (most recent call last):
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_SysConfig\test_NetManageStrate.py", line 348, in test_30_010_Remote_managment_close
+    port = remote_Outport1.get_attribute("value")
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 142, in get_attribute
+    resp = self._execute(Command.GET_ELEMENT_ATTRIBUTE, {'name': name})
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 499, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 297, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.15063 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt17.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_30_012_Net_management_access_strategy: 网管访问策略配置与操作</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt17.9')" >
+        通过</a>
+
+    <div id='div_pt17.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt17.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt17.9: 当前位置： 系统配置
+当前位置： 网管策略
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt17.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_30_013_language_select: 语言选择</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt17.10')" >
+        通过</a>
+
+    <div id='div_pt17.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt17.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt17.10: 当前位置： 系统配置
+当前位置： 网管策略
+当前位置： 语言选择
+****************************** 
+
+已选中该操作！
+当前语言为： 中文简体
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Re_OS_3.test_all.test_SysConfig.test_Clock_management.Clock_management: **时钟管理**</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c18',1)">详情</a></td>
+</tr>
+
+<tr id='pt18.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_31_001_Clock_management: 时钟管理的配置</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt18.1')" >
+        通过</a>
+
+    <div id='div_pt18.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt18.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt18.1: 当前位置： 系统配置
+当前位置： 时钟管理
+系统当前时间： 2018-03-16   16:31:18
+电脑当前时间： Fri Mar 16 16:31:18 2018
+****************************** 
+
+已选中该操作！
+服务器 IP地址为： 202.108.6.95
+服务器 IP地址为： 24.56.178.140
+服务器 IP地址为： 0.0.0.0
+点击保存！
+系统当前时间： 2018-03-16   16:31:20
+电脑当前时间： Fri Mar 16 16:31:20 2018
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>Re_OS_3.test_all.test_SysConfig.test_System_maintenance.System_maintenance: **系统维护**</td>
+    <td>4</td>
+    <td>2</td>
+    <td>0</td>
+    <td>2</td>
+    <td><a href="javascript:showClassDetail('c19',4)">详情</a></td>
+</tr>
+
+<tr id='ft19.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_32_001_System_upgrade: 系统升级操作</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft19.1')" >
+        错误</a>
+
+    <div id='div_ft19.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft19.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft19.1: 当前位置： 系统配置
+当前位置： 系统维护
+当前位置： 系统升级
+软件版本为： QV4240Gv3.0.0-171106
+版本检查情况： 未检测到更新
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_31_47_System_upgrade.png
+Traceback (most recent call last):
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_SysConfig\test_System_maintenance.py", line 91, in test_32_001_System_upgrade
+    self.System_upgrade()
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_SysConfig\test_System_maintenance.py", line 73, in System_upgrade
+    sendsoftware.send_keys(update_path)  # 考虑以下这个路径怎么写
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 350, in send_keys
+    'value': keys_to_typing(value)})
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 499, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 297, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: invalid argument: File not found : C:\Users\utt\Desktop\QV4240Gv3.0.0-171106.bin
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.15063 x86_64)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt19.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_32_002_Application_feature_library: 应用特征库显示</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt19.2')" >
+        通过</a>
+
+    <div id='div_pt19.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt19.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt19.2: 当前位置： 系统配置
+当前位置： 系统维护
+当前位置: 应用特征库
+****************************** 
+
+应用策略库版本: 3.1
+应用优先模板版本: 1.0
+版本状态: 更新成功
+截图保存文件夹路径为: G:\github\UTT_python\Re_OS_3\Screenshot\20180316.16_32_17_Application_feature_library.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt19.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_32_003_Configuration_management: 配置管理</div></td>
+    <td colspan='5' align='center'>通过</td>
+</tr>
+
+<tr id='ft19.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_32_004_Reboot_DUT: 重启操作</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft19.4')" >
+        错误</a>
+
+    <div id='div_ft19.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft19.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft19.4: 当前位置： 系统配置
+当前位置： 系统维护
+当前位置: 重启设备
+Traceback (most recent call last):
+  File "G:\github\UTT_python\Re_OS_3\test_all\test_SysConfig\test_System_maintenance.py", line 135, in test_32_004_Reboot_DUT
+    reboot_button.click()
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 78, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webelement.py", line 499, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 297, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\utt\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotVisibleException: Message: element not visible
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.15063 x86_64)
+
 
 
         </pre>
@@ -349,10 +4922,10 @@ G:\github\UTT_python\Re_OS_3\Public\Get_screenshot.py is file
 
 <tr id='total_row'>
     <td>总计</td>
-    <td>4</td>
-    <td>4</td>
-    <td>0</td>
-    <td>0</td>
+    <td>114</td>
+    <td>100</td>
+    <td>5</td>
+    <td>9</td>
     <td>&nbsp;</td>
 </tr>
 </table>

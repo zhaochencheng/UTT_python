@@ -15,7 +15,7 @@ class Ping():
         # print(type(a))
         # print(a)
         #ping 通 a = 0  ;ping 不通a = 1
-        if a == True:
+        if a :
             print('ping %s is fail' % ip)
             #如果ping 不通 会抛出异常
             raise BaseException("ping 不通该%s 地址 "%ip)

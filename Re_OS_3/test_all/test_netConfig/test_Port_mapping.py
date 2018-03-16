@@ -499,7 +499,7 @@ class Port_mapping(unittest.TestCase):
         Get_Screenshot(self.driver).get_screenshot("nat_rule_configure_delete_One2One")
 
 
-    def test_04_003_DMZ(self):
+    def test_04_016_DMZ(self):
             u'''DMZ主机配置'''
 
             # 显示等待

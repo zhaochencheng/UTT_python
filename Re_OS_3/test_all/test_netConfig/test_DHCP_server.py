@@ -17,7 +17,7 @@ from Re_OS_3.Public.Get_screenshot import Get_Screenshot
 from Re_OS_3.Public.Output_web_info import Output_info
 from Re_OS_3.Public.Delect_Config import Delect_config
 
-class Lan_config(unittest.TestCase):
+class DHCP_config(unittest.TestCase):
     u'''**Lan口配置**'''
     def setUp(self):
         self.driver = webdriver.Chrome()
@@ -230,9 +230,6 @@ class Lan_config(unittest.TestCase):
         DHCP_List.click()
         ''''''
         pass
-
-
-
 
     def test_03_004_DHCP_server_delete(self):
         u'''DHCP服务配置删除'''

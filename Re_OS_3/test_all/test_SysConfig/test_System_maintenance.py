@@ -136,8 +136,8 @@ class System_maintenance(unittest.TestCase):
         print("点击重启按钮!")
         # 确认 重启 定位
         time.sleep(2)
-        ok = self.driver.find_element_by_id("u-cfm-ok")
-        ok.click()
+        # ok = self.driver.find_element_by_id("u-cfm-ok")
+        # ok.click()
         print("确认重启....正在启动中...")
 
         '''此处加入 重启生效的判断方法'''

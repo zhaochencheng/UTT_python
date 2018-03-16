@@ -272,9 +272,6 @@ class PPTP(unittest.TestCase):
         save =self.driver.find_element_by_id("save")
         save.click()
 
-
-
-
     def test_27_001_PPTP_server_config(self):
         u'''PPTP服务器配置'''
         #开启PPTP服务器

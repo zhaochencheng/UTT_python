@@ -39,7 +39,6 @@ import os
 #     print(list)
 # elif os.path.isfile(cur_path):
 #     print("file")
-#
 
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
@@ -84,18 +83,36 @@ from Re_OS_3.Tool.Ping import Ping
 from selenium.webdriver.support import expected_conditions
 from selenium import webdriver
 from PIL import Image
-driver = webdriver.Chrome()
-driver.get('http://www.baidu.com/')
-
-driver.save_screenshot('button.png')
-element = driver.find_element_by_id("su")
-print(element.location)
-print(element.size)
-left = element.location['x']
-top = element.location['y']
-right = element.location['x'] + element.size['width']
-bottom = element.location['y'] + element.size['height']
-im = Image.open('button.png')
-im = im.crop((left,top,right,bottom))
-im.save('button.png')
-driver.quit()
+# driver = webdriver.Chrome()
+# driver.get('http://www.baidu.com/')
+#
+# driver.save_screenshot('button.png')
+# element = driver.find_element_by_id("su")
+# print(element.location)
+# print(element.size)
+# left = element.location['x']
+# top = element.location['y']
+# right = element.location['x'] + element.size['width']
+# bottom = element.location['y'] + element.size['height']
+# im = Image.open('button.png')
+# im = im.crop((left,top,right,bottom))
+# im.save('button.png')
+# driver.quit()
+import unittest
+# a = ["fc:2f:ef:e9:0a:af"]
+# L = [1,3,5,6,"fc:2f:ef:e9:0a:af"]
+# print(a[0] in L)
+# nowTime = time.strftime("%Y-%m-%d.%H_%M_%S")
+# print(nowTime)
+# class aa:
+#     w =  10
+#     def __init__(self):
+#         self.x = 11
+#         self.y = 12
+#     def add(self):
+#         return self.x+self.y
+# a = aa()
+# print(a.add())
+# aa.w= 20
+# a.w =13
+# print(aa.w,a.w)
