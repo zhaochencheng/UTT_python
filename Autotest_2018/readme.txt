@@ -1,0 +1,6 @@
+Config文件夹放置功能配置的参数
+log 文件夹放置记录、报告文件
+script文件夹放置python脚本文件
+software文件夹放置测试的软件
+tmp文件夹放置临时文件
+tools文件夹放置测试需要用到的小工具
