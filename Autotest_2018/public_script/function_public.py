@@ -22,7 +22,14 @@ def get_data(config_fdir,config_data,config_file="/Config/config.ini"):
     #print(config_data + ": %s" % data)
     return data
 
-
+def set_date(config_fdir,config_data,value_data,config_file="/Config/config.ini"):
+    config = configparser.ConfigParser()
+    file_path = os.path.abspath(os.path.join(os.path.realpath(__file__), "../..")) + config_file
+    config.read(file_path)
+    config.set(config_fdir,config_data,value_data)
+    with open(file_path, 'w+') as f:
+        config.write(f)
+    # print(config_data + ": %s" % data)
 
 #
 #函数作用：登录被测设备的UI

@@ -3,6 +3,7 @@
 
 import os
 import unittest
+import time
 
 from selenium.webdriver.support.ui import Select
 
