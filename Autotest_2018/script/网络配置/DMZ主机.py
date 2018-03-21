@@ -70,13 +70,13 @@ class DMZ_主机(unittest.TestCase):
                 print("wan%d口DMZ主机ip为：" % i, wan_DMZ.get_attribute("value"))
                 self.assertEqual(wan_DMZ.get_attribute("value"), self.DMZ_globalHost, "全局DMZ主机ip和wan1口DMZ主机IP不一致")
         print("各wan口配置ip与全局DMZ主机ip相同")
-    def test_DMZ主机配置(self):
+    def test_01_DMZ主机配置(self):
         #  登陆web页面
         self.driver = Login_web()
         #
         self.DMZ_config()
 
-    def test_DMZ主机验证(self):
+    def test_02_DMZ主机验证(self):
         pass
 if __name__ == '__main__':
     unittest.main()

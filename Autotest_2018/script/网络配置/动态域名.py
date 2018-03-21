@@ -156,7 +156,7 @@ class 动态_域名(unittest.TestCase):
 
 
 
-    def test_动态域名配置(self):
+    def test_01_动态域名配置(self):
         # 登陆web页面
         self.driver = Login_web()
         #
@@ -172,7 +172,7 @@ class 动态_域名(unittest.TestCase):
         time.sleep(2)
         self.driver.quit()
 
-    def test_动态域名验证(self):
+    def test_02_动态域名验证(self):
         DDNS_hostname = get_data("DDNS_config", "ddns_address")
         print("当前主机名:", DDNS_hostname)
         #

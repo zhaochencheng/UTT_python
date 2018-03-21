@@ -28,7 +28,7 @@ class 静态映射_TCP80(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_端口映射配置(self):  
+    def test_01_端口映射配置(self):
         #
         #vlan 配置
         #
@@ -69,7 +69,7 @@ class 静态映射_TCP80(unittest.TestCase):
                 driver.find_element_by_id("save").click()
                 return
 
-    def test_测试Lan方向http访问(self):  
+    def test_02_测试Lan方向http访问(self):
         #
         #测试打开网页
         #
@@ -86,7 +86,7 @@ class 静态映射_TCP80(unittest.TestCase):
         time.sleep(1)
         self.driver.quit()
 
-    def test_测试NAT回环访问(self):  
+    def test_03_测试NAT回环访问(self):
         #
         #测试打开网页
         #
@@ -101,7 +101,7 @@ class 静态映射_TCP80(unittest.TestCase):
         time.sleep(1)
         self.driver.quit()
 
-    def test_测试WAN方向http访问(self):  
+    def test_04_测试WAN方向http访问(self):
         #
         #测试打开网页
         #
@@ -139,7 +139,7 @@ class 静态映射_UDP69(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_端口映射配置(self):  
+    def test_01_端口映射配置(self):
         #
         #vlan 配置
         #
@@ -180,7 +180,7 @@ class 静态映射_UDP69(unittest.TestCase):
                 driver.find_element_by_id("save").click()
                 return
 
-    def test_测试Lan方向tftp下载(self):  
+    def test_02_测试Lan方向tftp下载(self):
         #
         #测试tftp下载
         #
@@ -190,7 +190,7 @@ class 静态映射_UDP69(unittest.TestCase):
         else:
             print("tftp下载文件测试 fail！")
 
-    def test_测试NAT回环下载(self):  
+    def test_03_测试NAT回环下载(self):
         #
         #测试tftp下载
         #
@@ -200,7 +200,7 @@ class 静态映射_UDP69(unittest.TestCase):
         else:
             print("tftp下载文件测试 fail！")
 
-    def test_测试WAN方向tftp下载(self):  
+    def test_04_测试WAN方向tftp下载(self):
         #
         #测试tftp下载
         #

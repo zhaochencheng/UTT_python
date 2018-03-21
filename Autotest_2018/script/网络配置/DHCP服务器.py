@@ -30,7 +30,7 @@ class DHCP_server_基本功能(unittest.TestCase):
         pass
     def tearDown(self):
         pass
-    def test_DHCP_server配置(self):
+    def test_DHCP_01_server配置(self):
         # 登陆web页面
         self.driver = Login_web()
         #配置DHCP服务器
@@ -87,7 +87,7 @@ class DHCP_server_基本功能(unittest.TestCase):
         time.sleep(2)
         self.driver.quit()
 
-    def test_DHCP_server验证(self):
+    def test_DHCP_02_server验证(self):
         pass
 class DHCP_手工绑定(unittest.TestCase):
     # class静态参数
@@ -179,7 +179,7 @@ class DHCP_手工绑定(unittest.TestCase):
         return len(td)
 
 
-    def test_DHCP_手工绑定_配置(self):
+    def test_01_DHCP_手工绑定_配置(self):
         # 登陆web页面
         self.driver = Login_web()
         #增加组织架构分组
@@ -260,12 +260,12 @@ class DHCP_手工绑定(unittest.TestCase):
         self.assertEqual(dhcpIp,self.web_static_ip,"页面 IP地址与配置文件信息不一致")
         self.assertEqual(dhcpMac,self.web_static_mac,"页面 MAC地址与配置文件信息不一致")
         self.driver.quit()
-    def test_DHCP_手工帮定_验证(self):
+    def test_02_DHCP_手工帮定_验证(self):
         #
         #下层路由器 wan口设置动态获取ip；查看获取ip 是否是 配置文件中 mac --ip 对应一致
         #
         pass
-    def test_DHCP_手工绑定_删除配置(self):
+    def test_03_DHCP_手工绑定_删除配置(self):
         # 登陆web页面
         self.driver = Login_web()
         # 配置DHCP服务器
@@ -290,12 +290,13 @@ class DHCP_手工绑定(unittest.TestCase):
             print("配置已被删除！")
 
         self.driver.quit()
+
 class DHCP全局配置(unittest.TestCase):
     def setUp(self):
         pass
     def tearDown(self):
         pass
-    def test_DNS代理配置(self):
+    def test_01_DNS代理配置(self):
         # 登陆web页面
         self.driver = Login_web()
         # 配置DHCP服务器
@@ -325,7 +326,7 @@ class DHCP全局配置(unittest.TestCase):
             print("现在开启DNS 代理")
         time.sleep(2)
         self.driver.quit()
-    def test_DNS代理验证(self):
+    def test_02_DNS代理验证(self):
         pass
 
 

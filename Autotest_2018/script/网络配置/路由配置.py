@@ -202,7 +202,7 @@ class 静态路由(unittest.TestCase):
                 break
         print("*" * 30, '\n')
 
-    def test_静态路由配置(self):
+    def test_01_静态路由配置(self):
         # 登陆web页面
         self.driver = Login_web()
         #
@@ -217,13 +217,13 @@ class 静态路由(unittest.TestCase):
         time.sleep(2)
         self.driver.quit()
 
-    def test_静态路由验证(self):
+    def test_02_静态路由验证(self):
         #
         #判断静态路由生效--- ping 目的网络？
         #
         pass
 
-    def test_静态路由删除(self):
+    def test_03_静态路由删除(self):
         # 登陆web页面
         self.driver = Login_web()
         #

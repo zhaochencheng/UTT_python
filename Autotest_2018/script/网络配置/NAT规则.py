@@ -209,7 +209,7 @@ class NAT规则_EasyIP(unittest.TestCase):
 
 
 
-    def test_NAT_EasyIP规则配置(self):
+    def test_01_NAT_EasyIP规则配置(self):
         #  登陆web页面
         self.driver = Login_web()
         #
@@ -223,10 +223,10 @@ class NAT规则_EasyIP(unittest.TestCase):
         time.sleep(2)
         self.driver.quit()
 
-    def test_NAT_EasyIP规则验证(self):
+    def test_02_NAT_EasyIP规则验证(self):
         pass
 
-    def test_NAT_EasyIP规则删除(self):
+    def test_03_NAT_EasyIP规则删除(self):
         #  登陆web页面
         self.driver = Login_web()
         # 删除配置
@@ -423,7 +423,7 @@ class NAT规则_One2One(unittest.TestCase):
                 # print("页面无%s 规则删除" % self.One2One_name)
                 break
 
-    def test_Nat规则One2One配置(self):
+    def test_01_Nat规则One2One配置(self):
         #  登陆web页面
         self.driver = Login_web()
         #
@@ -436,9 +436,9 @@ class NAT规则_One2One(unittest.TestCase):
         time.sleep(2)
         self.driver.quit()
 
-    def test_Nat规则One2One验证(self):
+    def test_02_Nat规则One2One验证(self):
         pass
-    def test_NAT_规则One2One删除(self):
+    def test_03_NAT_规则One2One删除(self):
         #  登陆web页面
         self.driver = Login_web()
         # 删除配置

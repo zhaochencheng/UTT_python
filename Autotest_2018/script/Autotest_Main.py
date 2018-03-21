@@ -1,8 +1,9 @@
 #coding:utf-8
-import unittest
-from Autotest_2018.public_script.function_public import *
 from HTMLTestRunner import HTMLTestRunner
-from Autotest_2018.script.单线路上网 import *
+import time
+from Autotest_2018.script.用户管理.用户状态 import 用户_状态
+from Autotest_2018.script.网络配置.内网配置 import LAN口配置
+from Autotest_2018.script.网络配置.单线路上网 import *
 
 if __name__ == '__main__':
 
@@ -11,6 +12,12 @@ if __name__ == '__main__':
     suite.addTest(单线路_固定IP上网("test_上网配置"))
     suite.addTest(单线路_固定IP上网("test_Cli验证"))
     suite.addTest(单线路_固定IP上网("test_上网测试"))
+    suite.addTest(LAN口配置("test_LAN口配置"))
+    suite.addTest(LAN口配置("test_LAN口验证"))
+    suite.addTest(LAN口配置("test_LAN_VLAN配置"))
+    suite.addTest(LAN口配置("test_LAN_VLAN验证"))
+    suite.addTest(用户_状态("test_用户状态查看"))
+    suite.addTest(用户_状态("test_临时用户加入分组"))
 
     #suite.addTest(单线路_动态IP上网("test_上网配置"))
     #suite.addTest(单线路_动态IP上网("test_Cli验证"))

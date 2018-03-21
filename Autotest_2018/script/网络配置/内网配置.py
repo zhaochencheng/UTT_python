@@ -66,11 +66,11 @@ class LAN口配置(unittest.TestCase):
         # 保存 定位
         save = self.driver.find_element_by_id("save")
         save.click()
-        time.sleep(10)
+        time.sleep(22)
         print(self.driver.current_url)
 
 
-    def test_LAN口配置(self):
+    def test_01_LAN口配置(self):
         # 登陆web页面
         self.driver = Login_web()
         #
@@ -80,7 +80,7 @@ class LAN口配置(unittest.TestCase):
         time.sleep(2)
         self.driver.quit()
 
-    def test_LAN口验证(self):
+    def test_02_LAN口验证(self):
         # 登陆web页面
         self.driver = Login_web(URL="http://%s"%self.lan_ip)
         print('登陆URL为：',self.driver.current_url)
@@ -192,7 +192,7 @@ class LAN口配置(unittest.TestCase):
         return len(td)
 
 
-    def test_LAN_VLAN配置(self):
+    def test_03_LAN_VLAN配置(self):
         # 登陆web页面
         self.driver = Login_web()
         #
@@ -208,14 +208,14 @@ class LAN口配置(unittest.TestCase):
         time.sleep(2)
         self.driver.quit()
 
-    def test_LAN_VLAN验证(self):
+    def test_04_LAN_VLAN验证(self):
         pass
 
 if __name__ == '__main__':
     suit = unittest.TestSuite()
-    suit.addTest(LAN口配置("test_LAN口配置"))
-    suit.addTest(LAN口配置("test_LAN口验证"))
-    suit.addTest(LAN口配置("test_LAN_VLAN配置"))
-    suit.addTest(LAN口配置("test_LAN_VLAN验证"))
+    suit.addTest(LAN口配置("test_01_LAN口配置"))
+    suit.addTest(LAN口配置("test_02_LAN口验证"))
+    suit.addTest(LAN口配置("test_03_LAN_VLAN配置"))
+    suit.addTest(LAN口配置("test_04_LAN_VLAN验证"))
     runner = unittest.TextTestRunner()
     runner.run(suit)

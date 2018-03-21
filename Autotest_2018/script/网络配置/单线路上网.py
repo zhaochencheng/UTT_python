@@ -25,7 +25,7 @@ class 单线路_固定IP上网(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_上网配置(self):
+    def test_01_上网配置(self):
         
         #
         #vlan 配置
@@ -78,7 +78,7 @@ class 单线路_固定IP上网(unittest.TestCase):
                     driver.quit()
                     return
 
-    def test_Cli验证(self):
+    def test_02_Cli验证(self):
         #
         #NAT规则检查
         #
@@ -92,7 +92,7 @@ class 单线路_固定IP上网(unittest.TestCase):
                 print("NAT规则检查 pass！")
                 return
 
-    def test_上网测试(self):
+    def test_03_上网测试(self):
         #
         #测试ping外网
         #
@@ -131,7 +131,7 @@ class 单线路_动态IP上网(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_上网配置(self):
+    def test_01_上网配置(self):
         
         #
         #vlan 配置
@@ -180,7 +180,7 @@ class 单线路_动态IP上网(unittest.TestCase):
                     driver.quit()
                     return
 
-    def test_Cli验证(self):
+    def test_02_Cli验证(self):
         #
         #NAT规则检查
         #
@@ -192,7 +192,7 @@ class 单线路_动态IP上网(unittest.TestCase):
             print("NAT规则检查 pass！")
 
 
-    def test_上网测试(self):
+    def test_03_上网测试(self):
         #
         #测试ping外网
         #
@@ -235,7 +235,7 @@ class 单线路_PPPoE拨号上网(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_上网配置(self):
+    def test_01_上网配置(self):
         
         #
         #vlan 配置
@@ -288,7 +288,7 @@ class 单线路_PPPoE拨号上网(unittest.TestCase):
                     driver.quit()
                     return
 
-    def test_Cli验证(self):
+    def test_02_Cli验证(self):
         #
         #NAT规则检查
         #
@@ -299,7 +299,7 @@ class 单线路_PPPoE拨号上网(unittest.TestCase):
             print("NAT规则检查 pass！")
 
 
-    def test_上网测试(self):
+    def test_03_上网测试(self):
         #
         #测试ping外网
         #
