@@ -6,11 +6,10 @@
 # @Software: PyCharm Community Edition
 import time
 import unittest
-
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.wait import WebDriverWait
-
 from Autotest_2018.public_script.function_public import *
+
 class 动态_域名(unittest.TestCase):
     # class静态参数
     #
@@ -110,7 +109,7 @@ class 动态_域名(unittest.TestCase):
                     print("IP 地址:", ip)
                     print("更新时间:", freshTime)
                     print("动态域名页面信息输出完成！")
-                    #往配置文件中读入 配置
+                    #往配置文件中写入 配置
                     set_date("DDNS_config", "ddns_address",hostName)
                     self.assertEqual(provider, self.DDNS_Server, '服务商 与配置文件不一致')
                 else:
