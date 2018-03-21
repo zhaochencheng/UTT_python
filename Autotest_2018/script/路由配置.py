@@ -9,6 +9,8 @@ import unittest
 
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.wait import WebDriverWait
+
+from Autotest_2018.public_script.Get_screenshot import Get_Screenshot
 from Autotest_2018.public_script.function_public import *
 class 静态路由(unittest.TestCase):
     # class静态参数
@@ -152,6 +154,54 @@ class 静态路由(unittest.TestCase):
                 break
         return len(td)
 
+    def static_router_delete(self):
+        u"静态路由配置删除"
+        # 显示等待
+        webwait = WebDriverWait(self.driver, 10, 1)
+        # 网络配置  定位
+        netconfig = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[3]/div/h4/span"))
+        netconfig.click()
+        # print("当前位置:", netconfig.text)
+        # 路由配置 定位
+        router_config = self.driver.find_element_by_link_text("路由配置")
+        router_config.click()
+        # print("当前位置:", router_config.text)
+        time.sleep(2)
+        # 删除配置 规则
+        tr = self.driver.find_elements_by_xpath("//*[@id='1']/div/div/div[1]/table/tbody/tr")
+        # print("每页显示个数为:", len(tr))
+        time.sleep(2)
+
+        for i in range(1, len(tr) + 1):
+            # tr中 td个数;若该条没有vlan 配置,td数为1;  如果不比较,会导致定位不到元素,,而报错
+            td = self.driver.find_elements_by_xpath(".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td" % i)
+            if len(td) > 1:
+                name_rule = self.driver.find_element_by_xpath(
+                    ".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[2]/span" % i).text
+                if name_rule == self.static_router_rulename:
+                    '''#删除配置前 截图#'''
+                    Get_Screenshot(self.driver).get_screenshot(
+                        "%s_static_router_delete_before" % (self.static_router_rulename))
+                    # 删除按钮 定位
+                    delete = self.driver.find_element_by_xpath(
+                        ".//*[@id='1']/div/div/div[1]/table/tbody/tr[%d]/td[9]/span[2]" % i)
+                    delete.click()
+                    time.sleep(1)
+                    # 确认删除 定位
+                    ok = self.driver.find_element_by_id("u-cfm-ok")
+                    ok.click()
+                    time.sleep(5)
+                    print("将%s 规则，删除" % name_rule)
+                    '''#删除配置后 截图#'''
+                    Get_Screenshot(self.driver).get_screenshot(
+                        "%s_static_router_delete_after" % (self.static_router_rulename))
+                    # print("*" * 30, '\n')
+                else:
+                    pass
+            else:
+                break
+        print("*" * 30, '\n')
+
     def test_静态路由配置(self):
         # 登陆web页面
         self.driver = Login_web()
@@ -172,6 +222,12 @@ class 静态路由(unittest.TestCase):
         #判断静态路由生效--- ping 目的网络？
         #
         pass
+
+    def test_静态路由删除(self):
+        # 登陆web页面
+        self.driver = Login_web()
+        #
+        self.static_router_delete()
 
 class 策略路由(unittest.TestCase):
     def setUp(self):

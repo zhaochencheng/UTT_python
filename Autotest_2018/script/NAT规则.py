@@ -8,6 +8,8 @@ import time
 import unittest
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.wait import WebDriverWait
+
+from Autotest_2018.public_script.Get_screenshot import Get_Screenshot
 from Autotest_2018.public_script.function_public import *
 
 class NAT规则_EasyIP(unittest.TestCase):
@@ -159,6 +161,52 @@ class NAT规则_EasyIP(unittest.TestCase):
                 break
         return len(td)
 
+    def del_nat_rule_sameconfig(self):
+        u'''删除相同配置'''
+        webwait = WebDriverWait(self.driver, 10, 1)
+        # 网络配置  定位
+        netconfig = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[3]/div/h4/span"))
+        netconfig.click()
+        print("当前位置：", netconfig.text)
+        # 端口映射 定位
+        port_map = self.driver.find_element_by_link_text("端口映射")
+        port_map.click()
+        print("当前位置:", port_map.text)
+        time.sleep(1)
+        # 进入 nat规则 页面
+        nat_rule = self.driver.find_element_by_link_text("NAT规则")
+        print("当前位置:", nat_rule.text)
+        nat_rule.click()
+        time.sleep(3)
+        tr = self.driver.find_elements_by_xpath("//*[@id='2']/div/div/div[1]/table/tbody/tr")
+        print("每页显示个数为:", len(tr))
+        print("*" * 30, '\n')
+        time.sleep(2)
+        # 判断是否已存在配置文件中的 配置 若有 则删除；
+        for i in range(1, len(tr) + 1):
+            # tr中 td个数;若该条没有vlan 配置,td数为1;  如果不比较,会导致定位不到元素,,而报错
+            td = self.driver.find_elements_by_xpath(".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td" % i)
+            if len(td) > 1:
+                name_rule = self.driver.find_element_by_xpath(
+                    ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[2]/span" % i).text
+                if name_rule == self.EasyIP_name:
+                    delete = self.driver.find_element_by_xpath(
+                        ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[8]/span[2]" % i)
+                    delete.click()
+                    # time.sleep(2)
+                    ok = webwait.until(lambda x: x.find_element_by_id("u-cfm-ok"))
+                    # ok = self.driver.find_element_by_id("u-cfm-ok")
+                    ok.click()
+                    time.sleep(4)
+                    print("有%s 规则，将其删除" % name_rule)
+
+                else:
+                    # print("页面无%s 规则删除" % self.EasyIP_name)
+                    pass
+            else:
+                # print("页面无%s 规则删除" % self.EasyIP_name)
+                break
+
 
 
     def test_NAT_EasyIP规则配置(self):
@@ -177,6 +225,12 @@ class NAT规则_EasyIP(unittest.TestCase):
 
     def test_NAT_EasyIP规则验证(self):
         pass
+
+    def test_NAT_EasyIP规则删除(self):
+        #  登陆web页面
+        self.driver = Login_web()
+        # 删除配置
+        self.del_nat_rule_sameconfig()
 
 class NAT规则_One2One(unittest.TestCase):
     # class静态参数
@@ -324,6 +378,50 @@ class NAT规则_One2One(unittest.TestCase):
                 # print("没有与配置文件%s一致的页面信息" % self.vlan_name)
                 break
         return len(td)
+    def del_nat_rule_sameconfig(self):
+        u'''删除相同配置'''
+        webwait = WebDriverWait(self.driver, 10, 1)
+        # 网络配置  定位
+        netconfig = webwait.until(lambda x: x.find_element_by_xpath("//*[@id='sidebar']/ul/li[3]/div/h4/span"))
+        netconfig.click()
+        print("当前位置：", netconfig.text)
+        # 端口映射 定位
+        port_map = self.driver.find_element_by_link_text("端口映射")
+        port_map.click()
+        print("当前位置:", port_map.text)
+        time.sleep(1)
+        # 进入 nat规则 页面
+        nat_rule = self.driver.find_element_by_link_text("NAT规则")
+        print("当前位置:", nat_rule.text)
+        nat_rule.click()
+        time.sleep(3)
+        tr = self.driver.find_elements_by_xpath("//*[@id='2']/div/div/div[1]/table/tbody/tr")
+        print("每页显示个数为:", len(tr))
+        print("*" * 30, '\n')
+        time.sleep(2)
+        # 判断是否已存在配置文件中的 配置 若有 则删除；
+        for i in range(1, len(tr) + 1):
+            # tr中 td个数;若该条没有vlan 配置,td数为1;  如果不比较,会导致定位不到元素,,而报错
+            td = self.driver.find_elements_by_xpath(".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td" % i)
+            if len(td) > 1:
+                name_rule = self.driver.find_element_by_xpath(
+                    ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[2]/span" % i).text
+                if name_rule == self.One2One_name:
+                    delete = self.driver.find_element_by_xpath(
+                        ".//*[@id='2']/div/div/div[1]/table/tbody/tr[%d]/td[8]/span[2]" % i)
+                    delete.click()
+                    # time.sleep(2)
+                    ok = webwait.until(lambda x: x.find_element_by_id("u-cfm-ok"))
+                    # ok = self.driver.find_element_by_id("u-cfm-ok")
+                    ok.click()
+                    time.sleep(4)
+                    print("有%s 规则，将其删除" % name_rule)
+                else:
+                    # print("页面无%s 规则删除" % self.EasyIP_name)
+                    pass
+            else:
+                # print("页面无%s 规则删除" % self.One2One_name)
+                break
 
     def test_Nat规则One2One配置(self):
         #  登陆web页面
@@ -340,6 +438,13 @@ class NAT规则_One2One(unittest.TestCase):
 
     def test_Nat规则One2One验证(self):
         pass
+    def test_NAT_规则One2One删除(self):
+        #  登陆web页面
+        self.driver = Login_web()
+        # 删除配置
+        self.del_nat_rule_sameconfig()
+        '''# 删除后 截图#'''
+        Get_Screenshot(self.driver).get_screenshot("nat_rule_configure_delete_One2One")
 
 
 if __name__ == '__main__':
